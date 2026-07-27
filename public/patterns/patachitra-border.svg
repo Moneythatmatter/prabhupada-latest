@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="40" viewBox="0 0 400 40" fill="none">
+  <!-- Soft Odisha vine border — no hard red rule lines -->
+  <path d="M0 20 Q25 8 50 20 Q75 32 100 20 Q125 8 150 20 Q175 32 200 20 Q225 8 250 20 Q275 32 300 20 Q325 8 350 20 Q375 32 400 20" stroke="#1B6B4A" stroke-width="1.4" fill="none" opacity="0.85"/>
+  <g fill="#C0392B" opacity="0.9">
+    <ellipse cx="50" cy="20" rx="4.5" ry="3"/>
+    <ellipse cx="150" cy="20" rx="4.5" ry="3"/>
+    <ellipse cx="250" cy="20" rx="4.5" ry="3"/>
+    <ellipse cx="350" cy="20" rx="4.5" ry="3"/>
+  </g>
+  <g fill="#E8A317">
+    <circle cx="50" cy="20" r="1.6"/>
+    <circle cx="150" cy="20" r="1.6"/>
+    <circle cx="250" cy="20" r="1.6"/>
+    <circle cx="350" cy="20" r="1.6"/>
+  </g>
+  <g fill="#1B6B4A" opacity="0.85">
+    <ellipse cx="100" cy="14" rx="4" ry="2" transform="rotate(-25 100 14)"/>
+    <ellipse cx="100" cy="26" rx="4" ry="2" transform="rotate(25 100 26)"/>
+    <ellipse cx="200" cy="14" rx="4" ry="2" transform="rotate(-25 200 14)"/>
+    <ellipse cx="200" cy="26" rx="4" ry="2" transform="rotate(25 200 26)"/>
+    <ellipse cx="300" cy="14" rx="4" ry="2" transform="rotate(-25 300 14)"/>
+    <ellipse cx="300" cy="26" rx="4" ry="2" transform="rotate(25 300 26)"/>
+  </g>
+</svg>

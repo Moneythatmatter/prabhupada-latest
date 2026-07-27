@@ -1,0 +1,645 @@
+/* ==========================================================================
+   HOTEL PRABHUPADA - LUXURY DESIGN SYSTEM
+   Inspired by Taj Hotels, Oberoi, Marriott Luxury Collection, & ITC Hotels
+   ========================================================================== */
+
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* --- CSS Variables & Design Tokens --- */
+:root {
+  /* Color Palette - Taj & Oberoi Classic Navy & Gold */
+  --color-navy-deep: #070F1A;
+  --color-navy-header: #0C1827;
+  --color-navy-translucent: rgba(12, 24, 39, 0.4);
+  --color-navy-solid: rgba(12, 24, 39, 0.98);
+  
+  --color-gold-primary: #C5A059;
+  --color-gold-hover: #B38E46;
+  --color-gold-subtle: rgba(197, 160, 89, 0.15);
+  
+  --color-surface-paper: #FAF8F5;
+  --color-surface-card: #FFFFFF;
+  
+  --color-text-light: #FFFFFF;
+  --color-text-muted-light: rgba(255, 255, 255, 0.75);
+  --color-text-dark: #1E293B;
+  --color-text-muted-dark: #64748B;
+  
+  --color-border-subtle: rgba(255, 255, 255, 0.12);
+  --color-border-gold: rgba(197, 160, 89, 0.3);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease-in-out;
+  --transition-header: background-color 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* --- Base & Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-dark);
+  background-color: var(--color-navy-deep);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+/* --- Layout Container --- */
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-gold-primary);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 2px;
+  border: 1px solid var(--color-gold-primary);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: var(--color-gold-hover);
+  border-color: var(--color-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.35);
+  outline: none;
+}
+
+/* ==========================================================================
+   MILESTONE 1: TOP CONTACT STRIP
+   ========================================================================== */
+.top-contact-strip {
+  background-color: var(--color-navy-deep);
+  color: var(--color-text-muted-light);
+  font-size: 0.8125rem;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+  position: relative;
+  z-index: 1010;
+}
+
+.top-contact-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info-list {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.contact-item svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--color-gold-primary);
+  flex-shrink: 0;
+}
+
+.contact-item a:hover {
+  color: var(--color-gold-primary);
+}
+
+.location-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.location-tag svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--color-gold-primary);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   MILESTONE 1: STICKY NAVIGATION HEADER
+   ========================================================================== */
+.main-header {
+  position: fixed;
+  top: 39px; /* Sits directly below top strip when at top */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: var(--transition-header);
+}
+
+/* Header state on scroll */
+.main-header.scrolled {
+  top: 0;
+  background-color: var(--color-navy-solid);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  transition: height 0.4s ease;
+}
+
+.main-header.scrolled .header-inner {
+  height: 76px;
+}
+
+/* Logo (Left Aligned) */
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-logo .logo-title {
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.brand-logo .logo-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-gold-primary);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+/* Navigation Links (Centered) */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  list-style: none;
+}
+
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 0;
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-gold-primary);
+  transition: var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #FFFFFF;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Header Actions (Right Aligned) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Mobile Nav Toggle Button */
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Mobile Slide-In Drawer Backdrop & Menu */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(7, 15, 26, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 1040;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+}
+
+.mobile-nav-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 320px;
+  height: 100vh;
+  background-color: var(--color-navy-deep);
+  border-left: 1px solid var(--color-border-subtle);
+  z-index: 1050;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-nav-drawer.is-active {
+  right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.drawer-close-btn {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--color-gold-primary);
+  padding-left: 8px;
+}
+
+.drawer-footer {
+  margin-top: auto;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+/* ==========================================================================
+   MILESTONE 1: HERO SECTION
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-navy-deep);
+  overflow: hidden;
+}
+
+/* Background Carousel */
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1), transform 8s ease-out;
+  transform: scale(1.05);
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.hero-slide-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 15, 26, 0.55) 0%,
+    rgba(7, 15, 26, 0.70) 50%,
+    rgba(7, 15, 26, 0.85) 100%
+  );
+}
+
+/* Hero Content */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 10;
+  padding-top: 60px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.hero-slide-text {
+  display: none;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.hero-slide-text.active {
+  display: block;
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overline {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gold-primary);
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 4.25rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  color: #FFFFFF;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto 44px auto;
+  max-width: 760px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Slider Controls */
+.hero-slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.slider-dot.active {
+  width: 36px;
+  border-radius: 5px;
+  background-color: var(--color-gold-primary);
+}
+
+/* Hero Scroll Indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.hero-scroll-indicator:hover {
+  color: var(--color-gold-primary);
+}
+
+.scroll-line {
+  width: 1px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-dot-anim {
+  width: 100%;
+  height: 12px;
+  background-color: var(--color-gold-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: scrollDown 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .nav-menu {
+    gap: 28px;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-header {
+    top: 0;
+  }
+
+  .top-contact-strip {
+    display: none; /* Streamlined on mobile & tablet */
+  }
+
+  .nav-container {
+    display: none; /* Hide desktop nav */
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-inner {
+    height: 76px;
+  }
+
+  .brand-logo .logo-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 14px 28px;
+    font-size: 0.75rem;
+  }
+}
