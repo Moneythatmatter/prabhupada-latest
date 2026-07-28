@@ -138,7 +138,7 @@ export const AmenitiesClient: React.FC = () => {
         <div className="max-w-[1320px] mx-auto px-6 sm:px-8 relative z-10">
           <FadeRise className="text-center max-w-[700px] mx-auto mb-16">
             <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#E8A317] mb-3">
-              HOTEL FACILITIES & COMFORTS
+              HOTEL COMFORTS
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-[#161616] tracking-tight leading-[1.15]">
               Everything You Need for a Comfortable Stay

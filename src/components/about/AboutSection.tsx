@@ -156,13 +156,13 @@ export const AboutSection: React.FC = () => {
                   className="bg-white p-5 sm:p-8 rounded-sm border border-[#E5DECE] border-t-[3px] border-t-[#8B1E1E] hover:border-[#C5A059] hover:border-t-[#C0392B] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between h-full group"
                 >
                   <div>
-                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-sm bg-[#F8F0DC] group-hover:bg-[#0C1827] flex items-center justify-center mb-4 sm:mb-6 transition-colors duration-300 border border-[#C5A059]/30">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 mx-auto rounded-sm bg-[#F8F0DC] group-hover:bg-[#0C1827] flex items-center justify-center mb-4 sm:mb-6 transition-colors duration-300 border border-[#C5A059]/30">
                       <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-[#C0392B] group-hover:text-[#C5A059] transition-colors duration-300" />
                     </div>
-                    <h3 className="font-serif text-lg sm:text-xl font-medium text-[#0C1827] mb-2 sm:mb-3">
+                    <h3 className="font-serif text-lg sm:text-xl font-bold text-[#0C1827] mb-2 sm:mb-3 text-center">
                       {card.title}
                     </h3>
-                    <p className="font-sans text-sm text-[#64748B] font-light leading-relaxed">
+                    <p className="font-sans text-sm text-[#64748B] font-light leading-relaxed text-center">
                       {card.description}
                     </p>
                   </div>

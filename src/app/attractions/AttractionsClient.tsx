@@ -10,34 +10,7 @@ import {
   PatachitraBackdrop,
   PatachitraDivider,
 } from '@/components/patachitra/PatachitraMotifs';
-
-const attractionItems = [
-  {
-    title: 'SHREE JAGANNATHA TEMPLE PURI',
-    image: '/images/attraction-jagannath.jpg',
-    description: 'Sacred 12th-century temple in the heart of Puri.',
-  },
-  {
-    title: 'SWARGADWAR SEA BEACH',
-    image: '/images/attraction-swargadwar.jpg',
-    description: 'Golden beach waves and coastal markets nearby.',
-  },
-  {
-    title: 'SUDARSHAN CRAFTS MUSEUM',
-    image: '/images/attraction-sudarshan.png',
-    description: 'Traditional Odisha crafts and Pattachitra heritage.',
-  },
-  {
-    title: 'KONARK SUN TEMPLE',
-    image: '/images/attraction-konark.jpg',
-    description: 'UNESCO World Heritage architectural wonder.',
-  },
-  {
-    title: 'CHILIKA LAKE',
-    image: '/images/attraction-chilika.jpg',
-    description: 'Asia’s largest brackish lagoon, a short drive away.',
-  },
-];
+import { attractions } from '@/data/attractions';
 
 export const AttractionsClient: React.FC = () => {
   const reduceMotion = useReducedMotion();
@@ -47,7 +20,7 @@ export const AttractionsClient: React.FC = () => {
       <InnerPageHero
         overline="Explore Puri · Odisha Heritage"
         title="Nearby Attractions"
-        subtitle="Discover temples, beaches, and heritage sites around Hotel Prabhupada."
+        subtitle="Discover temples, beaches, craft villages, and heritage sites around Hotel Prabhupada."
         image="/images/attraction-jagannath.jpg"
         imageAlt="Attractions near Hotel Prabhupada Puri"
         cta={
@@ -77,75 +50,41 @@ export const AttractionsClient: React.FC = () => {
             <h2 className="font-serif text-3xl sm:text-4xl font-normal text-[#0C1827] tracking-tight">
               Must-Visit Places Near Us
             </h2>
+            <p className="mt-3 font-sans text-sm sm:text-base text-[#64748B] font-light leading-relaxed max-w-xl mx-auto">
+              From sacred temples and Blue Flag beaches to craft villages like Raghurajpur and Pipli — explore Puri&apos;s richest experiences.
+            </p>
             <PatachitraDivider className="mt-4 sm:mt-6" />
           </FadeRise>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8 mb-6 sm:mb-8">
-            {attractionItems.slice(0, 3).map((item, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
+            {attractions.map((item, index) => (
               <motion.div
                 key={item.title}
                 initial={reduceMotion ? false : { opacity: 0, y: 32 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-8%' }}
+                viewport={{ once: true, margin: '-6%' }}
                 transition={{
-                  duration: 0.7,
-                  delay: reduceMotion ? 0 : index * 0.1,
+                  duration: 0.65,
+                  delay: reduceMotion ? 0 : (index % 6) * 0.06,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                whileHover={reduceMotion ? undefined : { y: -8 }}
-                className="relative h-[360px] sm:h-[440px] w-full rounded-sm overflow-hidden group border border-[#E5DECE] bg-white shadow-sm hover:shadow-[0_20px_44px_rgba(12,24,39,0.12)] transition-shadow"
+                whileHover={reduceMotion ? undefined : { y: -6 }}
+                className="relative h-[340px] sm:h-[400px] w-full rounded-sm overflow-hidden group border border-[#E5DECE] bg-white shadow-sm hover:shadow-[0_20px_44px_rgba(12,24,39,0.12)] transition-shadow"
               >
                 <ParallaxImage
                   src={item.image}
                   alt={item.title}
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="absolute inset-0"
                   imageClassName="object-cover transition-transform duration-700 group-hover:scale-105"
-                  distance={40}
+                  distance={36}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#070F1A]/90 via-[#070F1A]/35 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#070F1A]/92 via-[#070F1A]/40 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 text-center">
-                  <h3 className="font-sans text-sm sm:text-base font-semibold tracking-[0.16em] text-white uppercase mb-2">
+                  <h3 className="font-sans text-sm sm:text-base font-semibold tracking-[0.14em] text-white uppercase mb-2">
                     {item.title}
                   </h3>
-                  <p className="font-sans text-xs text-white/75 font-light mb-3">
-                    {item.description}
-                  </p>
-                  <div className="w-10 h-px bg-gradient-to-r from-transparent via-[#E8A317] to-transparent mx-auto" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 max-w-[940px] mx-auto">
-            {attractionItems.slice(3, 5).map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={reduceMotion ? false : { opacity: 0, y: 32 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-8%' }}
-                transition={{
-                  duration: 0.7,
-                  delay: reduceMotion ? 0 : 0.15 + index * 0.1,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                whileHover={reduceMotion ? undefined : { y: -8 }}
-                className="relative h-[360px] sm:h-[440px] w-full rounded-sm overflow-hidden group border border-[#E5DECE] bg-white shadow-sm hover:shadow-[0_20px_44px_rgba(12,24,39,0.12)] transition-shadow"
-              >
-                <ParallaxImage
-                  src={item.image}
-                  alt={item.title}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="absolute inset-0"
-                  imageClassName="object-cover transition-transform duration-700 group-hover:scale-105"
-                  distance={40}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#070F1A]/90 via-[#070F1A]/35 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 text-center">
-                  <h3 className="font-sans text-sm sm:text-base font-semibold tracking-[0.16em] text-white uppercase mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="font-sans text-xs text-white/75 font-light mb-3">
+                  <p className="font-sans text-xs sm:text-[13px] text-white/80 font-light leading-relaxed mb-3">
                     {item.description}
                   </p>
                   <div className="w-10 h-px bg-gradient-to-r from-transparent via-[#E8A317] to-transparent mx-auto" />

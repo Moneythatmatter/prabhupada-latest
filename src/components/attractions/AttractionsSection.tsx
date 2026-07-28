@@ -15,24 +15,7 @@ import {
 } from '@/components/patachitra/PatachitraMotifs';
 import { ParallaxImage } from '@/components/motion/ParallaxImage';
 import { FadeRise } from '@/hooks/useParallax';
-
-const attractions = [
-  {
-    title: 'Shree Jagannatha Temple Puri',
-    description: 'The world-famous sacred heritage temple located near Hotel Prabhupada in the heart of Puri.',
-    image: '/images/attraction-jagannath.jpg',
-  },
-  {
-    title: 'Swargadwar Sea Beach & Shopping',
-    description: 'Vibrant golden beach waves and famous coastal shopping markets within walking distance.',
-    image: '/images/attraction-swargadwar.jpg',
-  },
-  {
-    title: 'Konark Sun Temple & Heritage',
-    description: 'Iconic 13th-century UNESCO World Heritage monument architectural wonder nearby.',
-    image: '/images/attraction-konark.jpg',
-  },
-];
+import { featuredAttractions } from '@/data/attractions';
 
 export const AttractionsSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -71,7 +54,7 @@ export const AttractionsSection: React.FC = () => {
         </FadeRise>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
-          {attractions.map((item, index) => (
+          {featuredAttractions.map((item, index) => (
             <motion.div
               key={item.title}
               initial={reduceMotion ? false : { opacity: 0, y: 32 }}

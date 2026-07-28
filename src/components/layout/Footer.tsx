@@ -13,6 +13,20 @@ export const Footer: React.FC = () => {
         aria-hidden
         className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[520px] h-[220px] rounded-full bg-[#C5A059]/08 blur-3xl"
       />
+      {/* Half mandala — bottom center, flat edge on bottom */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-0 left-1/2 z-0 w-[420px] h-[210px] sm:w-[640px] sm:h-[320px] md:w-[820px] md:h-[410px] -translate-x-1/2"
+      >
+        <Image
+          src="/images/footer-mandala-half.png"
+          alt=""
+          fill
+          sizes="(max-width: 640px) 420px, (max-width: 768px) 640px, 820px"
+          className="object-contain object-bottom opacity-[0.05] sm:opacity-[0.06]"
+          unoptimized
+        />
+      </div>
       <div className="max-w-[1320px] mx-auto px-4 sm:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 pb-10 sm:pb-16 border-b border-[#C5A059]/20">
           <FadeRise className="lg:col-span-4">
@@ -63,6 +77,11 @@ export const Footer: React.FC = () => {
               <li>
                 <Link href="/gallery" className="hover:text-[#C5A059] transition-colors">
                   Photo Gallery
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-[#C5A059] transition-colors">
+                  Blog
                 </Link>
               </li>
               <li>

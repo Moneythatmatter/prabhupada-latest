@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   motion,
   useScroll,
@@ -80,17 +81,42 @@ export const RoomsSection: React.FC = () => {
       ref={sectionRef}
       className="py-14 sm:py-20 md:py-36 bg-[#070F1A] text-white relative overflow-hidden"
     >
+      {/* Gold corner ornaments — same asset, flipped per corner */}
+      {(
+        [
+          { pos: 'top-0 left-0', flip: '-scale-x-100', anchor: 'object-top-right' },
+          { pos: 'top-0 right-0', flip: '', anchor: 'object-top-right' },
+          { pos: 'bottom-0 left-0', flip: '-scale-x-100 -scale-y-100', anchor: 'object-top-right' },
+          { pos: 'bottom-0 right-0', flip: '-scale-y-100', anchor: 'object-top-right' },
+        ] as const
+      ).map(({ pos, flip, anchor }) => (
+        <div
+          key={pos}
+          aria-hidden
+          className={`pointer-events-none absolute ${pos} z-0 w-[140px] h-[140px] sm:w-[200px] sm:h-[200px] md:w-[260px] md:h-[260px] ${flip}`}
+        >
+          <Image
+            src="/images/rooms-corner-ornament-v2.png"
+            alt=""
+            fill
+            sizes="(max-width: 640px) 140px, (max-width: 768px) 200px, 260px"
+            className={`object-contain ${anchor} opacity-40 sm:opacity-50`}
+            unoptimized
+          />
+        </div>
+      ))}
+
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute top-1/4 -left-32 w-[420px] h-[420px] rounded-full bg-[#C5A059]/08 blur-3xl will-change-transform"
+        className="pointer-events-none absolute top-1/4 -left-32 w-[420px] h-[420px] rounded-full bg-[#C5A059]/08 blur-3xl will-change-transform z-0"
         style={{ y: glowY }}
       />
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 right-0 w-[360px] h-[360px] rounded-full bg-[#C0392B]/07 blur-3xl will-change-transform"
+        className="pointer-events-none absolute bottom-0 right-0 w-[360px] h-[360px] rounded-full bg-[#C0392B]/07 blur-3xl will-change-transform z-0"
         style={{ y: glowYAlt }}
       />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#C5A059]/40 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#C5A059]/40 to-transparent z-0" />
 
       <div className="max-w-[1320px] mx-auto px-4 sm:px-8 relative z-10">
         <FadeRise className="text-center max-w-[800px] mx-auto mb-10 sm:mb-20">

@@ -197,13 +197,13 @@ export const AboutClient: React.FC = () => {
                   className="bg-[#FAF8F5] p-8 md:p-10 rounded-[20px] border border-[#E5DECE] hover:border-[#E8A317] shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between h-full group"
                 >
                   <div>
-                    <div className="w-14 h-14 rounded-xl bg-[#E8A317]/10 group-hover:bg-[#161616] flex items-center justify-center mb-6 transition-colors duration-300">
+                    <div className="w-14 h-14 mx-auto rounded-xl bg-[#E8A317]/10 group-hover:bg-[#161616] flex items-center justify-center mb-6 transition-colors duration-300">
                       <IconComponent className="w-7 h-7 text-[#E8A317] transition-colors duration-300" />
                     </div>
-                    <h3 className="font-serif text-2xl font-medium text-[#161616] mb-3">
+                    <h3 className="font-serif text-2xl font-bold text-[#161616] mb-3 text-center">
                       {card.title}
                     </h3>
-                    <p className="font-sans text-sm text-[#6B6B6B] font-light leading-relaxed">
+                    <p className="font-sans text-sm text-[#6B6B6B] font-light leading-relaxed text-center">
                       {card.description}
                     </p>
                   </div>

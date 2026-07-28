@@ -106,7 +106,7 @@ export const AmenitiesSection: React.FC = () => {
       <div className="max-w-[1320px] mx-auto px-4 sm:px-8 relative z-10">
         <FadeRise className="text-center max-w-[800px] mx-auto mb-10 sm:mb-16">
           <span className="inline-block font-sans text-[10px] sm:text-xs font-semibold tracking-[0.22em] sm:tracking-[0.28em] uppercase text-[#8B1E1E] mb-2 sm:mb-3">
-            Hotel Facilities & Comforts
+            Hotel Comforts
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-[#0C1827] tracking-tight leading-[1.12]">
             Amenities

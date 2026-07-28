@@ -27,6 +27,7 @@ export const Header: React.FC = () => {
   }, []);
 
   const moreLinks = [
+    { name: 'BLOG', href: '/blog' },
     { name: 'PRIVACY POLICY', href: '/privacy-policy' },
     { name: 'REFUND POLICY', href: '/refund-policy' },
     { name: 'HOTEL POLICY', href: '/hotel-policy' },
@@ -128,6 +129,16 @@ export const Header: React.FC = () => {
                   }`}
                 >
                   GALLERY
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className={`font-sans text-[13px] font-semibold tracking-[0.16em] uppercase py-2 transition-colors duration-300 ${
+                    pathname.startsWith('/blog') ? 'text-[#C5A059]' : 'text-white hover:text-[#C5A059]'
+                  }`}
+                >
+                  BLOG
                 </Link>
               </li>
 
@@ -304,6 +315,17 @@ export const Header: React.FC = () => {
                       }`}
                     >
                       GALLERY
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/blog"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`font-sans text-sm font-semibold tracking-widest uppercase block ${
+                        pathname.startsWith('/blog') ? 'text-[#C5A059]' : 'text-white hover:text-[#C5A059]'
+                      }`}
+                    >
+                      BLOG
                     </Link>
                   </li>
 
