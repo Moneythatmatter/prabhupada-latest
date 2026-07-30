@@ -31,7 +31,7 @@ const roomsData = [
     badgeTitle: 'FAMILY QUAD SHARING',
     description:
       "At Hotel Prabhupada, we pride ourselves on offering a home away from home. Our Family Quad Sharing are thoughtfully designed to meet your needs, whether you're visiting for business or pleasure. Each room comes with top-tier amenities, including a comfortable bed, an en-suite bathroom, and a well-lit desk area. Enjoy 24-hour room service and personalized attention for a seamless stay.",
-    image: '/images/official-about.jpg',
+    image: '/images/roomImage.png',
     bookingUrl:
       'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
     features: ['Quad Sharing Setup', 'En-Suite Bathroom', '24-Hour Room Service', 'Well-Lit Desk Area', 'Free High-Speed Wi-Fi'],
@@ -42,7 +42,7 @@ const roomsData = [
     badgeTitle: 'EXECUTIVE FRONT SEA FACING',
     description:
       'Designed as a sanctuary of peace and comfort, our Executive Front Sea Facing rooms feature elegant interiors, plush furnishings, and modern technology. Enjoy direct ocean views and true Odia hospitality for both short and extended stays.',
-    image: '/images/room-executive.jpg',
+    image: '/images/hero2.png',
     bookingUrl:
       'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
     features: ['Direct Ocean View', 'Plush Furnishings', 'Air Conditioning', 'Free High-Speed Wi-Fi', 'In-Room Entertainment'],
@@ -135,8 +135,8 @@ export const RoomsClient: React.FC = () => {
         overline="Accommodations"
         title="Rooms & Suites"
         subtitle="Comfortable accommodations designed for a relaxing stay at Hotel Prabhupada."
-        image="/images/room-superior-deluxe.jpg"
-        imageAlt="Hotel Prabhupada Rooms & Suites"
+        image="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=2000&q=80"
+        imageAlt="Hotel Prabhupada Luxury Rooms & Suites"
       />
 
       {/* 2. Room Listing Showcase */}

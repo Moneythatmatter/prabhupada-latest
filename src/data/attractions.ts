@@ -11,7 +11,7 @@ export const attractions: Attraction[] = [
     title: 'Shree Jagannatha Temple Puri',
     description:
       'The world-famous 12th-century sacred temple in the heart of Puri, a must-visit for every guest.',
-    image: '/images/attraction-jagannath.jpg',
+    image: '/images/jagannath-temple.png',
     featured: true,
   },
   {
@@ -25,14 +25,14 @@ export const attractions: Attraction[] = [
     title: 'Konark Sun Temple & Heritage',
     description:
       'Iconic 13th-century UNESCO World Heritage monument and architectural wonder nearby.',
-    image: '/images/attraction-konark.jpg',
+    image: '/images/konark2.png',
     featured: true,
   },
   {
     title: 'Chilika Lake',
     description:
       'Asia’s largest brackish lagoon — ideal for boat rides, birdwatching, and scenic day trips.',
-    image: '/images/attraction-chilika.jpg',
+    image: '/images/chillka-lake.jpg',
   },
   {
     title: 'Sudarshan Crafts Museum',
@@ -50,7 +50,7 @@ export const attractions: Attraction[] = [
     title: 'Bedi Hanuman',
     description:
       'Sacred Daria Hanuman temple by the sea, believed to guard Puri’s shore with divine protection.',
-    image: '/images/puri-golden-beach.png',
+    image: '/images/bedi-hanuman.png',
   },
   {
     title: 'Siddha Mahavir',
@@ -62,13 +62,13 @@ export const attractions: Attraction[] = [
     title: 'Om Kareswar Temple',
     description:
       'A peaceful local Shiva shrine near Puri, ideal for quiet darshan and spiritual reflection.',
-    image: '/images/attraction-jagannath.jpg',
+    image: '/images/omkareshwar.png',
   },
   {
     title: 'Blue Flag Beach',
     description:
       'A clean, eco-certified coastal stretch near Puri, perfect for a safe and refreshing beach outing.',
-    image: '/images/puri-golden-beach.png',
+    image: '/images/blue-flag.png',
   },
   {
     title: 'Gundicha Temple',
@@ -92,13 +92,13 @@ export const attractions: Attraction[] = [
     title: 'Pipli',
     description:
       'Colourful applique-work town famous for vibrant canopies, umbrellas, and traditional textile crafts.',
-    image: '/images/attraction-sudarshan.png',
+    image: '/images/pipli.png',
   },
   {
     title: 'Rama Chandi Temple',
     description:
       'Seaside temple of Goddess Ramachandi near the Konark coast, blending devotion with ocean views.',
-    image: '/images/puri-marine-drive.png',
+    image: '/images/ramachandi.png',
   },
 ];
 
