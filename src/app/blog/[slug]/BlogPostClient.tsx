@@ -1,9 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { CalendarDays, Clock3, ArrowLeft, User } from 'lucide-react';
+import { CalendarDays, Clock3, ArrowLeft, User, HelpCircle, ChevronDown } from 'lucide-react';
 import { FadeRise } from '@/hooks/useParallax';
 import {
   PatachitraBackdrop,
@@ -17,6 +17,45 @@ type BlogPostClientProps = {
 
 export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
   const related = blogs.filter((b) => b.slug !== post.slug).slice(0, 3);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const renderParagraph = (text: string, index: number) => {
+    // Section Heading (e.g. ## Heading)
+    if (text.startsWith('## ')) {
+      const title = text.replace(/^##\s+/, '');
+      return (
+        <div key={index} className="pt-8 pb-2 mt-8 border-t border-[#E5DECE]">
+          <h2 className="font-serif text-2xl sm:text-3xl text-[#0C1827] font-semibold flex items-center gap-3">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#E8A317] inline-block shrink-0" />
+            {title}
+          </h2>
+        </div>
+      );
+    }
+
+    // Numbered Fact Title (e.g. 1. Title)
+    const matchFact = text.match(/^(\d+)\.\s+(.*)$/);
+    if (matchFact) {
+      const num = matchFact[1].padStart(2, '0');
+      const title = matchFact[2];
+      return (
+        <div key={index} className="pt-6 pb-1">
+          <h3 className="font-serif text-xl sm:text-2xl text-[#0C1827] font-semibold flex items-start gap-3.5 leading-snug">
+            <span className="flex items-center justify-center min-w-[2.25rem] h-9 rounded-full bg-[#8B1E1E] text-white font-sans text-xs font-bold tracking-wider shrink-0 mt-0.5 shadow-sm">
+              {num}
+            </span>
+            <span className="pt-0.5 text-[#0C1827]">{title}</span>
+          </h3>
+        </div>
+      );
+    }
+
+    return (
+      <p key={index} className="text-[#475569] font-light leading-relaxed">
+        {text}
+      </p>
+    );
+  };
 
   return (
     <>
@@ -79,11 +118,53 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
 
           <FadeRise delay={0.12}>
             <div className="space-y-5 font-sans text-base sm:text-lg text-[#475569] font-light leading-relaxed">
-              {post.content.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+              {post.content.map((paragraph, index) => renderParagraph(paragraph, index))}
             </div>
           </FadeRise>
+
+          {post.faqs && post.faqs.length > 0 && (
+            <FadeRise delay={0.14} className="mt-12 sm:mt-16 pt-8 border-t border-[#E5DECE]">
+              <div className="mb-6">
+                <span className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-[#E8A317]">
+                  Got Questions?
+                </span>
+                <h2 className="font-serif text-2xl sm:text-3xl text-[#0C1827] font-normal mt-1">
+                  Frequently Asked Questions
+                </h2>
+              </div>
+              <div className="space-y-3">
+                {post.faqs.map((faq, idx) => {
+                  const isOpen = openFaq === idx;
+                  return (
+                    <div
+                      key={idx}
+                      className="border border-[#E5DECE] rounded-sm bg-[#FDFBF7] overflow-hidden transition-colors"
+                    >
+                      <button
+                        onClick={() => setOpenFaq(isOpen ? null : idx)}
+                        className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-serif text-base sm:text-lg text-[#0C1827] font-medium hover:text-[#8B1E1E] transition-colors"
+                      >
+                        <span className="flex items-center gap-3 pr-4">
+                          <HelpCircle className="w-5 h-5 text-[#E8A317] shrink-0" />
+                          {faq.question}
+                        </span>
+                        <ChevronDown
+                          className={`w-5 h-5 text-[#8B1E1E] shrink-0 transition-transform duration-300 ${
+                            isOpen ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                      {isOpen && (
+                        <div className="px-5 pb-5 pt-1 text-sm sm:text-base text-[#475569] leading-relaxed border-t border-[#E5DECE]/50 font-sans font-light bg-white/50">
+                          {faq.answer}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </FadeRise>
+          )}
 
           <FadeRise delay={0.15} className="mt-10 sm:mt-12 pt-8 border-t border-[#E5DECE]">
             <a
@@ -140,3 +221,4 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
     </>
   );
 };
+
