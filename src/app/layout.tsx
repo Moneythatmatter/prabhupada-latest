@@ -31,10 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased bg-[#070F1A] text-white overflow-x-hidden">
+    <html lang="en" className="w-full overflow-x-clip">
+      <body className="antialiased bg-[#070F1A] text-white w-full min-w-0 overflow-x-clip">
         <Header />
-        <main className="min-w-0">{children}</main>
+        <main className="w-full min-w-0 overflow-x-clip">{children}</main>
         <Footer />
       </body>
     </html>

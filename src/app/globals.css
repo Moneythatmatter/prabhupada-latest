@@ -27,6 +27,20 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+  top: 0 !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -44,17 +58,17 @@ html {
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  overflow-x: hidden;
-  max-width: 100vw;
+  top: 0px !important;
 }
 
 img,
 video,
 svg {
   max-width: 100%;
+}
+
+img:not([data-nimg]),
+video {
   height: auto;
 }
 
@@ -117,11 +131,6 @@ iframe.goog-te-banner-frame,
   height: 0px !important;
   font-size: 0px !important;
   overflow: hidden !important;
-}
-
-body {
-  top: 0px !important;
-  position: static !important;
 }
 
 .goog-tooltip,

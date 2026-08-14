@@ -26,6 +26,20 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setMobileMoreOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [mobileMenuOpen]);
+
   const moreLinks = [
     { name: 'BLOG', href: '/blog' },
     { name: 'PRIVACY POLICY', href: '/privacy-policy' },
@@ -39,9 +53,9 @@ export const Header: React.FC = () => {
   return (
     <>
       {/* Single fixed stack — TopBar + nav stay flush (no gap on scroll) */}
-      <div className="fixed top-0 left-0 w-full z-[1000] pt-[env(safe-area-inset-top)]">
+      <div className="fixed top-0 left-0 right-0 w-full z-[1000] pt-[env(safe-area-inset-top)]">
         <div
-          className={`hidden md:block overflow-hidden transition-[max-height,opacity,transform] duration-300 ease-out ${
+          className={`hidden xl:block overflow-hidden transition-[max-height,opacity,transform] duration-300 ease-out ${
             isScrolled
               ? 'max-h-0 opacity-0 -translate-y-1 pointer-events-none'
               : 'max-h-12 opacity-100 translate-y-0'
@@ -51,7 +65,7 @@ export const Header: React.FC = () => {
         </div>
 
         <header
-          className={`relative w-full transition-all duration-300 ease-out ${
+          className={`relative w-full min-w-0 transition-all duration-300 ease-out ${
             isScrolled
               ? 'bg-[#0C1827]/96 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.4)]'
               : 'bg-[#0C1827]/92 backdrop-blur-md sm:bg-[#0C1827] sm:backdrop-blur-none'
@@ -59,19 +73,19 @@ export const Header: React.FC = () => {
         >
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#C5A059]/50 to-transparent pointer-events-none" />
           <div
-            className={`max-w-[1360px] mx-auto px-3 sm:px-8 flex items-center justify-between gap-3 transition-all duration-300 ${
-              isScrolled ? 'h-[56px] sm:h-[76px]' : 'h-[58px] sm:h-[90px] md:h-[96px]'
+            className={`w-full max-w-[1360px] mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4 min-w-0 transition-all duration-300 ${
+              isScrolled ? 'h-[56px] sm:h-[72px]' : 'h-[60px] sm:h-[80px] xl:h-[96px]'
             }`}
           >
           
           {/* 1. Official Hotel Logo Container */}
           <Link href="/" className="flex items-center group py-1 h-full min-w-0 shrink">
-            <div className="relative h-10 w-[8.25rem] sm:h-12 sm:w-48 md:h-14 md:w-56">
+            <div className="relative h-9 w-[7.25rem] sm:h-12 sm:w-48 xl:h-14 xl:w-56 [&_img]:max-w-none">
               <Image
                 src="/logos/official-logo.png"
                 alt="Hotel Prabhupada Official Logo"
                 fill
-                sizes="(max-width: 640px) 132px, (max-width: 768px) 192px, 224px"
+                sizes="(max-width: 640px) 116px, (max-width: 1280px) 192px, 224px"
                 priority
                 className="object-contain object-left filter drop-shadow-md transition-transform duration-300 group-hover:scale-[1.02]"
               />
@@ -79,8 +93,8 @@ export const Header: React.FC = () => {
           </Link>
 
           {/* 2. Desktop Navigation Menu matching original website links */}
-          <nav className="hidden lg:flex items-center justify-center">
-            <ul className="flex items-center gap-7 lg:gap-8 list-none m-0 p-0">
+          <nav className="hidden xl:flex items-center justify-center min-w-0">
+            <ul className="flex items-center gap-5 xl:gap-7 list-none m-0 p-0">
               <li>
                 <Link
                   href="/"
@@ -197,23 +211,25 @@ export const Header: React.FC = () => {
           </nav>
 
           {/* 3. CTA Right */}
-          <div className="flex items-center gap-2 sm:gap-5 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
             <a
               href="https://live.ipms247.com/booking/book-rooms-hotelprabhupada"
               target="_blank"
               rel="noopener noreferrer"
-              className="header-book-btn inline-flex items-center justify-center font-sans text-[10px] sm:text-[12px] md:text-[13px] uppercase rounded-sm px-3.5 py-2 sm:px-7 sm:py-3"
+              className="header-book-btn inline-flex items-center justify-center whitespace-nowrap font-sans text-[10px] sm:text-[12px] xl:text-[13px] uppercase rounded-sm px-2.5 py-2 sm:px-6 sm:py-2.5 xl:px-7 xl:py-3"
             >
-              <span className="sm:hidden">Book Stay</span>
-              <span className="hidden sm:inline">Book Your Stay</span>
+              <span className="xl:hidden">Book Stay</span>
+              <span className="hidden xl:inline">Book Your Stay</span>
             </a>
 
             <button
+              type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="lg:hidden h-9 w-9 flex items-center justify-center text-white/90 hover:text-[#E8A317] transition-colors rounded-sm border border-white/12 bg-white/[0.04] focus:outline-none"
-              aria-label="Open Mobile Menu"
+              className="xl:hidden relative z-[1001] h-10 w-10 min-h-10 min-w-10 flex items-center justify-center text-[#E8A317] hover:text-white transition-colors rounded-sm border border-[#C5A059]/50 bg-white/[0.06] focus:outline-none shrink-0"
+              aria-label="Open menu"
+              aria-expanded={mobileMenuOpen}
             >
-              <Menu className="w-[18px] h-[18px]" strokeWidth={1.75} />
+              <Menu className="w-5 h-5" strokeWidth={2} />
             </button>
           </div>
         </div>
@@ -221,7 +237,7 @@ export const Header: React.FC = () => {
       </div>
 
       {/* Matches former in-flow TopBar height so page content isn't covered */}
-      <div className="hidden md:block h-10" aria-hidden />
+      <div className="hidden xl:block h-10" aria-hidden />
 
       {/* Mobile Drawer Overlay */}
       <AnimatePresence>
