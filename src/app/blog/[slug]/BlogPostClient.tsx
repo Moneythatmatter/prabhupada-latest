@@ -19,6 +19,61 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
   const related = blogs.filter((b) => b.slug !== post.slug).slice(0, 3);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
+  const renderFormattedText = (text: string) => {
+    const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const parts: React.ReactNode[] = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = regex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.substring(lastIndex, match.index));
+      }
+      const linkText = match[1];
+      let href = match[2];
+
+      if (href.includes('hotelprabhupada.com/attraction')) {
+        href = '/attractions';
+      } else if (href.includes('hotelprabhupada.com/rooms')) {
+        href = '/rooms';
+      } else if (href === 'https://www.hotelprabhupada.com/' || href === 'https://www.hotelprabhupada.com') {
+        href = '/';
+      }
+
+      const isInternal = href.startsWith('/');
+      if (isInternal) {
+        parts.push(
+          <Link
+            key={match.index}
+            href={href}
+            className="text-[#8B1E1E] font-medium underline underline-offset-4 decoration-[#8B1E1E]/40 hover:text-[#C0392B] hover:decoration-[#C0392B] transition-colors"
+          >
+            {linkText}
+          </Link>
+        );
+      } else {
+        parts.push(
+          <a
+            key={match.index}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#8B1E1E] font-medium underline underline-offset-4 decoration-[#8B1E1E]/40 hover:text-[#C0392B] hover:decoration-[#C0392B] transition-colors"
+          >
+            {linkText}
+          </a>
+        );
+      }
+      lastIndex = regex.lastIndex;
+    }
+
+    if (lastIndex < text.length) {
+      parts.push(text.substring(lastIndex));
+    }
+
+    return parts.length > 0 ? parts : text;
+  };
+
   const renderParagraph = (text: string, index: number) => {
     // Section Heading (e.g. ## Heading)
     if (text.startsWith('## ')) {
@@ -27,7 +82,7 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
         <div key={index} className="pt-8 pb-2 mt-8 border-t border-[#E5DECE]">
           <h2 className="font-serif text-2xl sm:text-3xl text-[#0C1827] font-semibold flex items-center gap-3">
             <span className="w-2.5 h-2.5 rounded-full bg-[#E8A317] inline-block shrink-0" />
-            {title}
+            {renderFormattedText(title)}
           </h2>
         </div>
       );
@@ -44,7 +99,7 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
             <span className="flex items-center justify-center min-w-[2.25rem] h-9 rounded-full bg-[#8B1E1E] text-white font-sans text-xs font-bold tracking-wider shrink-0 mt-0.5 shadow-sm">
               {num}
             </span>
-            <span className="pt-0.5 text-[#0C1827]">{title}</span>
+            <span className="pt-0.5 text-[#0C1827]">{renderFormattedText(title)}</span>
           </h3>
         </div>
       );
@@ -52,7 +107,7 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
 
     return (
       <p key={index} className="text-[#475569] font-light leading-relaxed">
-        {text}
+        {renderFormattedText(text)}
       </p>
     );
   };
