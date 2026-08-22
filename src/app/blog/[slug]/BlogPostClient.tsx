@@ -36,6 +36,8 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
         href = '/attractions';
       } else if (href.includes('hotelprabhupada.com/rooms')) {
         href = '/rooms';
+      } else if (href.includes('hotelprabhupada.com/contactus') || href.includes('hotelprabhupada.com/contact')) {
+        href = '/contact';
       } else if (href === 'https://www.hotelprabhupada.com/' || href === 'https://www.hotelprabhupada.com') {
         href = '/';
       }
@@ -88,6 +90,19 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
       );
     }
 
+    // Bullet points (e.g. - Item or • Item)
+    if (text.startsWith('- ') || text.startsWith('• ')) {
+      const bulletText = text.replace(/^[-•]\s+/, '');
+      return (
+        <div key={index} className="flex items-start gap-3 pl-2 sm:pl-4 py-1">
+          <span className="w-2 h-2 rounded-full bg-[#8B1E1E] mt-2.5 shrink-0" />
+          <span className="text-[#475569] font-light leading-relaxed flex-1">
+            {renderFormattedText(bulletText)}
+          </span>
+        </div>
+      );
+    }
+
     // Numbered Fact Title (e.g. 1. Title)
     const matchFact = text.match(/^(\d+)\.\s+(.*)$/);
     if (matchFact) {
@@ -114,7 +129,7 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
 
   return (
     <>
-      <section className="relative h-[42vh] min-h-[320px] max-h-[480px] w-full flex items-end justify-center bg-[#070F1A] overflow-hidden pt-16 sm:pt-20">
+      <section className="relative min-h-[460px] md:min-h-[520px] w-full flex items-center justify-center bg-[#070F1A] overflow-hidden pt-36 sm:pt-40 md:pt-48 pb-14 sm:pb-16 md:pb-20">
         <Image
           src={post.image}
           alt={post.title}
@@ -123,18 +138,18 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[#070F1A]/45" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#070F1A] via-[#070F1A]/50 to-[#070F1A]/40" />
+        <div className="absolute inset-0 bg-[#070F1A]/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#070F1A] via-[#070F1A]/60 to-[#070F1A]/40" />
 
-        <div className="relative z-10 w-full max-w-[900px] mx-auto px-5 sm:px-8 pb-10 sm:pb-14 text-center text-white">
+        <div className="relative z-10 w-full max-w-[960px] mx-auto px-5 sm:px-8 text-center text-white">
           <FadeRise>
-            <span className="inline-block font-sans text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-[#E8A317] mb-3">
+            <span className="inline-block font-sans text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-[#E8A317] mb-3 sm:mb-4">
               {post.category}
             </span>
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight leading-[1.2] [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]">
+            <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.25] [text-shadow:0_2px_24px_rgba(0,0,0,0.5)]">
               {post.title}
             </h1>
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm text-white/80 font-sans">
+            <div className="mt-5 sm:mt-6 flex flex-wrap items-center justify-center gap-3.5 sm:gap-5 text-xs sm:text-sm text-white/80 font-sans">
               <span className="inline-flex items-center gap-1.5">
                 <User className="w-3.5 h-3.5 text-[#E8A317]" />
                 {post.author}

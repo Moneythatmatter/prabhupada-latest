@@ -20,6 +20,100 @@ export type BlogPost = {
 /** Hotel Prabhupada blog posts — travel, stay tips & Puri heritage */
 export const blogs: BlogPost[] = [
   {
+    slug: 'jhulana-jatra-in-puri-festival-guide',
+    title: 'Jhulana Jatra in Puri: Complete Festival Guide & Why Hotel Prabhupada Is a Convenient Stay for Devotees',
+    excerpt:
+      'Late August in Puri has its own particular character. Discover everything about Jhulana Jatra Puri — festival dates, swing rituals, practical tips, and why Hotel Prabhupada offers a convenient stay for devotees.',
+    content: [
+      'Late August in Puri has its own particular character. The monsoon has settled into a steady, gentle rhythm, the sea turns a deeper grey-green, and inside the Jagannath Temple, a quieter festival than most visitors expect is unfolding each evening. This is Jhulana Jatra — the swing festival of Lord Jagannath — and for many devotees, it’s one of the most peaceful and moving times to be in Puri.',
+      'This guide covers everything you need to know about Jhulana Jatra Puri: what it is, when it falls in 2026, how to plan around it, and why a hotel near Jagannath Temple Puri like [Hotel Prabhupada](https://www.hotelprabhupada.com/) makes the logistics of a festival visit considerably easier.',
+      '## What Is Jhulana Jatra in Puri?',
+      'Jhulana Jatra, also spelled Jhulan Yatra Puri, is a seven-day swing festival dedicated to Lord Jagannath, celebrated from Shravana Shukla Dashami through Pratipada, culminating on Shravan Purnima (also called Gamha Purnima). In 2026, Jhulana Jatra Puri dates run from August 22 to August 28.',
+      'Each evening during the festival, the utsav vighraha — the smaller festival representations of the deities, led by Sri Madanmohan as Lord Jagannath’s representative form, alongside Goddess Lakshmi and Vishwadhatri — are placed on an elaborately decorated wooden swing at the temple’s Muktimandap. Devotees gather to sing devotional songs, offer flowers, and gently push the swing, an act considered a deeply personal form of seva during the monsoon season, when the divine is believed to descend to enjoy the cool of the rains.',
+      'Unlike Rath Yatra, there are no chariots and no processions through the streets. The significance of Jhulana Jatra Puri lies in its intimacy — smaller crowds, quieter evenings, and an atmosphere built around devotion rather than spectacle. For pilgrims who’ve experienced the intensity of Rath Yatra, Jhulana Jatra often feels like the temple’s gentler, more contemplative side.',
+      '## How to Celebrate Jhulana Jatra in Puri',
+      'If you are planning to celebrate Jhulana Jatra in Puri as a visiting devotee, a few things shape how the days typically unfold:',
+      '- Evening darshan is the heart of the festival. The swing rituals take place after sunset, so most of the meaningful activity happens in the evening rather than the morning.',
+      '- Each day brings a slightly different observance, with the deities’ attire and decorations changed daily across the seven days.',
+      '- The festival closes on Shravan Purnima, the full moon day, which draws the largest crowds of the week as the swing rituals reach their conclusion.',
+      '- Prasad and temple offerings are an important part of the days surrounding the festival, and Anand Bazar near the temple remains the place to experience Mahaprasad.',
+      'For first-time visitors, the easiest way to experience Jhulana Jatra is to attend at least two or three consecutive evenings rather than a single visit — the festival’s rhythm is easier to appreciate once you’ve seen how each evening builds toward Purnima.',
+      '## Things to Know About Jhulana Jatra in Puri Before You Go',
+      'A few practical points that make a real difference for anyone planning a Puri trip around this festival:',
+      '- Puri gets noticeably busier in the days leading up to Purnima, so hotels near Jagannath Temple Puri should be booked well ahead rather than closer to the date.',
+      '- Dress and entry rules remain the same as any other temple visit — modest, traditional clothing, and no phones, cameras, or leather items inside the temple.',
+      '- The monsoon is still active through late August, so packing for rain and humidity is worth doing even if the days themselves are pleasant.',
+      '- Entry to the temple’s inner sanctum is restricted to Hindus, as with all darshan at the Jagannath Temple, though the town’s festival atmosphere is something every visitor can take part in from outside.',
+      '## Where to Stay in Puri During Jhulana Jatra',
+      'Because the festival’s key rituals happen in the evening, where you stay affects your entire experience of Jhulana Jatra far more than it would for a typical sightseeing trip. The best hotel in Puri for Jhulana Jatra is one that lets you walk to evening darshan without navigating festival-week traffic, and that gives you a genuinely restful place to return to afterward.',
+      'This is where [Hotel Prabhupada](https://www.hotelprabhupada.com/contactus.html) fits naturally into a devotee’s plans. Located close to the Jagannath Temple, it’s built with pilgrims and festival visitors specifically in mind rather than functioning as a general tourist hotel that happens to be nearby.',
+      'A few reasons [Hotel Prabhupada](https://www.hotelprabhupada.com/attraction.html) works well as a convenient hotel in Puri for devotees during Jhulana Jatra:',
+      '- Proximity to the temple, making evening darshan a short, manageable walk rather than a logistical challenge.',
+      '- Sea-facing rooms, offering a calm view of the Bay of Bengal after long days spent at the temple.',
+      '- A pool and spa, along with steam service, giving devotees a genuine way to rest and recover between darshan visits — particularly valuable during a physically demanding festival week.',
+      '- Complimentary breakfast, one less thing to plan around a schedule already built around evening rituals.',
+      '- Pet-friendly stays, useful for families who travel with pets and don’t want to leave them behind for a multi-day festival visit.',
+      'For pilgrims comparing hotels in Puri for Jhulana Jatra, this combination of location and genuine comfort is what separates a hotel that simply houses you for the night from one that actually supports the rhythm of a festival visit — early rest, evening darshan, and real recovery in between.',
+      '## Places to Visit in Puri During Jhulana Jatra',
+      'While the temple is naturally the center of a Jhulana Jatra visit, Puri has plenty to fill the daylight hours before evening darshan:',
+      '- Puri Beach, a short stretch from the temple, is quieter and moodier during monsoon season and worth an early morning walk.',
+      '- Anand Bazar, for Mahaprasad and a sense of the temple’s daily rhythm beyond the festival rituals themselves.',
+      '- Pipili, about 25 km away, known for its centuries-old applique craftwork, makes for an easy half-day outing.',
+      '## Planning Your Puri Trip for Jhulana Jatra 2026',
+      'A short checklist for anyone finalizing plans:',
+      '- Confirm dates — Jhulana Jatra Puri 2026 runs August 22 to August 28.',
+      '- Book a hotel near Jagannath Temple Puri well in advance, since rooms near the temple fill quickly in festival week.',
+      '- Plan your days around evening darshan rather than morning visits.',
+      '- Pack for monsoon conditions — light rain gear alongside temple-appropriate clothing.',
+      '- Set aside at least two to three evenings at the temple to properly experience the festival’s arc toward Purnima.',
+      '## Final Thoughts',
+      'Jhulana Jatra doesn’t have the scale of Rath Yatra, but for many devotees, that’s exactly its draw — a quieter, more devotional week centered on evenings at the temple rather than crowds in the streets. Planning around it properly, with a comfortable and conveniently located stay like [Hotel Prabhupada](https://www.hotelprabhupada.com/contactus.html), means those evenings can be about the festival itself rather than logistics.',
+    ],
+    faqs: [
+      {
+        question: 'What is Jhulana Jatra in Puri?',
+        answer:
+          'Jhulana Jatra is the seven-day swing festival of Lord Jagannath, where the festival deities are placed on a decorated swing each evening at the temple’s Muktimandap, culminating on Shravan Purnima.',
+      },
+      {
+        question: 'What are the Jhulana Jatra Puri dates for 2026?',
+        answer:
+          'Jhulana Jatra Puri 2026 runs from August 22 to August 28, ending on Shravan Purnima.',
+      },
+      {
+        question: 'Is Jhulana Jatra as crowded as Rath Yatra?',
+        answer:
+          'No. Jhulana Jatra draws devotees but is far more intimate than Rath Yatra, with no chariots or street processions — the focus is on evening darshan at the temple itself.',
+      },
+      {
+        question: 'Where should I stay in Puri during Jhulana Jatra?',
+        answer:
+          'A hotel near Jagannath Temple Puri makes evening darshan far easier to manage. Hotel Prabhupada, close to the temple with sea-facing rooms, is a convenient option for devotees visiting for the festival.',
+      },
+      {
+        question: 'Is Hotel Prabhupada suitable for families visiting for the festival?',
+        answer:
+          'Yes. With sea-facing rooms, a pool and spa, complimentary breakfast, and pet-friendly stays, Hotel Prabhupada works well for families attending Jhulana Jatra together.',
+      },
+      {
+        question: 'Do I need to book hotels in Puri in advance for Jhulana Jatra?',
+        answer:
+          'Yes. Hotels near the temple fill up in the days leading up to Purnima, so booking several weeks ahead is recommended.',
+      },
+      {
+        question: 'What else can I do in Puri during Jhulana Jatra besides temple visits?',
+        answer:
+          'Puri Beach, Anand Bazar, Pipili’s applique craft villages, and the Konark Sun Temple are all worth visiting during the daylight hours before evening darshan begins.',
+      },
+    ],
+    date: '2026-08-22',
+    author: 'Hotel Prabhupada',
+    category: 'Heritage',
+    image: '/images/attraction-jagannath.jpg',
+    readTime: '5 min read',
+    featured: true,
+  },
+  {
     slug: 'where-to-stay-in-puri-near-jagannath-temple',
     title: 'Where to Stay in Puri Near Jagannath Temple: What Travellers Should Consider',
     excerpt:
