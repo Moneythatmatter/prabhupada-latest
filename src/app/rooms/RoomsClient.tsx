@@ -142,7 +142,7 @@ export const RoomsClient: React.FC = () => {
       {/* 2. Room Listing Showcase */}
       <section className="py-28 lg:py-32 text-[#070F1A] relative overflow-hidden">
         <PatachitraBackdrop />
-        <div className="max-w-[1320px] mx-auto px-8 relative z-10">
+        <div className="max-w-[1320px] mx-auto px-4 sm:px-8 relative z-10">
           <FadeRise className="text-center max-w-[700px] mx-auto mb-20">
             <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#E8A317] mb-3">
               Luxury Accommodations

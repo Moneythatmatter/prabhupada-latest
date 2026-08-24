@@ -119,7 +119,7 @@ export const AboutClient: React.FC = () => {
               </div>
 
               {/* Overlapping Floating Badge */}
-              <div className="absolute -bottom-6 -right-2 md:right-8 bg-[#161616] text-white p-6 sm:p-7 rounded-[20px] shadow-2xl border border-[#E8A317]/40 backdrop-blur-md">
+              <div className="absolute -bottom-6 right-2 sm:right-4 md:right-8 bg-[#161616] text-white p-6 sm:p-7 rounded-[20px] shadow-2xl border border-[#E8A317]/40 backdrop-blur-md">
                 <div className="flex items-center gap-2 mb-1 text-[#E8A317]">
                   <Sparkles className="w-4 h-4" />
                   <span className="font-serif text-2xl sm:text-3xl font-normal">
@@ -172,8 +172,8 @@ export const AboutClient: React.FC = () => {
       </section>
 
       {/* 3. Why Choose Us (Authentic Features) */}
-      <section className="py-28 lg:py-32 bg-white border-t border-[#E5DECE] text-[#070F1A]">
-        <div className="max-w-[1320px] mx-auto px-8">
+      <section className="py-28 lg:py-32 bg-white border-t border-[#E5DECE] text-[#070F1A] overflow-hidden">
+        <div className="max-w-[1320px] mx-auto px-4 sm:px-8">
           <div className="text-center max-w-[700px] mx-auto mb-20">
             <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#E8A317] mb-3">
               Guest Value & Comfort
@@ -215,8 +215,8 @@ export const AboutClient: React.FC = () => {
       </section>
 
       {/* 4. Authentic Nearby Attractions (With Explicit View on Maps Button) */}
-      <section className="py-28 lg:py-32 bg-[#FAF8F5] border-t border-[#E5DECE] text-[#070F1A]">
-        <div className="max-w-[1320px] mx-auto px-8">
+      <section className="py-28 lg:py-32 bg-[#FAF8F5] border-t border-[#E5DECE] text-[#070F1A] overflow-hidden">
+        <div className="max-w-[1320px] mx-auto px-4 sm:px-8">
           <div className="text-center max-w-[700px] mx-auto mb-20">
             <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#E8A317] mb-3">
               Explore Puri Heritage
@@ -276,8 +276,8 @@ export const AboutClient: React.FC = () => {
       </section>
 
       {/* 5. Authentic Contact Information Section */}
-      <section className="py-28 lg:py-32 bg-white border-t border-[#E5DECE] text-[#070F1A]">
-        <div className="max-w-[1320px] mx-auto px-8">
+      <section className="py-28 lg:py-32 bg-white border-t border-[#E5DECE] text-[#070F1A] overflow-hidden">
+        <div className="max-w-[1320px] mx-auto px-4 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Column: Authentic Contact Info */}
             <motion.div

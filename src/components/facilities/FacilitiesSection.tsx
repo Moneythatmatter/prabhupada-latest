@@ -227,20 +227,20 @@ export const FacilitiesSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-14 sm:py-20 md:py-28 text-[#1E293B] relative border-b border-[#8B1E1E]/10"
+      className="py-14 sm:py-20 md:py-28 text-[#1E293B] relative border-b border-[#8B1E1E]/10 overflow-x-clip"
     >
       <PatachitraBackdrop />
 
-      <motion.div
-        aria-hidden
-        className="pointer-events-none absolute top-24 -left-28 w-[360px] h-[360px] rounded-full bg-[#C5A059]/12 blur-3xl will-change-transform"
-        style={{ y: blobY }}
-      />
-      <motion.div
-        aria-hidden
-        className="pointer-events-none absolute bottom-32 -right-24 w-[400px] h-[400px] rounded-full bg-[#C0392B]/08 blur-3xl will-change-transform"
-        style={{ y: blobYAlt }}
-      />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
+        <motion.div
+          className="pointer-events-none absolute top-24 -left-28 w-[360px] h-[360px] rounded-full bg-[#C5A059]/12 blur-3xl will-change-transform"
+          style={{ y: blobY }}
+        />
+        <motion.div
+          className="pointer-events-none absolute bottom-32 -right-24 w-[400px] h-[400px] rounded-full bg-[#C0392B]/08 blur-3xl will-change-transform"
+          style={{ y: blobYAlt }}
+        />
+      </div>
 
       <div className="max-w-[1320px] mx-auto px-4 sm:px-8 relative z-10">
         <FadeRise className="text-center max-w-[720px] mx-auto mb-10 sm:mb-14">

@@ -34,9 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased bg-[#070F1A] text-white overflow-x-hidden">
+      <body className="antialiased bg-[#070F1A] text-white overflow-x-hidden w-full max-w-full relative">
         <Header />
-        <main className="min-w-0">{children}</main>
+        <main className="min-w-0 w-full overflow-x-hidden">{children}</main>
         <Footer />
         <Chatbot />
         <WhatsAppButton />
