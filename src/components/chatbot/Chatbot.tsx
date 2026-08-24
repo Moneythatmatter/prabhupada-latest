@@ -165,8 +165,8 @@ export const Chatbot: React.FC = () => {
 
   return (
     <>
-      {/* 1. Floating Chat Trigger Button */}
-      <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-[999] flex flex-col items-end">
+      {/* 1. Floating Chat Trigger Button (Stacked above WhatsApp) */}
+      <div className="fixed bottom-20 right-5 sm:bottom-22 sm:right-6 z-[999] flex flex-col items-end">
         {/* Floating helper nudge bubble when chat hasn't been opened */}
         {!isOpen && !hasInteracted && (
           <motion.div
@@ -189,14 +189,13 @@ export const Chatbot: React.FC = () => {
           aria-label={isOpen ? 'Close chat' : 'Open hotel assistant chat'}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className={`relative w-13 h-13 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.6)] transition-all duration-300 border ${
-            isOpen
-              ? 'bg-[#0C1827] text-white border-[#C5A059]'
-              : 'bg-gradient-to-br from-[#D4AF61] via-[#C5A059] to-[#8B1E1E] text-white border-[#E8A317]/60 hover:shadow-[0_12px_35px_rgba(197,160,89,0.4)]'
-          }`}
+          className={`cursor-pointer relative w-13 h-13 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.6)] transition-all duration-300 border ${isOpen
+              ? 'bg-[#0C1827] text-white border-[#f46429]'
+              : 'bg-[#f46429] text-white border-white/20 hover:bg-[#e05318] shadow-[0_10px_25px_rgba(244,100,41,0.4)] hover:shadow-[0_12px_30px_rgba(244,100,41,0.6)]'
+            }`}
         >
           {isOpen ? (
-            <X className="w-6 h-6 text-[#E8A317]" />
+            <X className="w-6 h-6 text-[#f46429]" />
           ) : (
             <>
               <MessageSquare className="w-6 h-6 text-white drop-shadow-sm" />
@@ -227,7 +226,7 @@ export const Chatbot: React.FC = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 25, scale: 0.95 }}
               transition={{ duration: 0.26, ease: [0.16, 1, 0.3, 1] }}
-              className="fixed z-[999] inset-x-3 bottom-20 top-auto sm:inset-auto sm:bottom-24 sm:right-6 w-auto sm:w-[410px] h-[78vh] sm:h-[580px] max-h-[640px] flex"
+              className="fixed z-[999] inset-x-3 bottom-20 top-auto sm:inset-auto sm:bottom-36 sm:right-6 w-auto sm:w-[410px] h-[78vh] sm:h-[580px] max-h-[640px] flex"
             >
               <ChatWindow
                 messages={messages}

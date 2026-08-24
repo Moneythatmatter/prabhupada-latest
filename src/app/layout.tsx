@@ -3,6 +3,7 @@ import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Chatbot } from '@/components/chatbot/Chatbot';
+import { WhatsAppButton } from '@/components/layout/WhatsAppButton';
 
 export const metadata: Metadata = {
   title: 'Best Pet Friendly Sea Facing Hotel in Puri Odisha | Hotel Prabhupada',
@@ -38,6 +39,7 @@ export default function RootLayout({
         <main className="min-w-0">{children}</main>
         <Footer />
         <Chatbot />
+        <WhatsAppButton />
       </body>
     </html>
   );
