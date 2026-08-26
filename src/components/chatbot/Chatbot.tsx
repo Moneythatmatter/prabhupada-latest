@@ -7,19 +7,19 @@ import { ChatWindow } from './ChatWindow';
 import { Message } from './ChatMessage';
 
 const SUGGESTED_QUESTIONS = [
-  'What rooms do you have?',
-  'What time is check-in and check-out?',
-  'Are pets allowed at the hotel?',
-  'Do you have a swimming pool?',
-  'Where is the hotel located?',
-  'What is the cancellation policy?',
+  'What room categories are available?',
+  'Tell me about the restaurant Oris',
+  'Does the hotel have sea-view rooms?',
+  'Where is Hotel Prabhupada located?',
+  'What facilities and amenities do you provide?',
+  'How can I contact reservation?',
 ];
 
 const INITIAL_MESSAGE: Message = {
   id: 'welcome-1',
   role: 'assistant',
   content:
-    "Hi! 👋 I'm the Hotel Prabhupada assistant. I can help you with rooms, amenities, dining, policies, facilities, and booking information. What would you like to know?",
+    "Hi! 👋 Welcome to **Hotel Prabhupada**, Puri. I'm here to assist you with room details, dining at Oris, hotel facilities, location, sightseeing assistance, and reservations. How can I help you today?",
   timestamp: 'Just now',
 };
 
