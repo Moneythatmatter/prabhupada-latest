@@ -27,6 +27,7 @@ export const Header: React.FC = () => {
   }, []);
 
   const moreLinks = [
+    { name: 'CAREERS', href: '/careers' },
     { name: 'BLOG', href: '/blog' },
     { name: 'PRIVACY POLICY', href: '/privacy-policy' },
     { name: 'REFUND POLICY', href: '/refund-policy' },

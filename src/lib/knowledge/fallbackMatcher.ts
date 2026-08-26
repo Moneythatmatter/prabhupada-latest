@@ -225,6 +225,28 @@ Hotel Prabhupada provides a travel desk and local assistance for:
 👉 [Book Online](${HOTEL_INFO.contact.directBookingUrl}) | [Contact Page](/contact)`;
   }
 
+  // 12. Careers & Job Openings
+  if (
+    q.includes('career') ||
+    q.includes('job') ||
+    q.includes('vacancy') ||
+    q.includes('vacancies') ||
+    q.includes('hiring') ||
+    q.includes('recruitment') ||
+    q.includes('work with us') ||
+    q.includes('apply')
+  ) {
+    return `**Careers at Hotel Prabhupada:**
+
+We are always looking for passionate hospitality professionals and enthusiastic freshers to join our team in Puri!
+
+- **Departments:** Front Office, Food & Beverage (Oris Restaurant), Housekeeping, Kitchen & Culinary, and Operations.
+- **How to apply:** Visit our [Careers Page](/careers) to submit your online application and upload your resume.
+- **Direct HR Email:** You can also email your CV directly to **gm@hotelprabhupada.com**.
+
+👉 [Explore Careers & Apply Online](/careers)`;
+  }
+
   // Default helpful response
   return `Thank you for contacting **Hotel Prabhupada**, Puri!
 
