@@ -8,7 +8,7 @@ Hotel Prabhupada
 
 Hotel Prabhupada is located at:
 
-New Marine Drive Road  
+ New Marine Drive Road  
  Baliapanda  
  Puri, Odisha 752001  
  India
@@ -53,7 +53,7 @@ The Premier Room may be suitable for:
 
 Room category: Premier Room
 
-Current room rate: Available through the latest Hotel Prabhupada booking information.
+Current Room rate: Available through the latest Hotel Prabhupada booking information.
 
 Maximum adult occupancy: To be updated by Hotel Prabhupada management.
 
@@ -1049,4 +1049,81 @@ Website:
 www.hotelprabhupada.com
 
 ---
+
+# **Testimonials**
+
+## **Guest Testimonials**
+
+Guest reviews and experiences help future travellers understand the comfort, hospitality, and services offered by Hotel Prabhupada.
+
+Hotel Prabhupada welcomes valuable feedback from guests regarding:
+
+* Room comfort, cleanliness, and amenities  
+* Hotel location and accessibility to Puri beach  
+* Restaurant and dining experience  
+* Staff hospitality and service quality  
+* Family and leisure stay experience  
+* Overall satisfaction during their visit
+
+The testimonial section features guest experiences and reviews to help visitors make informed booking decisions.
+
+Guests are encouraged to share their feedback and stay experiences with Hotel Prabhupada.
+
+---
+
+# **Pet Policy**
+
+## **Pet-Friendly Stay at Hotel Prabhupada**
+
+Hotel Prabhupada welcomes guests travelling with pets and aims to provide a comfortable stay experience for both guests and their pets.
+
+Guests travelling with pets are requested to contact the hotel before arrival to confirm availability and applicable conditions.
+
+The pet policy includes:
+
+* Pets are allowed with prior approval from hotel management  
+* Accepted types of pets: Dogs and cats (subject to hotel approval)  
+* Pet-friendly room availability: Subject to availability  
+* Applicable pet charges: Additional charges may apply  
+* Pet size restrictions: As per hotel guidelines  
+* Designated pet areas: As advised by hotel management  
+* Cleaning and maintenance requirements: Guests are responsible for maintaining cleanliness and following hotel guidelines  
+* Safety guidelines: Pet owners must ensure the safety and comfort of other guests, staff, and pets
+
+Hotel Prabhupada reserves the right to update pet-related guidelines according to operational requirements and guest safety standards.
+
+For detailed pet arrangements, guests should contact the hotel before check-in.
+
+---
+
+# **Careers**
+
+## **Career Opportunities at Hotel Prabhupada**
+
+Hotel Prabhupada provides opportunities for individuals interested in building a rewarding career in the hospitality industry.
+
+Career opportunities may be available in various departments, including:
+
+* Front Office  
+* Housekeeping  
+* Food and Beverage Service  
+* Kitchen Operations  
+* Guest Relations  
+* Travel Desk  
+* Administration  
+* Maintenance  
+* Other hospitality roles
+
+Hotel Prabhupada welcomes talented, dedicated, and service-oriented individuals who wish to grow in the hospitality sector.
+
+Candidates interested in joining Hotel Prabhupada can contact the hotel for information about current openings and application procedures.
+
+## **Career Information**
+
+* Current job openings: Contact hotel management for available positions  
+* Eligibility requirements: Based on role and experience  
+* Application process: Submit your resume through the official hotel communication channels  
+* Recruitment contact: Contact Hotel Prabhupada management for career opportunities
+
+Join Hotel Prabhupada and become a part of a team committed to providing excellent hospitality experiences to guests.
 
