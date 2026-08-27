@@ -20,6 +20,82 @@ export type BlogPost = {
 /** Hotel Prabhupada blog posts — travel, stay tips & Puri heritage */
 export const blogs: BlogPost[] = [
   {
+    slug: 'best-pet-friendly-hotels-in-puri-near-sea-beach',
+    title: 'Best Pet-Friendly Hotels in Puri Near the Sea Beach: What to Look for Before Booking',
+    excerpt:
+      'Travelling with a pet changes the way you plan a trip. Discover what makes a pet-friendly hotel near Puri beach actually work in practice, and what pet parents should check before booking.',
+    content: [
+      "Travelling with a pet changes the way you plan a trip. Suddenly the questions aren't just about the nearest temple or the best beach view — they're about whether the hotel actually welcomes your dog, whether the room set-up works for a pet, and whether the whole stay feels like a genuine option rather than something you had to negotiate your way into. For pet parents heading to Puri, this guide covers exactly what to check before booking, and what makes a pet-friendly hotel near Puri beach actually work in practice.",
+      '## What Makes a Hotel Genuinely Pet-Friendly, Not Just Pet-Tolerant',
+      'A genuinely pet-friendly hotel in Puri is one that welcomes pets as a standard part of its policy, not as an exception granted reluctantly at the front desk. The difference shows up in the details: clear pet policies stated upfront, staff who don\'t treat a traveling pet as an inconvenience, and rooms suited to actually having an animal in them for the length of a stay. Plenty of hotels will "allow" pets if asked directly, but that\'s a different experience from a property that\'s set up for it from the start.',
+      '## Why Location Near the Sea Beach Matters for Pet Owners',
+      'Hotels near Puri sea beach offer a specific advantage for pet owners: easy access to open outdoor space for walks, without needing to drive anywhere first. A pet cooped up in a hotel room after a long journey benefits enormously from a nearby stretch of beach for a morning or evening walk, and staying close to the coast means that\'s a five-minute stroll rather than a planned outing. For dogs especially, this kind of easy outdoor access does a lot to make a multi-day hotel stay feel less confined.',
+      '## What to Look for in a Pet-Friendly Hotel Near Puri Beach',
+      'A few specific things are worth checking before booking pet-friendly accommodation in Puri:',
+      '- A clearly stated pet policy, ideally confirmed directly with the hotel rather than assumed from a listing.',
+      '- Ground-floor or easily accessible rooms, which make it simpler to take a pet in and out for walks without navigating stairs or long hallways repeatedly.',
+      '- Proximity to outdoor space, whether that\'s the beach itself or hotel grounds where a pet can be walked comfortably.',
+      '- Reasonable expectations around noise and shared spaces, so both your pet and other guests have a comfortable stay.',
+      '- Staff who are used to pets on the property, since a team unfamiliar with hosting animals often creates friction that a well-prepared property simply doesn\'t.',
+      '## Pet-Friendly Hotels in Puri for Families',
+      'Families travelling with both children and a pet have a slightly longer checklist, since the hotel needs to work for everyone at once. A pet-friendly hotel in Puri for families ideally combines sea-facing or beach-adjacent rooms, enough space for a family to spread out comfortably, and amenities like a pool or breakfast service that make the stay easier to manage without constantly planning around the pet\'s needs. The goal is a hotel that doesn\'t feel like a compromise for any member of the trip, human or otherwise.',
+      '## Where Hotel Prabhupada Fits In',
+      '[Hotel Prabhupada](https://www.hotelprabhupada.com/index.html), located near Puri sea beach with sea-facing rooms, is a pet-friendly hotel in Puri built around exactly this kind of stay. Guests travelling with pets can walk them along the nearby coastline without needing transport, and the [hotel\'s sea-facing rooms](https://www.hotelprabhupada.com/rooms.html) give both families and their pets a comfortable base to return to after a day of sightseeing or temple visits.',
+      'A few features that make it a practical choice for pet owners specifically:',
+      '- Sea-facing rooms, putting the beach within easy walking distance for regular pet walks.',
+      '- A pool and spa with steam service, giving the human half of the trip a way to relax without needing to leave the property or the pet behind for long.',
+      '- Complimentary breakfast, simplifying the daily routine for families managing both children and a pet on a shared schedule.',
+      "- Proximity to the Jagannath Temple, useful for families combining a pilgrimage visit with a pet-friendly stay, since pets can't accompany guests into the temple itself but can comfortably wait back at a nearby, comfortable hotel.",
+      '## Where Can I Stay in Puri With My Pet?',
+      'The most reliable answer is a hotel that states its pet policy clearly, sits close to open outdoor space like the beach, and has rooms designed with enough flexibility for an animal to stay comfortably for several days. Confirming pet policy details directly with the hotel — size restrictions, additional charges if any, and which areas of the property pets can access — before booking avoids surprises at check-in and makes for a smoother stay for everyone.',
+      '## Final Thoughts',
+      '[Booking a pet-friendly hotel in Puri](https://www.hotelprabhupada.com/contactus.html) comes down to a short but important list: a real, clearly stated pet policy, proximity to outdoor space like the sea beach, and a team that treats a traveling pet as a normal part of hospitality rather than an exception. Get those right, and the trip works as well for your pet as it does for the rest of the family.',
+    ],
+    faqs: [
+      {
+        question: 'Are there pet-friendly hotels in Puri near the sea beach?',
+        answer:
+          'Yes. A number of hotels in Puri, including those close to the Jagannath Temple, allow pets and offer easy access to the beach for regular walks.',
+      },
+      {
+        question: 'What should I check before booking a pet-friendly hotel in Puri?',
+        answer:
+          'Confirm the hotel’s pet policy directly, check for ground-floor or accessible rooms, and look for proximity to outdoor space like the beach for daily walks.',
+      },
+      {
+        question: 'Is Hotel Prabhupada pet-friendly?',
+        answer:
+          'Yes. Hotel Prabhupada is a pet-friendly hotel near Puri Sea beach with sea-facing rooms, making it a practical choice for guests travelling with pets.',
+      },
+      {
+        question: 'Are pets allowed inside the Jagannath Temple?',
+        answer:
+          'No. Pets cannot accompany guests into the temple itself, so a comfortable, pet-friendly hotel nearby is the practical way to manage a temple visit alongside a pet-friendly stay.',
+      },
+      {
+        question: 'What makes a hotel good for families travelling with pets?',
+        answer:
+          'A combination of sea-facing or beach-adjacent rooms, enough space for the whole family, and amenities like a pool or breakfast service that reduce the need to plan every hour around the pet’s needs.',
+      },
+      {
+        question: 'Do pet-friendly hotels in Puri charge extra for pets?',
+        answer:
+          'This varies by property, so it’s worth confirming any additional charges or restrictions directly with the hotel before booking.',
+      },
+      {
+        question: 'Why does proximity to the beach matter for pet owners?',
+        answer:
+          'Being close to the sea beach means easy, frequent walks without needing transport, which matters a lot for dogs on a multi-day stay away from home.',
+      },
+    ],
+    date: '2026-08-27',
+    author: 'Hotel Prabhupada',
+    category: 'Hotel Stay',
+    image: '/images/official-hero2.jpg',
+    readTime: '5 min read',
+    featured: true,
+  },
+  {
     slug: 'jhulana-jatra-in-puri-festival-guide',
     title: 'Jhulana Jatra in Puri: Complete Festival Guide & Why Hotel Prabhupada Is a Convenient Stay for Devotees',
     excerpt:
