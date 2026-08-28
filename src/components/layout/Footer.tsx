@@ -3,8 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Mail, MapPin } from 'lucide-react';
-import { FadeRise } from '@/hooks/useParallax';
+import { Phone, Mail, MapPin, Building2 } from 'lucide-react';
 
 const FacebookIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
   <svg
@@ -61,7 +60,7 @@ export const Footer: React.FC = () => {
       </div>
       <div className="max-w-[1320px] mx-auto px-4 sm:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 pb-10 sm:pb-16 border-b border-[#C5A059]/20">
-          <FadeRise className="lg:col-span-4">
+          <div className="lg:col-span-4">
             <Link href="/" className="inline-block mb-5 sm:mb-6">
               <div className="relative h-12 w-48 sm:h-14 sm:w-56">
                 <Image
@@ -103,9 +102,9 @@ export const Footer: React.FC = () => {
                 </a>
               </div>
             </div>
-          </FadeRise>
+          </div>
 
-          <FadeRise delay={0.08} className="lg:col-span-3">
+          <div className="lg:col-span-3">
             <h4 className="font-serif text-xl font-normal text-[#E8A317] mb-6 tracking-wider uppercase">
               Quick Links
             </h4>
@@ -161,9 +160,9 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
             </ul>
-          </FadeRise>
+          </div>
 
-          <FadeRise delay={0.14} className="lg:col-span-2">
+          <div className="lg:col-span-2">
             <h4 className="font-serif text-xl font-normal text-[#E8A317] mb-6 tracking-wider uppercase">
               Hotel Policies
             </h4>
@@ -194,9 +193,9 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
             </ul>
-          </FadeRise>
+          </div>
 
-          <FadeRise delay={0.2} className="lg:col-span-3">
+          <div className="lg:col-span-3">
             <h4 className="font-serif text-xl font-normal text-[#E8A317] mb-6 tracking-wider uppercase">
               Get In Touch
             </h4>
@@ -228,33 +227,20 @@ export const Footer: React.FC = () => {
                 </div>
               </li>
             </ul>
-          </FadeRise>
+          </div>
         </div>
 
-        <FadeRise delay={0.1} className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-xs text-white/60 font-light">
-          <p>Hotel Prabhupada © . All rights reserved.</p>
-          <div className="flex items-center gap-5 text-white/75">
-            <a
-              href="https://www.facebook.com/share/1CwS7yEET7/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#E8A317] transition-colors flex items-center gap-1.5"
-            >
-              <FacebookIcon className="w-3.5 h-3.5 text-[#E8A317]" />
-              <span>Facebook</span>
-            </a>
-            <span className="text-white/25">•</span>
-            <a
-              href="https://www.instagram.com/hotelprabhupada"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#E8A317] transition-colors flex items-center gap-1.5"
-            >
-              <InstagramIcon className="w-3.5 h-3.5 text-[#E8A317]" />
-              <span>Instagram</span>
-            </a>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-xs text-white/60 font-light border-t border-white/5 mt-4 sm:mt-0">
+
+          <div className="flex items-center gap-1.5 text-white/70">
+            <span>Powered by</span>
+
+            <Building2 className="w-3.5 h-3.5 text-[#E8A317] shrink-0" />
+            <Link href="https://ritgb.com" target="_blank" rel="noopener noreferrer"> <span className="font-semibold text-white/85 tracking-wider">RITGB</span>
+            </Link>
           </div>
-        </FadeRise>
+          <p>Hotel Prabhupada © . All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );
