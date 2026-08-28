@@ -46,24 +46,26 @@ export async function POST(req: NextRequest) {
     const resumeFileName = (body.resumeFileName || 'Resume.pdf').trim();
 
     // Validation
-    if (!candidateName) {
+    if (!candidateName || candidateName.length < 2) {
       return NextResponse.json(
-        { error: 'Applicant name is required.' },
+        { error: 'Please enter a valid full name (at least 2 characters).' },
         { status: 400 }
       );
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!candidateEmail || !emailRegex.test(candidateEmail)) {
       return NextResponse.json(
-        { error: 'A valid email address is required.' },
+        { error: 'Please provide a valid email address (e.g. name@example.com).' },
         { status: 400 }
       );
     }
 
-    if (!candidatePhone) {
+    // Phone validation: no alphabets allowed, 10 digits only
+    const phoneDigits = candidatePhone.replace(/\D/g, '');
+    if (!candidatePhone || /[a-zA-Z]/.test(candidatePhone) || phoneDigits.length < 10 || phoneDigits.length > 10) {
       return NextResponse.json(
-        { error: 'Contact phone number is required.' },
+        { error: 'Please enter a valid phone number with 10 digits.' },
         { status: 400 }
       );
     }
@@ -176,9 +178,8 @@ export async function POST(req: NextRequest) {
                 </tr>
               </table>
 
-              ${
-                coverNote
-                  ? `
+              ${coverNote
+        ? `
               <!-- Cover Note -->
               <div style="margin-bottom: 24px;">
                 <p style="margin: 0 0 8px 0; color: #C5A059; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;">
@@ -189,8 +190,8 @@ export async function POST(req: NextRequest) {
                 </div>
               </div>
               `
-                  : ''
-              }
+        : ''
+      }
 
               <!-- Action Button -->
               <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">

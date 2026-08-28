@@ -29,17 +29,15 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
 
   return (
     <div
-      className={`flex items-start gap-2.5 my-3.5 transition-opacity duration-200 ${
-        isUser ? 'flex-row-reverse' : 'flex-row'
-      }`}
+      className={`flex items-start gap-2.5 my-3.5 transition-opacity duration-200 ${isUser ? 'flex-row-reverse' : 'flex-row'
+        }`}
     >
       {/* Avatar Icon */}
       <div
-        className={`w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-full flex items-center justify-center shrink-0 border overflow-hidden relative ${
-          isUser
+        className={`w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-full flex items-center justify-center shrink-0 border overflow-hidden relative ${isUser
             ? 'bg-gradient-to-br from-[#C5A059] to-[#8B1E1E] border-[#E8A317]/50 text-white shadow-md'
             : 'bg-[#0C1827] border-[#C5A059]/40 shadow-md'
-        }`}
+          }`}
       >
         {isUser ? (
           <User className="w-4 h-4 text-white" />
@@ -57,11 +55,10 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
 
       {/* Message Content Container */}
       <div
-        className={`relative max-w-[85%] sm:max-w-[78%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-lg ${
-          isUser
+        className={`relative max-w-[85%] sm:max-w-[78%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-lg ${isUser
             ? 'bg-gradient-to-r from-[#C5A059] to-[#B38E46] text-[#070F1A] font-medium rounded-tr-none'
             : 'bg-[#0C1827] text-white/90 border border-[#C5A059]/25 rounded-tl-none font-light'
-        }`}
+          }`}
       >
         {/* Render formatted message content */}
         <div className="space-y-1.5 break-words">
@@ -122,9 +119,8 @@ function formatMessageContent(content: string, isUser: boolean): React.ReactNode
       return (
         <div key={lineIdx} className="flex items-start gap-2 pl-1 my-0.5">
           <span
-            className={`w-1.5 h-1.5 rounded-full mt-2 shrink-0 ${
-              isUser ? 'bg-[#070F1A]' : 'bg-[#E8A317]'
-            }`}
+            className={`w-1.5 h-1.5 rounded-full mt-2 shrink-0 ${isUser ? 'bg-[#070F1A]' : 'bg-[#E8A317]'
+              }`}
           />
           <span className="flex-1">{renderInlineStyles(trimmed.slice(2), isUser)}</span>
         </div>
@@ -137,9 +133,8 @@ function formatMessageContent(content: string, isUser: boolean): React.ReactNode
       return (
         <div key={lineIdx} className="flex items-start gap-2 pl-1 my-0.5">
           <span
-            className={`font-semibold shrink-0 text-xs mt-0.5 ${
-              isUser ? 'text-[#070F1A]' : 'text-[#E8A317]'
-            }`}
+            className={`font-semibold shrink-0 text-xs mt-0.5 ${isUser ? 'text-[#070F1A]' : 'text-[#E8A317]'
+              }`}
           >
             {numMatch[1]}.
           </span>
@@ -183,11 +178,10 @@ function renderInlineStyles(text: string, isUser: boolean): React.ReactNode[] {
           <Link
             key={`link-${match.index}`}
             href={url}
-            className={`font-semibold underline underline-offset-2 transition-colors ${
-              isUser
+            className={`font-semibold underline underline-offset-2 transition-colors ${isUser
                 ? 'text-[#070F1A] hover:text-black font-bold'
                 : 'text-[#E8A317] hover:text-[#D4AF61] bg-[#E8A317]/10 px-1.5 py-0.5 rounded border border-[#E8A317]/30'
-            }`}
+              }`}
           >
             {label} →
           </Link>
@@ -199,11 +193,10 @@ function renderInlineStyles(text: string, isUser: boolean): React.ReactNode[] {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`font-semibold underline underline-offset-2 transition-colors inline-flex items-center gap-1 ${
-              isUser
+            className={`font-semibold underline underline-offset-2 transition-colors inline-flex items-center gap-1 ${isUser
                 ? 'text-[#070F1A] hover:text-black font-bold'
                 : 'text-[#E8A317] hover:text-[#D4AF61] bg-[#E8A317]/10 px-1.5 py-0.5 rounded border border-[#E8A317]/30'
-            }`}
+              }`}
           >
             {label} ↗
           </a>

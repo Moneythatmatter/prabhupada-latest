@@ -50,7 +50,7 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
           <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-[#E8A317] to-[#8B1E1E] p-0.5 shadow-md flex items-center justify-center shrink-0">
             <div className="w-full h-full rounded-full bg-[#0C1827] overflow-hidden relative">
               <Image
-                src="/chatbot/mascot.gif"
+                src="/chatbot/greeting-mascot.gif"
                 alt="Hotel Prabhupada Mascot"
                 fill
                 sizes="40px"

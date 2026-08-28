@@ -208,21 +208,23 @@ export const Chatbot: React.FC = () => {
           {isOpen ? (
             <X className="w-6 h-6 text-[#E8A317]" />
           ) : (
-            <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-[#070F1A]">
-              <Image
-                src="/chatbot/mascot.gif"
-                alt="Hotel Prabhupada Assistant Mascot"
-                fill
-                sizes="64px"
-                className="object-cover object-center scale-105"
-                unoptimized
-                priority
-              />
-              {/* Pulsing online badge */}
-              <span className="absolute top-1 right-1 w-3.5 h-3.5 bg-emerald-400 border-2 border-[#070F1A] rounded-full flex items-center justify-center z-10">
+            <>
+              <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-[#070F1A]">
+                <Image
+                  src="/chatbot/mascot.gif"
+                  alt="Hotel Prabhupada Assistant Mascot"
+                  fill
+                  sizes="64px"
+                  className="object-cover object-center scale-105"
+                  unoptimized
+                  priority
+                />
+              </div>
+              {/* Pulsing online badge on top right of the floating button */}
+              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-emerald-500 border-2 border-[#0C1827] rounded-full flex items-center justify-center z-20 shadow-md">
                 <span className="w-full h-full rounded-full bg-emerald-400 animate-ping opacity-75" />
               </span>
-            </div>
+            </>
           )}
         </motion.button>
       </div>

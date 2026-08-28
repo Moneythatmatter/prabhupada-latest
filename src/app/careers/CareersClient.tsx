@@ -103,6 +103,13 @@ export const CareersClient: React.FC = () => {
 
   const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<{
+    fullName?: string;
+    email?: string;
+    phone?: string;
+    department?: string;
+    experience?: string;
+  }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStage, setSubmitStage] = useState<'idle' | 'uploading' | 'sending' | 'error'>('idle');
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -116,6 +123,63 @@ export const CareersClient: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const formSectionRef = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion();
+
+  const validateField = (name: string, value: string): string | undefined => {
+    if (name === 'fullName') {
+      const trimmed = value.trim();
+      if (!trimmed) return 'Full name is required.';
+      if (trimmed.length < 2) return 'Name must be at least 2 characters.';
+      if (!/^[a-zA-Z\s.'-]+$/.test(trimmed)) return 'Name should only contain letters.';
+    }
+    if (name === 'email') {
+      const trimmed = value.trim();
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!trimmed) return 'Email address is required.';
+      if (!emailRegex.test(trimmed)) return 'Please enter a valid email address (e.g. name@example.com).';
+    }
+    if (name === 'phone') {
+      const digits = value.replace(/\D/g, '');
+      if (!value.trim()) return 'Phone number is required.';
+      if (digits.length < 10 || digits.length > 10) return 'Please enter a valid phone number (at least 10 digits).';
+    }
+    if (name === 'department') {
+      if (!value.trim()) return 'Please select a department of interest.';
+    }
+    if (name === 'experience') {
+      if (!value.trim()) return 'Please select your experience level.';
+    }
+    return undefined;
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Only allow digits, plus sign, spaces, hyphens, and parentheses - strictly reject letters
+    const filtered = e.target.value.replace(/[^\d+\-\s()]/g, '').slice(0, 11);
+    setFormData((prev) => ({ ...prev, phone: filtered }));
+
+    const error = validateField('phone', filtered);
+    setFieldErrors((prev) => {
+      const next = { ...prev };
+      if (error) {
+        next.phone = error;
+      } else {
+        delete next.phone;
+      }
+      return next;
+    });
+  };
+
+  const handleFieldBlur = (name: string, value: string) => {
+    const error = validateField(name, value);
+    setFieldErrors((prev) => {
+      const next = { ...prev };
+      if (error) {
+        next[name as keyof typeof fieldErrors] = error;
+      } else {
+        delete next[name as keyof typeof fieldErrors];
+      }
+      return next;
+    });
+  };
 
   const handleFileChange = (file: File | null) => {
     setFileError(null);
@@ -150,8 +214,29 @@ export const CareersClient: React.FC = () => {
     e.preventDefault();
     setSubmitError(null);
 
+    // Validate all fields
+    const nameErr = validateField('fullName', formData.fullName);
+    const emailErr = validateField('email', formData.email);
+    const phoneErr = validateField('phone', formData.phone);
+    const deptErr = validateField('department', formData.department);
+    const expErr = validateField('experience', formData.experience);
+
+    const newErrors = {
+      ...(nameErr ? { fullName: nameErr } : {}),
+      ...(emailErr ? { email: emailErr } : {}),
+      ...(phoneErr ? { phone: phoneErr } : {}),
+      ...(deptErr ? { department: deptErr } : {}),
+      ...(expErr ? { experience: expErr } : {}),
+    };
+
+    setFieldErrors(newErrors);
+
     if (!resumeFile) {
       setFileError('Please attach your resume or CV before submitting.');
+    }
+
+    if (Object.keys(newErrors).length > 0 || !resumeFile) {
+      setSubmitError('Please fix the highlighted errors in the form before submitting.');
       return;
     }
 
@@ -186,7 +271,7 @@ export const CareersClient: React.FC = () => {
       if (!response.ok) {
         throw new Error(
           result?.error ||
-            'We were unable to process your application. Please check your details and try again.'
+          'We were unable to process your application. Please check your details and try again.'
         );
       }
 
@@ -575,12 +660,31 @@ export const CareersClient: React.FC = () => {
                               type="text"
                               required
                               value={formData.fullName}
-                              onChange={(e) =>
-                                setFormData({ ...formData, fullName: e.target.value })
-                              }
+                              onChange={(e) => {
+                                setFormData({ ...formData, fullName: e.target.value });
+                                if (fieldErrors.fullName) {
+                                  const err = validateField('fullName', e.target.value);
+                                  setFieldErrors((prev) => {
+                                    const next = { ...prev };
+                                    if (err) next.fullName = err;
+                                    else delete next.fullName;
+                                    return next;
+                                  });
+                                }
+                              }}
+                              onBlur={(e) => handleFieldBlur('fullName', e.target.value)}
                               placeholder="e.g. Rajesh Kumar"
-                              className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317] placeholder:text-white/35 transition-colors"
+                              className={`w-full bg-white/5 border rounded-sm px-4 py-3 text-sm text-white focus:outline-none transition-colors placeholder:text-white/35 ${fieldErrors.fullName
+                                ? 'border-[#C0392B] bg-[#8B1E1E]/10 focus:border-[#E8A317]'
+                                : 'border-white/15 focus:border-[#E8A317]'
+                                }`}
                             />
+                            {fieldErrors.fullName && (
+                              <p className="mt-1.5 text-xs text-[#E8A317] flex items-center gap-1 font-medium">
+                                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                                {fieldErrors.fullName}
+                              </p>
+                            )}
                           </div>
 
                           <div>
@@ -595,12 +699,31 @@ export const CareersClient: React.FC = () => {
                               type="email"
                               required
                               value={formData.email}
-                              onChange={(e) =>
-                                setFormData({ ...formData, email: e.target.value })
-                              }
+                              onChange={(e) => {
+                                setFormData({ ...formData, email: e.target.value });
+                                if (fieldErrors.email) {
+                                  const err = validateField('email', e.target.value);
+                                  setFieldErrors((prev) => {
+                                    const next = { ...prev };
+                                    if (err) next.email = err;
+                                    else delete next.email;
+                                    return next;
+                                  });
+                                }
+                              }}
+                              onBlur={(e) => handleFieldBlur('email', e.target.value)}
                               placeholder="e.g. rajesh@example.com"
-                              className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317] placeholder:text-white/35 transition-colors"
+                              className={`w-full bg-white/5 border rounded-sm px-4 py-3 text-sm text-white focus:outline-none transition-colors placeholder:text-white/35 ${fieldErrors.email
+                                ? 'border-[#C0392B] bg-[#8B1E1E]/10 focus:border-[#E8A317]'
+                                : 'border-white/15 focus:border-[#E8A317]'
+                                }`}
                             />
+                            {fieldErrors.email && (
+                              <p className="mt-1.5 text-xs text-[#E8A317] flex items-center gap-1 font-medium">
+                                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                                {fieldErrors.email}
+                              </p>
+                            )}
                           </div>
                         </div>
 
@@ -618,12 +741,20 @@ export const CareersClient: React.FC = () => {
                               type="tel"
                               required
                               value={formData.phone}
-                              onChange={(e) =>
-                                setFormData({ ...formData, phone: e.target.value })
-                              }
+                              onChange={handlePhoneChange}
+                              onBlur={(e) => handleFieldBlur('phone', e.target.value)}
                               placeholder="e.g. +91 98765 43210"
-                              className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317] placeholder:text-white/35 transition-colors"
+                              className={`w-full bg-white/5 border rounded-sm px-4 py-3 text-sm text-white focus:outline-none transition-colors placeholder:text-white/35 ${fieldErrors.phone
+                                ? 'border-[#C0392B] bg-[#8B1E1E]/10 focus:border-[#E8A317]'
+                                : 'border-white/15 focus:border-[#E8A317]'
+                                }`}
                             />
+                            {fieldErrors.phone && (
+                              <p className="mt-1.5 text-xs text-[#E8A317] flex items-center gap-1 font-medium">
+                                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                                {fieldErrors.phone}
+                              </p>
+                            )}
                           </div>
 
                           <div>
@@ -638,10 +769,23 @@ export const CareersClient: React.FC = () => {
                                 id="career-experience"
                                 required
                                 value={formData.experience}
-                                onChange={(e) =>
-                                  setFormData({ ...formData, experience: e.target.value })
-                                }
-                                className="w-full bg-[#0C1827] border border-white/15 rounded-sm pl-4 pr-10 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317] transition-colors cursor-pointer appearance-none"
+                                onChange={(e) => {
+                                  setFormData({ ...formData, experience: e.target.value });
+                                  if (fieldErrors.experience) {
+                                    const err = validateField('experience', e.target.value);
+                                    setFieldErrors((prev) => {
+                                      const next = { ...prev };
+                                      if (err) next.experience = err;
+                                      else delete next.experience;
+                                      return next;
+                                    });
+                                  }
+                                }}
+                                onBlur={(e) => handleFieldBlur('experience', e.target.value)}
+                                className={`w-full bg-[#0C1827] border rounded-sm pl-4 pr-10 py-3 text-sm text-white focus:outline-none transition-colors cursor-pointer appearance-none ${fieldErrors.experience
+                                  ? 'border-[#C0392B] bg-[#8B1E1E]/10 focus:border-[#E8A317]'
+                                  : 'border-white/15 focus:border-[#E8A317]'
+                                  }`}
                               >
                                 <option value="" disabled className="bg-[#0C1827] text-white/50">
                                   Select experience
@@ -661,6 +805,12 @@ export const CareersClient: React.FC = () => {
                               </select>
                               <ChevronDown className="w-4 h-4 text-[#E8A317] absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                             </div>
+                            {fieldErrors.experience && (
+                              <p className="mt-1.5 text-xs text-[#E8A317] flex items-center gap-1 font-medium">
+                                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                                {fieldErrors.experience}
+                              </p>
+                            )}
                           </div>
                         </div>
 
@@ -677,10 +827,23 @@ export const CareersClient: React.FC = () => {
                               id="career-department"
                               required
                               value={formData.department}
-                              onChange={(e) =>
-                                setFormData({ ...formData, department: e.target.value })
-                              }
-                              className="w-full bg-[#0C1827] border border-white/15 rounded-sm pl-4 pr-10 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317] transition-colors cursor-pointer appearance-none"
+                              onChange={(e) => {
+                                setFormData({ ...formData, department: e.target.value });
+                                if (fieldErrors.department) {
+                                  const err = validateField('department', e.target.value);
+                                  setFieldErrors((prev) => {
+                                    const next = { ...prev };
+                                    if (err) next.department = err;
+                                    else delete next.department;
+                                    return next;
+                                  });
+                                }
+                              }}
+                              onBlur={(e) => handleFieldBlur('department', e.target.value)}
+                              className={`w-full bg-[#0C1827] border rounded-sm pl-4 pr-10 py-3 text-sm text-white focus:outline-none transition-colors cursor-pointer appearance-none ${fieldErrors.department
+                                ? 'border-[#C0392B] bg-[#8B1E1E]/10 focus:border-[#E8A317]'
+                                : 'border-white/15 focus:border-[#E8A317]'
+                                }`}
                             >
                               <option value="" disabled className="bg-[#0C1827] text-white/50">
                                 Select a department
@@ -693,6 +856,12 @@ export const CareersClient: React.FC = () => {
                             </select>
                             <ChevronDown className="w-4 h-4 text-[#E8A317] absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                           </div>
+                          {fieldErrors.department && (
+                            <p className="mt-1.5 text-xs text-[#E8A317] flex items-center gap-1 font-medium">
+                              <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                              {fieldErrors.department}
+                            </p>
+                          )}
                         </div>
 
                         {/* Resume File Upload */}

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Send } from 'lucide-react';
+import { Send, Building2 } from 'lucide-react';
 
 interface ChatInputProps {
   onSendMessage: (content: string) => void;
@@ -82,24 +82,22 @@ export const ChatInput: React.FC<ChatInputProps> = ({
           onClick={handleSend}
           disabled={isSendDisabled}
           aria-label="Send message"
-          className={`p-2 rounded-lg shrink-0 transition-all duration-200 ${
-            isSendDisabled
+          className={`p-2 rounded-lg shrink-0 transition-all duration-200 ${isSendDisabled
               ? 'bg-white/5 text-white/20 cursor-not-allowed'
               : 'bg-gradient-to-r from-[#D4AF61] to-[#C5A059] text-[#070F1A] hover:from-[#F0D78C] hover:to-[#D4AF61] shadow-md transform active:scale-95'
-          }`}
+            }`}
         >
           <Send className="w-4 h-4" />
         </button>
       </div>
 
-      <div className="flex items-center justify-between mt-1.5 px-1 text-[10px] text-white/40">
-        <span className="hidden sm:inline-flex items-center gap-1">
-          Press <kbd className="bg-white/10 px-1 py-0.5 rounded text-[9px]">Enter ↵</kbd> to send
-        </span>
-        <span className="sm:hidden">Hotel Prabhupada AI</span>
-        <span>
-          {input.length}/{MAX_CHAR_LIMIT}
-        </span>
+
+
+      {/* Powered by RITGB Label */}
+      <div className="flex items-center justify-center gap-1.5 pt-2 pb-0.5 text-[11px] text-white/50 font-sans tracking-wide border-t border-white/5 mt-2">
+        <span>Powered by</span>
+        <Building2 className="w-3.5 h-3.5 text-[#E8A317] shrink-0" />
+        <span className="font-semibold text-white/85 tracking-wider">RITGB</span>
       </div>
     </div>
   );
