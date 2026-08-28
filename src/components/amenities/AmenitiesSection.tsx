@@ -87,7 +87,7 @@ export const AmenitiesSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-14 sm:py-20 md:py-32 text-[#1E293B] relative overflow-hidden"
+      className="pt-8 sm:pt-12 md:pt-16 pb-14 sm:pb-20 md:pb-28 text-[#1E293B] relative overflow-hidden"
     >
       <PatachitraBackdrop />
 
