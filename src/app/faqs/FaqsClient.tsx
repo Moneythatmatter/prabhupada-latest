@@ -9,6 +9,8 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { LegalPageShell } from '@/components/layout/LegalPageShell';
+import { HOTEL_POLICIES } from '@/data/hotelPolicies';
+import Link from 'next/link';
 
 interface FaqItem {
   id: string;
@@ -20,62 +22,141 @@ const FAQ_DATA: FaqItem[] = [
   {
     id: 'faq-1',
     question: 'Where is Hotel Prabhupada located?',
-    answer: 'Hotel Prabhupada is located on New Marine Drive Road, Baliapanda, Puri, Odisha 752001, India.',
+    answer: 'Hotel Prabhupada is located on New Marine Drive Road, Baliapanda, Puri, Odisha 752001, India, just steps from the sea beach.',
   },
   {
     id: 'faq-2',
-    question: 'Is Hotel Prabhupada near the beach?',
-    answer: 'Yes. Hotel Prabhupada is located near the sea beach in Puri.',
+    question: 'What are the check-in and check-out timings?',
+    answer: (
+      <div className="space-y-2">
+        <p>
+          Standard <strong>Check-in time is {HOTEL_POLICIES.checkInOutPolicy.standardCheckIn}</strong> and standard <strong>Check-out time is {HOTEL_POLICIES.checkInOutPolicy.standardCheckOut}</strong>.
+        </p>
+        <p>Early check-in and late check-out are subject to room availability and applicable charges.</p>
+        <p className="text-white/70">For details, see our <Link href="/hotel-policy" className="text-[#E8A317] hover:underline">Hotel Policy</Link>.</p>
+      </div>
+    ),
   },
   {
     id: 'faq-3',
-    question: 'Does Hotel Prabhupada have Wi-Fi?',
-    answer: 'Yes. Wi-Fi is available for guests.',
+    question: 'What valid identification (ID) proof is required at check-in?',
+    answer: (
+      <div className="space-y-2">
+        <p>As per Government regulations, every guest must carry and present a valid government-issued photo ID at check-in:</p>
+        <ul className="list-disc pl-5 space-y-1 text-white/90">
+          <li><strong>Indian Residents:</strong> Passport, Driving License, AADHAAR Card, or Voter ID.</li>
+          <li><strong>PAN Card:</strong> <span className="text-amber-400 font-medium">PAN card is NOT accepted</span> as a valid ID proof.</li>
+          <li><strong>Foreign Nationals:</strong> Original Passport and valid Indian Visa are mandatory.</li>
+        </ul>
+      </div>
+    ),
   },
   {
     id: 'faq-4',
-    question: 'Does Hotel Prabhupada have a swimming pool?',
-    answer: 'Yes. Hotel Prabhupada has a swimming pool. Current pool timings and usage guidelines are available from the hotel.',
+    question: 'Is Hotel Prabhupada pet-friendly? What are the pet charges & rules?',
+    answer: (
+      <div className="space-y-2">
+        <p>
+          Yes! Hotel Prabhupada is pet-friendly. The pet policy details are:
+        </p>
+        <ul className="list-disc pl-5 space-y-1 text-white/90">
+          <li><strong>Pet Fee:</strong> {HOTEL_POLICIES.petPolicy.feeDetails.dailyFee} (charged upon arrival per day per night).</li>
+          <li><strong>Security Deposit:</strong> {HOTEL_POLICIES.petPolicy.feeDetails.securityDeposit} (refundable at check-out).</li>
+          <li><strong>Allowed Areas:</strong> Guest Room, Main Lobby, Poolside & Lawn areas.</li>
+          <li><strong>Restricted Areas:</strong> Public areas where Food & Beverages are served.</li>
+          <li><strong>Cleaning:</strong> Guests are responsible for cleaning waste and disposing of it in outside dumpsters, failing which a fine of {HOTEL_POLICIES.petPolicy.feeDetails.cleaningFine} applies.</li>
+        </ul>
+      </div>
+    ),
   },
   {
     id: 'faq-5',
-    question: 'Does Hotel Prabhupada have a restaurant?',
-    answer: 'Yes. Hotel Prabhupada has an in-house restaurant named Oris.',
+    question: 'What is the Swimming Pool policy and costume rental / charges?',
+    answer: (
+      <div className="space-y-2">
+        <p>
+          Hotel Prabhupada has an outdoor swimming pool exclusive to in-house guests:
+        </p>
+        <ul className="list-disc pl-5 space-y-1 text-white/90">
+          <li>Proper swimming costume is mandatory while entering the pool.</li>
+          <li>All in-house guests will be charged <strong>{HOTEL_POLICIES.swimmingPoolPolicy.costumeCharge}</strong> for pool usage if found without a proper swimming costume.</li>
+          <li>Outside guests are strictly not allowed to use the pool.</li>
+        </ul>
+      </div>
+    ),
   },
   {
     id: 'faq-6',
-    question: 'What cuisines are served at Oris?',
-    answer: 'Oris serves food that may include Indian, Bengali, and Chinese cuisine.',
+    question: "What is the Visitor's Policy?",
+    answer: (
+      <div className="space-y-2">
+        <p>For guest safety and comfort, the following visitor rules apply:</p>
+        <ul className="list-disc pl-5 space-y-1 text-white/90">
+          <li>Every visitor must register in the Visitor&apos;s Register at Reception.</li>
+          <li>Visitors are not allowed in guest rooms; they can be seated at Reception. (Allowed in rooms only if accompanied in person by the in-house guest).</li>
+          <li>No visitors are allowed inside the property after <strong>20:00 hrs (8:00 PM)</strong>.</li>
+          <li>External photographers must report at the Security Gate before entry.</li>
+        </ul>
+      </div>
+    ),
   },
   {
     id: 'faq-7',
-    question: 'What are the restaurant timings?',
+    question: 'What is the Cancellation & Refund Policy?',
     answer: (
       <div className="space-y-2">
-        <p>The restaurant generally operates from approximately 7:00 AM to 11:00 PM.</p>
-        <p>Breakfast is approximately 8:30 AM to 11:00 AM.</p>
-        <p>Lunch is approximately 12:00 PM to 2:30 PM.</p>
-        <p>Dinner is approximately 7:00 PM to 10:30 PM.</p>
-        <p className="text-white/70">Guests may confirm the latest timings with Hotel Prabhupada.</p>
+        <p>For individual room reservations:</p>
+        <ul className="list-disc pl-5 space-y-1 text-white/90">
+          <li><strong>More than 2 days before check-in:</strong> Free Cancellation (No charges applied).</li>
+          <li><strong>0 to 2 days before check-in:</strong> Non-refundable (Full stay charge applied).</li>
+          <li><strong>No Show:</strong> No refund or adjustment.</li>
+          <li><strong>Festival Periods:</strong> NO CANCELLATION & AMENDMENT during Durga Puja, Holi, Diwali, Christmas & New Year.</li>
+        </ul>
+        <p className="text-white/70 pt-1">
+          Read the complete terms on our <Link href="/refund-policy" className="text-[#E8A317] hover:underline">Refund Policy</Link> page.
+        </p>
       </div>
     ),
   },
   {
     id: 'faq-8',
-    question: 'Is parking available?',
-    answer: 'Yes. Parking is available at Hotel Prabhupada. Current parking arrangements can be confirmed with the hotel.',
+    question: 'What is the Property Damage Policy?',
+    answer: (
+      <div className="space-y-2">
+        <ul className="list-disc pl-5 space-y-1 text-white/90">
+          <li>In case of any damage to hotel property by an in-house guest, actual repair/replacement costs will be charged to the guest account.</li>
+          <li>In case of any loss or damage by a visitor, the cost will be recovered from the visitor or the hosting guest.</li>
+          <li>Property damage assessment and charges solely depend upon the decision of Hotel Prabhupada management.</li>
+        </ul>
+      </div>
+    ),
   },
   {
     id: 'faq-9',
-    question: 'Does the hotel provide room service?',
-    answer: 'Yes. Room service and in-room dining facilities are available.',
+    question: 'What cuisines are served at Oris Restaurant?',
+    answer: 'Oris, our in-house multi-cuisine restaurant, serves authentic Indian, Bengali, and Chinese delicacies daily from 7:00 AM to 11:00 PM.',
   },
   {
     id: 'faq-10',
+    question: 'What are the restaurant timings?',
+    answer: (
+      <div className="space-y-2">
+        <p>The restaurant operates daily from approximately 7:00 AM to 11:00 PM.</p>
+        <ul className="list-disc pl-5 space-y-1 text-white/85">
+          <li><strong>Breakfast:</strong> ~8:30 AM to 11:00 AM</li>
+          <li><strong>Lunch:</strong> ~12:00 PM to 2:30 PM</li>
+          <li><strong>Dinner:</strong> ~7:00 PM to 10:30 PM</li>
+        </ul>
+        <p className="text-white/70">24-hour room service is also available for in-room dining.</p>
+      </div>
+    ),
+  },
+  {
+    id: 'faq-11',
     question: 'What room categories are available?',
     answer: (
       <div className="space-y-2">
-        <p>Hotel Prabhupada offers room categories including:</p>
+        <p>Hotel Prabhupada offers 6 room categories:</p>
         <ul className="list-disc pl-5 space-y-1 text-white/85">
           <li>Premier Room</li>
           <li>Deluxe Room</li>
@@ -84,123 +165,52 @@ const FAQ_DATA: FaqItem[] = [
           <li>Superior Deluxe Balcony Sea View</li>
           <li>Suite Front Sea View</li>
         </ul>
-        <p>Availability depends on selected travel dates.</p>
+        <p className="text-white/70">
+          Visit our <Link href="/rooms" className="text-[#E8A317] hover:underline">Rooms & Suites</Link> page to view details and photos.
+        </p>
       </div>
     ),
-  },
-  {
-    id: 'faq-11',
-    question: 'Does Hotel Prabhupada have sea-view rooms?',
-    answer: 'Yes. Sea-view room categories include Superior Deluxe Balcony Sea View and Suite Front Sea View, subject to current availability.',
   },
   {
     id: 'faq-12',
-    question: 'How much does a room cost?',
-    answer: (
-      <div className="space-y-2">
-        <p>Room rates vary according to the room category, travel dates, occupancy, meal plan, season, offers, and availability.</p>
-        <p>Guests may share their check-in date, check-out date, and number of guests to receive the latest available options.</p>
-      </div>
-    ),
+    question: 'Is parking and Wi-Fi available at the hotel?',
+    answer: 'Yes. High-speed optical fiber Wi-Fi is complimentary across all rooms and public areas, and spacious on-site parking is available free of charge for guest vehicles.',
   },
   {
     id: 'faq-13',
-    question: 'Is a room available today?',
-    answer: (
-      <div className="space-y-2">
-        <p>Current room availability is based on Hotel Prabhupada&apos;s latest reservation inventory.</p>
-        <p>Guests should provide:</p>
-        <ul className="list-disc pl-5 space-y-1 text-white/85">
-          <li>Check-in date</li>
-          <li>Check-out date</li>
-          <li>Number of adults</li>
-          <li>Number of children</li>
-          <li>Preferred room category, if any</li>
-        </ul>
-        <p>This information can then be used to identify suitable available rooms.</p>
-      </div>
-    ),
+    question: 'Does the hotel assist with Jagannath Temple, Konark, and Chilika sightseeing?',
+    answer: 'Yes. Our 24/7 front desk and travel desk provide comprehensive assistance with Shree Jagannath Temple visits, cab bookings, local sightseeing tours to Konark Sun Temple and Chilika Lake, as well as railway station and airport transfers.',
   },
   {
     id: 'faq-14',
-    question: 'Is Shree Jagannath Temple accessible from Hotel Prabhupada?',
+    question: 'How can I contact Hotel Prabhupada for reservations?',
     answer: (
       <div className="space-y-2">
-        <p>Yes. Shree Jagannath Temple is one of the major attractions guests can visit while staying at Hotel Prabhupada.</p>
-        <p>Actual travel time depends on traffic and local conditions.</p>
-      </div>
-    ),
-  },
-  {
-    id: 'faq-15',
-    question: 'Does Hotel Prabhupada have family rooms?',
-    answer: 'Yes. Hotel Prabhupada offers a Family Room category designed for families and larger travelling parties.',
-  },
-  {
-    id: 'faq-16',
-    question: 'Does the hotel provide travel assistance?',
-    answer: 'Yes. Hotel Prabhupada offers travel assistance or travel-desk services for guests.',
-  },
-  {
-    id: 'faq-17',
-    question: 'Can the hotel assist with Konark or Chilika sightseeing?',
-    answer: 'Guests may enquire with the hotel travel desk regarding available sightseeing and transportation arrangements for destinations such as Konark and Chilika Lake.',
-  },
-  {
-    id: 'faq-18',
-    question: 'Is breakfast included with the room?',
-    answer: (
-      <div className="space-y-2">
-        <p>Breakfast inclusion depends on the room plan selected at the time of booking.</p>
-        <p>The latest booking information should be used to confirm whether breakfast is included.</p>
-      </div>
-    ),
-  },
-  {
-    id: 'faq-19',
-    question: 'Does the hotel provide laundry service?',
-    answer: 'Laundry service is available according to the hotel&apos;s current service arrangements.',
-  },
-  {
-    id: 'faq-20',
-    question: 'Does Hotel Prabhupada have a spa?',
-    answer: 'Ayurvedic spa services may be available. Guests may enquire regarding current treatments, prices, and operating hours.',
-  },
-  {
-    id: 'faq-21',
-    question: 'Can I request early check-in?',
-    answer: 'Early check-in requests are handled according to room availability and the hotel&apos;s current check-in policy.',
-  },
-  {
-    id: 'faq-22',
-    question: 'Can I request late check-out?',
-    answer: 'Late check-out requests are handled according to room availability and the hotel&apos;s current check-out policy.',
-  },
-  {
-    id: 'faq-23',
-    question: 'How can I contact Hotel Prabhupada?',
-    answer: (
-      <div className="space-y-2">
-        <p className="font-medium text-white">Reservation phone numbers:</p>
+        <p className="font-medium text-white">Reservation Phone Numbers:</p>
         <p className="text-white/90">
           <a href="tel:+919583002951" className="text-[#E8A317] hover:underline">
             +91 9583002951
-          </a>
-          <br />
+          </a>{' '}
+          /{' '}
           <a href="tel:+919583002952" className="text-[#E8A317] hover:underline">
             +91 9583002952
           </a>
         </p>
-        <p className="font-medium text-white pt-2">Reservation email:</p>
+        <p className="font-medium text-white pt-1">Reservation Email:</p>
         <p>
           <a href="mailto:reservation@hotelprabhupada.com" className="text-[#E8A317] hover:underline">
             reservation@hotelprabhupada.com
           </a>
         </p>
-        <p className="font-medium text-white pt-2">Website:</p>
+        <p className="font-medium text-white pt-1">Direct Online Booking:</p>
         <p>
-          <a href="https://www.hotelprabhupada.com" target="_blank" rel="noopener noreferrer" className="text-[#E8A317] hover:underline">
-            www.hotelprabhupada.com
+          <a
+            href="https://live.ipms247.com/booking/book-rooms-hotelprabhupada"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#E8A317] hover:underline"
+          >
+            Live Instant Booking Portal
           </a>
         </p>
       </div>
@@ -232,7 +242,7 @@ export const FaqsClient: React.FC = () => {
     <LegalPageShell
       title="Frequently Asked Questions"
       breadcrumb="FAQ's"
-      subtitle="Hotel Prabhupada, Puri, Odisha"
+      subtitle="Find answers to common questions regarding policies, rooms, dining, and facilities at Hotel Prabhupada, Puri"
       icon={<HelpCircle className="w-6 h-6" />}
     >
       <div className="space-y-6 font-sans">
@@ -244,7 +254,7 @@ export const FaqsClient: React.FC = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search frequently asked questions..."
+              placeholder="Search policies, check-in, pet rules, pool, cancellation..."
               className="w-full bg-[#0C1827] border border-[#C5A059]/30 rounded-sm pl-12 pr-10 py-3.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#E8A317] focus:ring-1 focus:ring-[#E8A317]/50 transition-all shadow-lg"
             />
             {searchQuery && (

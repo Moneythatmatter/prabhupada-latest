@@ -1,7 +1,8 @@
 import { HOTEL_INFO } from './hotelKnowledge';
+import { HOTEL_POLICIES } from '@/data/hotelPolicies';
 
 /**
- * Intelligent deterministic fallback matcher grounded in PRABHUPADA_INFO.md.
+ * Intelligent deterministic fallback matcher grounded in PRABHUPADA_INFO.md and HOTEL_POLICIES.
  * Used when OpenAI API is offline, unreachable, or as an instant deterministic response.
  */
 export function getGroundedFallbackResponse(userMessage: string): string {
@@ -20,7 +21,79 @@ How can I assist you with your stay today? Feel free to ask about:
 - 💳 [Direct Online Booking](${HOTEL_INFO.contact.directBookingUrl})`;
   }
 
-  // 1. Restaurant / Food / Dining / Oris / Breakfast
+  // 1. Pet Policy
+  if (q.includes('pet') || q.includes('dog') || q.includes('cat') || q.includes('animal')) {
+    return `**Pet Policy at Hotel Prabhupada:**
+
+Hotel Prabhupada is a pet-friendly property! 🐾
+
+- **Pet Fee:** ${HOTEL_POLICIES.petPolicy.feeDetails.dailyFee}
+- **Security Deposit:** ${HOTEL_POLICIES.petPolicy.feeDetails.securityDeposit} (fully refundable upon check-out).
+- **Pet-Friendly Areas:** Allowed in **Guest Rooms, Main Lobby, Poolside, and Lawn**.
+- **Restricted Areas:** Strictly NOT allowed in public areas where Food & Beverages (F&B) are served.
+- **Waste & Cleanliness:** Guests must clean up after their pets and dispose of waste in outside dumpsters (or a fine of ${HOTEL_POLICIES.petPolicy.feeDetails.cleaningFine} applies).
+
+👉 [Read Hotel Policy](/hotel-policy#pet-policy)`;
+  }
+
+  // 2. Identification / ID Proof / PAN Card
+  if (
+    q.includes('identification') ||
+    q.includes('id proof') ||
+    q.includes('id card') ||
+    q.includes('pan card') ||
+    q.includes('aadhaar') ||
+    q.includes('passport') ||
+    q.includes('voter') ||
+    q.includes('driving license')
+  ) {
+    return `**Valid Identification (ID) Policy:**
+
+As per Government notification, all guests must present valid identification at check-in:
+- **Indian Residents:** Passport, Driving License, AADHAAR Card, or Voter's Card.
+- **PAN Card:** ⚠️ **PAN card is NOT accepted** as valid identification proof.
+- **Foreign Nationals:** Valid Passport and valid Indian Visa on arrival.
+- The hotel reserves the right to refuse check-in if valid ID is not provided.
+
+👉 [View Hotel Policy](/hotel-policy#id-policy)`;
+  }
+
+  // 3. Swimming Pool & Pool Costume / Charges
+  if (q.includes('pool') || q.includes('swim') || q.includes('costume')) {
+    return `**Swimming Pool Guidelines:**
+
+Hotel Prabhupada features an outdoor swimming pool for in-house guests:
+- **Attire:** All guests must wear proper swimming costumes while entering the pool.
+- **Usage Fee (Without Costume):** In-house guests will be charged **${HOTEL_POLICIES.swimmingPoolPolicy.costumeCharge}** for pool usage if without proper swimming attire.
+- **Outside Guests:** Outside guests are strictly not allowed for pool usage (exclusive to in-house guests).
+
+👉 [View Facilities](/amenities)`;
+  }
+
+  // 4. Visitor's Policy
+  if (q.includes('visitor') || q.includes('guest visit') || q.includes('photographer')) {
+    return `**Visitor's Policy at Hotel Prabhupada:**
+
+- Every visitor must register at Reception in the **Visitor’s Register**.
+- Visitors are not allowed in guest rooms (they may be seated in the Reception lounge), unless accompanied in person by the registered in-house guest.
+- **Curfew:** No visitors are allowed inside the property after **20:00 hrs (8:00 PM)**.
+- **Photographers:** External photographers must report at the Security Gate upon arrival.
+
+👉 [Read Hotel Policy](/hotel-policy#visitors-policy)`;
+  }
+
+  // 5. Property Damage
+  if (q.includes('damage') || q.includes('fine') || q.includes('broken') || q.includes('loss')) {
+    return `**Property Damage Policy:**
+
+- Damage caused by an in-house guest will be charged at actual repair/replacement cost to the guest account.
+- Damage or losses caused by a visitor will be recovered from the visitor or hosting in-house guest.
+- Property damage charges are solely determined by the management of Hotel Prabhupada.
+
+👉 [View Hotel Policy](/hotel-policy#damage-policy)`;
+  }
+
+  // 6. Restaurant / Food / Dining / Oris / Breakfast
   if (
     q.includes('restaurant') ||
     q.includes('oris') ||
@@ -49,7 +122,7 @@ Hotel Prabhupada has an in-house restaurant named **Oris**.
 For more details, visit our [Hotel Amenities](/amenities) page.`;
   }
 
-  // 2. Rooms & Accommodation
+  // 7. Rooms & Accommodation
   if (
     q.includes('room') ||
     q.includes('stay') ||
@@ -73,7 +146,7 @@ For more details, visit our [Hotel Amenities](/amenities) page.`;
 👉 [View Room Details](/rooms) | [Book Online](${HOTEL_INFO.contact.directBookingUrl})`;
   }
 
-  // 3. Room Pricing / Rates / Availability
+  // 8. Room Pricing / Rates / Availability
   if (
     q.includes('cost') ||
     q.includes('price') ||
@@ -91,7 +164,7 @@ To check the latest rates and available rooms:
 - Call our reservation desk directly at **+91 9583002951** / **+91 9583002952**.`;
   }
 
-  // 4. Location / Address / Distance / Beach
+  // 9. Location / Address / Distance / Beach
   if (
     q.includes('location') ||
     q.includes('address') ||
@@ -109,7 +182,7 @@ To check the latest rates and available rooms:
 👉 [Open in Google Maps](${HOTEL_INFO.location.googleMapsUrl}) | [Contact Us](/contact)`;
   }
 
-  // 5. Check-in & Check-out
+  // 10. Check-in & Check-out Timings
   if (
     q.includes('check-in') ||
     q.includes('check in') ||
@@ -119,21 +192,28 @@ To check the latest rates and available rooms:
   ) {
     return `**Check-in & Check-out at Hotel Prabhupada:**
 
-- **Check-in / Check-out:** Handled according to hotel policy.
-- **Early Check-in & Late Check-out:** Handled according to room availability and current hotel policy.
-- **ID Requirement:** Valid government-issued photo ID (AADHAAR, Voter ID, Driving License, or Passport for Indian nationals; Passport/Visa for foreign nationals) is required for registration.
+- **Standard Check-in Time:** ${HOTEL_POLICIES.checkInOutPolicy.standardCheckIn}
+- **Standard Check-out Time:** ${HOTEL_POLICIES.checkInOutPolicy.standardCheckOut}
+- **Early Check-in & Late Check-out:** Subject to room availability on a chargeable basis.
+- **ID Proof Requirement:** Valid government-issued photo ID (AADHAAR, Voter ID, Driving License, or Passport for Indian nationals; Passport/Visa for foreign nationals) is mandatory. PAN Card is NOT accepted.
 
-For more details, visit our [Hotel Policy](/hotel-policy) page.`;
+👉 [View Hotel Policy](/hotel-policy)`;
   }
 
-  // 6. Swimming Pool
-  if (q.includes('pool') || q.includes('swim')) {
-    return `Yes, **Hotel Prabhupada** has an outdoor swimming pool for guests.
+  // 11. Cancellation, Refund & Booking Modifications
+  if (q.includes('cancel') || q.includes('refund') || q.includes('modification') || q.includes('change date')) {
+    return `**Cancellation & Refund Policy (Individual Reservations):**
 
-Pool access is subject to current operating timings and safety guidelines. Learn more on our [Hotel Amenities](/amenities) page.`;
+- **More than 2 days before check-in:** Free Cancellation (No charges applied).
+- **0 to 2 days before check-in:** Non-refundable (Full stay charge applied).
+- **No Show:** No refund or adjustment.
+- **Festival Periods:** **NO CANCELLATION & AMENDMENT** during Durga Puja, Holi, Diwali, Christmas & New Year.
+- **Refund Timeline:** Approved refunds are processed within 7–10 business days.
+
+👉 [Read Refund Policy](/refund-policy)`;
   }
 
-  // 7. Spa / Ayurvedic Spa
+  // 12. Spa / Ayurvedic Spa
   if (q.includes('spa') || q.includes('ayurved') || q.includes('massage') || q.includes('wellness')) {
     return `**Ayurvedic Spa Services:**
 
@@ -142,7 +222,7 @@ Ayurvedic spa services and wellness therapies are available at Hotel Prabhupada.
 Explore our [Hotel Amenities](/amenities) for more information.`;
   }
 
-  // 8. Shree Jagannath Temple & Sightseeing / Travel Desk
+  // 13. Shree Jagannath Temple & Sightseeing / Travel Desk
   if (
     q.includes('temple') ||
     q.includes('jagannath') ||
@@ -168,7 +248,7 @@ Hotel Prabhupada provides a travel desk and local assistance for:
 👉 [Explore Nearby Attractions](/attractions)`;
   }
 
-  // 9. Parking & Wi-Fi & Facilities
+  // 14. Parking & Wi-Fi & Facilities
   if (
     q.includes('parking') ||
     q.includes('wifi') ||
@@ -194,18 +274,7 @@ Hotel Prabhupada provides a travel desk and local assistance for:
 👉 [View All Amenities](/amenities)`;
   }
 
-  // 10. Cancellation, Refund & Booking Modifications
-  if (q.includes('cancel') || q.includes('refund') || q.includes('modification') || q.includes('change date')) {
-    return `**Cancellation, Refund & Modification Policy:**
-
-- **Cancellation & Refunds:** Conditions follow the confirmed booking plan, room category, and approved hotel terms.
-- **Modifications:** Requests to modify stay dates, room categories, or guest count are handled according to the hotel's modification policy.
-- For reservations made through third-party platforms, modifications and cancellations should be processed via the respective platform.
-
-👉 [Read Refund Policy](/refund-policy)`;
-  }
-
-  // 11. Contact & Booking
+  // 15. Contact & Booking
   if (
     q.includes('contact') ||
     q.includes('phone') ||
@@ -225,7 +294,7 @@ Hotel Prabhupada provides a travel desk and local assistance for:
 👉 [Book Online](${HOTEL_INFO.contact.directBookingUrl}) | [Contact Page](/contact)`;
   }
 
-  // 12. Careers & Job Openings
+  // 16. Careers & Job Openings
   if (
     q.includes('career') ||
     q.includes('job') ||
@@ -260,4 +329,3 @@ I can assist you with:
 
 For immediate reservations or customized inquiries, please contact our team at **+91 9583002951** / **+91 9583002952** or email **reservation@hotelprabhupada.com**.`;
 }
-

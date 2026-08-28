@@ -1,100 +1,132 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { FileText, CheckCircle2, ShieldCheck, Link2 } from 'lucide-react';
+import { FileText, CheckCircle2, ShieldCheck, Link2, AlertOctagon, Dog, Users, Waves } from 'lucide-react';
 import { LegalPageShell } from '@/components/layout/LegalPageShell';
+import { HOTEL_POLICIES } from '@/data/hotelPolicies';
 
 export const metadata: Metadata = {
   title: 'Terms & Conditions | Hotel Prabhupada Puri',
-  description: 'Official Terms & Conditions of Hotel Prabhupada, Puri, Odisha.',
+  description: 'Official Terms & Conditions and Guest Agreement of Hotel Prabhupada, Puri, Odisha.',
 };
 
 export default function TermsConditionsPage() {
+  const {
+    propertyDamagePolicy,
+    visitorsPolicy,
+    identificationPolicy,
+    cancellationPolicy,
+    swimmingPoolPolicy,
+    petPolicy,
+  } = HOTEL_POLICIES;
+
   return (
     <LegalPageShell
       title="Terms & Conditions"
       breadcrumb="Terms & Conditions"
+      subtitle="Official Guest Terms & Property Conditions for Hotel Prabhupada, Puri"
       icon={<FileText className="w-6 h-6" />}
     >
-        <div className="bg-[#0C1827] p-8 sm:p-12 rounded-sm border border-[#C5A059]/20 space-y-8 font-sans text-sm sm:text-base text-white/80 font-light leading-relaxed">
-          
-          {/* Introductory Preamble */}
-          <section className="space-y-4">
-            <p className="text-white/90">
-              Please read these Terms and Conditions carefully as these conditions incorporate the basis on which bookings for the Hotel Prabhupada Hotel is accepted. The Terms and Conditions below are for bookings made directly via the hotels’ websites and payments via payment gateway systems through the Waetiya Limited. Registered Address: New Marine Drive Road, Baliapanda, Puri,Odisha 752001,India
-            </p>
-            <p className="text-[#E8A317] font-medium">
-              By using this Site, you agree to be bound by these terms and conditions.
-            </p>
-          </section>
+      <div className="bg-[#0C1827] p-8 sm:p-12 rounded-sm border border-[#C5A059]/20 space-y-8 font-sans text-sm sm:text-base text-white/80 font-light leading-relaxed">
+        
+        {/* Introductory Preamble */}
+        <section className="space-y-4">
+          <p className="text-white/90">
+            Please read these Terms and Conditions carefully as these conditions incorporate the basis on which bookings for Hotel Prabhupada are accepted. The Terms and Conditions below apply to all direct bookings made via the hotel’s official website, front desk, and authorized reservation systems.
+          </p>
+          <p className="text-white/70">
+            Registered Address: Hotel Prabhupada, New Marine Drive Road, Baliapanda, Puri, Odisha 752001, India.
+          </p>
+          <p className="text-[#E8A317] font-medium">
+            By making a reservation or using this Site, you agree to be bound by these terms and conditions.
+          </p>
+        </section>
 
-          {/* Section: Revisions */}
-          <section className="pt-4 border-t border-[#C5A059]/20 space-y-3">
-            <h2 className="font-serif text-xl text-[#E8A317] font-normal">Revisions to Terms</h2>
+        {/* Section: Valid ID Requirements */}
+        <section className="pt-4 border-t border-[#C5A059]/20 space-y-3">
+          <h2 className="font-serif text-xl text-[#E8A317] font-normal flex items-center gap-2">
+            <ShieldCheck className="w-5 h-5 text-[#E8A317]" /> {identificationPolicy.title}
+          </h2>
+          <p>
+            As per Government of India notification, every resident guest is required to carry valid proof of identity (Passport, Driving License, AADHAAR Card, or Voter ID) and present it at check-in. <strong className="text-white">PAN Card is NOT accepted as a valid identification proof.</strong> Foreign nationals must present a valid Passport and valid Indian Visa on arrival. The hotel reserves the right to refuse check-in without valid ID.
+          </p>
+        </section>
+
+        {/* Section: Cancellation & Reservation Policy */}
+        <section className="pt-4 border-t border-[#C5A059]/20 space-y-3">
+          <h2 className="font-serif text-xl text-[#E8A317] font-normal">Reservation & Cancellation Terms</h2>
+          <p>
+            Individual reservations are subject to our standard cancellation policy:
+          </p>
+          <ul className="list-disc pl-5 space-y-1.5 text-white/90">
+            <li><strong>More than 2 days before check-in:</strong> Free Cancellation (0% charge).</li>
+            <li><strong>0 to 2 days before check-in:</strong> Non-refundable (Full stay charge applied).</li>
+            <li><strong>No Show:</strong> 100% Non-refundable / No adjustment.</li>
+            <li><strong>Festival Periods:</strong> NO CANCELLATION & AMENDMENT TO BE MADE DURING FESTIVAL PERIODS (Durga Puja, Holi, Diwali, Christmas & New Year).</li>
+          </ul>
+        </section>
+
+        {/* Section: Property Damage Policy */}
+        <section className="pt-4 border-t border-[#C5A059]/20 space-y-3">
+          <h2 className="font-serif text-xl text-[#E8A317] font-normal flex items-center gap-2">
+            <AlertOctagon className="w-5 h-5 text-[#E8A317]" /> {propertyDamagePolicy.title}
+          </h2>
+          <div className="space-y-2">
+            {propertyDamagePolicy.rules.map((rule, idx) => (
+              <p key={idx} className="text-white/85">
+                • {rule.text}
+              </p>
+            ))}
+          </div>
+        </section>
+
+        {/* Section: Visitor's Policy */}
+        <section className="pt-4 border-t border-[#C5A059]/20 space-y-3">
+          <h2 className="font-serif text-xl text-[#E8A317] font-normal flex items-center gap-2">
+            <Users className="w-5 h-5 text-[#E8A317]" /> {visitorsPolicy.title}
+          </h2>
+          <div className="space-y-2">
+            {visitorsPolicy.rules.map((rule, idx) => (
+              <p key={idx} className="text-white/85">
+                • {rule.text}
+              </p>
+            ))}
+          </div>
+        </section>
+
+        {/* Section: Swimming Pool & Pet Guidelines */}
+        <section className="pt-4 border-t border-[#C5A059]/20 space-y-4">
+          <h2 className="font-serif text-xl text-[#E8A317] font-normal flex items-center gap-2">
+            <Waves className="w-5 h-5 text-[#E8A317]" /> Swimming Pool & Pet Guidelines
+          </h2>
+          <div className="space-y-2 text-white/85">
             <p>
-              We may revise these terms & conditions from time to time by updating this posting. The revised terms will take effect when they are posted. Your use of some parts or features of the Site may be governed by additional terms and conditions. Where this is the case you will be notified accordingly of those additional terms and conditions.
+              • <strong>Swimming Pool:</strong> Proper swimming costume is mandatory. In-house guests without a proper swimming costume will be charged {swimmingPoolPolicy.costumeCharge} for pool usage. Outside guests are strictly not permitted.
             </p>
-          </section>
-
-          {/* Section: Departure & Requests */}
-          <section className="pt-4 border-t border-[#C5A059]/20 space-y-3">
-            <h2 className="font-serif text-xl text-[#E8A317] font-normal">Early Departure & Requests</h2>
             <p>
-              The property reserves the right to charge an early departure fee in the event a guest departs earlier than the original departure date.
+              • <strong>Pet Policy:</strong> Pet fee is {petPolicy.feeDetails.dailyFee}. A refundable security deposit of {petPolicy.feeDetails.securityDeposit} is collected at check-in. Pets are allowed in designated areas (Guest Room, Main Lobby, Poolside & Lawn) and prohibited in F&B dining areas. Waste must be cleaned and disposed of in outside dumpsters, failing which a fine of {petPolicy.feeDetails.cleaningFine} will be charged.
             </p>
-            <p className="text-white/70 italic">
-              On request. Please contact the Front Office. Additional fees may be applied.
-            </p>
-          </section>
+          </div>
+        </section>
 
-          {/* Section: Cancellation & Reservation Policy */}
-          <section className="pt-4 border-t border-[#C5A059]/20 space-y-3">
-            <h2 className="font-serif text-xl text-[#E8A317] font-normal">Reservation & Cancellation Terms</h2>
-            <p>
-              Each rate booked at Hotel Prabhupada Hotel, is subject to a Cancellation Policy. Failure to check in on the reserved arrival date will incur a penalty charge as detailed in the Cancellation Policy of the rate booked. We reserve the right to cancel or modify reservations under the circumstances where it appears that a customer has provided an invalid credit card, engaged in fraudulent or inappropriate activity, or the reservations contain or resulted from a mistake or error. In addition, we also reserve the right to cancel or amend bookings if they do not adhere to our terms & conditions. If a guest chooses to shorten their stay or check out early, a penalty charge will apply, as detailed in the Cancellation Policy associated with the rate booked. In the cases of the aforementioned booking cancellations, Hotel Prabhupada Hotel has no obligation to guarantee new available bookings or best rates. A new booking at the best available rate will need to be made by the guest at the time of the new reservation.
-            </p>
-          </section>
+        {/* Section: Revisions */}
+        <section className="pt-4 border-t border-[#C5A059]/20 space-y-3">
+          <h2 className="font-serif text-xl text-[#E8A317] font-normal">Revisions to Terms</h2>
+          <p>
+            We may revise these terms & conditions from time to time by updating this posting. The revised terms will take effect when they are posted. Your continued use of the Site and hotel services constitutes acceptance of these revised terms.
+          </p>
+        </section>
 
-          {/* Section: Proof of Payment & Validation */}
-          <section className="pt-4 border-t border-[#C5A059]/20 space-y-3">
-            <h2 className="font-serif text-xl text-[#E8A317] font-normal">Proof of Payment & Verification</h2>
-            <p>
-              As a condition of using this website, you agree to provide proof of payment to the hotel reservations department within 48 hours of the time of booking and will indicate the reservation confirmation number on the proof of payment. You will be fully responsible for any banking fees and/or costs required to complete the bank funds transaction(s). Furthermore, you acknowledge that the reservation may be canceled by the hotel if proof of payment is not submitted to the hotel within the 48-hour notice period. You will be responsible for any cancellation or no show penalties that might be incurred and hereby acknowledge that booking and personal contact information provided is correct for the hotel’s validation purposes.
-            </p>
-          </section>
+        {/* Section: Hyperlinking */}
+        <section className="pt-4 border-t border-[#C5A059]/20 space-y-4">
+          <h2 className="font-serif text-xl text-[#E8A317] font-normal flex items-center gap-2">
+            <Link2 className="w-5 h-5 text-[#E8A317]" /> Hyperlinking to our Website
+          </h2>
+          <p className="text-white/90">
+            Government agencies, search engines, news organizations, and online directory distributors may link to our website without prior written approval, provided the link is not deceptive and does not falsely imply sponsorship or endorsement.
+          </p>
+        </section>
 
-          {/* Section: Hyperlinking & Linking Rights */}
-          <section className="pt-4 border-t border-[#C5A059]/20 space-y-4">
-            <h2 className="font-serif text-xl text-[#E8A317] font-normal flex items-center gap-2">
-              <Link2 className="w-5 h-5 text-[#E8A317]" /> Hyperlinking to our Website
-            </h2>
-            <p className="text-white/90">
-              The following organizations may link to our website without prior written approval:
-            </p>
-            <ul className="space-y-2 pl-4">
-              <li className="flex items-start gap-2 text-[#E8A317]">
-                <CheckCircle2 className="w-4 h-4 shrink-0 mt-1" />
-                <span className="text-white/85">Government agencies;</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#E8A317]">
-                <CheckCircle2 className="w-4 h-4 shrink-0 mt-1" />
-                <span className="text-white/85">Search engines;</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#E8A317]">
-                <CheckCircle2 className="w-4 h-4 shrink-0 mt-1" />
-                <span className="text-white/85">News organizations;</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#E8A317]">
-                <CheckCircle2 className="w-4 h-4 shrink-0 mt-1" />
-                <span className="text-white/85">Online directory distributors may link to our website in the same manner as they hyperlink to the websites of other listed businesses; and</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#E8A317]">
-                <CheckCircle2 className="w-4 h-4 shrink-0 mt-1" />
-                <span className="text-white/85">System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</span>
-              </li>
-            </ul>
-          </section>
-
-        </div>
+      </div>
     </LegalPageShell>
   );
 }

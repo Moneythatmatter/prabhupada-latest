@@ -331,23 +331,12 @@ Current parking terms should follow the latest Hotel Prabhupada policy.
 
 # **SWIMMING POOL**
 
-Hotel Prabhupada has a swimming pool for guests.
+Hotel Prabhupada has an outdoor swimming pool for in-house guests.
 
-Pool access is subject to the hotel's current operating timings and safety guidelines.
-
-Information to be maintained in the hotel database includes:
-
-Pool opening time: To be updated.
-
-Pool closing time: To be updated.
-
-Children's pool access: To be updated.
-
-Swimming attire requirements: To be updated.
-
-Pool usage charges, if applicable: To be updated.
-
-Guest safety rules: To be updated.
+* All guests should use proper swimming costume while entering the pool.
+* All in-house guests will be charged Rs. 150/- per head for the usage of the swimming pool if found without a proper swimming costume.
+* Outside guests are strictly NOT allowed for pool usage (exclusive to in-house guests).
+* Pool access is subject to current operating timings and guest safety guidelines.
 
 ---
 
@@ -662,134 +651,87 @@ Other applicable charges: To be updated.
 
 # **CANCELLATION POLICY**
 
-Hotel Prabhupada's cancellation policy should be provided according to the confirmed booking plan and approved hotel terms.
-
-Cancellation conditions may vary based on:
-
-* Room rate  
-* Booking source  
-* Travel dates  
-* Offer  
-* Package  
-* Season  
-* Advance purchase conditions  
-* Group booking conditions
-
-Current cancellation policy: To be updated by Hotel Prabhupada management.
-
-For confirmed reservations, the applicable cancellation terms should match the conditions associated with the individual booking.
+### **Cancellation Policy for Individual Reservations**
+* **More than 2 days before check-in:** Free Cancellation. No charges will be applied.
+* **0 to 2 days before check-in:** Non-refundable. Full stay charge will be applied.
+* **NO SHOW:** No refund / adjustment on NO SHOW.
+* **FESTIVAL PERIODS:** NO CANCELLATION & AMENDMENT TO BE MADE DURING FESTIVAL PERIODS I.E. DURGA PUJA, HOLI, DIWALI, CHRISTMAS & NEW YEAR.
 
 ---
 
 # **REFUND POLICY**
 
-Refund conditions should follow Hotel Prabhupada's approved policy and the conditions of the guest's reservation.
-
-Current refund policy: To be updated by Hotel Prabhupada management.
-
-The database should maintain information related to:
-
-* Refund eligibility  
-* Refund processing time  
-* Payment gateway refunds  
-* Advance payment refunds  
-* Cancellation deductions  
-* No-show situations  
-* Booking modifications
+* Free cancellation applies when cancelled more than 2 days prior to check-in.
+* Cancellations within 0 to 2 days before check-in are 100% non-refundable.
+* Approved refunds are processed back to the original payment source within 7–10 business days.
+* Bookings made during festival periods are non-refundable and cannot be amended.
 
 ---
 
 # **BOOKING MODIFICATION POLICY**
 
-Guests may request changes to an existing reservation according to Hotel Prabhupada's current booking modification policy.
-
-Possible modification requests may include:
-
-* Change of check-in date  
-* Change of check-out date  
-* Change of room category  
-* Change in number of guests  
-* Addition of children  
-* Addition of extra person  
-* Meal-plan changes  
-* Contact detail updates
-
-Current modification rules and charges: To be updated by Hotel Prabhupada management.
+* Any amendment of dates will be considered as a cancellation of the existing room reservation and is subject to standard cancellation charges.
+* No amendments allowed during festival periods (Durga Puja, Holi, Diwali, Christmas & New Year).
 
 ---
 
 # **NO-SHOW POLICY**
 
-Hotel Prabhupada's approved no-show policy should be used for confirmed reservations.
-
-Current no-show policy: To be updated by Hotel Prabhupada management.
+* No refund or adjustment on NO SHOW reservations. Full stay charge applies.
 
 ---
 
 # **CHILD POLICY**
 
-Hotel Prabhupada welcomes families travelling with children.
-
-The hotel's approved child policy should include:
-
-* Age considered as child  
-* Complimentary child stay age, where applicable  
-* Child breakfast charges  
-* Extra mattress requirements  
-* Maximum children permitted by room category  
-* Child occupancy conditions
-
-Current child policy: To be updated by Hotel Prabhupada management.
+* Children above 10 years of age will be considered as an adult @ Rs. 1,200 + GST.
+* Children between 7-10 years of age will be charged Rs. 750 + GST.
+* Children must be accompanied by their parents while staying in the room.
 
 ---
 
-# **EXTRA PERSON POLICY**
+# **EXTRA PERSON & EXTRA BED POLICY**
 
-Extra-person accommodation depends on room category and hotel policy.
-
-The hotel database should maintain:
-
-Extra adult charge: To be updated.
-
-Extra child charge: To be updated.
-
-Extra mattress charge: To be updated.
-
-Extra bed availability: To be updated.
-
-Maximum occupancy by room type: To be updated.
+* An extra person charge will be applied at Rs. 1,200 + GST on EP with an extra bed.
+* In case of any extra bed taken for children below 10 years of age, Rs. 1,000 + GST will be charged to the respective guest account.
 
 ---
 
 # **PET POLICY**
 
-Current pet policy: To be updated by Hotel Prabhupada management.
+* **Pet Fee:** A pet fee of Rs. 1,200/- will be charged to the guest upon arrival per day per night.
+* **Security Deposit:** During check-in, a security deposit of Rs. 4,000/- will be applied to the guest, which is completely refundable at the time of check-out.
+* **Pet-Friendly Areas:** Pets are allowed ONLY in the following areas: Guest Room, Main Lobby, Poolside & Lawn.
+* **Prohibited Areas:** Pets are strictly NOT allowed in public areas where Food & Beverages (F&B) are served.
+* **Waste & Cleaning Fine:** Guest is responsible for cleaning up after the pet on hotel grounds and properly disposing of the waste in the outside dumpster or will be charged a fine of Rs. 300/- against cleaning services.
 
-The hotel database should include details regarding:
+---
 
-* Whether pets are accepted  
-* Type of pets accepted  
-* Size restrictions  
-* Applicable charges  
-* Designated areas  
-* Cleaning requirements  
-* Pet-related room restrictions
+# **VISITOR'S POLICY**
+
+* Every visitor should be registered at Reception in the Visitor’s Register.
+* Visitors are not allowed in the guest rooms; they can be seated at Reception.
+* In special cases, visitors will be allowed if the in-house guest accompanies them in person.
+* No visitors allowed inside the property after 20:00 hrs (8:00 PM).
+* Especially for Photographers: External photographers and media crews must report at the Security Gate.
+
+---
+
+# **PROPERTY DAMAGE POLICY**
+
+* In case of any damage to the property by the in-house guest, actual repair/replacement cost will be charged to the in-house guest.
+* In case of any losses to the property by a visitor, the cost has to be recovered from him.
+* In case of any losses to the property by a guest's visitor, the cost has to be recovered from him / host guest.
+* Property damage charges solely depend upon the decision and management of Hotel Prabhupada.
 
 ---
 
 # **IDENTIFICATION REQUIREMENTS**
 
-Guests should carry valid identification according to Hotel Prabhupada's current policy and applicable legal requirements.
-
-The hotel database should maintain the accepted identification requirements for:
-
-* Indian guests  
-* Foreign nationals  
-* Children  
-* Group guests  
-* Corporate guests
-
-Accepted ID types should be updated using the hotel's approved guest-registration policy.
+* **Indian Resident Guests:** As per Government notification, every Indian resident guest is required to carry proof of identity and present it at the time of check-in.
+* **Accepted Indian ID Proofs:** Passport, Driving License, AADHAAR Card, or Voter's Card.
+* **PAN Card Restriction:** PAN card would NOT be accepted as a valid identification proof.
+* **Foreign Nationals:** Foreign nationals must present a valid Passport and valid Indian Visa on arrival at the hotel.
+* **Refusal of Check-in:** The hotel reserves the right to refuse check-in in case no valid identification proof is provided.
 
 ---
 
