@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   motion,
   AnimatePresence,
@@ -184,6 +185,12 @@ export const TestimonialsSection: React.FC = () => {
         </motion.div>
 
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center gap-3 sm:gap-4 border-t border-[#C5A059]/30 pt-5 sm:pt-6">
+          <Link
+            href="/testimonials"
+            className="pata-btn inline-flex items-center justify-center gap-2 text-[10px] sm:text-xs font-sans font-semibold tracking-[0.14em] sm:tracking-[0.16em] uppercase text-white px-5 py-3 sm:px-6 sm:py-2.5 rounded-sm transition-all duration-300 w-full sm:w-auto shadow-md"
+          >
+            All Guest Reviews &rarr;
+          </Link>
           <a
             href="https://www.google.com/maps/place/Hotel+Prabhupada/@19.7899492,85.8070141,17z/data=!4m11!3m10!1s0x3a19c5ccce332e3b:0x3e5550da010583ec!5m2!4m1!1i2!8m2!3d19.7899492!4d85.8070141!9m1!1b1!16s%2Fg%2F11b6dcvt28?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
@@ -204,7 +211,7 @@ export const TestimonialsSection: React.FC = () => {
             href="https://live.ipms247.com/booking/reviewslist-hotelprabhupada"
             target="_blank"
             rel="noopener noreferrer"
-            className="pata-btn inline-flex items-center justify-center gap-2 text-[10px] sm:text-xs font-sans font-semibold tracking-[0.14em] sm:tracking-[0.16em] uppercase text-white px-4 py-3 sm:px-5 sm:py-2.5 rounded-sm transition-all duration-300 w-full sm:w-auto"
+            className="pata-btn-outline inline-flex items-center justify-center gap-2 text-[10px] sm:text-xs font-sans font-semibold tracking-[0.14em] sm:tracking-[0.16em] uppercase px-4 py-3 sm:px-5 sm:py-2.5 rounded-sm transition-all duration-300 backdrop-blur-sm bg-[#070F1A]/55 hover:-translate-y-0.5 w-full sm:w-auto"
           >
             Booking Reviews &rarr;
           </a>
