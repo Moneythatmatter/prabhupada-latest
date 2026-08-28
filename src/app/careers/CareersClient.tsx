@@ -25,12 +25,12 @@ import {
   FileCheck2,
   HelpCircle,
   Loader2,
+  ChevronDown,
 } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { InnerPageHero } from '@/components/layout/InnerPageHero';
 import { FadeRise } from '@/hooks/useParallax';
 import {
-  PatachitraBackdrop,
   PatachitraDivider,
 } from '@/components/patachitra/PatachitraMotifs';
 import { uploadResumeToSupabase } from '@/lib/supabaseClient';
@@ -323,21 +323,28 @@ export const CareersClient: React.FC = () => {
           </section>
 
           {/* Career Information Details */}
-          <section className="bg-[#0C1827] rounded-sm border border-[#C5A059]/25 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-            <PatachitraBackdrop />
+          <section className="bg-[#0C1827] rounded-sm border border-[#C5A059]/30 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#0C1827] via-[#0E1F35] to-[#070F1A] opacity-95"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:24px_24px] opacity-15"
+            />
             <div className="relative z-10 max-w-4xl mx-auto">
               <FadeRise className="text-center mb-8 sm:mb-10">
-                <span className="inline-block font-sans text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-[#E8A317] mb-2">
+                <span className="inline-block font-sans text-xs font-semibold tracking-[0.22em] uppercase text-[#E8A317] mb-2">
                   Guidelines &amp; Overview
                 </span>
-                <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white text-[#E8A317]/60!">
+                <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white">
                   Career Information
                 </h3>
                 <PatachitraDivider light className="mt-4" />
               </FadeRise>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-[#070F1A]/80 border border-[#C5A059]/15 rounded-sm p-6 flex items-start gap-4">
+                <div className="bg-[#070F1A]/90 border border-[#C5A059]/25 rounded-sm p-6 flex items-start gap-4 hover:border-[#E8A317]/50 transition-colors">
                   <div className="w-10 h-10 rounded-full bg-[#E8A317]/10 border border-[#E8A317]/30 flex items-center justify-center text-[#E8A317] shrink-0 mt-0.5">
                     <Briefcase className="w-5 h-5" />
                   </div>
@@ -345,13 +352,13 @@ export const CareersClient: React.FC = () => {
                     <h4 className="font-serif text-base text-white font-medium mb-1">
                       Current Job Openings
                     </h4>
-                    <p className="font-sans text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                    <p className="font-sans text-xs sm:text-sm text-white/75 font-light leading-relaxed">
                       Contact hotel management for available positions and upcoming vacancies.
                     </p>
                   </div>
                 </div>
 
-                <div className="bg-[#070F1A]/80 border border-[#C5A059]/15 rounded-sm p-6 flex items-start gap-4">
+                <div className="bg-[#070F1A]/90 border border-[#C5A059]/25 rounded-sm p-6 flex items-start gap-4 hover:border-[#E8A317]/50 transition-colors">
                   <div className="w-10 h-10 rounded-full bg-[#E8A317]/10 border border-[#E8A317]/30 flex items-center justify-center text-[#E8A317] shrink-0 mt-0.5">
                     <FileCheck2 className="w-5 h-5" />
                   </div>
@@ -359,13 +366,13 @@ export const CareersClient: React.FC = () => {
                     <h4 className="font-serif text-base text-white font-medium mb-1">
                       Eligibility Requirements
                     </h4>
-                    <p className="font-sans text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                    <p className="font-sans text-xs sm:text-sm text-white/75 font-light leading-relaxed">
                       Based on the specific role, department requirements, and relevant experience.
                     </p>
                   </div>
                 </div>
 
-                <div className="bg-[#070F1A]/80 border border-[#C5A059]/15 rounded-sm p-6 flex items-start gap-4">
+                <div className="bg-[#070F1A]/90 border border-[#C5A059]/25 rounded-sm p-6 flex items-start gap-4 hover:border-[#E8A317]/50 transition-colors">
                   <div className="w-10 h-10 rounded-full bg-[#E8A317]/10 border border-[#E8A317]/30 flex items-center justify-center text-[#E8A317] shrink-0 mt-0.5">
                     <UploadCloud className="w-5 h-5" />
                   </div>
@@ -373,13 +380,13 @@ export const CareersClient: React.FC = () => {
                     <h4 className="font-serif text-base text-white font-medium mb-1">
                       Application Process
                     </h4>
-                    <p className="font-sans text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                    <p className="font-sans text-xs sm:text-sm text-white/75 font-light leading-relaxed">
                       Submit your resume through the official hotel communication channels.
                     </p>
                   </div>
                 </div>
 
-                <div className="bg-[#070F1A]/80 border border-[#C5A059]/15 rounded-sm p-6 flex items-start gap-4">
+                <div className="bg-[#070F1A]/90 border border-[#C5A059]/25 rounded-sm p-6 flex items-start gap-4 hover:border-[#E8A317]/50 transition-colors">
                   <div className="w-10 h-10 rounded-full bg-[#E8A317]/10 border border-[#E8A317]/30 flex items-center justify-center text-[#E8A317] shrink-0 mt-0.5">
                     <Users className="w-5 h-5" />
                   </div>
@@ -387,15 +394,15 @@ export const CareersClient: React.FC = () => {
                     <h4 className="font-serif text-base text-white font-medium mb-1">
                       Recruitment Contact
                     </h4>
-                    <p className="font-sans text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                    <p className="font-sans text-xs sm:text-sm text-white/75 font-light leading-relaxed">
                       Contact Hotel Prabhupada management directly for career opportunities.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 text-center p-5 bg-[#E8A317]/10 border border-[#E8A317]/30 rounded-sm">
-                <p className="font-serif text-base sm:text-lg text-white font-normal text-[#E8A317]!">
+              <div className="mt-8 text-center p-5 bg-[#070F1A] border border-[#E8A317]/30 rounded-sm">
+                <p className="font-serif text-base sm:text-lg text-[#E8A317] font-normal">
                   Join Hotel Prabhupada and become a part of a team committed to providing excellent
                   hospitality experiences to guests.
                 </p>
@@ -626,31 +633,34 @@ export const CareersClient: React.FC = () => {
                             >
                               Experience Level <span className="text-[#8B1E1E]">*</span>
                             </label>
-                            <select
-                              id="career-experience"
-                              required
-                              value={formData.experience}
-                              onChange={(e) =>
-                                setFormData({ ...formData, experience: e.target.value })
-                              }
-                              className="w-full bg-[#0C1827] border border-white/15 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317] transition-colors cursor-pointer"
-                            >
-                              <option value="" disabled className="bg-[#0C1827] text-white/50">
-                                Select experience
-                              </option>
-                              <option value="Fresher" className="bg-[#0C1827]">
-                                Fresher / Entry Level
-                              </option>
-                              <option value="1-3 Years" className="bg-[#0C1827]">
-                                1–3 Years
-                              </option>
-                              <option value="3-5 Years" className="bg-[#0C1827]">
-                                3–5 Years
-                              </option>
-                              <option value="5+ Years" className="bg-[#0C1827]">
-                                5+ Years
-                              </option>
-                            </select>
+                            <div className="relative">
+                              <select
+                                id="career-experience"
+                                required
+                                value={formData.experience}
+                                onChange={(e) =>
+                                  setFormData({ ...formData, experience: e.target.value })
+                                }
+                                className="w-full bg-[#0C1827] border border-white/15 rounded-sm pl-4 pr-10 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317] transition-colors cursor-pointer appearance-none"
+                              >
+                                <option value="" disabled className="bg-[#0C1827] text-white/50">
+                                  Select experience
+                                </option>
+                                <option value="Fresher" className="bg-[#0C1827]">
+                                  Fresher / Entry Level
+                                </option>
+                                <option value="1-3 Years" className="bg-[#0C1827]">
+                                  1–3 Years
+                                </option>
+                                <option value="3-5 Years" className="bg-[#0C1827]">
+                                  3–5 Years
+                                </option>
+                                <option value="5+ Years" className="bg-[#0C1827]">
+                                  5+ Years
+                                </option>
+                              </select>
+                              <ChevronDown className="w-4 h-4 text-[#E8A317] absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                            </div>
                           </div>
                         </div>
 
@@ -662,24 +672,27 @@ export const CareersClient: React.FC = () => {
                           >
                             Department of Interest <span className="text-[#8B1E1E]">*</span>
                           </label>
-                          <select
-                            id="career-department"
-                            required
-                            value={formData.department}
-                            onChange={(e) =>
-                              setFormData({ ...formData, department: e.target.value })
-                            }
-                            className="w-full bg-[#0C1827] border border-white/15 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317] transition-colors cursor-pointer"
-                          >
-                            <option value="" disabled className="bg-[#0C1827] text-white/50">
-                              Select a department
-                            </option>
-                            {DEPARTMENTS.map((dept) => (
-                              <option key={dept.name} value={dept.name} className="bg-[#0C1827]">
-                                {dept.name}
+                          <div className="relative">
+                            <select
+                              id="career-department"
+                              required
+                              value={formData.department}
+                              onChange={(e) =>
+                                setFormData({ ...formData, department: e.target.value })
+                              }
+                              className="w-full bg-[#0C1827] border border-white/15 rounded-sm pl-4 pr-10 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317] transition-colors cursor-pointer appearance-none"
+                            >
+                              <option value="" disabled className="bg-[#0C1827] text-white/50">
+                                Select a department
                               </option>
-                            ))}
-                          </select>
+                              {DEPARTMENTS.map((dept) => (
+                                <option key={dept.name} value={dept.name} className="bg-[#0C1827]">
+                                  {dept.name}
+                                </option>
+                              ))}
+                            </select>
+                            <ChevronDown className="w-4 h-4 text-[#E8A317] absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                          </div>
                         </div>
 
                         {/* Resume File Upload */}

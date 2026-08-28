@@ -15,6 +15,7 @@ import {
   Send,
   Filter,
   Award,
+  ChevronDown,
 } from 'lucide-react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { InnerPageHero } from '@/components/layout/InnerPageHero';
@@ -294,12 +295,12 @@ export const TestimonialsClient: React.FC = () => {
 
                 {/* Filter Selector */}
                 <div className="flex flex-wrap items-center gap-2">
-                  <div className="flex items-center gap-1.5 bg-white/5 border border-white/15 rounded-sm px-3 py-1.5 text-xs text-white">
-                    <Filter className="w-3.5 h-3.5 text-[#E8A317]" />
+                  <div className="relative flex items-center bg-white/5 border border-white/15 rounded-sm px-3 py-1.5 text-xs text-white">
+                    <Filter className="w-3.5 h-3.5 text-[#E8A317] mr-1.5 shrink-0" />
                     <select
                       value={selectedFilter}
                       onChange={(e) => setSelectedFilter(e.target.value)}
-                      className="bg-transparent text-white focus:outline-none cursor-pointer pr-2"
+                      className="bg-transparent text-white focus:outline-none cursor-pointer pr-6 appearance-none text-xs"
                     >
                       <option value="all" className="bg-[#0C1827] text-white">All Trip Types</option>
                       {TRIP_TYPES.map((type) => (
@@ -308,10 +309,11 @@ export const TestimonialsClient: React.FC = () => {
                         </option>
                       ))}
                     </select>
+                    <ChevronDown className="w-3.5 h-3.5 text-[#E8A317] absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none" />
                   </div>
 
-                  <div className="flex items-center gap-1.5 bg-white/5 border border-white/15 rounded-sm px-3 py-1.5 text-xs text-white">
-                    <Star className="w-3.5 h-3.5 text-[#E8A317] fill-[#E8A317]" />
+                  <div className="relative flex items-center bg-white/5 border border-white/15 rounded-sm px-3 py-1.5 text-xs text-white">
+                    <Star className="w-3.5 h-3.5 text-[#E8A317] fill-[#E8A317] mr-1.5 shrink-0" />
                     <select
                       value={selectedRatingFilter}
                       onChange={(e) =>
@@ -319,13 +321,14 @@ export const TestimonialsClient: React.FC = () => {
                           e.target.value === 'all' ? 'all' : Number(e.target.value)
                         )
                       }
-                      className="bg-transparent text-white focus:outline-none cursor-pointer pr-2"
+                      className="bg-transparent text-white focus:outline-none cursor-pointer pr-6 appearance-none text-xs"
                     >
                       <option value="all" className="bg-[#0C1827] text-white">All Ratings</option>
                       <option value={5} className="bg-[#0C1827] text-white">5 Stars Only</option>
                       <option value={4} className="bg-[#0C1827] text-white">4 Stars</option>
                       <option value={3} className="bg-[#0C1827] text-white">3 Stars</option>
                     </select>
+                    <ChevronDown className="w-3.5 h-3.5 text-[#E8A317] absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none" />
                   </div>
                 </div>
               </div>
@@ -595,18 +598,21 @@ export const TestimonialsClient: React.FC = () => {
                           Trip Type
                         </label>
                       </div>
-                      <select
-                        id="review-tripType"
-                        value={formData.tripType}
-                        onChange={(e) => setFormData({ ...formData, tripType: e.target.value })}
-                        className="w-full h-11 bg-[#0C1827] border border-white/15 rounded-sm px-3.5 text-sm text-white focus:outline-none focus:border-[#E8A317] transition-colors cursor-pointer"
-                      >
-                        {TRIP_TYPES.map((type) => (
-                          <option key={type} value={type} className="bg-[#0C1827]">
-                            {type}
-                          </option>
-                        ))}
-                      </select>
+                      <div className="relative">
+                        <select
+                          id="review-tripType"
+                          value={formData.tripType}
+                          onChange={(e) => setFormData({ ...formData, tripType: e.target.value })}
+                          className="w-full h-11 bg-[#0C1827] border border-white/15 rounded-sm pl-3.5 pr-10 text-sm text-white focus:outline-none focus:border-[#E8A317] transition-colors cursor-pointer appearance-none"
+                        >
+                          {TRIP_TYPES.map((type) => (
+                            <option key={type} value={type} className="bg-[#0C1827]">
+                              {type}
+                            </option>
+                          ))}
+                        </select>
+                        <ChevronDown className="w-4 h-4 text-[#E8A317] absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                      </div>
                     </div>
 
                     <div>
