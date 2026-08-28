@@ -3,14 +3,14 @@ import { Metadata } from 'next';
 import { CareersClient } from './CareersClient';
 
 export const metadata: Metadata = {
-  title: 'Careers at Hotel Prabhupada | Join Our Hospitality Team in Puri',
+  title: 'Careers at Hotel Prabhupada | Career Opportunities in Puri',
   description:
-    'Explore career opportunities at Hotel Prabhupada, Puri. Apply for positions in Front Office, Housekeeping, Food & Beverage, Culinary, and Hotel Operations on New Marine Drive Road.',
+    'Hotel Prabhupada provides opportunities for individuals interested in building a rewarding career in the hospitality industry. Learn about career opportunities and recruitment procedures.',
   openGraph: {
-    title: 'Careers at Hotel Prabhupada Puri | Hospitality Opportunities',
+    title: 'Career Opportunities at Hotel Prabhupada Puri',
     description:
-      'Join the team at Hotel Prabhupada, New Marine Drive, Puri. Submit your resume and application online for hospitality career opportunities.',
-    url: 'https://hotelprabhupada.com/careers',
+      'Hotel Prabhupada welcomes talented, dedicated, and service-oriented individuals who wish to grow in the hospitality sector in Puri, Odisha.',
+    url: 'https://www.hotelprabhupada.com/careers',
     siteName: 'Hotel Prabhupada',
     locale: 'en_IN',
     type: 'website',

@@ -14,23 +14,71 @@ import {
   MapPin,
   Sparkles,
   Users,
-  Inbox,
   ArrowRight,
+  Utensils,
+  ChefHat,
+  Compass,
+  HeartHandshake,
+  Wrench,
+  ShieldCheck,
+  Building2,
+  FileCheck2,
+  HelpCircle,
 } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { InnerPageHero } from '@/components/layout/InnerPageHero';
 import { FadeRise } from '@/hooks/useParallax';
-import { PatachitraDivider } from '@/components/patachitra/PatachitraMotifs';
+import {
+  PatachitraBackdrop,
+  PatachitraDivider,
+} from '@/components/patachitra/PatachitraMotifs';
 
-const DEPARTMENT_OPTIONS = [
-  'Front Office & Guest Relations',
-  'Food & Beverage Service',
-  'Housekeeping & Property Care',
-  'Kitchen & Culinary',
-  'Accounts & Administration',
-  'Maintenance & Engineering',
-  'Security & Transportation',
-  'General / Any Department',
+const DEPARTMENTS = [
+  {
+    name: 'Front Office',
+    icon: Building2,
+    desc: 'Front desk operations, guest reception, check-in, and guest communication.',
+  },
+  {
+    name: 'Housekeeping',
+    icon: Sparkles,
+    desc: 'Room preparation, linen care, hygiene standards, and property cleanliness.',
+  },
+  {
+    name: 'Food and Beverage Service',
+    icon: Utensils,
+    desc: 'Dining service, restaurant hospitality, and beverage operations.',
+  },
+  {
+    name: 'Kitchen Operations',
+    icon: ChefHat,
+    desc: 'Culinary preparation, kitchen management, food safety, and cooking.',
+  },
+  {
+    name: 'Guest Relations',
+    icon: HeartHandshake,
+    desc: 'Assisting guests, addressing special requests, and ensuring a comfortable stay.',
+  },
+  {
+    name: 'Travel Desk',
+    icon: Compass,
+    desc: 'Assisting guests with local sightseeing, Puri itineraries, and transport.',
+  },
+  {
+    name: 'Administration',
+    icon: ShieldCheck,
+    desc: 'Operational management, accounts, coordination, and office administration.',
+  },
+  {
+    name: 'Maintenance',
+    icon: Wrench,
+    desc: 'Property upkeep, electrical, plumbing, and facility maintenance.',
+  },
+  {
+    name: 'Other hospitality roles',
+    icon: Briefcase,
+    desc: 'Various specialized and support hospitality positions across hotel operations.',
+  },
 ];
 
 const MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024; // 5 MB
@@ -136,11 +184,11 @@ export const CareersClient: React.FC = () => {
   return (
     <>
       <InnerPageHero
-        overline="Join Our Team · Puri"
-        title="Careers at Hotel Prabhupada"
-        subtitle="We are always looking for passionate individuals to join our hospitality team in Puri. Submit your profile below for upcoming opportunities."
+        overline="Hotel Prabhupada · Puri"
+        title="Career Opportunities at Hotel Prabhupada"
+        subtitle="Hotel Prabhupada provides opportunities for individuals interested in building a rewarding career in the hospitality industry."
         image="/images/official-about.jpg"
-        imageAlt="Careers at Hotel Prabhupada Puri"
+        imageAlt="Career Opportunities at Hotel Prabhupada Puri"
         cta={
           <button
             type="button"
@@ -152,155 +200,195 @@ export const CareersClient: React.FC = () => {
             className="header-book-btn inline-flex items-center justify-center gap-2 font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase rounded-sm px-8 py-3.5 cursor-pointer"
           >
             <Briefcase className="w-4 h-4" />
-            Submit Your CV
+            Submit Application
           </button>
         }
       />
 
+      {/* Main Section */}
       <div className="bg-[#070F1A] text-white py-14 sm:py-20 md:py-24 relative overflow-hidden">
-        {/* Subtle background glow */}
+        {/* Subtle Background Elements */}
         <div
           aria-hidden
-          className="pointer-events-none absolute top-12 right-[-8%] w-[380px] h-[380px] rounded-full bg-[#C5A059]/08 blur-3xl"
+          className="pointer-events-none absolute top-12 right-[-8%] w-[420px] h-[420px] rounded-full bg-[#C5A059]/08 blur-3xl"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute bottom-24 left-[-10%] w-[360px] h-[360px] rounded-full bg-[#C0392B]/08 blur-3xl"
+          className="pointer-events-none absolute bottom-24 left-[-10%] w-[380px] h-[380px] rounded-full bg-[#8B1E1E]/08 blur-3xl"
         />
 
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-8 relative z-10">
-          {/* Current Vacancies Status — Clean Empty State */}
-          <section className="mb-14 sm:mb-20">
-            <FadeRise className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-              <span className="inline-block font-sans text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-[#E8A317] mb-2">
-                Open Positions
+        <div className="max-w-[1320px] mx-auto px-4 sm:px-8 relative z-10 space-y-16 sm:space-y-24">
+          {/* Welcome & Philosophy */}
+          <section className="text-center max-w-3xl mx-auto">
+            <FadeRise>
+              <span className="inline-block font-sans text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-[#E8A317] mb-3">
+                Join Our Team
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-normal text-white tracking-tight">
-                Current Openings
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-white tracking-tight leading-snug">
+                Welcome to Hotel Prabhupada Hospitality Careers
               </h2>
-              <PatachitraDivider light className="mt-4 sm:mt-5" />
-            </FadeRise>
-
-            <motion.div
-              initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-3xl mx-auto bg-[#0C1827] rounded-sm border border-[#C5A059]/25 p-8 sm:p-12 text-center shadow-xl"
-            >
-              <div className="w-14 h-14 rounded-full bg-white/5 border border-white/15 flex items-center justify-center mx-auto mb-5 text-[#C5A059]">
-                <Inbox className="w-7 h-7" />
-              </div>
-              <h3 className="font-serif text-2xl font-normal text-white mb-3">
-                No Active Vacancies at Present
-              </h3>
-              <p className="font-sans text-sm sm:text-base text-white/75 font-light leading-relaxed max-w-xl mx-auto mb-6">
-                We currently do not have any specific open positions listed. However, we regularly
-                review applications and welcome resumes for future requirements across all
-                departments.
+              <PatachitraDivider light className="my-5" />
+              <p className="font-sans text-base sm:text-lg text-white/80 font-light leading-relaxed">
+                Hotel Prabhupada welcomes talented, dedicated, and service-oriented individuals
+                who wish to grow in the hospitality sector.
               </p>
-              <button
-                type="button"
-                onClick={() => {
-                  if (formSectionRef.current) {
-                    formSectionRef.current.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="inline-flex items-center gap-2 font-sans text-xs font-semibold tracking-wider uppercase px-6 py-3 bg-white/5 hover:bg-[#C5A059] hover:text-[#070F1A] text-[#C5A059] border border-[#C5A059]/30 rounded-sm transition-all duration-300 cursor-pointer"
-              >
-                <span>Send General Application</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
-            </motion.div>
+            </FadeRise>
           </section>
 
-          {/* Hospitality Values — Understated */}
-          <section className="mb-14 sm:mb-20">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              <motion.div
-                initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="bg-[#0C1827] p-6 sm:p-8 rounded-sm border border-[#C5A059]/20 shadow-xl flex flex-col justify-start"
-              >
-                <div className="w-12 h-12 rounded-sm bg-[#C5A059]/10 border border-[#C5A059]/30 flex items-center justify-center mb-5 text-[#E8A317]">
-                  <Sparkles className="w-6 h-6" />
-                </div>
-                <h3 className="font-serif text-xl font-normal text-white mb-2">
-                  Hospitality Experience
-                </h3>
-                <p className="font-sans text-sm text-white/70 font-light leading-relaxed">
-                  Opportunities to work in a premier beachfront hotel environment on New Marine
-                  Drive, Puri.
-                </p>
-              </motion.div>
+          {/* Departments Grid */}
+          <section>
+            <FadeRise className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+              <span className="inline-block font-sans text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-[#E8A317] mb-2">
+                Departments
+              </span>
+              <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white tracking-tight">
+                Career Opportunities by Department
+              </h3>
+              <p className="font-sans text-sm text-white/70 font-light mt-2">
+                Career opportunities may be available in various departments across our property:
+              </p>
+            </FadeRise>
 
-              <motion.div
-                initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.08 }}
-                className="bg-[#0C1827] p-6 sm:p-8 rounded-sm border border-[#C5A059]/20 shadow-xl flex flex-col justify-start"
-              >
-                <div className="w-12 h-12 rounded-sm bg-[#C0392B]/10 border border-[#C0392B]/30 flex items-center justify-center mb-5 text-[#C0392B]">
-                  <Users className="w-6 h-6" />
-                </div>
-                <h3 className="font-serif text-xl font-normal text-white mb-2">
-                  Supportive Work Culture
-                </h3>
-                <p className="font-sans text-sm text-white/70 font-light leading-relaxed">
-                  A respectful team atmosphere, fair policies, and on-duty meal provisions for staff
-                  members.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.16 }}
-                className="bg-[#0C1827] p-6 sm:p-8 rounded-sm border border-[#C5A059]/20 shadow-xl flex flex-col justify-start"
-              >
-                <div className="w-12 h-12 rounded-sm bg-[#34E0A1]/10 border border-[#34E0A1]/30 flex items-center justify-center mb-5 text-[#34E0A1]">
-                  <MapPin className="w-6 h-6" />
-                </div>
-                <h3 className="font-serif text-xl font-normal text-white mb-2">
-                  Prime Puri Location
-                </h3>
-                <p className="font-sans text-sm text-white/70 font-light leading-relaxed">
-                  Located near Puri Beach and Swargadwar, easily accessible for local candidates.
-                </p>
-              </motion.div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+              {DEPARTMENTS.map((dept, index) => {
+                const IconComponent = dept.icon;
+                return (
+                  <motion.div
+                    key={dept.name}
+                    initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                    className="bg-[#0C1827] p-6 sm:p-7 rounded-sm border border-[#C5A059]/20 hover:border-[#E8A317]/50 transition-colors shadow-lg flex flex-col justify-between group"
+                  >
+                    <div>
+                      <div className="w-12 h-12 rounded-sm bg-[#C5A059]/10 border border-[#C5A059]/25 flex items-center justify-center mb-4 text-[#E8A317] group-hover:bg-[#E8A317] group-hover:text-[#070F1A] transition-colors">
+                        <IconComponent className="w-6 h-6" />
+                      </div>
+                      <h4 className="font-serif text-lg sm:text-xl font-normal text-white mb-2">
+                        {dept.name}
+                      </h4>
+                      <p className="font-sans text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                        {dept.desc}
+                      </p>
+                    </div>
+                    <div className="mt-5 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#E8A317] font-medium">
+                      <span>Hospitality Role</span>
+                      <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </section>
 
-          {/* Application Form Section */}
+          {/* Career Information Details */}
+          <section className="bg-[#0C1827] rounded-sm border border-[#C5A059]/25 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+            <PatachitraBackdrop />
+            <div className="relative z-10 max-w-4xl mx-auto">
+              <FadeRise className="text-center mb-8 sm:mb-10">
+                <span className="inline-block font-sans text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-[#E8A317] mb-2">
+                  Guidelines &amp; Overview
+                </span>
+                <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white text-[#E8A317]/60!">
+                  Career Information
+                </h3>
+                <PatachitraDivider light className="mt-4" />
+              </FadeRise>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-[#070F1A]/80 border border-[#C5A059]/15 rounded-sm p-6 flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-[#E8A317]/10 border border-[#E8A317]/30 flex items-center justify-center text-[#E8A317] shrink-0 mt-0.5">
+                    <Briefcase className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-serif text-base text-white font-medium mb-1">
+                      Current Job Openings
+                    </h4>
+                    <p className="font-sans text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                      Contact hotel management for available positions and upcoming vacancies.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-[#070F1A]/80 border border-[#C5A059]/15 rounded-sm p-6 flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-[#E8A317]/10 border border-[#E8A317]/30 flex items-center justify-center text-[#E8A317] shrink-0 mt-0.5">
+                    <FileCheck2 className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-serif text-base text-white font-medium mb-1">
+                      Eligibility Requirements
+                    </h4>
+                    <p className="font-sans text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                      Based on the specific role, department requirements, and relevant experience.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-[#070F1A]/80 border border-[#C5A059]/15 rounded-sm p-6 flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-[#E8A317]/10 border border-[#E8A317]/30 flex items-center justify-center text-[#E8A317] shrink-0 mt-0.5">
+                    <UploadCloud className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-serif text-base text-white font-medium mb-1">
+                      Application Process
+                    </h4>
+                    <p className="font-sans text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                      Submit your resume through the official hotel communication channels.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-[#070F1A]/80 border border-[#C5A059]/15 rounded-sm p-6 flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-[#E8A317]/10 border border-[#E8A317]/30 flex items-center justify-center text-[#E8A317] shrink-0 mt-0.5">
+                    <Users className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-serif text-base text-white font-medium mb-1">
+                      Recruitment Contact
+                    </h4>
+                    <p className="font-sans text-xs sm:text-sm text-white/70 font-light leading-relaxed">
+                      Contact Hotel Prabhupada management directly for career opportunities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 text-center p-5 bg-[#E8A317]/10 border border-[#E8A317]/30 rounded-sm">
+                <p className="font-serif text-base sm:text-lg text-white font-normal text-[#E8A317]!">
+                  Join Hotel Prabhupada and become a part of a team committed to providing excellent
+                  hospitality experiences to guests.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Channels & Application Form */}
           <section ref={formSectionRef} className="scroll-mt-28">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-              {/* Left Column: Direct HR Inquiries */}
+              {/* Left Column: Official Hotel Communication Channels */}
               <div className="lg:col-span-4 space-y-6">
                 <div className="bg-[#0C1827] p-7 sm:p-9 rounded-sm border border-[#C5A059]/25 shadow-xl">
                   <span className="inline-block font-sans text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-[#E8A317] mb-2">
-                    Direct Contact
+                    Official Communication
                   </span>
                   <h3 className="font-serif text-2xl font-normal text-white mb-3 tracking-wide">
-                    HR &amp; Management Desk
+                    Hotel Management Desk
                   </h3>
-                  <p className="font-sans text-sm text-white/70 font-light leading-relaxed mb-6">
-                    You may also email your resume directly to our management desk or reach out via
-                    phone:
+                  <p className="font-sans text-xs sm:text-sm text-white/70 font-light leading-relaxed mb-6">
+                    Candidates interested in joining Hotel Prabhupada can contact the hotel for
+                    information about current openings and application procedures:
                   </p>
 
                   <div className="space-y-4 font-sans text-xs sm:text-sm font-light border-t border-white/10 pt-5">
                     <div className="flex items-start gap-3">
-                      <Mail className="w-4 h-4 text-[#C0392B] shrink-0 mt-0.5" />
+                      <Mail className="w-4 h-4 text-[#8B1E1E] shrink-0 mt-0.5" />
                       <div>
                         <p className="text-[#C5A059] text-[11px] uppercase tracking-wider font-medium">
-                          Email Resume
+                          General Manager Email
                         </p>
                         <a
-                          href="mailto:gm@hotelprabhupada.com?subject=Job%20Application%20-%20Hotel%20Prabhupada"
+                          href="mailto:gm@hotelprabhupada.com?subject=Career%20Enquiry%20-%20Hotel%20Prabhupada"
                           className="text-white/90 hover:text-[#E8A317] transition-colors break-all"
                         >
                           gm@hotelprabhupada.com
@@ -309,28 +397,51 @@ export const CareersClient: React.FC = () => {
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <Phone className="w-4 h-4 text-[#C0392B] shrink-0 mt-0.5" />
+                      <Mail className="w-4 h-4 text-[#8B1E1E] shrink-0 mt-0.5" />
                       <div>
                         <p className="text-[#C5A059] text-[11px] uppercase tracking-wider font-medium">
-                          Hotel Desk
+                          Reservation Email
                         </p>
                         <a
-                          href="tel:+919583002952"
-                          className="text-white/90 hover:text-[#E8A317] transition-colors"
+                          href="mailto:reservation@hotelprabhupada.com"
+                          className="text-white/90 hover:text-[#E8A317] transition-colors break-all"
                         >
-                          +91 9583002952
+                          reservation@hotelprabhupada.com
                         </a>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <MapPin className="w-4 h-4 text-[#C0392B] shrink-0 mt-0.5" />
+                      <Phone className="w-4 h-4 text-[#8B1E1E] shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-[#C5A059] text-[11px] uppercase tracking-wider font-medium">
+                          Reservation Phone Numbers
+                        </p>
+                        <div className="space-y-1">
+                          <a
+                            href="tel:+919583002951"
+                            className="block text-white/90 hover:text-[#E8A317] transition-colors"
+                          >
+                            +91 9583002951
+                          </a>
+                          <a
+                            href="tel:+919583002952"
+                            className="block text-white/90 hover:text-[#E8A317] transition-colors"
+                          >
+                            +91 9583002952
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <MapPin className="w-4 h-4 text-[#8B1E1E] shrink-0 mt-0.5" />
                       <div>
                         <p className="text-[#C5A059] text-[11px] uppercase tracking-wider font-medium">
                           Hotel Address
                         </p>
-                        <p className="text-white/80">
-                          New Marine Drive Road, Baliapanda, Puri, Odisha 752001
+                        <p className="text-white/80 leading-relaxed">
+                          New Marine Drive Road, Baliapanda, Puri, Odisha 752001, India
                         </p>
                       </div>
                     </div>
@@ -338,7 +449,7 @@ export const CareersClient: React.FC = () => {
                 </div>
               </div>
 
-              {/* Right Column: Interactive Application Form */}
+              {/* Right Column: Online Resume Submission Form */}
               <div className="lg:col-span-8">
                 <div className="bg-[#0C1827] p-7 sm:p-10 rounded-sm border border-[#C5A059]/25 shadow-2xl relative">
                   {isSubmitted ? (
@@ -353,7 +464,7 @@ export const CareersClient: React.FC = () => {
                       </div>
 
                       <span className="inline-block font-sans text-xs font-semibold tracking-[0.22em] uppercase text-[#E8A317]">
-                        Application Received
+                        Application Submitted
                       </span>
 
                       <h3 className="font-serif text-3xl sm:text-4xl font-normal text-white">
@@ -365,13 +476,11 @@ export const CareersClient: React.FC = () => {
                         <strong className="text-[#E8A317] font-medium">
                           {submittedData?.department || 'the selected department'}
                         </strong>{' '}
-                        has been successfully received by Hotel Prabhupada. A record has been logged for{' '}
-                        <span className="text-white font-medium">{submittedData?.email}</span>.
+                        has been successfully received by Hotel Prabhupada management.
                       </p>
 
                       <div className="p-4 bg-white/5 border border-white/10 rounded-sm max-w-md mx-auto text-xs text-white/70 font-light leading-relaxed">
-                        Our management team will keep your CV on file and contact you directly when an
-                        opening matching your profile becomes available.
+                        Our management will review your details based on role requirements and current openings.
                       </div>
 
                       <div className="pt-6 flex flex-wrap items-center justify-center gap-4">
@@ -394,13 +503,13 @@ export const CareersClient: React.FC = () => {
                     <>
                       <div className="mb-8 pb-4 border-b border-white/10">
                         <span className="inline-block font-sans text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-[#E8A317] mb-1">
-                          Online Application
+                          Official Application Portal
                         </span>
                         <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white">
-                          Submit Your Profile
+                          Submit Your Resume
                         </h3>
                         <p className="font-sans text-xs sm:text-sm text-white/70 font-light mt-1">
-                          Please complete the details below and attach your latest resume.
+                          Submit your resume through the official hotel communication channels below.
                         </p>
                       </div>
 
@@ -412,7 +521,7 @@ export const CareersClient: React.FC = () => {
                               htmlFor="career-fullName"
                               className="block text-xs uppercase tracking-wider text-white/80 mb-1.5 font-medium"
                             >
-                              Full Name <span className="text-[#C0392B]">*</span>
+                              Full Name <span className="text-[#8B1E1E]">*</span>
                             </label>
                             <input
                               id="career-fullName"
@@ -432,7 +541,7 @@ export const CareersClient: React.FC = () => {
                               htmlFor="career-email"
                               className="block text-xs uppercase tracking-wider text-white/80 mb-1.5 font-medium"
                             >
-                              Email Address <span className="text-[#C0392B]">*</span>
+                              Email Address <span className="text-[#8B1E1E]">*</span>
                             </label>
                             <input
                               id="career-email"
@@ -455,7 +564,7 @@ export const CareersClient: React.FC = () => {
                               htmlFor="career-phone"
                               className="block text-xs uppercase tracking-wider text-white/80 mb-1.5 font-medium"
                             >
-                              Phone Number <span className="text-[#C0392B]">*</span>
+                              Phone Number <span className="text-[#8B1E1E]">*</span>
                             </label>
                             <input
                               id="career-phone"
@@ -475,7 +584,7 @@ export const CareersClient: React.FC = () => {
                               htmlFor="career-experience"
                               className="block text-xs uppercase tracking-wider text-white/80 mb-1.5 font-medium"
                             >
-                              Hospitality Experience <span className="text-[#C0392B]">*</span>
+                              Experience Level <span className="text-[#8B1E1E]">*</span>
                             </label>
                             <select
                               id="career-experience"
@@ -487,10 +596,10 @@ export const CareersClient: React.FC = () => {
                               className="w-full bg-[#0C1827] border border-white/15 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317] transition-colors cursor-pointer"
                             >
                               <option value="" disabled className="bg-[#0C1827] text-white/50">
-                                Select your experience level
+                                Select experience
                               </option>
-                              <option value="Fresher / 0-1 Year" className="bg-[#0C1827]">
-                                Fresher / 0–1 Year
+                              <option value="Fresher" className="bg-[#0C1827]">
+                                Fresher / Entry Level
                               </option>
                               <option value="1-3 Years" className="bg-[#0C1827]">
                                 1–3 Years
@@ -505,13 +614,13 @@ export const CareersClient: React.FC = () => {
                           </div>
                         </div>
 
-                        {/* Department of Interest */}
+                        {/* Department Selection */}
                         <div>
                           <label
                             htmlFor="career-department"
                             className="block text-xs uppercase tracking-wider text-white/80 mb-1.5 font-medium"
                           >
-                            Department / Area of Interest <span className="text-[#C0392B]">*</span>
+                            Department of Interest <span className="text-[#8B1E1E]">*</span>
                           </label>
                           <select
                             id="career-department"
@@ -525,9 +634,9 @@ export const CareersClient: React.FC = () => {
                             <option value="" disabled className="bg-[#0C1827] text-white/50">
                               Select a department
                             </option>
-                            {DEPARTMENT_OPTIONS.map((dept) => (
-                              <option key={dept} value={dept} className="bg-[#0C1827]">
-                                {dept}
+                            {DEPARTMENTS.map((dept) => (
+                              <option key={dept.name} value={dept.name} className="bg-[#0C1827]">
+                                {dept.name}
                               </option>
                             ))}
                           </select>
@@ -539,7 +648,7 @@ export const CareersClient: React.FC = () => {
                             htmlFor="career-resume-file"
                             className="block text-xs uppercase tracking-wider text-white/80 mb-1.5 font-medium"
                           >
-                            Resume / Curriculum Vitae (CV) <span className="text-[#C0392B]">*</span>
+                            Resume / CV Attachment <span className="text-[#8B1E1E]">*</span>
                           </label>
 
                           <div
@@ -555,13 +664,12 @@ export const CareersClient: React.FC = () => {
                                 handleFileChange(e.dataTransfer.files[0]);
                               }
                             }}
-                            className={`border-2 border-dashed rounded-sm p-6 text-center cursor-pointer transition-all duration-200 ${
-                              fileError
-                                ? 'border-[#C0392B]/70 bg-[#C0392B]/05'
-                                : resumeFile
+                            className={`border-2 border-dashed rounded-sm p-6 text-center cursor-pointer transition-all duration-200 ${fileError
+                              ? 'border-[#8B1E1E]/70 bg-[#8B1E1E]/05'
+                              : resumeFile
                                 ? 'border-[#E8A317]/80 bg-[#E8A317]/05'
                                 : 'border-white/20 bg-white/[0.02] hover:border-[#E8A317]/50 hover:bg-white/[0.04]'
-                            }`}
+                              }`}
                           >
                             <input
                               ref={fileInputRef}
@@ -598,7 +706,7 @@ export const CareersClient: React.FC = () => {
                                     setResumeFile(null);
                                     if (fileInputRef.current) fileInputRef.current.value = '';
                                   }}
-                                  className="p-1.5 text-white/50 hover:text-[#C0392B] rounded-sm hover:bg-white/10 transition-colors cursor-pointer"
+                                  className="p-1.5 text-white/50 hover:text-[#8B1E1E] rounded-sm hover:bg-white/10 transition-colors cursor-pointer"
                                   title="Remove attached file"
                                 >
                                   <X className="w-5 h-5" />
@@ -623,7 +731,7 @@ export const CareersClient: React.FC = () => {
                           {fileError && (
                             <p
                               role="alert"
-                              className="mt-2 text-xs text-[#C0392B] flex items-center gap-1.5 font-medium"
+                              className="mt-2 text-xs text-[#E8A317] flex items-center gap-1.5 font-medium"
                             >
                               <AlertCircle className="w-4 h-4 shrink-0" />
                               {fileError}
@@ -631,7 +739,7 @@ export const CareersClient: React.FC = () => {
                           )}
                         </div>
 
-                        {/* Cover Note / Message */}
+                        {/* Cover Note */}
                         <div>
                           <label
                             htmlFor="career-coverNote"
@@ -646,7 +754,7 @@ export const CareersClient: React.FC = () => {
                             onChange={(e) =>
                               setFormData({ ...formData, coverNote: e.target.value })
                             }
-                            placeholder="Briefly introduce yourself, your current location, notice period, or relevant skills..."
+                            placeholder="Briefly share your background, key skills, and interest in Hotel Prabhupada..."
                             className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317] placeholder:text-white/35 transition-colors resize-y"
                           />
                         </div>
@@ -669,8 +777,8 @@ export const CareersClient: React.FC = () => {
                           </button>
 
                           <p className="mt-3 text-center text-[11px] text-white/50">
-                            By submitting this application, you agree to allow Hotel Prabhupada to
-                            keep your details on file for future hiring considerations.
+                            By submitting this application, you agree to allow Hotel Prabhupada management
+                            to keep your details on file for available positions and recruitment procedures.
                           </p>
                         </div>
                       </form>

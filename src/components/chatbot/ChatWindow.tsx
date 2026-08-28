@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
 import { X, RotateCcw, Sparkles, MessageCircleQuestion, AlertCircle } from 'lucide-react';
 import { ChatMessage, Message } from './ChatMessage';
 import { ChatInput } from './ChatInput';
@@ -46,12 +47,19 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
       {/* 1. Header with Hotel Prabhupada Branding */}
       <div className="bg-[#0C1827] px-4 py-3.5 border-b border-[#C5A059]/25 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-3">
-          <div className="relative w-9 h-9 rounded-full bg-gradient-to-br from-[#E8A317] to-[#8B1E1E] p-0.5 shadow-md flex items-center justify-center">
-            <div className="w-full h-full rounded-full bg-[#0C1827] flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-[#E8A317]" />
+          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-[#E8A317] to-[#8B1E1E] p-0.5 shadow-md flex items-center justify-center shrink-0">
+            <div className="w-full h-full rounded-full bg-[#0C1827] overflow-hidden relative">
+              <Image
+                src="/chatbot/mascot.gif"
+                alt="Hotel Prabhupada Mascot"
+                fill
+                sizes="40px"
+                className="object-cover"
+                unoptimized
+              />
             </div>
             {/* Online indicator */}
-            <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 border-2 border-[#0C1827] rounded-full" />
+            <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 border-2 border-[#0C1827] rounded-full z-10" />
           </div>
 
           <div>
@@ -109,8 +117,15 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
         {/* Typing indicator */}
         {isLoading && (
           <div className="flex items-center gap-2 text-xs text-[#E8A317] my-2 pl-2">
-            <div className="w-6 h-6 rounded-full bg-[#0C1827] border border-[#C5A059]/30 flex items-center justify-center">
-              <Sparkles className="w-3 h-3 text-[#E8A317] animate-spin" />
+            <div className="w-7 h-7 rounded-full bg-[#0C1827] border border-[#C5A059]/30 overflow-hidden relative shrink-0">
+              <Image
+                src="/chatbot/mascot.gif"
+                alt="Typing Mascot"
+                fill
+                sizes="28px"
+                className="object-cover"
+                unoptimized
+              />
             </div>
             <div className="flex items-center gap-1 bg-[#0C1827] border border-[#C5A059]/20 px-3 py-2 rounded-2xl rounded-tl-none">
               <span className="w-1.5 h-1.5 bg-[#E8A317] rounded-full animate-bounce [animation-delay:-0.3s]" />

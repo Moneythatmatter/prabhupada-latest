@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Copy, Check, User, Sparkles } from 'lucide-react';
+import Image from 'next/image';
+import { Copy, Check, User } from 'lucide-react';
 
 export interface Message {
   id: string;
@@ -34,16 +35,23 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
     >
       {/* Avatar Icon */}
       <div
-        className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 border ${
+        className={`w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-full flex items-center justify-center shrink-0 border overflow-hidden relative ${
           isUser
             ? 'bg-gradient-to-br from-[#C5A059] to-[#8B1E1E] border-[#E8A317]/50 text-white shadow-md'
-            : 'bg-[#0C1827] border-[#C5A059]/40 text-[#E8A317] shadow-md'
+            : 'bg-[#0C1827] border-[#C5A059]/40 shadow-md'
         }`}
       >
         {isUser ? (
-          <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+          <User className="w-4 h-4 text-white" />
         ) : (
-          <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#E8A317]" />
+          <Image
+            src="/chatbot/mascot.gif"
+            alt="Assistant Mascot"
+            fill
+            sizes="34px"
+            className="object-cover"
+            unoptimized
+          />
         )}
       </div>
 

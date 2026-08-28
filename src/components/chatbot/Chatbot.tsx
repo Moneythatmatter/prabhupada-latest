@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, X, Sparkles } from 'lucide-react';
+import { X } from 'lucide-react';
 import { ChatWindow } from './ChatWindow';
 import { Message } from './ChatMessage';
 
@@ -172,12 +173,21 @@ export const Chatbot: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 10, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ delay: 2, duration: 0.4 }}
-            className="hidden sm:flex items-center gap-2 bg-[#0C1827] text-white border border-[#C5A059]/40 px-3.5 py-2 rounded-full shadow-2xl mb-3 cursor-pointer group hover:border-[#E8A317] transition-all"
+            transition={{ delay: 1.5, duration: 0.4 }}
+            className="hidden sm:flex items-center gap-2.5 bg-[#0C1827] text-white border border-[#C5A059]/40 pl-2 pr-3.5 py-1.5 rounded-full shadow-2xl mb-3 cursor-pointer group hover:border-[#E8A317] transition-all"
             onClick={() => setIsOpen(true)}
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#E8A317]" />
-            <span className="text-xs font-sans text-white/90">
+            <div className="relative w-7 h-7 rounded-full overflow-hidden shrink-0 border border-[#E8A317]/50 bg-[#070F1A]">
+              <Image
+                src="/chatbot/mascot.gif"
+                alt="Assistant Mascot"
+                fill
+                sizes="28px"
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+            <span className="text-xs font-sans text-white/90 group-hover:text-[#E8A317] transition-colors">
               Need help? Ask Hotel Prabhupada
             </span>
           </motion.div>
@@ -187,23 +197,32 @@ export const Chatbot: React.FC = () => {
           type="button"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? 'Close chat' : 'Open hotel assistant chat'}
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.95 }}
-          className={`cursor-pointer relative w-13 h-13 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.6)] transition-all duration-300 border ${isOpen
-              ? 'bg-[#0C1827] text-white border-[#f46429]'
-              : 'bg-[#f46429] text-white border-white/20 hover:bg-[#e05318] shadow-[0_10px_25px_rgba(244,100,41,0.4)] hover:shadow-[0_12px_30px_rgba(244,100,41,0.6)]'
-            }`}
+          className={`cursor-pointer relative w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.6)] transition-all duration-300 ${
+            isOpen
+              ? 'bg-[#0C1827] text-white border-2 border-[#E8A317]'
+              : 'bg-[#0C1827] border-2 border-[#E8A317]/80 hover:border-[#E8A317] shadow-[0_10px_25px_rgba(232,163,23,0.35)] hover:shadow-[0_12px_32px_rgba(232,163,23,0.55)]'
+          }`}
         >
           {isOpen ? (
-            <X className="w-6 h-6 text-[#f46429]" />
+            <X className="w-6 h-6 text-[#E8A317]" />
           ) : (
-            <>
-              <MessageSquare className="w-6 h-6 text-white drop-shadow-sm" />
-              {/* Pulsing online gold badge */}
-              <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-emerald-400 border-2 border-[#070F1A] rounded-full flex items-center justify-center">
+            <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-[#070F1A]">
+              <Image
+                src="/chatbot/mascot.gif"
+                alt="Hotel Prabhupada Assistant Mascot"
+                fill
+                sizes="64px"
+                className="object-cover object-center scale-105"
+                unoptimized
+                priority
+              />
+              {/* Pulsing online badge */}
+              <span className="absolute top-1 right-1 w-3.5 h-3.5 bg-emerald-400 border-2 border-[#070F1A] rounded-full flex items-center justify-center z-10">
                 <span className="w-full h-full rounded-full bg-emerald-400 animate-ping opacity-75" />
               </span>
-            </>
+            </div>
           )}
         </motion.button>
       </div>
