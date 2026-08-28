@@ -24,6 +24,7 @@ import {
   Building2,
   FileCheck2,
   HelpCircle,
+  Loader2,
 } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { InnerPageHero } from '@/components/layout/InnerPageHero';
@@ -32,6 +33,7 @@ import {
   PatachitraBackdrop,
   PatachitraDivider,
 } from '@/components/patachitra/PatachitraMotifs';
+import { uploadResumeToSupabase } from '@/lib/supabaseClient';
 
 const DEPARTMENTS = [
   {
@@ -102,6 +104,8 @@ export const CareersClient: React.FC = () => {
   const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStage, setSubmitStage] = useState<'idle' | 'uploading' | 'sending' | 'error'>('idle');
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState<{
     fullName: string;
@@ -115,6 +119,7 @@ export const CareersClient: React.FC = () => {
 
   const handleFileChange = (file: File | null) => {
     setFileError(null);
+    setSubmitError(null);
     if (!file) {
       setResumeFile(null);
       return;
@@ -141,8 +146,9 @@ export const CareersClient: React.FC = () => {
     setResumeFile(file);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError(null);
 
     if (!resumeFile) {
       setFileError('Please attach your resume or CV before submitting.');
@@ -150,18 +156,41 @@ export const CareersClient: React.FC = () => {
     }
 
     setIsSubmitting(true);
+    setSubmitStage('uploading');
 
-    const payload = {
-      ...formData,
-      resumeFileName: resumeFile.name,
-      resumeFileSize: `${(resumeFile.size / (1024 * 1024)).toFixed(2)} MB`,
-      submittedAt: new Date().toISOString(),
-    };
+    try {
+      // 1. Upload resume to Supabase Storage
+      const resumeUrl = await uploadResumeToSupabase(resumeFile);
 
-    console.log('Hotel Prabhupada Career Application Submitted:', payload);
+      // 2. Dispatch application data to Resend email API route
+      setSubmitStage('sending');
+      const response = await fetch('/api/careers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          position: formData.department,
+          experience: formData.experience,
+          coverNote: formData.coverNote,
+          resumeUrl,
+          resumeFileName: resumeFile.name,
+        }),
+      });
 
-    setTimeout(() => {
-      setIsSubmitting(false);
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        throw new Error(
+          result?.error ||
+            'We were unable to process your application. Please check your details and try again.'
+        );
+      }
+
+      // Success transition
       setIsSubmitted(true);
       setSubmittedData({
         fullName: formData.fullName,
@@ -177,8 +206,19 @@ export const CareersClient: React.FC = () => {
         coverNote: '',
       });
       setResumeFile(null);
+      setSubmitStage('idle');
       if (fileInputRef.current) fileInputRef.current.value = '';
-    }, 1000);
+    } catch (err: unknown) {
+      const errorMessage =
+        err instanceof Error
+          ? err.message
+          : 'An unexpected error occurred while submitting your application.';
+      console.error('Career application submission error:', err);
+      setSubmitError(errorMessage);
+      setSubmitStage('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -759,6 +799,31 @@ export const CareersClient: React.FC = () => {
                           />
                         </div>
 
+                        {/* Error Alert Box */}
+                        {submitError && (
+                          <motion.div
+                            initial={{ opacity: 0, y: -6 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="p-4 rounded-sm bg-[#8B1E1E]/20 border border-[#8B1E1E]/60 text-white flex items-start justify-between gap-3 text-xs"
+                          >
+                            <div className="flex items-start gap-2.5">
+                              <AlertCircle className="w-4 h-4 text-[#E8A317] shrink-0 mt-0.5" />
+                              <div className="space-y-1">
+                                <p className="font-semibold text-[#E8A317]">Submission Failed</p>
+                                <p className="text-white/80 leading-relaxed">{submitError}</p>
+                              </div>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() => setSubmitError(null)}
+                              className="text-white/50 hover:text-white transition-colors p-1"
+                              title="Dismiss error"
+                            >
+                              <X className="w-4 h-4" />
+                            </button>
+                          </motion.div>
+                        )}
+
                         {/* Submit Button */}
                         <div className="pt-2">
                           <button
@@ -767,7 +832,14 @@ export const CareersClient: React.FC = () => {
                             className="header-book-btn w-full font-sans text-xs tracking-widest uppercase py-4 rounded-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                           >
                             {isSubmitting ? (
-                              <span>Submitting Application...</span>
+                              <span className="inline-flex items-center gap-2">
+                                <Loader2 className="w-4 h-4 animate-spin text-[#E8A317]" />
+                                {submitStage === 'uploading'
+                                  ? 'Uploading Resume to Storage...'
+                                  : submitStage === 'sending'
+                                    ? 'Dispatching Application...'
+                                    : 'Submitting Application...'}
+                              </span>
                             ) : (
                               <>
                                 <span>Submit Application</span>
