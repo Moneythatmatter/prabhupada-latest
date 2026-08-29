@@ -61,7 +61,7 @@ const attractionsData = [
     title: 'Swargadwar Sea Beach & Shopping',
     description:
       'Vibrant golden beach waves and famous coastal shopping markets within walking distance.',
-    image: '/images/attraction-swargadwar.jpg',
+    image: '/images/attraction-swargadwar.jpeg',
     mapsUrl: 'https://maps.google.com/?q=Swargadwar+Beach+Puri+Odisha',
   },
   {

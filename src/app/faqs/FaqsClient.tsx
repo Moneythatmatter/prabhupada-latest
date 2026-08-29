@@ -143,7 +143,7 @@ const FAQ_DATA: FaqItem[] = [
       <div className="space-y-2">
         <p>The restaurant operates daily from approximately 7:00 AM to 11:00 PM.</p>
         <ul className="list-disc pl-5 space-y-1 text-white/85">
-          <li><strong>Breakfast:</strong> ~8:30 AM to 11:00 AM</li>
+          <li><strong>Breakfast:</strong> ~8:00 AM to 10:30 AM</li>
           <li><strong>Lunch:</strong> ~12:00 PM to 2:30 PM</li>
           <li><strong>Dinner:</strong> ~7:00 PM to 10:30 PM</li>
         </ul>
@@ -278,11 +278,10 @@ export const FaqsClient: React.FC = () => {
               return (
                 <div
                   key={faq.id}
-                  className={`rounded-sm border transition-all duration-300 overflow-hidden shadow-lg ${
-                    isOpen
-                      ? 'bg-[#0C1827] border-[#C5A059]/60 ring-1 ring-[#C5A059]/20'
-                      : 'bg-[#0C1827]/80 border-white/10 hover:border-[#C5A059]/30'
-                  }`}
+                  className={`rounded-sm border transition-all duration-300 overflow-hidden shadow-lg ${isOpen
+                    ? 'bg-[#0C1827] border-[#C5A059]/60 ring-1 ring-[#C5A059]/20'
+                    : 'bg-[#0C1827]/80 border-white/10 hover:border-[#C5A059]/30'
+                    }`}
                 >
                   <button
                     type="button"
@@ -291,18 +290,16 @@ export const FaqsClient: React.FC = () => {
                     className="w-full p-5 sm:p-6 text-left flex items-start justify-between gap-4 cursor-pointer focus:outline-none"
                   >
                     <span
-                      className={`font-serif text-base sm:text-lg font-normal transition-colors leading-snug ${
-                        isOpen ? 'text-[#E8A317]' : 'text-white'
-                      }`}
+                      className={`font-serif text-base sm:text-lg font-normal transition-colors leading-snug ${isOpen ? 'text-[#E8A317]' : 'text-white'
+                        }`}
                     >
                       {faq.question}
                     </span>
                     <div
-                      className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 border ${
-                        isOpen
-                          ? 'rotate-180 bg-[#E8A317]/20 border-[#E8A317]/40 text-[#E8A317]'
-                          : 'bg-white/5 border-white/15 text-white/60'
-                      }`}
+                      className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 border ${isOpen
+                        ? 'rotate-180 bg-[#E8A317]/20 border-[#E8A317]/40 text-[#E8A317]'
+                        : 'bg-white/5 border-white/15 text-white/60'
+                        }`}
                     >
                       <ChevronDown className="w-4 h-4" />
                     </div>

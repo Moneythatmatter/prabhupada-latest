@@ -178,7 +178,7 @@ export const HOTEL_INFO = {
     operatingDays: 'Monday through Sunday (Daily)',
     timings: {
       general: 'Approximately 7:00 AM to 11:00 PM',
-      breakfast: 'Approximately 8:30 AM to 11:00 AM',
+      breakfast: 'Approximately 8:00 AM to 10:30 AM',
       lunch: 'Approximately 12:00 PM to 2:30 PM',
       dinner: 'Approximately 7:00 PM to 10:30 PM',
     },

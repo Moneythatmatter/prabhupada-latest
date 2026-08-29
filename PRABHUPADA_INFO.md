@@ -418,7 +418,7 @@ Approximately 7:00 AM to 11:00 PM.
 
 ### **Breakfast**
 
-Approximately 8:30 AM to 11:00 AM.
+Approximately 8 AM to 10:30 AM.
 
 ### **Lunch**
 
@@ -450,7 +450,7 @@ Breakfast buffet availability: To be updated.
 
 Breakfast menu: To be updated.
 
-Breakfast timing: Approximately 8:30 AM to 11:00 AM, subject to current restaurant operations.
+Breakfast timing: Approximately 8:00 AM to 10:30 AM, subject to current restaurant operations.
 
 ---
 
@@ -882,7 +882,7 @@ Oris serves food that may include Indian, Bengali, and Chinese cuisine.
 
 The restaurant generally operates from approximately 7:00 AM to 11:00 PM.
 
-Breakfast is approximately 8:30 AM to 11:00 AM.
+Breakfast is approximately 8 AM to 10:30 AM.
 
 Lunch is approximately 12:00 PM to 2:30 PM.
 

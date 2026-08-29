@@ -244,11 +244,10 @@ export const GalleryClient: React.FC = () => {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`font-sans text-xs font-semibold tracking-[0.14em] uppercase px-6 py-3 rounded-full transition-all duration-300 ${
-                    isActive
-                      ? 'bg-[#E8A317] text-white shadow-md shadow-[#E8A317]/25 scale-105'
-                      : 'bg-white text-[#161616] border border-[#E5DECE] hover:border-[#E8A317] hover:text-[#E8A317] shadow-sm'
-                  }`}
+                  className={`font-sans text-xs font-semibold tracking-[0.14em] uppercase px-6 py-3 rounded-full transition-all duration-300 ${isActive
+                    ? 'bg-[#E8A317] text-white shadow-md shadow-[#E8A317]/25 scale-105'
+                    : 'bg-white text-[#161616] border border-[#E5DECE] hover:border-[#E8A317] hover:text-[#E8A317] shadow-sm'
+                    }`}
                 >
                   {cat}
                 </button>

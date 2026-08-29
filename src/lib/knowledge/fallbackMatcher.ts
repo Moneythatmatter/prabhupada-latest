@@ -113,7 +113,7 @@ Hotel Prabhupada has an in-house restaurant named **Oris**.
 - **Operating Days:** Open Monday through Sunday (Daily).
 - **Restaurant Timings:**
   - General hours: Approximately 7:00 AM to 11:00 PM
-  - **Breakfast:** Approximately 8:30 AM to 11:00 AM
+  - **Breakfast:** Approximately 8 AM to 10:30 AM
   - **Lunch:** Approximately 12:00 PM to 2:30 PM
   - **Dinner:** Approximately 7:00 PM to 10:30 PM
 - **Room Service:** In-room dining and room service facilities are available.

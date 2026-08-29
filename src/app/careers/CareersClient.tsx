@@ -140,7 +140,8 @@ export const CareersClient: React.FC = () => {
     if (name === 'phone') {
       const digits = value.replace(/\D/g, '');
       if (!value.trim()) return 'Phone number is required.';
-      if (digits.length < 10 || digits.length > 10) return 'Please enter a valid phone number (at least 10 digits).';
+      if (digits.length < 10) return 'Please enter a valid 10-digit phone number.';
+      if (digits.length > 15) return 'Phone number cannot exceed 15 digits.';
     }
     if (name === 'department') {
       if (!value.trim()) return 'Please select a department of interest.';
@@ -153,7 +154,7 @@ export const CareersClient: React.FC = () => {
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // Only allow digits, plus sign, spaces, hyphens, and parentheses - strictly reject letters
-    const filtered = e.target.value.replace(/[^\d+\-\s()]/g, '').slice(0, 11);
+    const filtered = e.target.value.replace(/[^\d+\-\s()]/g, '').slice(0, 10);
     setFormData((prev) => ({ ...prev, phone: filtered }));
 
     const error = validateField('phone', filtered);
