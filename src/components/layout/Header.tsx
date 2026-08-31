@@ -68,12 +68,12 @@ export const Header: React.FC = () => {
           
           {/* 1. Official Hotel Logo Container */}
           <Link href="/" className="flex items-center group py-1 h-full min-w-0 shrink">
-            <div className="relative h-10 w-[8.25rem] sm:h-12 sm:w-48 md:h-14 md:w-56">
+            <div className="relative h-11 w-36 sm:h-14 sm:w-56 md:h-16 md:w-64 transition-all duration-300">
               <Image
                 src="/logos/official-logo.png"
                 alt="Hotel Prabhupada Official Logo"
                 fill
-                sizes="(max-width: 640px) 132px, (max-width: 768px) 192px, 224px"
+                sizes="(max-width: 640px) 144px, (max-width: 768px) 224px, 256px"
                 priority
                 className="object-contain object-left filter drop-shadow-md transition-transform duration-300 group-hover:scale-[1.02]"
               />
@@ -245,12 +245,12 @@ export const Header: React.FC = () => {
             >
               <div>
                 <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
-                  <div className="relative h-12 w-44">
+                  <div className="relative h-14 w-52">
                     <Image
                       src="/logos/official-logo.png"
                       alt="Hotel Prabhupada Logo"
                       fill
-                      sizes="176px"
+                      sizes="208px"
                       className="object-contain object-left"
                     />
                   </div>
