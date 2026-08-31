@@ -54,7 +54,7 @@ const attractionsData = [
     title: 'Shree Jagannatha Temple Puri',
     description:
       'The world-famous sacred heritage temple located near Hotel Prabhupada in the heart of Puri.',
-    image: '/images/attraction-jagannath.webp',
+    image: '/images/jagannath-temple.webp',
     mapsUrl: 'https://maps.google.com/?q=Shree+Jagannath+Temple+Puri+Odisha',
   },
   {
