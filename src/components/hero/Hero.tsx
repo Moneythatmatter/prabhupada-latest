@@ -17,7 +17,7 @@ const slides = [
     title: 'Welcome to an Enchanting Wonderland',
     subtitle:
       'Stay at the best pet friendly, sea facing hotel in Puri, Odisha. Enjoy comfortable rooms, beach views, and a perfect stay near Puri beach.',
-    image: '/images/official-hero1.jpg',
+    image: '/images/official-hero1.webp',
     alt: 'Authentic Hotel Prabhupada Ocean View Puri Odisha',
   },
   {
@@ -25,7 +25,7 @@ const slides = [
     title: 'Best Pet-Friendly Hotel in Puri',
     subtitle:
       'Stay at one of the best pet-friendly hotels in Puri, where you and your furry companions can enjoy a relaxing stay with modern amenities, comfortable rooms, and warm hospitality near Puri Beach.',
-    image: '/images/official-hero2.jpg',
+    image: '/images/official-hero2.webp',
     alt: 'Hotel Prabhupada Superior Sea Facing Balcony View',
   },
   {
@@ -33,7 +33,7 @@ const slides = [
     title: 'Best Beachfront Hotel in Puri',
     subtitle:
       'Experience an unforgettable stay at one of the best beachfront hotels in Puri. Wake up to beautiful sea views and enjoy premium comfort on New Marine Drive Road.',
-    image: '/images/official-hero3.jpg',
+    image: '/images/official-hero3.webp',
     alt: 'Hotel Prabhupada New Marine Drive Puri Location',
   },
 ];

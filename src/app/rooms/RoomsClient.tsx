@@ -31,7 +31,7 @@ const roomsData = [
     badgeTitle: 'FAMILY QUAD SHARING',
     description:
       "At Hotel Prabhupada, we pride ourselves on offering a home away from home. Our Family Quad Sharing are thoughtfully designed to meet your needs, whether you're visiting for business or pleasure. Each room comes with top-tier amenities, including a comfortable bed, an en-suite bathroom, and a well-lit desk area. Enjoy 24-hour room service and personalized attention for a seamless stay.",
-    image: '/images/roomImage.png',
+    image: '/images/roomImage.webp',
     bookingUrl:
       'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
     features: ['Quad Sharing Setup', 'En-Suite Bathroom', '24-Hour Room Service', 'Well-Lit Desk Area', 'Free High-Speed Wi-Fi'],
@@ -42,7 +42,7 @@ const roomsData = [
     badgeTitle: 'EXECUTIVE FRONT SEA FACING',
     description:
       'Designed as a sanctuary of peace and comfort, our Executive Front Sea Facing rooms feature elegant interiors, plush furnishings, and modern technology. Enjoy direct ocean views and true Odia hospitality for both short and extended stays.',
-    image: '/images/hero2.png',
+    image: '/images/hero2.webp',
     bookingUrl:
       'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
     features: ['Direct Ocean View', 'Plush Furnishings', 'Air Conditioning', 'Free High-Speed Wi-Fi', 'In-Room Entertainment'],
@@ -53,7 +53,7 @@ const roomsData = [
     badgeTitle: 'PREMIER ROOM',
     description:
       "Indulge in the luxury and comfort of Hotel Prabhupada's well-designed Premier Room. Offering a perfect blend of modern aesthetics and premium amenities, featuring high-speed internet, in-room entertainment, spacious en-suite bathrooms, and 24-hour concierge service for an elevated stay.",
-    image: '/images/official-hero1.jpg',
+    image: '/images/official-hero1.webp',
     bookingUrl:
       'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
     features: ['Modern Aesthetics', 'High-Speed Internet', 'In-Room Entertainment', 'Spacious Bathroom', '24-Hour Concierge'],
@@ -64,7 +64,7 @@ const roomsData = [
     badgeTitle: 'DELUXE WITH BALCONY SEA VIEW',
     description:
       'Thoughtfully designed for both business and leisure travelers, our Deluxe With Balcony Sea View rooms offer a comfortable bed, an en-suite bathroom, a well-lit desk area, and a private balcony with sea views. Enjoy 24-hour room service and personalized hospitality.',
-    image: '/images/official-hero2.jpg',
+    image: '/images/official-hero2.webp',
     bookingUrl:
       'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
     features: ['Private Sea View Balcony', 'Well-Lit Desk Area', 'Air Conditioning', 'Free High-Speed Wi-Fi', '24-Hour Room Service'],
@@ -75,7 +75,7 @@ const roomsData = [
     badgeTitle: 'SUPERIOR DELUXE BALCONY SEA VIEW',
     description:
       'Welcome to Hotel Prabhupada, where comfort meets luxury. Our Superior Deluxe Balcony Sea view offer the perfect blend of style and functionality, ideal for both business and leisure travelers. Each room features modern amenities, including high-speed Wi-Fi, flat-screen TVs, and plush bedding, ensuring a relaxing stay. Unwind in our elegantly furnished interiors, designed to provide you with the utmost comfort.',
-    image: '/images/room-superior-deluxe.jpg',
+    image: '/images/room-superior-deluxe.webp',
     bookingUrl:
       'https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000009',
     features: ['Sea View Balcony', 'Free High-Speed Wi-Fi', 'Air Conditioning', 'Flat-Screen TV', 'Daily Housekeeping'],
@@ -86,7 +86,7 @@ const roomsData = [
     badgeTitle: 'SUITE FRONT SEA VIEW',
     description:
       'Discover the ultimate in relaxation at Hotel Prabhupada. Our Suite Front sea view offer a tranquil retreat. Each room is equipped with contemporary décor, premium bedding, and essential amenities such as complimentary Wi-Fi, in-room entertainment, and a dedicated workspace. Experience unparalleled hospitality and make your stay memorable with us.',
-    image: '/images/room-suite.jpg',
+    image: '/images/room-suite.webp',
     bookingUrl:
       'https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000010',
     features: ['Front Ocean View', 'Spacious Seating Area', 'Free High-Speed Wi-Fi', 'Flat-Screen TV', 'En-Suite Bathroom'],

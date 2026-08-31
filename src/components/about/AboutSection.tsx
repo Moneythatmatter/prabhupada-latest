@@ -78,7 +78,7 @@ export const AboutSection: React.FC = () => {
                 style={{ y: imageY }}
               >
                 <Image
-                  src="/images/official-about.jpg"
+                  src="/images/official-about.webp"
                   alt="Hotel Prabhupada Exterior Ocean View Building Puri"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

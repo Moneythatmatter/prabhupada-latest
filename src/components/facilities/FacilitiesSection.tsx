@@ -41,7 +41,7 @@ const facilities: Facility[] = [
     description:
       'Refresh in our outdoor pool after a day by the Puri coast — blue water, open sky, and easy poolside lounging.',
     icon: Waves,
-    image: '/images/swimming_pool.jpg',
+    image: '/images/swimming_pool.webp',
     alt: 'Outdoor swimming pool and sun deck at Hotel Prabhupada Puri',
     number: '01',
   },
@@ -50,7 +50,7 @@ const facilities: Facility[] = [
     description:
       'A well-equipped space for meetings, celebrations, and gatherings — ready for business or family occasions.',
     icon: Presentation,
-    image: '/images/conference_hall.jpg',
+    image: '/images/conference_hall.webp',
     alt: 'Conference and banquet hall setup for corporate meetings and family events',
     number: '02',
   },
@@ -59,7 +59,7 @@ const facilities: Facility[] = [
     description:
       'A calm shared lounge to relax, connect, and unwind between temple visits and beach walks.',
     icon: Sofa,
-    image: '/images/guest_lounge.jpg',
+    image: '/images/guest_lounge.webp',
     alt: 'Relaxing guest lounge with comfortable seating at Hotel Prabhupada',
     number: '03',
   },
@@ -68,7 +68,7 @@ const facilities: Facility[] = [
     description:
       'Rejuvenating treatments for restful wellness during your stay — unwind after a day of exploring Puri.',
     icon: Flower2,
-    image: '/images/spa.png',
+    image: '/images/spa.webp',
     alt: 'Ayurvedic wellness and rejuvenating spa therapies at Hotel Prabhupada',
     number: '04',
   },
@@ -77,7 +77,7 @@ const facilities: Facility[] = [
     description:
       'In-house dining with Odia flavours and multi-cuisine options, served in a warm, welcoming setting.',
     icon: UtensilsCrossed,
-    image: '/images/oris_restaurant.jpg',
+    image: '/images/oris_restaurant.webp',
     alt: 'Oris restaurant serving authentic Odia delicacies and multi-cuisine meals',
     number: '05',
   },
@@ -86,7 +86,7 @@ const facilities: Facility[] = [
     description:
       'Open green lawn for leisure, photos, and outdoor moments — quiet greenery on New Marine Drive.',
     icon: Trees,
-    image: '/images/lawn.jpg',
+    image: '/images/lawn.webp',
     alt: 'Lush landscaped open garden lawn facing New Marine Drive Puri',
     number: '06',
   },

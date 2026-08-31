@@ -24,7 +24,7 @@ const featuredRooms = [
     badgeTitle: 'FAMILY QUAD SHARING',
     description:
       "At Hotel Prabhupada, we pride ourselves on offering a home away from home. Our Family Quad Sharing are thoughtfully designed to meet your needs, whether you're visiting for business or pleasure. Each room comes with top-tier amenities, including a comfortable bed, an en-suite bathroom, and a well-lit desk area.",
-    image: '/images/official-about.jpg',
+    image: '/images/official-about.webp',
     bookingUrl: 'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
     exploreUrl: '/rooms',
   },
@@ -33,7 +33,7 @@ const featuredRooms = [
     badgeTitle: 'EXECUTIVE FRONT SEA FACING',
     description:
       'Designed as a sanctuary of peace and comfort, our Executive Front Sea Facing rooms feature elegant interiors, plush furnishings, and modern technology. Enjoy direct ocean views and true Odia hospitality for both short and extended stays.',
-    image: '/images/room-executive.jpg',
+    image: '/images/room-executive.webp',
     bookingUrl: 'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
     exploreUrl: '/rooms',
   },
@@ -42,7 +42,7 @@ const featuredRooms = [
     badgeTitle: 'SUPERIOR DELUXE BALCONY SEA VIEW',
     description:
       'Welcome to Hotel Prabhupada, where comfort meets luxury. Our Superior Deluxe Balcony Sea view offer the perfect blend of style and functionality, featuring high-speed Wi-Fi, flat-screen TVs, and plush bedding.',
-    image: '/images/room-superior-deluxe.jpg',
+    image: '/images/room-superior-deluxe.webp',
     bookingUrl:
       'https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000009',
     exploreUrl: '/rooms',
@@ -52,7 +52,7 @@ const featuredRooms = [
     badgeTitle: 'SUITE FRONT SEA VIEW',
     description:
       'Discover the ultimate in relaxation at Hotel Prabhupada. Our Suite Front sea view offer a tranquil retreat with contemporary décor, premium bedding, and essential amenities.',
-    image: '/images/room-suite.jpg',
+    image: '/images/room-suite.webp',
     bookingUrl:
       'https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000010',
     exploreUrl: '/rooms',
@@ -96,7 +96,7 @@ export const RoomsSection: React.FC = () => {
           className={`pointer-events-none absolute ${pos} z-0 w-[140px] h-[140px] sm:w-[200px] sm:h-[200px] md:w-[260px] md:h-[260px] ${flip}`}
         >
           <Image
-            src="/images/rooms-corner-ornament-v2.png"
+            src="/images/rooms-corner-ornament-v2.webp"
             alt=""
             fill
             sizes="(max-width: 640px) 140px, (max-width: 768px) 200px, 260px"

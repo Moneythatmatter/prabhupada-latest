@@ -21,7 +21,7 @@ export const AttractionsClient: React.FC = () => {
         overline="Explore Puri · Odisha Heritage"
         title="Nearby Attractions"
         subtitle="Discover temples, beaches, craft villages, and heritage sites around Hotel Prabhupada."
-        image="/images/konark2.png"
+        image="/images/konark2.webp"
         imageAlt="Attractions near Hotel Prabhupada Puri"
         cta={
           <a

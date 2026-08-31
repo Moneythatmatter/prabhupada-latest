@@ -39,7 +39,7 @@ const galleryPhotos = [
     id: 1,
     title: 'Hotel Reception Counter & Lounge',
     category: 'Reception',
-    image: '/images/official-about.jpg',
+    image: '/images/reception.jpg',
     caption: 'Welcoming reception counter featuring marble wall backdrop and traditional deity altar at Hotel Prabhupada.',
   },
 
@@ -48,7 +48,7 @@ const galleryPhotos = [
     id: 2,
     title: 'Hotel Lawn & Outdoor Seating',
     category: 'Lawn',
-    image: '/images/official-hero3.jpg',
+    image: '/images/lawn.webp',
     caption: 'Manicured green lawn with comfortable wooden bench seating for outdoor relaxation.',
   },
 
@@ -57,7 +57,7 @@ const galleryPhotos = [
     id: 3,
     title: 'Main Staircase & Corridors',
     category: 'Common Area & Corridors',
-    image: '/images/puri-marine-drive.png',
+    image: '/images/staircase.jpg',
     caption: 'Elegantly panelled main staircase and guest floor corridors with wooden handrails.',
   },
 
@@ -66,7 +66,7 @@ const galleryPhotos = [
     id: 4,
     title: 'Outdoor Swimming Pool & Facade',
     category: 'Swimming Pool',
-    image: '/images/official-hero1.jpg',
+    image: '/images/swimming_pool.webp',
     caption: 'Crystal-clear blue tiled outdoor swimming pool with poolside lounge seating.',
   },
 
@@ -75,7 +75,7 @@ const galleryPhotos = [
     id: 5,
     title: 'In-House Dining Restaurant',
     category: 'Restaurant',
-    image: '/images/attraction-sudarshan.png',
+    image: '/images/oris_restaurant.webp',
     caption: 'In-house restaurant serving authentic Odia seafood, North Indian, and Continental delicacies.',
   },
 
@@ -84,21 +84,21 @@ const galleryPhotos = [
     id: 6,
     title: 'Deluxe Balcony Sea View Bedroom',
     category: 'Deluxe Balcony Sea View',
-    image: '/images/room-superior-deluxe.jpg',
+    image: '/images/room-superior-deluxe.webp',
     caption: 'Spacious guest bedroom with plush double bed, artwork, and individual air conditioning.',
   },
   {
     id: 7,
     title: 'Private Sea View Balcony',
     category: 'Deluxe Balcony Sea View',
-    image: '/images/official-hero2.jpg',
+    image: '/images/sea_balcony.jpg',
     caption: 'Private sea-facing balcony offering panoramic views of Puri Golden Beach and waves.',
   },
   {
     id: 8,
     title: 'Deluxe Sea View Bathroom',
     category: 'Deluxe Balcony Sea View',
-    image: '/images/attraction-swargadwar.jpg',
+    image: '/images/bathroom.jpg',
     caption: 'Modern tiled en-suite bathroom with hot & cold rain shower and vessel sink.',
   },
 
@@ -107,35 +107,35 @@ const galleryPhotos = [
     id: 9,
     title: 'Executive Front Sea View Suite',
     category: 'Executive Front Sea View Room',
-    image: '/images/room-suite.jpg',
+    image: '/images/room-suite.webp',
     caption: 'Elegantly furnished suite with plush double bed, feature wall art, and teal window drapes.',
   },
   {
     id: 10,
     title: 'Executive Room Interior View',
     category: 'Executive Front Sea View Room',
-    image: '/images/room-executive.jpg',
+    image: '/images/room-executive.webp',
     caption: 'Bright, airy room layout with wall-mounted flat-screen TV and dedicated workspace.',
   },
   {
     id: 11,
     title: 'Puri Golden Beach Horizon',
     category: 'Executive Front Sea View Room',
-    image: '/images/puri-golden-beach.png',
+    image: '/images/puri-golden-beach.webp',
     caption: 'Direct sea view of Puri Golden Beach waves visible from Executive Suite windows.',
   },
   {
     id: 12,
     title: 'Shree Jagannatha Temple Puri',
     category: 'Common Area & Corridors',
-    image: '/images/attraction-jagannath.jpg',
+    image: '/images/jagannath-temple.webp',
     caption: 'Sacred 12th-century Jagannath Temple heritage located near Hotel Prabhupada.',
   },
   {
     id: 13,
     title: 'Konark Sun Temple Heritage',
     category: 'Common Area & Corridors',
-    image: '/images/attraction-konark.jpg',
+    image: '/images/attraction-konark.webp',
     caption: 'UNESCO World Heritage 13th-century Sun Temple architectural monument.',
   },
 ];
@@ -184,7 +184,7 @@ export const GalleryClient: React.FC = () => {
         overline="HOTEL PRABHUPADA"
         title="Gallery"
         subtitle="Explore our rooms, amenities, dining spaces, and hotel surroundings before your stay."
-        image="/images/room-superior-deluxe.jpg"
+        image="/images/room-superior-deluxe.webp"
         imageAlt="Hotel Prabhupada Gallery"
         cta={
           <>

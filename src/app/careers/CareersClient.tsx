@@ -313,7 +313,7 @@ export const CareersClient: React.FC = () => {
         overline="Hotel Prabhupada · Puri"
         title="Career Opportunities at Hotel Prabhupada"
         subtitle="Hotel Prabhupada provides opportunities for individuals interested in building a rewarding career in the hospitality industry."
-        image="/images/official-about.jpg"
+        image="/images/official-about.webp"
         imageAlt="Career Opportunities at Hotel Prabhupada Puri"
         cta={
           <button

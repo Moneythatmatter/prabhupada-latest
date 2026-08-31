@@ -35,7 +35,7 @@ export const ContactClient: React.FC = () => {
         overline="New Marine Drive · Puri"
         title="Contact Us"
         subtitle="Reach Hotel Prabhupada for reservations, queries, or a callback."
-        image="/images/official-about.jpg"
+        image="/images/official-about.webp"
         imageAlt="Contact Hotel Prabhupada Puri"
         cta={
           <button

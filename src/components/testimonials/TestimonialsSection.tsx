@@ -75,7 +75,7 @@ export const TestimonialsSection: React.FC = () => {
       >
         <div className="absolute inset-0">
           <Image
-            src="/images/patachitra-bg.png"
+            src="/images/patachitra-bg.webp"
             alt="Traditional Odisha Pattachitra painting"
             fill
             sizes="100vw"

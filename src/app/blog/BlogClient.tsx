@@ -29,7 +29,7 @@ export const BlogClient: React.FC = () => {
         overline="Stories from Puri"
         title="Hotel Blog"
         subtitle="Travel tips, heritage guides, and stay inspiration from Hotel Prabhupada."
-        image="/images/official-hero3.jpg"
+        image="/images/official-hero3.webp"
         imageAlt="Hotel Prabhupada Blog"
       />
 

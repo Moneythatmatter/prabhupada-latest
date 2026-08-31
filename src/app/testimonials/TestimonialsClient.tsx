@@ -176,7 +176,7 @@ export const TestimonialsClient: React.FC = () => {
         overline="Hotel Prabhupada · Puri"
         title="Guest Testimonials & Reviews"
         subtitle="Read real experiences from families, couples, and pilgrims who enjoyed their seaside stay at Hotel Prabhupada, Puri."
-        image="/images/patachitra-bg.png"
+        image="/images/patachitra-bg.webp"
         imageAlt="Hotel Prabhupada Guest Testimonials and Reviews"
         cta={
           <button

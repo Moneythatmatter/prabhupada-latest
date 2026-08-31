@@ -76,8 +76,8 @@ export const Header: React.FC = () => {
       <div className="fixed top-0 left-0 w-full z-[1000] pt-[env(safe-area-inset-top)]">
         <div
           className={`hidden md:block relative z-20 transition-[max-height,opacity,transform] duration-300 ease-out ${isScrolled
-              ? 'max-h-0 opacity-0 -translate-y-1 pointer-events-none overflow-hidden'
-              : 'max-h-12 opacity-100 translate-y-0 overflow-visible'
+            ? 'max-h-0 opacity-0 -translate-y-1 pointer-events-none overflow-hidden'
+            : 'max-h-12 opacity-100 translate-y-0 overflow-visible'
             }`}
         >
           <TopBar />
@@ -85,24 +85,29 @@ export const Header: React.FC = () => {
 
         <header
           className={`relative z-10 w-full transition-all duration-300 ease-out ${isScrolled
-              ? 'bg-[#0C1827]/96 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.4)]'
-              : 'bg-[#0C1827]/92 backdrop-blur-md sm:bg-[#0C1827] sm:backdrop-blur-none'
+            ? 'bg-[#0C1827]/96 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.4)]'
+            : 'bg-[#0C1827]/92 backdrop-blur-md sm:bg-[#0C1827] sm:backdrop-blur-none'
             }`}
         >
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#C5A059]/50 to-transparent pointer-events-none" />
           <div
-            className={`max-w-[1360px] mx-auto px-3 flex items-center justify-between gap-3 transition-all duration-300 ${isScrolled ? 'h-[56px] sm:h-[76px]' : 'h-[58px] sm:h-[90px] md:h-[96px]'
+            className={`max-w-[1360px] mx-auto px-3 flex items-center justify-between gap-3 transition-all duration-300 ${isScrolled ? 'h-[56px] sm:h-[76px]' : 'h-[62px] sm:h-[94px] md:h-[102px]'
               }`}
           >
 
             {/* 1. Official Hotel Logo Container */}
             <Link href="/" className="flex items-center group py-1 h-full min-w-0 shrink">
-              <div className="relative h-11 w-36 sm:h-14 sm:w-56 md:h-16 md:w-64 transition-all duration-300">
+              <div
+                className={`relative transition-all duration-300 ${isScrolled
+                  ? 'h-11 w-36 sm:h-14 sm:w-52 md:h-16 md:w-64'
+                  : 'h-12 w-40 sm:h-[72px] sm:w-60 md:h-[82px] md:w-72 lg:h-[88px] lg:w-80'
+                  }`}
+              >
                 <Image
                   src="/logos/official-logo.png"
                   alt="Hotel Prabhupada Official Logo"
                   fill
-                  sizes="(max-width: 640px) 144px, (max-width: 768px) 224px, 256px"
+                  sizes="(max-width: 640px) 160px, (max-width: 768px) 240px, 320px"
                   priority
                   className="object-contain object-left filter drop-shadow-md transition-transform duration-300 group-hover:scale-[1.02]"
                 />
@@ -293,12 +298,12 @@ export const Header: React.FC = () => {
             >
               <div>
                 <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
-                  <div className="relative h-14 w-52">
+                  <div className="relative h-16 w-56">
                     <Image
                       src="/logos/official-logo.png"
                       alt="Hotel Prabhupada Logo"
                       fill
-                      sizes="208px"
+                      sizes="224px"
                       className="object-contain object-left"
                     />
                   </div>

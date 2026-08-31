@@ -115,7 +115,7 @@ export const AmenitiesClient: React.FC = () => {
         overline="LUXURY EXPERIENCE"
         title="Our Amenities"
         subtitle="Every room is designed to provide comfort, convenience and relaxation during your stay at Hotel Prabhupada."
-        image="/images/official-hero1.jpg"
+        image="/images/official-hero1.webp"
         imageAlt="Hotel Prabhupada Puri Luxury Room"
         cta={
           <a
@@ -207,7 +207,7 @@ export const AmenitiesClient: React.FC = () => {
             >
               <div className="relative h-[380px] sm:h-[480px] lg:h-[540px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/15 group">
                 <ParallaxImage
-                  src="/images/official-about.jpg"
+                  src="/images/official-about.webp"
                   alt="Hotel Prabhupada Guest Comfort & View"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="absolute inset-0"

@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
         className="pointer-events-none absolute bottom-0 left-1/2 z-0 w-[420px] h-[210px] sm:w-[640px] sm:h-[320px] md:w-[820px] md:h-[410px] -translate-x-1/2"
       >
         <Image
-          src="/images/footer-mandala-half.png"
+          src="/images/footer-mandala-half.webp"
           alt=""
           fill
           sizes="(max-width: 640px) 420px, (max-width: 768px) 640px, 820px"

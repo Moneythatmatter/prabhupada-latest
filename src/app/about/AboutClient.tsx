@@ -54,21 +54,21 @@ const attractionsData = [
     title: 'Shree Jagannatha Temple Puri',
     description:
       'The world-famous sacred heritage temple located near Hotel Prabhupada in the heart of Puri.',
-    image: '/images/attraction-jagannath.jpg',
+    image: '/images/attraction-jagannath.webp',
     mapsUrl: 'https://maps.google.com/?q=Shree+Jagannath+Temple+Puri+Odisha',
   },
   {
     title: 'Swargadwar Sea Beach & Shopping',
     description:
       'Vibrant golden beach waves and famous coastal shopping markets within walking distance.',
-    image: '/images/attraction-swargadwar.jpeg',
+    image: '/images/attraction-swargadwar.webp',
     mapsUrl: 'https://maps.google.com/?q=Swargadwar+Beach+Puri+Odisha',
   },
   {
     title: 'Konark Sun Temple & Heritage',
     description:
       'Iconic 13th-century UNESCO World Heritage monument architectural wonder nearby.',
-    image: '/images/attraction-konark.jpg',
+    image: '/images/attraction-konark.webp',
     mapsUrl: 'https://maps.google.com/?q=Konark+Sun+Temple+Odisha',
   },
 ];
@@ -80,7 +80,7 @@ export const AboutClient: React.FC = () => {
         overline="Coastal Heritage"
         title="About Hotel Prabhupada"
         subtitle="Sea-facing hospitality in Puri, inspired by Odisha’s living Pattachitra tradition."
-        image="/images/official-about.jpg"
+        image="/images/official-about.webp"
         imageAlt="Hotel Prabhupada Puri Exterior View"
         cta={
           <a
@@ -108,7 +108,7 @@ export const AboutClient: React.FC = () => {
             >
               <div className="relative h-[320px] sm:h-[520px] md:h-[580px] w-full rounded-sm overflow-hidden shadow-2xl group">
                 <ParallaxImage
-                  src="/images/official-about.jpg"
+                  src="/images/official-about.webp"
                   alt="Hotel Prabhupada Beach Front View Puri"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="absolute inset-0"
