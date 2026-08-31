@@ -75,25 +75,23 @@ export const Header: React.FC = () => {
       {/* Single fixed stack — TopBar + nav stay flush (no gap on scroll) */}
       <div className="fixed top-0 left-0 w-full z-[1000] pt-[env(safe-area-inset-top)]">
         <div
-          className={`hidden md:block relative z-20 transition-[max-height,opacity,transform] duration-300 ease-out ${
-            isScrolled
+          className={`hidden md:block relative z-20 transition-[max-height,opacity,transform] duration-300 ease-out ${isScrolled
               ? 'max-h-0 opacity-0 -translate-y-1 pointer-events-none overflow-hidden'
               : 'max-h-12 opacity-100 translate-y-0 overflow-visible'
-          }`}
+            }`}
         >
           <TopBar />
         </div>
 
         <header
-          className={`relative z-10 w-full transition-all duration-300 ease-out ${
-            isScrolled
+          className={`relative z-10 w-full transition-all duration-300 ease-out ${isScrolled
               ? 'bg-[#0C1827]/96 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.4)]'
               : 'bg-[#0C1827]/92 backdrop-blur-md sm:bg-[#0C1827] sm:backdrop-blur-none'
-          }`}
+            }`}
         >
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#C5A059]/50 to-transparent pointer-events-none" />
           <div
-            className={`max-w-[1360px] mx-auto px-3 sm:px-8 flex items-center justify-between gap-3 transition-all duration-300 ${isScrolled ? 'h-[56px] sm:h-[76px]' : 'h-[58px] sm:h-[90px] md:h-[96px]'
+            className={`max-w-[1360px] mx-auto px-3 flex items-center justify-between gap-3 transition-all duration-300 ${isScrolled ? 'h-[56px] sm:h-[76px]' : 'h-[58px] sm:h-[90px] md:h-[96px]'
               }`}
           >
 
