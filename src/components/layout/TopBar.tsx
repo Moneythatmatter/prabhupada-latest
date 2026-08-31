@@ -4,7 +4,7 @@ import { LanguageSelector } from './LanguageSelector';
 
 export const TopBar: React.FC = () => {
   return (
-    <div className="bg-[#070F1A] text-white/85 text-xs py-2 border-b border-white/10">
+    <div className="bg-[#070F1A] text-white/85 text-xs py-2 border-b border-white/10 relative z-20">
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 flex justify-between items-center">
         <ul className="flex items-center gap-7 list-none m-0 p-0">
           <li className="flex items-center gap-2 tracking-wider">

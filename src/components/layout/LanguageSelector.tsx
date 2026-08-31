@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Globe, ChevronDown, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -14,6 +14,7 @@ export const languages = [
 export const LanguageSelector: React.FC = () => {
   const [selectedLang, setSelectedLang] = useState('en');
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Add Google Translate script dynamically if not present
@@ -37,6 +38,16 @@ export const LanguageSelector: React.FC = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const changeLanguage = (langCode: string) => {
     setSelectedLang(langCode);
     setIsOpen(false);
@@ -52,52 +63,53 @@ export const LanguageSelector: React.FC = () => {
   const currentLanguage = languages.find((l) => l.code === selectedLang) || languages[0];
 
   return (
-    <div className="relative inline-block text-left z-[1020]">
+    <div ref={dropdownRef} className="relative inline-block text-left z-[9999]">
       {/* Hidden Google Translate div */}
       <div id="google_translate_element" className="hidden" />
 
       {/* Selector Trigger Button */}
       <button
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 font-sans text-xs font-semibold tracking-wider text-[#4A4540] hover:text-[#FF8C1A] bg-white border border-[#E8DFD4] px-3 py-1.5 rounded-full transition-all duration-300 focus:outline-none"
+        className="flex items-center gap-1.5 font-sans text-xs font-semibold tracking-wider text-[#0C1827] hover:text-[#C5A059] bg-white hover:bg-slate-50 border border-white/20 px-3 py-1.5 rounded-full shadow-sm transition-all duration-200 focus:outline-none cursor-pointer"
         aria-label="Select Language"
       >
-        <Globe className="w-3.5 h-3.5 text-[#FF8C1A]" />
+        <Globe className="w-3.5 h-3.5 text-[#C5A059]" />
         <span>{currentLanguage.nativeName}</span>
-        <ChevronDown className={`w-3 h-3 text-[#6B6560] transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-3 h-3 text-[#0C1827]/70 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {/* Dropdown Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 8 }}
+            initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 8 }}
-            transition={{ duration: 0.2 }}
-            className="absolute right-0 mt-2 w-44 bg-white border border-[#E8DFD4] shadow-2xl rounded-xl py-2 z-[1050]"
+            exit={{ opacity: 0, y: 6 }}
+            transition={{ duration: 0.15 }}
+            className="absolute right-0 mt-2 w-48 bg-[#0C1827] text-white border border-[#C5A059]/40 shadow-2xl rounded-xl py-2 z-[9999999]"
           >
-            <div className="px-3 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-[#FF8C1A] border-b border-[#E8DFD4]">
+            <div className="px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-[#C5A059] border-b border-white/10">
               Select Language
             </div>
-            <ul className="list-none p-0 m-0">
+            <ul className="list-none p-0 m-0 py-1">
               {languages.map((lang) => {
                 const isSelected = selectedLang === lang.code;
                 return (
                   <li key={lang.code}>
                     <button
+                      type="button"
                       onClick={() => changeLanguage(lang.code)}
-                      className={`w-full flex items-center justify-between px-3.5 py-2 text-xs font-sans transition-colors ${
-                        isSelected
-                          ? 'text-[#FF8C1A] bg-[#EFEBE7] font-semibold'
-                          : 'text-[#4A4540] hover:text-[#2F2F2F] hover:bg-[#EFEBE7]'
-                      }`}
+                      className={`w-full flex items-center justify-between px-3.5 py-2 text-xs font-sans transition-colors cursor-pointer ${isSelected
+                          ? 'text-[#C5A059] bg-white/10 font-semibold'
+                          : 'text-white/80 hover:text-white hover:bg-white/5'
+                        }`}
                     >
                       <div className="flex items-center gap-2">
-                        <span>{lang.nativeName}</span>
-                        <span className="text-[10px] text-[#6B6560]">({lang.name})</span>
+                        <span className="font-medium">{lang.nativeName}</span>
+                        <span className="text-[11px] text-white/50">({lang.name})</span>
                       </div>
-                      {isSelected && <Check className="w-3.5 h-3.5 text-[#FF8C1A]" />}
+                      {isSelected && <Check className="w-3.5 h-3.5 text-[#C5A059]" />}
                     </button>
                   </li>
                 );
