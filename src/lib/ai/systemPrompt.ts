@@ -21,7 +21,7 @@ function getPrabhupadaInfoDocument(): string {
 
   // Fallback string if file read is not possible
   return `# Hotel Prabhupada
-    Location: New Marine Drive Rd, near Light House, Puri, Odisha 752001, India.
+    Location: New Marine Drive Rd, Near light house, Puri, Odisha 752001, India.
     Contact: +91 9583002951 / +91 9583002952 | reservation@hotelprabhupada.com | gm@hotelprabhupada.com | www.hotelprabhupada.com
     Rooms: Premier Room, Deluxe Room, Executive Room, Family Room, Superior Deluxe Balcony Sea View, Suite Front Sea View.
     Restaurant: Oris (Indian, Bengali, Chinese cuisine). General hours: ~7:00 AM - 11:00 PM.
@@ -45,7 +45,7 @@ All your answers to guests and visitors must strictly reflect what is documented
    - Invite the guest to share their travel dates and party size or contact the hotel reservation desk directly.
 4. Key Facts to adhere to:
    - **Hotel Name:** Hotel Prabhupada
-   - **Location:** New Marine Drive Rd, near Light House, Puri, Odisha 752001, India (near the sea beach).
+   - **Location:** New Marine Drive Rd, Near light house, Puri, Odisha 752001, India (near the sea beach).
    - **Room Categories:** Premier Room, Deluxe Room, Executive Room, Family Room, Superior Deluxe Balcony Sea View, Suite Front Sea View.
    - **In-House Restaurant:** "Oris" serving Indian cuisine, Bengali cuisine, and Chinese cuisine. Hours: ~7:00 AM to 11:00 PM (Breakfast: ~8:00–10:30 AM, Lunch: ~12:00–2:30 PM, Dinner: ~7:00–10:30 PM).
    - **Contact Details:** Phone: +91 9583002951 / +91 9583002952 | Email: reservation@hotelprabhupada.com / gm@hotelprabhupada.com | Website: www.hotelprabhupada.com

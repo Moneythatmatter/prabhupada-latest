@@ -30,11 +30,11 @@ const roomsData = [
     title: 'Family Quad Sharing',
     badgeTitle: 'FAMILY QUAD SHARING',
     description:
-      "At Hotel Prabhupada, we pride ourselves on offering a home away from home. Our Family Quad Sharing are thoughtfully designed to meet your needs, whether you're visiting for business or pleasure. Each room comes with top-tier amenities, including a comfortable bed, an en-suite bathroom, and a well-lit desk area. Enjoy 24-hour room service and personalized attention for a seamless stay.",
+      "At Hotel Prabhupada, we pride ourselves on offering a home away from home. Our Family Quad Sharing are thoughtfully designed to meet your needs, whether you're visiting for business or pleasure. Each room comes with top-tier amenities, including a comfortable bed, an en-suite bathroom, and a well-lit desk area. Enjoy room service and personalized attention for a seamless stay.",
     image: '/images/roomImage.webp',
     bookingUrl:
       'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
-    features: ['Quad Sharing Setup', 'En-Suite Bathroom', '24-Hour Room Service', 'Well-Lit Desk Area', 'Free High-Speed Wi-Fi'],
+    features: ['Quad Sharing Setup', 'En-Suite Bathroom', 'Room Service', 'Well-Lit Desk Area', 'Free High-Speed Wi-Fi'],
   },
   {
     id: 'executive-front-sea',
@@ -52,22 +52,22 @@ const roomsData = [
     title: 'Premier Room',
     badgeTitle: 'PREMIER ROOM',
     description:
-      "Indulge in the luxury and comfort of Hotel Prabhupada's well-designed Premier Room. Offering a perfect blend of modern aesthetics and premium amenities, featuring high-speed internet, in-room entertainment, spacious en-suite bathrooms, and 24-hour concierge service for an elevated stay.",
+      "Indulge in the luxury and comfort of Hotel Prabhupada's well-designed Premier Room. Offering a perfect blend of modern aesthetics and premium amenities, featuring high-speed internet, in-room entertainment, spacious en-suite bathrooms, and concierge service for an elevated stay.",
     image: '/images/official-hero1.webp',
     bookingUrl:
       'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
-    features: ['Modern Aesthetics', 'High-Speed Internet', 'In-Room Entertainment', 'Spacious Bathroom', '24-Hour Concierge'],
+    features: ['Modern Aesthetics', 'High-Speed Internet', 'In-Room Entertainment', 'Spacious Bathroom', 'Concierge Assistance'],
   },
   {
     id: 'deluxe-balcony-sea-view',
     title: 'Deluxe With Balcony Sea View',
     badgeTitle: 'DELUXE WITH BALCONY SEA VIEW',
     description:
-      'Thoughtfully designed for both business and leisure travelers, our Deluxe With Balcony Sea View rooms offer a comfortable bed, an en-suite bathroom, a well-lit desk area, and a private balcony with sea views. Enjoy 24-hour room service and personalized hospitality.',
+      'Thoughtfully designed for both business and leisure travelers, our Deluxe With Balcony Sea View rooms offer a comfortable bed, an en-suite bathroom, a well-lit desk area, and a private balcony with sea views. Enjoy room service and personalized hospitality.',
     image: '/images/official-hero2.webp',
     bookingUrl:
       'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
-    features: ['Private Sea View Balcony', 'Well-Lit Desk Area', 'Air Conditioning', 'Free High-Speed Wi-Fi', '24-Hour Room Service'],
+    features: ['Private Sea View Balcony', 'Well-Lit Desk Area', 'Air Conditioning', 'Free High-Speed Wi-Fi', 'Room Service'],
   },
   {
     id: 'superior-deluxe',
@@ -121,7 +121,7 @@ const roomFeaturesList = [
   },
   {
     icon: ConciergeBell,
-    title: '24×7 Room Service',
+    title: 'Room Service',
     description: 'Fresh multi-cuisine in-room dining.',
   },
 ];

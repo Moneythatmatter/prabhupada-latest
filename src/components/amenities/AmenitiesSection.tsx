@@ -41,28 +41,23 @@ const amenities = [
     number: '04',
     description: 'Spacious secure parking available for all guest vehicles.',
   },
-  {
-    title: 'BATHROOM',
-    icon: Bath,
-    number: '05',
-    description: 'En-suite modern bathrooms with hot rain showers and toiletries.',
-  },
+
   {
     title: 'AIR CONDITIONER',
     icon: Wind,
-    number: '06',
+    number: '05',
     description: 'Whisper-quiet climate control in every luxury room.',
   },
   {
     title: 'KING SIZED BEDS',
     icon: Bed,
-    number: '07',
+    number: '06',
     description: 'Pillow-top ergonomic mattresses with premium cotton linens.',
   },
   {
     title: 'HD TV',
     icon: Tv,
-    number: '08',
+    number: '07',
     description: 'High-definition flat screen satellite TVs for entertainment.',
   },
 ];

@@ -9,7 +9,7 @@ Hotel Prabhupada
 Hotel Prabhupada is located at:
 
  New Marine Drive Rd  
- Near Light House  
+ Near light house  
  Puri, Odisha 752001  
  India
 
@@ -519,7 +519,7 @@ Hotel Prabhupada
 ## **ADDRESS**
 
 New Marine Drive Rd  
- Near Light House  
+ Near light house  
  Puri, Odisha 752001  
  India
 
@@ -913,7 +913,7 @@ Only currently active offers should be presented to guests.
 
 ## **Where is Hotel Prabhupada located?**
 
-Hotel Prabhupada is located on New Marine Drive Rd, near Light House, Puri, Odisha 752001, India.
+Hotel Prabhupada is located on New Marine Drive Rd, Near light house, Puri, Odisha 752001, India.
 
 ## **Is Hotel Prabhupada near the beach?**
 

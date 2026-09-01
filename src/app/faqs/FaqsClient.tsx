@@ -22,7 +22,7 @@ const FAQ_DATA: FaqItem[] = [
   {
     id: 'faq-1',
     question: 'Where is Hotel Prabhupada located?',
-    answer: 'Hotel Prabhupada is located on New Marine Drive Rd, near Light House, Puri, Odisha 752001, just steps from the sea beach.',
+    answer: 'Hotel Prabhupada is located on New Marine Drive Rd, Near light house, Puri, Odisha 752001, just steps from the sea beach.',
   },
   {
     id: 'faq-2',
@@ -150,7 +150,6 @@ const FAQ_DATA: FaqItem[] = [
           <li><strong>Lunch:</strong> ~12:00 PM to 2:30 PM</li>
           <li><strong>Dinner:</strong> ~7:00 PM to 10:30 PM</li>
         </ul>
-        <p className="text-white/70">24-hour room service is also available for in-room dining.</p>
       </div>
     ),
   },
@@ -161,12 +160,12 @@ const FAQ_DATA: FaqItem[] = [
       <div className="space-y-2">
         <p>Hotel Prabhupada offers 6 room categories:</p>
         <ul className="list-disc pl-5 space-y-1 text-white/85">
-          <li>Premier Room</li>
-          <li>Deluxe Room</li>
-          <li>Executive Room</li>
-          <li>Family Room</li>
-          <li>Superior Deluxe Balcony Sea View</li>
-          <li>Suite Front Sea View</li>
+          <li>Premier rooms ( No-view  & Lobby level)</li>
+          <li>Deluxe Balcony side sea view </li>
+          <li>Superior Balcony side sea view </li>
+          <li>Family room ( Non sea view )</li>
+          <li>Executive front sea view</li>
+          <li>Suite Front sea view</li>
         </ul>
         <p className="text-white/70">
           Visit our <Link href="/rooms" className="text-[#E8A317] hover:underline">Rooms & Suites</Link> page to view details and photos.

@@ -574,7 +574,7 @@ export const CareersClient: React.FC = () => {
                           Hotel Address
                         </p>
                         <p className="text-white/80 leading-relaxed">
-                          New Marine Drive Rd, near Light House, Puri, Odisha 752001
+                          New Marine Drive Rd, Near light house, Puri, Odisha 752001
                         </p>
                       </div>
                     </div>

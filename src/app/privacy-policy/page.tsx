@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
       <div className="bg-[#0C1827] p-8 sm:p-12 rounded-sm border border-[#C5A059]/20 space-y-8 font-sans text-sm sm:text-base text-white/80 font-light leading-relaxed">
         {/* Introductory Paragraph */}
         <p className="text-base sm:text-lg text-white/90 font-normal leading-relaxed border-b border-[#C5A059]/20 pb-6">
-          Hotel Prabhupada (“We,” “Us,” “Our”) has measures to protect your Personal Data. We shall ensure you that your Personal Data is handled in accordance with Personal Data Protection regulations at New Marine Drive Rd, near Light House, Puri, Odisha 752001, India.
+          Hotel Prabhupada (“We,” “Us,” “Our”) has measures to protect your Personal Data. We shall ensure you that your Personal Data is handled in accordance with Personal Data Protection regulations at New Marine Drive Rd, Near light house, Puri, Odisha 752001, India.
         </p>
 
         {/* Section 1: Terms and Definitions */}
@@ -99,7 +99,7 @@ export default function PrivacyPolicyPage() {
             <h3 className="font-serif text-lg text-white font-normal">Hotel Prabhupada</h3>
             <p className="flex items-start gap-2 text-sm text-white/80">
               <MapPin className="w-4 h-4 text-[#E8A317] shrink-0 mt-1" />
-              <span>New Marine Drive Rd, near Light House, Puri, Odisha 752001, India</span>
+              <span>New Marine Drive Rd, Near light house, Puri, Odisha 752001, India</span>
             </p>
             <p className="flex items-center gap-2 text-sm text-white/80 pt-1">
               <Mail className="w-4 h-4 text-[#E8A317] shrink-0" />
