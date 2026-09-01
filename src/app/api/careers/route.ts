@@ -209,7 +209,7 @@ export async function POST(req: NextRequest) {
           <tr>
             <td style="background-color: #070F1A; border-top: 1px solid rgba(197,160,89,0.2); padding: 20px 32px; text-align: center;">
               <p style="margin: 0; color: rgba(255,255,255,0.45); font-size: 12px; line-height: 1.5;">
-                Hotel Prabhupada · New Marine Drive Road, Baliapanda, Puri, Odisha 752001<br>
+                Hotel Prabhupada · New Marine Drive Rd, near Light House, Puri, Odisha 752001<br>
                 Reply to this email directly to communicate with ${escapeHtml(candidateName)} (${escapeHtml(candidateEmail)}).
               </p>
             </td>
@@ -291,7 +291,7 @@ export async function POST(req: NextRequest) {
               <p style="margin: 0; color: rgba(255,255,255,0.7); font-size: 13px; line-height: 1.6;">
                 Warm regards,<br>
                 <strong style="color: #ffffff;">Hotel Prabhupada Management</strong><br>
-                New Marine Drive Road, Baliapanda, Puri, Odisha 752001<br>
+                New Marine Drive Rd, near Light House, Puri, Odisha 752001<br>
                 <a href="https://hotelprabhupada.com" style="color: #E8A317; text-decoration: none;">www.hotelprabhupada.com</a>
               </p>
             </td>

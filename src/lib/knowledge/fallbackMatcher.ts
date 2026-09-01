@@ -179,7 +179,7 @@ To check the latest rates and available rooms:
   ) {
     return `**Hotel Prabhupada Location:**
 
-📍 **Address:** New Marine Drive Road, Baliapanda, Puri, Odisha 752001, India.
+📍 **Address:** New Marine Drive Rd, near Light House, Puri, Odisha 752001, India.
 🌊 **Location Highlights:** Situated right near the sea beach in Puri, offering convenient access to the beach, Swargadwar, Shree Jagannath Temple, Konark Sun Temple, and Chilika Lake.
 
 👉 [Open in Google Maps](${HOTEL_INFO.location.googleMapsUrl}) | [Contact Us](/contact)`;
@@ -292,7 +292,7 @@ Hotel Prabhupada provides a travel desk and local assistance for:
 - ✉️ **Reservation Email:** reservation@hotelprabhupada.com
 - ✉️ **General Manager Email:** gm@hotelprabhupada.com
 - 🌐 **Website:** [www.hotelprabhupada.com](https://www.hotelprabhupada.com)
-- 📍 **Address:** New Marine Drive Road, Baliapanda, Puri, Odisha 752001, India
+- 📍 **Address:** New Marine Drive Rd, near Light House, Puri, Odisha 752001, India
 
 👉 [Book Online](${HOTEL_INFO.contact.directBookingUrl}) | [Contact Page](/contact)`;
   }

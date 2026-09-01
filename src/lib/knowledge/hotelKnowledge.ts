@@ -32,8 +32,8 @@ export const HOTEL_INFO = {
   name: 'Hotel Prabhupada',
   tagline: 'Comfortable Hospitality & Sea-Facing Accommodation in Puri, Odisha',
   location: {
-    address: 'New Marine Drive Road, Baliapanda, Puri, Odisha 752001, India',
-    area: 'Baliapanda / New Marine Drive Road, Puri',
+    address: 'New Marine Drive Rd, near Light House, Puri, Odisha 752001, India',
+    area: 'Near Light House, New Marine Drive Rd, Puri',
     googleMapsUrl: 'https://maps.google.com/?q=Hotel+Prabhupada+Puri+New+Marine+Drive+Road',
     directionsNote: 'Situated on New Marine Drive Road near the sea beach, providing convenient access to Shree Jagannath Temple, Swargadwar, Konark, and Chilika Lake.',
   },

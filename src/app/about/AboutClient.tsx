@@ -304,7 +304,7 @@ export const AboutClient: React.FC = () => {
                       Address
                     </p>
                     <p className="text-[#161616] font-medium">
-                      New Marine Drive Road, Swargadwar, Puri, Odisha 752001
+                      New Marine Drive Rd, near Light House, Puri, Odisha 752001
                     </p>
                   </div>
                 </div>

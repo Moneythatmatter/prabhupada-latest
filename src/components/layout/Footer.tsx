@@ -202,7 +202,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-4 font-sans text-sm font-light text-white/80 list-none p-0 m-0">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#C0392B] shrink-0 mt-0.5" />
-                <span>New Marine Drive Road, Baliapanda, Puri, Odisha 752001, India</span>
+                <span>New Marine Drive Rd, near Light House, Puri, Odisha 752001</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#C0392B] shrink-0" />

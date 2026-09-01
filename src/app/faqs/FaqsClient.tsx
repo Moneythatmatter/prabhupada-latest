@@ -22,7 +22,7 @@ const FAQ_DATA: FaqItem[] = [
   {
     id: 'faq-1',
     question: 'Where is Hotel Prabhupada located?',
-    answer: 'Hotel Prabhupada is located on New Marine Drive Road, Baliapanda, Puri, Odisha 752001, India, just steps from the sea beach.',
+    answer: 'Hotel Prabhupada is located on New Marine Drive Rd, near Light House, Puri, Odisha 752001, just steps from the sea beach.',
   },
   {
     id: 'faq-2',
