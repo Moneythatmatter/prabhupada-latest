@@ -25,15 +25,26 @@ export async function GET() {
       console.warn('Supabase client unconfigured or unavailable:', supaErr instanceof Error ? supaErr.message : supaErr);
     }
 
+    // Combine newly submitted reviews from database with default Google Maps reviews
+    const combinedTestimonials =
+      dbTestimonials.length > 0
+        ? [
+            ...dbTestimonials,
+            ...DEFAULT_TESTIMONIALS.filter(
+              (def) => !dbTestimonials.some((db) => db.id === def.id)
+            ),
+          ]
+        : DEFAULT_TESTIMONIALS;
+
     return NextResponse.json({
       success: true,
-      testimonials: dbTestimonials,
+      testimonials: combinedTestimonials,
     });
   } catch (err: unknown) {
     console.error('Error fetching testimonials:', err);
     return NextResponse.json({
       success: true,
-      testimonials: [],
+      testimonials: DEFAULT_TESTIMONIALS,
     });
   }
 }

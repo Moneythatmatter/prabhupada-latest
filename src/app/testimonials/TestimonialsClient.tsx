@@ -30,7 +30,7 @@ import {
   PatachitraDivider,
   LotusMotif,
 } from '@/components/patachitra/PatachitraMotifs';
-import { TestimonialItem } from '@/data/defaultTestimonials';
+import { DEFAULT_TESTIMONIALS, TestimonialItem } from '@/data/defaultTestimonials';
 
 const GOOGLE_REVIEWS_URL =
   'https://www.google.com/maps/place/Hotel+Prabhupada/@19.7899492,85.8070141,17z/data=!4m11!3m10!1s0x3a19c5ccce332e3b:0x3e5550da010583ec!5m2!4m1!1i2!8m2!3d19.7899492!4d85.8070141!9m1!1b1!16s%2Fg%2F11b6dcvt28?entry=ttu';
@@ -93,8 +93,8 @@ const RATING_LABELS: Record<number, string> = {
 };
 
 export const TestimonialsClient: React.FC = () => {
-  const [testimonials, setTestimonials] = useState<TestimonialItem[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [testimonials, setTestimonials] = useState<TestimonialItem[]>(DEFAULT_TESTIMONIALS);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [selectedFilter, setSelectedFilter] = useState<string>('all');
   const [selectedRatingFilter, setSelectedRatingFilter] = useState<number | 'all'>('all');
   const [activeQrModal, setActiveQrModal] = useState<'google' | 'tripadvisor' | null>(null);
@@ -125,7 +125,7 @@ export const TestimonialsClient: React.FC = () => {
         const res = await fetch('/api/testimonials');
         if (res.ok) {
           const data = await res.json();
-          if (data.testimonials && Array.isArray(data.testimonials)) {
+          if (data.testimonials && Array.isArray(data.testimonials) && data.testimonials.length > 0) {
             setTestimonials(data.testimonials);
           }
         }
@@ -583,10 +583,22 @@ export const TestimonialsClient: React.FC = () => {
                                 })}
                               </span>
                             )}
-                            <span className="flex items-center gap-1 text-emerald-400/90 font-medium">
-                              <CheckCircle2 className="w-3.5 h-3.5" />
-                              Verified Guest
-                            </span>
+                            {item.id?.startsWith('google-rev-') ? (
+                              <a
+                                href={GOOGLE_REVIEWS_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-1.5 text-white/80 hover:text-white font-medium bg-white/5 hover:bg-white/10 border border-white/15 px-2.5 py-0.5 rounded-full transition-colors"
+                              >
+                                <GoogleIcon className="w-3 h-3" />
+                                <span>Google Review</span>
+                              </a>
+                            ) : (
+                              <span className="flex items-center gap-1 text-emerald-400/90 font-medium">
+                                <CheckCircle2 className="w-3.5 h-3.5" />
+                                Verified Guest
+                              </span>
+                            )}
                           </div>
                         </div>
                       </motion.article>
