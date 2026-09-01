@@ -54,29 +54,23 @@ const officialAmenities = [
     description:
       'Spacious secure parking facility available free of charge for guest vehicles.',
   },
+
   {
     number: '05',
-    title: 'BATHROOM',
-    icon: Bath,
-    description:
-      'Modern tiled en-suite bathrooms equipped with continuous hot & cold rain showers and toiletries.',
-  },
-  {
-    number: '06',
     title: 'AIR CONDITIONER',
     icon: Wind,
     description:
       'Whisper-quiet split AC with individual temperature controls in every room for custom comfort.',
   },
   {
-    number: '07',
+    number: '06',
     title: 'KING SIZED BEDS',
     icon: Bed,
     description:
       'Plush pillow-top ergonomic mattresses wrapped in crisp premium white cotton linens.',
   },
   {
-    number: '08',
+    number: '07',
     title: 'HD TV',
     icon: Tv,
     description:
