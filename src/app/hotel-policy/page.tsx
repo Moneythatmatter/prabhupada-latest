@@ -15,6 +15,13 @@ import {
   CalendarX,
   CreditCard,
   Camera,
+  FileText,
+  HeartHandshake,
+  Ban,
+  Calendar,
+  Receipt,
+  ShieldAlert,
+  Info,
 } from 'lucide-react';
 import { LegalPageShell } from '@/components/layout/LegalPageShell';
 import { HOTEL_POLICIES } from '@/data/hotelPolicies';
@@ -197,8 +204,9 @@ export default function HotelPolicyPage() {
           </div>
         </section>
 
-        {/* 3. Pet Policy & Security Deposit */}
-        <section id="pet-policy" className="bg-[#0C1827] p-6 sm:p-10 rounded-sm border border-[#C5A059]/30 space-y-6 shadow-xl">
+        {/* 3. Pet Policy & Guidelines */}
+        <section id="pet-policy" className="bg-[#0C1827] p-6 sm:p-10 rounded-sm border border-[#C5A059]/30 space-y-8 shadow-xl">
+          {/* Header */}
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-[#E8A317]/20 border border-[#E8A317] flex items-center justify-center text-[#E8A317] shrink-0">
@@ -218,66 +226,244 @@ export default function HotelPolicyPage() {
             </span>
           </div>
 
-          <p className="text-white/85 text-sm sm:text-base">
-            {petPolicy.description}
-          </p>
-
-          {/* Key Pet Fee Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="p-4 bg-white/[0.04] rounded-xl border border-white/10 space-y-1">
-              <span className="text-xs text-white/60 uppercase tracking-wider block">Pet Stay Fee</span>
-              <div className="text-lg sm:text-xl font-serif text-[#E8A317] font-medium">
-                {petPolicy.feeDetails.dailyFee}
-              </div>
-              <p className="text-xs text-white/70">{petPolicy.feeDetails.dailyFeeNote}</p>
+          {/* Objective Callout */}
+          <div className="p-5 bg-gradient-to-r from-[#E8A317]/10 via-[#0C1827] to-transparent border-l-4 border-[#E8A317] rounded-r-xl space-y-2">
+            <div className="flex items-center gap-2 text-[#E8A317] text-xs font-semibold uppercase tracking-wider">
+              <Sparkles className="w-4 h-4" />
+              <span>Policy Objective</span>
             </div>
+            <p className="text-white/95 text-sm sm:text-base font-light italic leading-relaxed">
+              "{petPolicy.objective}"
+            </p>
+            <p className="text-white/70 text-xs sm:text-sm pt-1">
+              {petPolicy.description}
+            </p>
+          </div>
 
-            <div className="p-4 bg-white/[0.04] rounded-xl border border-white/10 space-y-1">
-              <span className="text-xs text-white/60 uppercase tracking-wider block">Security Deposit</span>
-              <div className="text-lg sm:text-xl font-serif text-[#E8A317] font-medium">
-                {petPolicy.feeDetails.securityDeposit}
+          {/* Permitted Pets & Breed Restrictions */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-lg text-white font-medium flex items-center gap-2">
+              <Dog className="w-4 h-4 text-[#E8A317]" />
+              Permitted Pets & Restrictions
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              <div className="p-4 bg-white/[0.03] rounded-xl border border-white/5 space-y-1">
+                <span className="text-xs text-[#E8A317] font-semibold uppercase tracking-wider block">Animal Type</span>
+                <p className="text-sm text-white/90 font-medium">{petPolicy.permittedPets.animalType}</p>
               </div>
-              <p className="text-xs text-white/70">{petPolicy.feeDetails.depositNote}</p>
+              <div className="p-4 bg-white/[0.03] rounded-xl border border-white/5 space-y-1">
+                <span className="text-xs text-[#E8A317] font-semibold uppercase tracking-wider block">Quantity Limit</span>
+                <p className="text-sm text-white/90 font-medium">{petPolicy.permittedPets.quantity}</p>
+              </div>
+              <div className="p-4 bg-rose-950/20 rounded-xl border border-rose-500/20 space-y-1">
+                <span className="text-xs text-rose-400 font-semibold uppercase tracking-wider block">Breed Restrictions</span>
+                <p className="text-xs text-white/80">{petPolicy.permittedPets.breedRestrictions}</p>
+              </div>
+              <div className="p-4 bg-rose-950/20 rounded-xl border border-rose-500/20 space-y-1">
+                <span className="text-xs text-rose-400 font-semibold uppercase tracking-wider block">Excluded Animals</span>
+                <p className="text-xs text-white/80">{petPolicy.permittedPets.otherAnimals}</p>
+              </div>
             </div>
+          </div>
 
-            <div className="p-4 bg-white/[0.04] rounded-xl border border-white/10 space-y-1">
-              <span className="text-xs text-white/60 uppercase tracking-wider block">Waste Cleaning Fine</span>
-              <div className="text-lg sm:text-xl font-serif text-amber-300 font-medium">
-                {petPolicy.feeDetails.cleaningFine}
+          {/* Mandatory Check-in Documentation */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-lg text-white font-medium flex items-center gap-2">
+              <FileText className="w-4 h-4 text-[#E8A317]" />
+              Mandatory Documentation (Required at Check-in)
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {petPolicy.mandatoryDocumentation.map((doc, idx) => (
+                <div key={idx} className="p-3.5 bg-amber-500/5 rounded-xl border border-amber-500/20 flex items-start gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-[#E8A317] shrink-0 mt-0.5" />
+                  <span className="text-xs sm:text-sm text-white/90 leading-snug">{doc}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Fees & Security Deposits */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-lg text-white font-medium flex items-center gap-2">
+              <CreditCard className="w-4 h-4 text-[#E8A317]" />
+              Fees & Deposits
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="p-4 bg-white/[0.04] rounded-xl border border-white/10 space-y-1">
+                <span className="text-xs text-white/60 uppercase tracking-wider block">Daily Pet Stay Fee</span>
+                <div className="text-lg sm:text-xl font-serif text-[#E8A317] font-medium">
+                  {petPolicy.feeDetails.dailyFee}
+                </div>
+                <p className="text-xs text-white/70">{petPolicy.feeDetails.dailyFeeNote}</p>
               </div>
-              <p className="text-xs text-white/70">{petPolicy.feeDetails.fineNote}</p>
+
+              <div className="p-4 bg-white/[0.04] rounded-xl border border-white/10 space-y-1">
+                <span className="text-xs text-white/60 uppercase tracking-wider block">Security Deposit</span>
+                <div className="text-lg sm:text-xl font-serif text-emerald-400 font-medium">
+                  {petPolicy.feeDetails.securityDeposit}
+                </div>
+                <p className="text-xs text-white/70">{petPolicy.feeDetails.depositNote}</p>
+              </div>
+
+              <div className="p-4 bg-white/[0.04] rounded-xl border border-white/10 space-y-1">
+                <span className="text-xs text-white/60 uppercase tracking-wider block">Waste Cleaning Fine</span>
+                <div className="text-lg sm:text-xl font-serif text-rose-400 font-medium">
+                  {petPolicy.feeDetails.cleaningFine}
+                </div>
+                <p className="text-xs text-white/70">{petPolicy.feeDetails.fineNote}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Check-in Process Steps */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-lg text-white font-medium flex items-center gap-2">
+              <Clock className="w-4 h-4 text-[#E8A317]" />
+              Check-in Process
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {petPolicy.checkInProcess.map((step, idx) => (
+                <div key={idx} className="p-4 bg-[#070F1A] rounded-xl border border-[#E8A317]/20 flex flex-col justify-between space-y-2">
+                  <div className="w-6 h-6 rounded-full bg-[#E8A317]/20 text-[#E8A317] text-xs font-bold flex items-center justify-center">
+                    {idx + 1}
+                  </div>
+                  <p className="text-xs sm:text-sm text-white/90 leading-relaxed">{step}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Guest Responsibilities During Stay */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-lg text-white font-medium flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-[#E8A317]" />
+              During Stay — Guest Responsibilities
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {petPolicy.guestResponsibilities.map((item, idx) => (
+                <div key={idx} className="p-3.5 bg-white/[0.03] rounded-xl border border-white/5 space-y-1">
+                  <span className="text-xs font-semibold text-[#E8A317] block">{item.title}</span>
+                  <p className="text-xs sm:text-sm text-white/85 leading-relaxed">{item.text}</p>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Allowed vs Restricted Areas */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 space-y-2">
-              <h4 className="text-emerald-400 font-medium text-sm flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4" /> Pet-Friendly Areas
+            <div className="p-5 rounded-xl bg-emerald-950/20 border border-emerald-500/30 space-y-3">
+              <h4 className="text-emerald-400 font-medium text-sm sm:text-base flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5" /> Allowed Pet-Friendly Areas
               </h4>
-              <p className="text-white/85 text-xs sm:text-sm">
-                Pets are allowed in: <strong className="text-white">{petPolicy.allowedAreas.join(', ')}</strong>.
+              <ul className="space-y-1.5 text-xs sm:text-sm text-white/85">
+                {petPolicy.allowedAreas.map((area, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-emerald-400 font-bold">•</span>
+                    <span>{area}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="p-5 rounded-xl bg-rose-950/20 border border-rose-500/30 space-y-3">
+              <h4 className="text-rose-400 font-medium text-sm sm:text-base flex items-center gap-2">
+                <Ban className="w-5 h-5" /> Restricted Areas (Strictly No Pets)
+              </h4>
+              <ul className="space-y-1.5 text-xs sm:text-sm text-white/85">
+                {petPolicy.prohibitedAreas.map((area, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-rose-400 font-bold">•</span>
+                    <span>{area}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Housekeeping Protocol */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-lg text-white font-medium flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-[#E8A317]" />
+              Housekeeping Protocol
+            </h4>
+            <div className="space-y-2">
+              {petPolicy.housekeepingProtocol.map((protocol, idx) => (
+                <div key={idx} className="p-3 bg-white/[0.03] rounded-xl border border-white/5 flex items-start gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-[#E8A317] shrink-0 mt-0.5" />
+                  <p className="text-xs sm:text-sm text-white/90 leading-relaxed">{protocol}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Damage & Liability */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-lg text-white font-medium flex items-center gap-2">
+              <AlertOctagon className="w-4 h-4 text-[#E8A317]" />
+              Damage & Liability
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {petPolicy.damageAndLiability.map((liability, idx) => (
+                <div key={idx} className="p-3.5 bg-rose-950/15 border border-rose-500/20 rounded-xl flex items-start gap-2.5">
+                  <ShieldAlert className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+                  <p className="text-xs sm:text-sm text-rose-100/90 leading-relaxed">{liability}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Exceptions: Service Animals & Peak Season */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="p-5 bg-gradient-to-br from-emerald-950/25 to-transparent border border-emerald-500/30 rounded-xl space-y-2">
+              <div className="flex items-center gap-2 text-emerald-400 font-serif text-base font-medium">
+                <HeartHandshake className="w-5 h-5" />
+                <span>{petPolicy.exceptions.serviceAnimals.title}</span>
+              </div>
+              <p className="text-xs sm:text-sm text-white/85 leading-relaxed">
+                {petPolicy.exceptions.serviceAnimals.description}
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-rose-950/20 border border-rose-500/30 space-y-2">
-              <h4 className="text-rose-400 font-medium text-sm flex items-center gap-2">
-                <AlertOctagon className="w-4 h-4" /> Restricted Areas
-              </h4>
-              <p className="text-white/85 text-xs sm:text-sm">
-                {petPolicy.prohibitedAreas.join('. ')}.
+            <div className="p-5 bg-gradient-to-br from-amber-950/25 to-transparent border border-amber-500/30 rounded-xl space-y-2">
+              <div className="flex items-center gap-2 text-amber-300 font-serif text-base font-medium">
+                <Calendar className="w-5 h-5" />
+                <span>{petPolicy.exceptions.peakSeason.title}</span>
+              </div>
+              <p className="text-xs sm:text-sm text-white/85 leading-relaxed">
+                {petPolicy.exceptions.peakSeason.description}
               </p>
             </div>
           </div>
 
-          {/* Pet Rules List */}
-          <div className="space-y-3">
-            {petPolicy.rules.map((rule, idx) => (
-              <div key={idx} className="p-4 bg-white/[0.03] rounded-xl border border-white/5 flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#E8A317] shrink-0 mt-0.5" />
-                <p className="text-white/90 text-sm sm:text-base leading-relaxed">{rule.text}</p>
+          {/* Non-Compliance Actions & Documentation Attachments */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+            <div className="p-5 bg-[#070F1A] border border-red-500/30 rounded-xl space-y-3">
+              <h5 className="text-xs uppercase tracking-wider font-semibold text-red-400 flex items-center gap-2">
+                <AlertTriangle className="w-4 h-4" /> Non-Compliance Actions
+              </h5>
+              <div className="space-y-2.5">
+                {petPolicy.nonComplianceActions.map((item, idx) => (
+                  <div key={idx} className="text-xs sm:text-sm">
+                    <span className="text-white font-medium block">• {item.situation}:</span>
+                    <span className="text-white/70 pl-3 block">{item.action}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div className="p-5 bg-[#070F1A] border border-[#E8A317]/30 rounded-xl space-y-3">
+              <h5 className="text-xs uppercase tracking-wider font-semibold text-[#E8A317] flex items-center gap-2">
+                <Receipt className="w-4 h-4" /> Required Documentation Attachments
+              </h5>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {petPolicy.documentationAttachments.map((attachment, idx) => (
+                  <div key={idx} className="p-2.5 bg-white/[0.03] rounded-lg border border-white/5 flex items-center gap-2 text-xs text-white/85">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#E8A317]" />
+                    <span>{attachment}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 

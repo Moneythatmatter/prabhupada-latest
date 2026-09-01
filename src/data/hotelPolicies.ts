@@ -103,53 +103,175 @@ export const HOTEL_POLICIES = {
     ],
   },
 
-  // 3. Pet Policy & Security Deposit
+  // 3. Pet Policy & Guidelines
   petPolicy: {
     id: 'pet-policy',
     title: 'Pet Policy & Guidelines',
     shortTitle: 'Pet Policy',
-    badge: 'Pet Friendly',
+    badge: 'Pet Friendly Guidelines',
     iconName: 'Dog',
+    objective:
+      'To establish clear guidelines for accommodating pets while ensuring hygiene, safety, and comfort for all guests and maintaining the luxury standards of the hotel.',
     description:
-      'Hotel Prabhupada warmly welcomes pets. To ensure a comfortable and harmonious environment for all guests, the following pet guidelines apply:',
+      'Hotel Prabhupada warmly accommodates guests travelling with pets while upholding strict standards of hygiene, safety, and tranquility for all guests. All pet owners are required to adhere to the following comprehensive policy guidelines:',
+    permittedPets: {
+      animalType: 'Only domesticated dogs and cats allowed.',
+      quantity: 'Maximum 1 Pet per room or 2 small Pets.',
+      breedRestrictions: 'Potentially dangerous breeds are strictly not allowed.',
+      otherAnimals: 'Birds, reptiles, and exotic animals are excluded.',
+    },
+    mandatoryDocumentation: [
+      'Vaccination certificate (anti-rabies must be current & valid)',
+      'Pet passport / licence (dog passport, cat licence)',
+      'Medical clearance if pet was sick within the last 72 hours',
+      'Pet waiver form signed by guest upon check-in',
+    ],
     feeDetails: {
       dailyFee: 'Rs. 1,200/- per day per night',
-      dailyFeeNote: 'Charged to the guest upon arrival per pet.',
-      securityDeposit: 'Rs. 4,000/-',
+      dailyFeeNote: 'Daily pet accommodation fee as per hotel policy.',
+      securityDeposit: 'Rs. 4,000/- per room',
       depositType: 'Refundable Security Deposit',
-      depositNote: 'Collected during check-in and completely refundable at the time of check-out subject to room inspection.',
+      depositNote: 'Deposit refunded after check-out inspection if no damage or excessive cleaning is needed.',
+      cleaningDisinfectionFee: 'Non-refundable cleaning / disinfection fee as per room category',
       cleaningFine: 'Rs. 300/-',
-      fineNote: 'Applicable if waste is not properly cleaned and disposed of in designated outside dumpsters.',
+      fineNote: 'Applicable if pet waste is not cleaned up immediately by owner and disposed of in outside dumpsters.',
     },
+    checkInProcess: [
+      'Pet Policy Agreement to be signed at the front desk',
+      'Present all mandatory vaccination records, pet passport/licence & health certificates',
+      'Security deposit and applicable fees to be settled',
+      'Hang "Pet in Room" door hanger (guest must display throughout stay)',
+    ],
+    guestResponsibilities: [
+      {
+        title: 'Leash / Carrier',
+        text: 'Pets must be leashed or in carrier in all public areas of the property at all times.',
+      },
+      {
+        title: 'Owner Presence',
+        text: 'Owner must accompany pet in public areas at all times.',
+      },
+      {
+        title: 'Unattended Pets',
+        text: 'Maximum two hours unattended; notify Front Desk if leaving pet in room.',
+      },
+      {
+        title: 'Hotel Property Protection',
+        text: 'Hotel property (towels, linen, bedsheets) is strictly not for pet use.',
+      },
+      {
+        title: 'No Bed / Sofa',
+        text: 'Guest must not allow pets on bed or sofa.',
+      },
+      {
+        title: 'No Bathing',
+        text: 'Pets cannot bathe in room bathroom or shower.',
+      },
+      {
+        title: 'Noise Control',
+        text: 'Guest is responsible for pet noise; disruptive pets may be removed.',
+      },
+    ],
     allowedAreas: [
-      'Guest Room',
-      'Main Lobby',
-      'Poolside',
-      'Lawn Area',
+      'Guest room (only occupied assigned room)',
+      'Garden / lawn (owner must clean waste)',
+      'Lobby lounge',
     ],
     prohibitedAreas: [
-      'Public areas where Food & Beverages (F&B) are served (including Oris Restaurant dining area)',
+      'Restaurants and food outlets (including Oris Restaurant)',
+      'Banquet / function rooms',
+      'Swimming pool area',
+      'Spa / salon',
+      'Fitness center / gym',
+      'Any area designated by Hotel Management',
+    ],
+    housekeepingProtocol: [
+      'Guest must remove pet from room during housekeeping or coordinate convenient time with Front Office.',
+      'If pet left: guest must be present when staff enters the room.',
+      'Use privacy sign (DND) if housekeeping is not needed.',
+      'Clean pet waste immediately if found; charges will apply to guest account if not cleaned.',
+    ],
+    damageAndLiability: [
+      'Guest bears full responsibility for all damage or injury caused by pet.',
+      'Stained linen: Charged at double laundry rate.',
+      'Permanent stains: Replacement fee applied.',
+      'Security deposit becomes non-refundable if damage occurs.',
+      'Hotel not liable for pet injury, illness, or loss.',
+    ],
+    exceptions: {
+      serviceAnimals: {
+        title: 'Service Animals',
+        description:
+          'Service Animals are always welcome — not subject to pet policy. No fees, restrictions, or documentation required for legitimate service animals.',
+      },
+      peakSeason: {
+        title: 'Peak Season',
+        description:
+          'Hotel may refuse pet admission during peak season. A limited quota of pet-friendly rooms applies.',
+      },
+    },
+    nonComplianceActions: [
+      {
+        situation: 'Policy violation (Ongoing)',
+        action: 'The hotel reserves the right to discontinue services without refund; may evict.',
+      },
+      {
+        situation: 'Damage caused',
+        action: 'Charge will be deducted from the security deposit or billed to the guest account.',
+      },
+    ],
+    documentationAttachments: [
+      'Pet Policy Agreement (signed)',
+      'Pet Waiver Form',
+      'Vaccination Checklist',
+      'Damage Deposit Receipt',
     ],
     rules: [
       {
-        text: 'A pet fee of Rs. 1200/- will be charged to the guest upon arrival per day per night.',
-        highlight: 'Rs. 1200/- per day per night',
+        text: 'Permitted Pets: Only domesticated dogs and cats allowed (Maximum 1 Pet per room or 2 small Pets). Potentially dangerous breeds, birds, reptiles, and exotic animals are strictly excluded.',
+        highlight: 'Domesticated dogs & cats only (Max 1 pet or 2 small pets)',
       },
       {
-        text: 'During check-in, a security deposit of Rs. 4000/- will be applied, which is completely refundable at check-out.',
-        highlight: 'Rs. 4000/- refundable security deposit',
-      },
-      {
-        text: 'Pet-Friendly Areas: Pets are allowed only in Guest Rooms, Main Lobby, Poolside, and Lawn areas.',
-        highlight: 'Guest Room, Main Lobby, Poolside & Lawn',
-      },
-      {
-        text: 'Pets are strictly NOT allowed in public areas where F&B is served (including indoor restaurant dining).',
+        text: 'Mandatory Check-in Documentation: Vaccination certificate (anti-rabies must be current & valid), pet passport/licence (dog passport, cat licence), medical clearance if sick within 72 hours, and signed Pet Waiver Form.',
+        highlight: 'Vaccination certificate, passport/licence & signed waiver form',
         important: true,
       },
       {
-        text: 'Guest is responsible for cleaning up after the pet on hotel grounds and properly disposing of waste in the outside dumpster, or will be charged a fine of Rs. 300/- against cleaning services.',
-        highlight: 'Rs. 300/- fine if not cleaned',
+        text: 'Fees & Deposits: Daily pet accommodation fee of Rs. 1,200/- per day per night, cleaning/disinfection fee, and Rs. 4,000/- refundable security deposit (refunded after check-out inspection if no damage/excessive cleaning needed).',
+        highlight: 'Rs. 1,200/night fee + Rs. 4,000/- refundable security deposit',
+      },
+      {
+        text: 'Check-in Process: Sign Pet Policy Agreement, present all vaccination & health documents, pay security deposit, and hang "Pet in Room" door hanger throughout the entire stay.',
+        highlight: '"Pet in Room" door hanger displayed throughout stay',
+      },
+      {
+        text: 'Public Area Conduct: Pets must be leashed or in carrier in all public areas and accompanied by owner at all times. Maximum 2 hours unattended in room (notify Front Desk).',
+        highlight: 'Leashed/carrier at all times; max 2 hours unattended',
+      },
+      {
+        text: 'Room Rules: Hotel towels and linen are NOT for pet use. Pets are strictly not allowed on beds or sofas. Pets cannot bathe in room bathroom/shower.',
+        highlight: 'No pets on bed/sofa; hotel linen not for pet use; no bathing in shower',
+      },
+      {
+        text: 'Restricted vs Allowed Zones: Allowed in Guest Room, Garden/Lawn, and Lobby Lounge only. Strictly prohibited in Restaurants/food outlets, Banquet rooms, Swimming pool area, Spa/salon, and Fitness center/gym.',
+        highlight: 'Allowed: Room, Lawn, Lobby Lounge. Restricted: F&B, Pool, Spa, Gym, Banquets',
+        important: true,
+      },
+      {
+        text: 'Housekeeping Protocol: Guest must remove pet or be present during housekeeping. Clean pet waste immediately or a cleaning fine of Rs. 300/- applies.',
+        highlight: 'Guest present for housekeeping; Rs. 300/- fine if waste not cleaned',
+      },
+      {
+        text: 'Damage & Liability: Guest bears full responsibility for damage/injury. Stained linen charged at double laundry rate; permanent stains charged at replacement fee. Hotel not liable for pet illness or loss.',
+        highlight: 'Double laundry charge for stained linen; full replacement fee for damage',
+      },
+      {
+        text: 'Exceptions: Service Animals are always welcome with zero fees or pet policy restrictions. During peak season, hotel may restrict pet admission due to limited room quota.',
+        highlight: 'Service animals exempt from fees; peak season quota applies',
+      },
+      {
+        text: 'Non-Compliance: Ongoing policy violation may result in service discontinuation and eviction without refund. Damage costs deducted from deposit.',
+        important: true,
       },
     ],
   },

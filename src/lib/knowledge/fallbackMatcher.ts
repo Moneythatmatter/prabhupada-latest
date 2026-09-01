@@ -23,17 +23,20 @@ How can I assist you with your stay today? Feel free to ask about:
 
   // 1. Pet Policy
   if (q.includes('pet') || q.includes('dog') || q.includes('cat') || q.includes('animal')) {
-    return `**Pet Policy at Hotel Prabhupada:**
+    return `**Pet Policy & Guidelines at Hotel Prabhupada:**
 
-Hotel Prabhupada is a pet-friendly property! 🐾
+Hotel Prabhupada accommodates domesticated dogs and cats! 🐾
 
+- **Permitted Pets:** Domesticated dogs and cats only (Max 1 pet per room or 2 small pets; dangerous breeds excluded).
 - **Pet Fee:** ${HOTEL_POLICIES.petPolicy.feeDetails.dailyFee}
-- **Security Deposit:** ${HOTEL_POLICIES.petPolicy.feeDetails.securityDeposit} (fully refundable upon check-out).
-- **Pet-Friendly Areas:** Allowed in **Guest Rooms, Main Lobby, Poolside, and Lawn**.
-- **Restricted Areas:** Strictly NOT allowed in public areas where Food & Beverages (F&B) are served.
-- **Waste & Cleanliness:** Guests must clean up after their pets and dispose of waste in outside dumpsters (or a fine of ${HOTEL_POLICIES.petPolicy.feeDetails.cleaningFine} applies).
+- **Security Deposit:** ${HOTEL_POLICIES.petPolicy.feeDetails.securityDeposit} (refundable upon check-out inspection).
+- **Mandatory Documents:** Valid anti-rabies vaccination certificate, pet passport/licence, medical clearance (if sick in last 72 hrs), and signed Pet Waiver Form.
+- **Allowed Areas:** Assigned Guest Room, Garden/Lawn, and Lobby Lounge (must be leashed or in carrier).
+- **Restricted Areas:** Strictly prohibited in Restaurants & dining outlets, Banquet rooms, Swimming pool area, Spa, and Gym.
+- **In-Room Rules:** Display "Pet in Room" door hanger; pets prohibited on beds/sofas; cannot bathe in hotel bathrooms; max 2 hours unattended (notify Front Desk).
+- **Service Animals:** Legitimate service animals are exempt from pet fees and restrictions.
 
-👉 [Read Hotel Policy](/hotel-policy#pet-policy)`;
+👉 [Read Complete Pet Policy](/hotel-policy#pet-policy)`;
   }
 
   // 2. Identification / ID Proof / PAN Card

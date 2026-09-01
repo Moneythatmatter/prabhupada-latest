@@ -103,7 +103,7 @@ export default function TermsConditionsPage() {
               • <strong>Swimming Pool:</strong> Proper swimming costume is mandatory. In-house guests without a proper swimming costume will be charged {swimmingPoolPolicy.costumeCharge} for pool usage. Outside guests are strictly not permitted.
             </p>
             <p>
-              • <strong>Pet Policy:</strong> Pet fee is {petPolicy.feeDetails.dailyFee}. A refundable security deposit of {petPolicy.feeDetails.securityDeposit} is collected at check-in. Pets are allowed in designated areas (Guest Room, Main Lobby, Poolside & Lawn) and prohibited in F&B dining areas. Waste must be cleaned and disposed of in outside dumpsters, failing which a fine of {petPolicy.feeDetails.cleaningFine} will be charged.
+              • <strong>Pet Policy:</strong> Pet accommodation fee is {petPolicy.feeDetails.dailyFee}. A refundable security deposit of {petPolicy.feeDetails.securityDeposit} is collected at check-in (refunded after check-out inspection). Only domesticated dogs and cats are allowed (max 1 pet or 2 small pets; dangerous breeds excluded). Mandatory check-in documents (anti-rabies vaccination, pet passport/licence, signed waiver) are required. Pets are allowed only in designated areas (Guest Room, Garden/Lawn, Lobby Lounge) and strictly prohibited in F&B outlets, swimming pool area, spa, gym, and banquet rooms. Pets must be leashed/in carriers in public spaces. Waste must be cleaned immediately, failing which a fine of {petPolicy.feeDetails.cleaningFine} will be charged.
             </p>
           </div>
         </section>

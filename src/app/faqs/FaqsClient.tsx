@@ -57,14 +57,17 @@ const FAQ_DATA: FaqItem[] = [
     answer: (
       <div className="space-y-2">
         <p>
-          Yes! Hotel Prabhupada is pet-friendly. The pet policy details are:
+          Yes! Hotel Prabhupada warmly accommodates pets under the following comprehensive guidelines:
         </p>
         <ul className="list-disc pl-5 space-y-1 text-white/90">
-          <li><strong>Pet Fee:</strong> {HOTEL_POLICIES.petPolicy.feeDetails.dailyFee} (charged upon arrival per day per night).</li>
-          <li><strong>Security Deposit:</strong> {HOTEL_POLICIES.petPolicy.feeDetails.securityDeposit} (refundable at check-out).</li>
-          <li><strong>Allowed Areas:</strong> Guest Room, Main Lobby, Poolside & Lawn areas.</li>
-          <li><strong>Restricted Areas:</strong> Public areas where Food & Beverages are served.</li>
-          <li><strong>Cleaning:</strong> Guests are responsible for cleaning waste and disposing of it in outside dumpsters, failing which a fine of {HOTEL_POLICIES.petPolicy.feeDetails.cleaningFine} applies.</li>
+          <li><strong>Permitted Pets:</strong> Domesticated dogs and cats only (Max 1 pet per room or 2 small pets; dangerous breeds excluded).</li>
+          <li><strong>Pet Fee:</strong> {HOTEL_POLICIES.petPolicy.feeDetails.dailyFee} (daily pet accommodation fee).</li>
+          <li><strong>Security Deposit:</strong> {HOTEL_POLICIES.petPolicy.feeDetails.securityDeposit} (refundable at check-out subject to room inspection).</li>
+          <li><strong>Mandatory Documentation:</strong> Anti-rabies vaccination certificate, pet passport/licence, medical clearance (if sick within 72 hrs), and signed Pet Waiver Form.</li>
+          <li><strong>Allowed Areas:</strong> Guest Room (occupied), Garden / Lawn, and Lobby Lounge only (must be on leash or in carrier in public areas).</li>
+          <li><strong>Restricted Areas:</strong> Strictly prohibited in Restaurants & F&B outlets, Banquet rooms, Swimming pool area, Spa/salon, and Fitness center.</li>
+          <li><strong>In-Room Rules:</strong> "Pet in Room" door hanger must be displayed; pets not allowed on beds/sofas; cannot bathe in hotel bathrooms; max 2 hours unattended (notify Front Desk).</li>
+          <li><strong>Service Animals:</strong> Legitimate service animals are always welcome without any fees or restrictions.</li>
         </ul>
       </div>
     ),

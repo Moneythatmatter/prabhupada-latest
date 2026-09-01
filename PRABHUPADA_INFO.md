@@ -696,13 +696,70 @@ Other applicable charges: To be updated.
 
 ---
 
-# **PET POLICY**
+# **PET POLICY & GUIDELINES**
 
-* **Pet Fee:** A pet fee of Rs. 1,200/- will be charged to the guest upon arrival per day per night.
-* **Security Deposit:** During check-in, a security deposit of Rs. 4,000/- will be applied to the guest, which is completely refundable at the time of check-out.
-* **Pet-Friendly Areas:** Pets are allowed ONLY in the following areas: Guest Room, Main Lobby, Poolside & Lawn.
-* **Prohibited Areas:** Pets are strictly NOT allowed in public areas where Food & Beverages (F&B) are served.
-* **Waste & Cleaning Fine:** Guest is responsible for cleaning up after the pet on hotel grounds and properly disposing of the waste in the outside dumpster or will be charged a fine of Rs. 300/- against cleaning services.
+* **Objective:** To establish clear guidelines for accommodating pets while ensuring hygiene, safety, and comfort for all guests and maintaining the luxury standards of the hotel.
+* **Permitted Pets:**
+  * Animal Type: Only domesticated dogs and cats allowed.
+  * Quantity: Maximum 1 Pet per room or 2 small Pets.
+  * Breed Restrictions: Potentially dangerous breeds not allowed.
+  * Other Animals: Birds, Reptiles, Exotic Animals excluded.
+* **Mandatory Documentation (Check-in):**
+  * Vaccination certificate (anti-rabies must be current & valid).
+  * Pet passport / licence (dog passport, cat licence).
+  * Medical clearance if pet was sick within last 72 hours.
+  * Pet waiver form signed by guest.
+* **Fees & Deposits:**
+  * Non-refundable cleaning / disinfection fee as per room category.
+  * Refundable security deposit: Rs. 4,000/- per room (refunded after check-out inspection if no damage/excessive cleaning needed).
+  * Daily Pet accommodation fee: Rs. 1,200/- per day per night as per hotel policy.
+  * Waste cleaning fine: Rs. 300/- fine if pet waste is not cleaned up immediately by owner.
+* **Check-in Process:**
+  * Pet Policy Agreement to be signed.
+  * Present all vaccination/documents.
+  * Security deposit to be made.
+  * Hang "Pet in Room" door hanger (guest must display throughout stay).
+* **During Stay — Guest Responsibilities:**
+  * Leash / Carrier: Pets must be leashed or in Carrier in all public areas of the property at all times.
+  * Owner presence: Owner must accompany Pet in public areas at all times.
+  * Unattended: Maximum two hours Unattended; notify Front Desk if leaving Pet.
+  * Hotel property: Towels, linen, and bedsheets are NOT for Pet use.
+  * No Bed / Sofa: Guest must not allow Pets on bed or sofa.
+  * No Bathing: Pets cannot bathe in Room bathroom / shower.
+  * Noise Control: Guest responsible for Pet noise; disruptive Pets may be removed.
+* **Restricted Areas (Strictly No Pets):**
+  * Restaurants, food outlets (including Oris Restaurant dining area).
+  * Banquet / function rooms.
+  * Swimming pool area.
+  * Spa / salon.
+  * Fitness center / gym.
+  * Any area designated by Hotel Management.
+* **Allowed Areas:**
+  * Guest room (only occupied assigned room).
+  * Garden / lawn (owner must clean waste).
+  * Lobby lounge.
+* **Housekeeping Protocol:**
+  * Guest must remove pet from room during housekeeping or coordinate convenient time with Front Office.
+  * If pet left: Guest must be present when staff enters.
+  * Use privacy sign (DND) if housekeeping not needed.
+  * Clean pet waste immediately if found; charge to guest account if not cleaned.
+* **Damage & Liability:**
+  * Guest bears full responsibility for all damage/injury caused by pet.
+  * Stained linen: Charged at double laundry rate.
+  * Permanent stains: Replacement fee applied.
+  * Security deposit becomes non-refundable if damage occurs.
+  * Hotel not liable for pet injury, illness, or loss.
+* **Exceptions:**
+  * Service Animals: Service Animals are always welcome — not subject to pet policy. No fees, restrictions, or documentation required for legitimate service animals.
+  * Peak Season: Hotel may refuse pet admission during peak season; limited quota of pet-friendly rooms applies.
+* **Non-Compliance Actions:**
+  * Policy violation (Ongoing): The hotel reserves the right to discontinue services without refund; may evict.
+  * Damage caused: Charge will be deducted from deposit / billed to guest account.
+* **Documentation & Attachments:**
+  * Pet Policy Agreement (signed)
+  * Pet Waiver Form
+  * Vaccination Checklist
+  * Damage Deposit Receipt
 
 ---
 
@@ -1015,26 +1072,22 @@ Guests are encouraged to share their feedback and stay experiences with Hotel Pr
 
 # **Pet Policy**
 
-## **Pet-Friendly Stay at Hotel Prabhupada**
+## **Pet-Friendly Stays at Hotel Prabhupada**
 
-Hotel Prabhupada welcomes guests travelling with pets and aims to provide a comfortable stay experience for both guests and their pets.
+**Objective:** To establish clear guidelines for accommodating pets while ensuring hygiene, safety, and comfort for all guests and maintaining the luxury standards of the hotel.
 
-Guests travelling with pets are requested to contact the hotel before arrival to confirm availability and applicable conditions.
-
-The pet policy includes:
-
-* Pets are allowed with prior approval from hotel management  
-* Accepted types of pets: Dogs and cats (subject to hotel approval)  
-* Pet-friendly room availability: Subject to availability  
-* Applicable pet charges: Additional charges may apply  
-* Pet size restrictions: As per hotel guidelines  
-* Designated pet areas: As advised by hotel management  
-* Cleaning and maintenance requirements: Guests are responsible for maintaining cleanliness and following hotel guidelines  
-* Safety guidelines: Pet owners must ensure the safety and comfort of other guests, staff, and pets
-
-Hotel Prabhupada reserves the right to update pet-related guidelines according to operational requirements and guest safety standards.
-
-For detailed pet arrangements, guests should contact the hotel before check-in.
+### **Key Pet Policy Details:**
+* **Permitted Pets:** Domesticated dogs and cats only (Max 1 pet per room or 2 small pets). Potentially dangerous breeds, birds, reptiles, and exotic animals are strictly excluded.
+* **Mandatory Documentation:** Valid anti-rabies vaccination certificate, pet passport/licence, medical clearance (if sick within last 72 hours), and signed Pet Waiver Form.
+* **Fees & Security Deposit:** Daily accommodation fee of Rs. 1,200/- per night, non-refundable cleaning/disinfection fee as per room category, and Rs. 4,000/- refundable security deposit (refunded after check-out inspection if no damage/excessive cleaning needed).
+* **Check-in Process:** Sign Pet Policy Agreement, present documents, pay security deposit, and display "Pet in Room" door hanger throughout stay.
+* **Guest Responsibilities:** Pets must be on leash or in carrier in public areas; owner must accompany pet; max 2 hours unattended (notify Front Desk); hotel towels/linen NOT for pet use; pets not allowed on beds/sofas; no bathing in room bathroom; guest responsible for pet noise.
+* **Allowed Areas:** Occupied guest room, garden/lawn (owner cleans waste), lobby lounge.
+* **Strictly Restricted Areas:** Restaurants & F&B outlets, banquet rooms, swimming pool area, spa/salon, fitness center/gym.
+* **Housekeeping:** Guest must remove pet or be present during housekeeping. Clean pet waste immediately or Rs. 300/- fine applies.
+* **Damage & Liability:** Stained linen charged at double laundry rate; replacement fee for permanent stains/damage; deposit becomes non-refundable upon damage; hotel not liable for pet illness/loss.
+* **Exceptions:** Service Animals are fully welcome with zero fees or restrictions. Peak season pet admission is subject to quota.
+* **Non-Compliance:** Ongoing violations may lead to service discontinuation and eviction without refund. Damage deducted from deposit.
 
 ---
 
