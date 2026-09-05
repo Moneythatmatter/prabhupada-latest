@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import React, { useRef } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { MapPin, ShieldCheck, Clock, Utensils } from 'lucide-react';
+import React, { useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { MapPin, ShieldCheck, Clock, Utensils } from "lucide-react";
 import {
   PatachitraBackdrop,
   PatachitraDivider,
-} from '@/components/patachitra/PatachitraMotifs';
+} from "@/components/patachitra/PatachitraMotifs";
 
 export const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
   const imageY = useSpring(useTransform(scrollYProgress, [0, 1], [60, -60]), {
     stiffness: 80,
@@ -32,27 +32,27 @@ export const AboutSection: React.FC = () => {
   const highlightCards = [
     {
       icon: MapPin,
-      title: 'Best Location',
+      title: "Best Location",
       description:
-        'Nestled in the heart of Puri, Odisha, our hotel boasts the best location, offering easy access to top attractions, Swargadwar beach, and scenic ocean views, ensuring an unforgettable stay for our guests.',
+        "Nestled in the heart of Puri, Odisha, our hotel boasts the best location, offering easy access to top attractions, Swargadwar beach, and scenic ocean views, ensuring an unforgettable stay for our guests.",
     },
     {
       icon: ShieldCheck,
-      title: 'Best Rate Guarantee',
+      title: "Best Rate Guarantee",
       description:
-        'Book directly with us and enjoy our Best Rate Guarantee, ensuring you receive the lowest available rates for your stay.',
+        "Book directly with us and enjoy our Best Rate Guarantee, ensuring you receive the lowest available rates for your stay.",
     },
     {
       icon: Clock,
-      title: 'Reservations 24/7',
+      title: "Reservations 24/7",
       description:
-        'Reservations available round-the-clock, ensuring seamless booking convenience for our guests, anytime, anywhere.',
+        "Reservations available round-the-clock, ensuring seamless booking convenience for our guests, anytime, anywhere.",
     },
     {
       icon: Utensils,
-      title: 'Free breakfast',
+      title: "Complimentary Breakfast",
       description:
-        'Enjoy a complimentary breakfast buffet featuring a delicious array of options during your stay at our hotel.',
+        "Enjoy a complimentary breakfast buffet featuring a delicious array of options during your stay at our hotel.",
     },
   ];
 
@@ -92,7 +92,11 @@ export const AboutSection: React.FC = () => {
               initial={{ opacity: 0, y: 20, scale: 0.96 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.7,
+                delay: 0.25,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               style={{ y: badgeY }}
               className="absolute -bottom-4 right-3 sm:-bottom-6 sm:right-6 bg-[#0C1827] text-white p-4 sm:p-7 rounded-sm shadow-2xl max-w-[200px] sm:max-w-[260px] border border-[#C5A059]/80 z-20 will-change-transform"
             >
@@ -124,10 +128,20 @@ export const AboutSection: React.FC = () => {
 
             <div className="max-w-xl mx-auto lg:mx-0 space-y-4 sm:space-y-6 font-sans text-sm sm:text-base md:text-lg text-[#64748B] font-light leading-relaxed mb-8 sm:mb-10 text-left">
               <p>
-                Welcome to Hotel Prabhupada, a premier destination for comfort and style in Puri, Odisha — where coastal elegance meets the living art of Patachitra. Our hotel offers a blend of elegance and convenience, featuring a variety of rooms and suites designed to provide a restful and enjoyable stay. Each room is equipped with modern amenities to ensure your comfort and satisfaction.
+                Welcome to Hotel Prabhupada, a premier destination for comfort
+                and style in Puri, Odisha — where costal elegance meets
+                Divinity. Our hotel offers a blend of elegance and convenience,
+                featuring a variety of rooms and suites designed to provide a
+                restful and enjoyable stay. Each room is equipped with modern
+                amenities to ensure your comfort and satisfaction.
               </p>
               <p className="hidden sm:block">
-                Ideally situated in Puri, Odisha, Hotel Prabhupada offers easy access to the city&apos;s attractions, business centers, and entertainment venues. Whether you are traveling for business or pleasure, our location is perfect for exploring the local area. Our dedicated staff is committed to providing exceptional service and ensuring that every guest has a memorable stay.
+                Ideally situated in Puri, Odisha, Hotel Prabhupada offers easy
+                access to the city&apos;s attractions, business centers, and
+                entertainment venues. Whether you are traveling for business or
+                pleasure, our location is perfect for exploring. Our dedicated
+                staff is committed to providing exceptional service and ensuring
+                that every guest has a memorable stay.
               </p>
             </div>
 
@@ -152,7 +166,11 @@ export const AboutSection: React.FC = () => {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.1,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
                   className="bg-white p-5 sm:p-8 rounded-sm border border-[#E5DECE] border-t-[3px] border-t-[#8B1E1E] hover:border-[#C5A059] hover:border-t-[#C0392B] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between h-full group"
                 >
                   <div>

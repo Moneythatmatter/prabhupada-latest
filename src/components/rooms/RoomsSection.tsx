@@ -1,61 +1,61 @@
-'use client';
+"use client";
 
-import React, { useRef } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import {
   motion,
   useScroll,
   useTransform,
   useSpring,
   useReducedMotion,
-} from 'framer-motion';
-import { Camera } from 'lucide-react';
+} from "framer-motion";
+import { Camera } from "lucide-react";
 import {
   PatachitraDivider,
   LotusMotif,
-} from '@/components/patachitra/PatachitraMotifs';
-import { ParallaxImage } from '@/components/motion/ParallaxImage';
-import { FadeRise } from '@/hooks/useParallax';
+} from "@/components/patachitra/PatachitraMotifs";
+import { ParallaxImage } from "@/components/motion/ParallaxImage";
+import { FadeRise } from "@/hooks/useParallax";
 
 const featuredRooms = [
   {
-    title: 'Family Quad Sharing',
-    badgeTitle: 'FAMILY QUAD SHARING',
+    title: "Family Quad Sharing",
+    badgeTitle: "FAMILY QUAD SHARING",
     description:
-      "At Hotel Prabhupada, we pride ourselves on offering a home away from home. Our Family Quad Sharing are thoughtfully designed to meet your needs, whether you're visiting for business or pleasure. Each room comes with top-tier amenities, including a comfortable bed, an en-suite bathroom, and a well-lit desk area.",
-    image: '/images/official-about.webp',
-    bookingUrl: 'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
-    exploreUrl: '/rooms',
+      "At Hotel Prabhupada, we pride ourselves in offering a home away from home. Our Family Quad Sharing are thoughtfully designed to meet your needs, whether you're visiting for business or pleasure. Each room comes with top-tier amenities, including a comfortable bed, an en-suite bathroom, and a well-lit desk area.",
+    image: "/images/official-about.webp",
+    bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
+    exploreUrl: "/rooms",
   },
   {
-    title: 'Executive Front Sea Facing',
-    badgeTitle: 'EXECUTIVE FRONT SEA FACING',
+    title: "Executive Front Sea Facing",
+    badgeTitle: "EXECUTIVE FRONT SEA FACING",
     description:
-      'Designed as a sanctuary of peace and comfort, our Executive Front Sea Facing rooms feature elegant interiors, plush furnishings, and modern technology. Enjoy direct ocean views and true Odia hospitality for both short and extended stays.',
-    image: '/images/room-executive.webp',
-    bookingUrl: 'https://live.ipms247.com/booking/book-rooms-hotelprabhupada',
-    exploreUrl: '/rooms',
+      "Designed as a sanctuary of peace and comfort, our Executive Front Sea Facing rooms feature elegant interiors, plush furnishings, and modern technology. Enjoy direct ocean views and true Odia hospitality for both short and extended stays.",
+    image: "/images/room-executive.webp",
+    bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
+    exploreUrl: "/rooms",
   },
   {
-    title: 'Superior Deluxe Balcony Sea View',
-    badgeTitle: 'SUPERIOR DELUXE BALCONY SEA VIEW',
+    title: "Superior Deluxe Balcony Sea View",
+    badgeTitle: "SUPERIOR DELUXE BALCONY SEA VIEW",
     description:
-      'Welcome to Hotel Prabhupada, where comfort meets luxury. Our Superior Deluxe Balcony Sea view offer the perfect blend of style and functionality, featuring high-speed Wi-Fi, flat-screen TVs, and plush bedding.',
-    image: '/images/room-superior-deluxe.webp',
+      "Welcome to Hotel Prabhupada, where comfort meets luxury. Our Superior Deluxe Balcony Sea view offer the perfect blend of style and functionality, featuring high-speed Wi-Fi, flat-screen TVs, and plush bedding.",
+    image: "/images/room-superior-deluxe.webp",
     bookingUrl:
-      'https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000009',
-    exploreUrl: '/rooms',
+      "https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000009",
+    exploreUrl: "/rooms",
   },
   {
-    title: 'Suite Front Sea View',
-    badgeTitle: 'SUITE FRONT SEA VIEW',
+    title: "Suite Front Sea View",
+    badgeTitle: "SUITE FRONT SEA VIEW",
     description:
-      'Discover the ultimate in relaxation at Hotel Prabhupada. Our Suite Front sea view offer a tranquil retreat with contemporary décor, premium bedding, and essential amenities.',
-    image: '/images/room-suite.webp',
+      "Discover the ultimate in relaxation at Hotel Prabhupada. Our Suite Front sea view offer a tranquil retreat with contemporary décor, premium bedding, and essential amenities.",
+    image: "/images/room-suite.webp",
     bookingUrl:
-      'https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000010',
-    exploreUrl: '/rooms',
+      "https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000010",
+    exploreUrl: "/rooms",
   },
 ];
 
@@ -64,16 +64,24 @@ export const RoomsSection: React.FC = () => {
   const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
 
   const glowY = useSpring(
-    useTransform(scrollYProgress, [0, 1], [reduceMotion ? 0 : 50, reduceMotion ? 0 : -70]),
-    { stiffness: 65, damping: 28 }
+    useTransform(
+      scrollYProgress,
+      [0, 1],
+      [reduceMotion ? 0 : 50, reduceMotion ? 0 : -70],
+    ),
+    { stiffness: 65, damping: 28 },
   );
   const glowYAlt = useSpring(
-    useTransform(scrollYProgress, [0, 1], [reduceMotion ? 0 : 30, reduceMotion ? 0 : -40]),
-    { stiffness: 70, damping: 30 }
+    useTransform(
+      scrollYProgress,
+      [0, 1],
+      [reduceMotion ? 0 : 30, reduceMotion ? 0 : -40],
+    ),
+    { stiffness: 70, damping: 30 },
   );
 
   return (
@@ -84,10 +92,22 @@ export const RoomsSection: React.FC = () => {
       {/* Gold corner ornaments — same asset, flipped per corner */}
       {(
         [
-          { pos: 'top-0 left-0', flip: '-scale-x-100', anchor: 'object-top-right' },
-          { pos: 'top-0 right-0', flip: '', anchor: 'object-top-right' },
-          { pos: 'bottom-0 left-0', flip: '-scale-x-100 -scale-y-100', anchor: 'object-top-right' },
-          { pos: 'bottom-0 right-0', flip: '-scale-y-100', anchor: 'object-top-right' },
+          {
+            pos: "top-0 left-0",
+            flip: "-scale-x-100",
+            anchor: "object-top-right",
+          },
+          { pos: "top-0 right-0", flip: "", anchor: "object-top-right" },
+          {
+            pos: "bottom-0 left-0",
+            flip: "-scale-x-100 -scale-y-100",
+            anchor: "object-top-right",
+          },
+          {
+            pos: "bottom-0 right-0",
+            flip: "-scale-y-100",
+            anchor: "object-top-right",
+          },
         ] as const
       ).map(({ pos, flip, anchor }) => (
         <div
@@ -135,7 +155,7 @@ export const RoomsSection: React.FC = () => {
               key={room.title}
               initial={reduceMotion ? false : { opacity: 0, y: 36 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-8%' }}
+              viewport={{ once: true, margin: "-8%" }}
               transition={{
                 duration: 0.8,
                 delay: reduceMotion ? 0 : index * 0.12,
@@ -182,7 +202,11 @@ export const RoomsSection: React.FC = () => {
 
                 <div className="p-5 sm:p-8 md:p-10 relative">
                   <div className="flex items-start sm:items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <LotusMotif size={18} tone="gold" className="opacity-80 shrink-0 mt-1 sm:mt-0" />
+                    <LotusMotif
+                      size={18}
+                      tone="gold"
+                      className="opacity-80 shrink-0 mt-1 sm:mt-0"
+                    />
                     <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-normal text-white group-hover:text-[#E8A317] transition-colors">
                       {room.title}
                     </h3>

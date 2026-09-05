@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   MapPin,
   ShieldCheck,
@@ -14,62 +14,62 @@ import {
   Navigation,
   ExternalLink,
   Sparkles,
-} from 'lucide-react';
-import { InnerPageHero } from '@/components/layout/InnerPageHero';
-import { ParallaxImage } from '@/components/motion/ParallaxImage';
+} from "lucide-react";
+import { InnerPageHero } from "@/components/layout/InnerPageHero";
+import { ParallaxImage } from "@/components/motion/ParallaxImage";
 import {
   PatachitraBackdrop,
   PatachitraDivider,
-} from '@/components/patachitra/PatachitraMotifs';
+} from "@/components/patachitra/PatachitraMotifs";
 
 const whyChooseCards = [
   {
     icon: MapPin,
-    title: 'Best Location',
+    title: "Best Location",
     description:
-      'Nestled in the heart of Puri, Odisha, our hotel boasts the best location, offering easy access to top attractions, Swargadwar beach, and scenic ocean views, ensuring an unforgettable stay for our guests.',
+      "Nestled in the heart of Puri, Odisha, our hotel boasts the best location, offering easy access to top attractions, Swargadwar beach, and scenic ocean views, ensuring an unforgettable stay for our guests.",
   },
   {
     icon: ShieldCheck,
-    title: 'Best Rate Guarantee',
+    title: "Best Rate Guarantee",
     description:
-      'Book directly with us and enjoy our Best Rate Guarantee, ensuring you receive the lowest available rates for your stay.',
+      "Book directly with us and enjoy our Best Rate Guarantee, ensuring you receive the lowest available rates for your stay.",
   },
   {
     icon: Clock,
-    title: 'Reservations 24/7',
+    title: "Reservations 24/7",
     description:
-      'Reservations available round-the-clock, ensuring seamless booking convenience for our guests, anytime, anywhere.',
+      "Reservations available round-the-clock, ensuring seamless booking convenience for our guests, anytime, anywhere.",
   },
   {
     icon: Utensils,
-    title: 'Free Breakfast',
+    title: "Complimentary Breakfast",
     description:
-      'Enjoy a complimentary breakfast buffet featuring a delicious array of options during your stay at our hotel.',
+      "Enjoy a complimentary breakfast buffet featuring a delicious array of options during your stay at our hotel.",
   },
 ];
 
 const attractionsData = [
   {
-    title: 'Shree Jagannatha Temple Puri',
+    title: "Shree Jagannatha Temple Puri",
     description:
-      'The world-famous sacred heritage temple located near Hotel Prabhupada in the heart of Puri.',
-    image: '/images/jagannath-temple.webp',
-    mapsUrl: 'https://maps.google.com/?q=Shree+Jagannath+Temple+Puri+Odisha',
+      "The world-famous sacred heritage temple located near Hotel Prabhupada in the heart of Puri.",
+    image: "/images/jagannath-temple.webp",
+    mapsUrl: "https://maps.google.com/?q=Shree+Jagannath+Temple+Puri+Odisha",
   },
   {
-    title: 'Swargadwar Sea Beach & Shopping',
+    title: "Swargadwar Sea Beach & Shopping",
     description:
-      'Vibrant golden beach waves and famous coastal shopping markets within walking distance.',
-    image: '/images/attraction-swargadwar.webp',
-    mapsUrl: 'https://maps.google.com/?q=Swargadwar+Beach+Puri+Odisha',
+      "Vibrant golden beach waves and famous coastal shopping markets within walking distance.",
+    image: "/images/attraction-swargadwar.webp",
+    mapsUrl: "https://maps.google.com/?q=Swargadwar+Beach+Puri+Odisha",
   },
   {
-    title: 'Konark Sun Temple & Heritage',
+    title: "Konark Sun Temple & Heritage",
     description:
-      'Iconic 13th-century UNESCO World Heritage monument architectural wonder nearby.',
-    image: '/images/attraction-konark.webp',
-    mapsUrl: 'https://maps.google.com/?q=Konark+Sun+Temple+Odisha',
+      "Iconic 13th-century UNESCO World Heritage monument architectural wonder nearby.",
+    image: "/images/attraction-konark.webp",
+    mapsUrl: "https://maps.google.com/?q=Konark+Sun+Temple+Odisha",
   },
 ];
 
@@ -149,10 +149,21 @@ export const AboutClient: React.FC = () => {
 
               <div className="space-y-7 font-sans text-lg md:text-[19px] text-[#475569] font-light leading-relaxed">
                 <p>
-                  Welcome to Hotel Prabhupada, a premier destination for comfort and style in Puri, Odisha. Our hotel offers a blend of elegance and convenience, featuring a variety of rooms and suites designed to provide a restful and enjoyable stay. Each room is equipped with modern amenities to ensure your comfort and satisfaction.
+                  Welcome to Hotel Prabhupada, a premier destination for comfort
+                  and style in Puri, Odisha. Our hotel offers a blend of
+                  elegance and convenience, featuring a variety of rooms and
+                  suites designed to provide a restful and enjoyable stay. Each
+                  room is equipped with modern amenities to ensure your comfort
+                  and satisfaction.
                 </p>
                 <p>
-                  Ideally situated in Puri, Odisha, Hotel Prabhupada offers easy access to the city’s attractions, business centers, and entertainment venues. Whether you are traveling for business or pleasure, our location is perfect for exploring the local area. Our dedicated staff is committed to providing exceptional service and ensuring that every guest has a memorable stay.
+                  Ideally situated in Puri, Odisha, Hotel Prabhupada offers easy
+                  access to the city’s attractions, business centers, and
+                  entertainment venues. Whether you are traveling for business
+                  or pleasure, our location is perfect for exploring the local
+                  area. Our dedicated staff is committed to providing
+                  exceptional service and ensuring that every guest has a
+                  memorable stay.
                 </p>
               </div>
 
@@ -193,7 +204,11 @@ export const AboutClient: React.FC = () => {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.1,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
                   className="bg-[#FAF8F5] p-8 md:p-10 rounded-[20px] border border-[#E5DECE] hover:border-[#E8A317] shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between h-full group"
                 >
                   <div>
@@ -234,7 +249,11 @@ export const AboutClient: React.FC = () => {
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.15,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
                 className="bg-white rounded-[20px] border border-[#E5DECE] overflow-hidden shadow-lg hover:shadow-2xl hover:border-[#E8A317] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>

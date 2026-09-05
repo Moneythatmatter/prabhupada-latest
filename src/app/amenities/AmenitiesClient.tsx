@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Wifi,
   ConciergeBell,
@@ -15,90 +15,90 @@ import {
   Check,
   ExternalLink,
   ChevronRight,
-} from 'lucide-react';
-import { InnerPageHero } from '@/components/layout/InnerPageHero';
-import { ParallaxImage } from '@/components/motion/ParallaxImage';
-import { FadeRise } from '@/hooks/useParallax';
+} from "lucide-react";
+import { InnerPageHero } from "@/components/layout/InnerPageHero";
+import { ParallaxImage } from "@/components/motion/ParallaxImage";
+import { FadeRise } from "@/hooks/useParallax";
 import {
   PatachitraBackdrop,
   PatachitraDivider,
-} from '@/components/patachitra/PatachitraMotifs';
+} from "@/components/patachitra/PatachitraMotifs";
 
 // The 8 Official Hotel Prabhupada Amenities
 const officialAmenities = [
   {
-    number: '01',
-    title: 'FREE WIFI',
+    number: "01",
+    title: "FREE WIFI",
     icon: Wifi,
     description:
-      'High-speed optical fiber wireless internet across all guest rooms, ocean balconies, and public lounges.',
+      "High-speed optical fiber wireless internet across all guest rooms & public area within the premises.",
   },
   {
-    number: '02',
-    title: 'ROOM SERVICE',
+    number: "02",
+    title: "ROOM SERVICE",
     icon: ConciergeBell,
     description:
-      'Freshly prepared local Odia seafood, North Indian classics, and Continental meals delivered to your room.',
+      "Freshly prepared local Odia seafood, North Indian classics, and Continental meals delivered to your room.",
   },
   {
-    number: '03',
-    title: 'DAILY HOUSEKEEPING',
+    number: "03",
+    title: "DAILY HOUSEKEEPING",
     icon: Sparkles,
     description:
-      'Meticulous daily room sanitization, crisp cotton linen refresh, and premium luxury bath essentials.',
+      "Meticulous daily room sanitization, crisp cotton linen refresh, and premium luxury bath essentials.",
   },
   {
-    number: '04',
-    title: 'FREE PARKING',
+    number: "04",
+    title: "FREE PARKING",
     icon: Car,
     description:
-      'Spacious secure parking facility available free of charge for guest vehicles.',
+      "Spacious secure parking facility available free of charge for guest vehicles.",
   },
 
   {
-    number: '05',
-    title: 'AIR CONDITIONER',
+    number: "05",
+    title: "AIR CONDITIONER",
     icon: Wind,
     description:
-      'Whisper-quiet split AC with individual temperature controls in every room for custom comfort.',
+      "Whisper-quiet split AC with individual temperature controls in every room for custom comfort.",
   },
   {
-    number: '06',
-    title: 'KING SIZED BEDS',
+    number: "06",
+    title: "KING SIZED BEDS",
     icon: Bed,
     description:
-      'Plush pillow-top ergonomic mattresses wrapped in crisp premium white cotton linens.',
+      "Plush pillow-top ergonomic mattresses wrapped in crisp premium white cotton linens.",
   },
   {
-    number: '07',
-    title: 'HD TV',
+    number: "07",
+    title: "HD TV",
     icon: Tv,
     description:
-      'High-definition flat screen satellite television preloaded with entertainment and sports channels.',
+      "High-definition flat screen satellite television preloaded with entertainment and sports channels.",
   },
 ];
 
 // Guest Comfort Highlights
 const comfortHighlights = [
   {
-    title: 'Comfortable & Spacious Rooms',
-    desc: 'Ergonomically designed room layouts featuring fresh coastal sea breeze and serene decor.',
+    title: "Comfortable & Spacious Rooms",
+    desc: "Ergonomically designed room layouts featuring fresh coastal sea breeze and serene decor.",
   },
   {
-    title: 'Clean & Hygienic Standards',
-    desc: 'Comprehensive sanitization protocols following luxury international hospitality norms.',
+    title: "Clean & Hygienic Standards",
+    desc: "Comprehensive sanitization protocols following luxury international hospitality norms.",
   },
   {
-    title: 'Attentive & Friendly Staff',
-    desc: '24/7 dedicated hospitality staff committed to making your Puri stay memorable.',
+    title: "Attentive & Friendly Staff",
+    desc: "24/7 dedicated hospitality staff committed to making your Puri stay memorable.",
   },
   {
-    title: 'Prime Beachfront Location',
-    desc: 'Situated right on New Marine Drive Road, just steps away from Puri’s Golden Beach.',
+    title: "Prime Beachfront Location",
+    desc: "Situated right on New Marine Drive Road, just steps away from Puri’s Golden Beach.",
   },
   {
-    title: 'Fast & Reliable Wi-Fi',
-    desc: 'High-speed optical fiber internet ensuring continuous connectivity for work or play.',
+    title: "Fast & Reliable Wi-Fi",
+    desc: "High-speed optical fiber internet ensuring continuous connectivity for work or play.",
   },
 ];
 
@@ -138,7 +138,9 @@ export const AmenitiesClient: React.FC = () => {
               Everything You Need for a Comfortable Stay
             </h2>
             <p className="font-sans text-base text-[#475569] font-light leading-relaxed mt-4">
-              At Hotel Prabhupada, we combine traditional Odishan warmth with essential hotel comforts to make every guest feel relaxed and at home.
+              At Hotel Prabhupada, we combine traditional Odishan warmth with
+              essential hotel comforts to make every guest feel relaxed and at
+              home.
             </p>
             <PatachitraDivider className="mt-6" />
           </FadeRise>
@@ -153,7 +155,11 @@ export const AmenitiesClient: React.FC = () => {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.07,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
                   className="relative bg-white p-8 rounded-sm border border-[#E5DECE] hover:border-[#E8A317] shadow-sm hover:shadow-2xl hover:shadow-[#E8A317]/10 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center justify-between text-center min-h-[250px] group"
                 >
                   {/* Micro Number Indicator */}
@@ -216,8 +222,13 @@ export const AmenitiesClient: React.FC = () => {
                     <Sparkles className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-serif text-lg font-normal text-white">Beachfront Tranquility</h4>
-                    <p className="font-sans text-xs text-white/75 font-light">Experience scenic coastal sea breezes from your private balcony.</p>
+                    <h4 className="font-serif text-lg font-normal text-white">
+                      Beachfront Tranquility
+                    </h4>
+                    <p className="font-sans text-xs text-white/75 font-light">
+                      Experience scenic coastal sea breezes from your private
+                      balcony.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -240,7 +251,10 @@ export const AmenitiesClient: React.FC = () => {
                 </h2>
                 <PatachitraDivider light className="mb-6" />
                 <p className="font-sans text-base text-white/80 font-light leading-relaxed mb-8">
-                  Every aspect of Hotel Prabhupada is thoughtfully crafted to offer you peace of mind. From hygiene standards to personalized assistance, we make sure your Puri getaway feels effortless and luxurious.
+                  Every aspect of Hotel Prabhupada is thoughtfully crafted to
+                  offer you peace of mind. From hygiene standards to
+                  personalized assistance, we make sure your Puri getaway feels
+                  effortless and luxurious.
                 </p>
               </FadeRise>
 
@@ -252,7 +266,11 @@ export const AmenitiesClient: React.FC = () => {
                     initial={{ opacity: 0, y: 14 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{
+                      duration: 0.5,
+                      delay: idx * 0.08,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
                     className="flex items-start gap-4 p-4 rounded-xl bg-white/[0.03] border border-white/5 hover:border-[#E8A317]/40 hover:bg-white/[0.06] transition-all duration-300 group"
                   >
                     <div className="w-8 h-8 rounded-full bg-[#E8A317]/20 border border-[#E8A317]/50 flex items-center justify-center text-[#E8A317] shrink-0 mt-0.5 group-hover:bg-[#E8A317] group-hover:text-white transition-all">
@@ -290,7 +308,9 @@ export const AmenitiesClient: React.FC = () => {
             </h2>
             <PatachitraDivider className="mb-6" />
             <p className="font-sans text-base sm:text-lg text-[#475569] font-light leading-relaxed mb-10">
-              Immerse yourself in coastal luxury, sea views, and warm Odisha hospitality at Hotel Prabhupada. Book direct with us to secure guaranteed best rates and special inclusions.
+              Immerse yourself in coastal luxury, sea views, and warm Odisha
+              hospitality at Hotel Prabhupada. Book direct with us to secure
+              guaranteed best rates and special inclusions.
             </p>
 
             {/* Buttons Row */}
