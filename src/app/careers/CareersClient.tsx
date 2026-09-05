@@ -245,10 +245,22 @@ export const CareersClient: React.FC = () => {
     setSubmitStage('uploading');
 
     try {
-      // 1. Upload resume to Supabase Storage
-      const resumeUrl = await uploadResumeToSupabase(resumeFile);
 
-      // 2. Dispatch application data to Resend email API route
+      const resumeBase64 = await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result as string);
+        reader.onerror = (err) => reject(err);
+        reader.readAsDataURL(resumeFile);
+      });
+      let resumeUrl: string | undefined = undefined;
+      try {
+        const uploadedUrl = await uploadResumeToSupabase(resumeFile);
+        if (uploadedUrl) resumeUrl = uploadedUrl;
+      } catch (uploadErr) {
+        console.warn('Supabase storage upload skipped:', uploadErr);
+      }
+
+
       setSubmitStage('sending');
       const response = await fetch('/api/careers', {
         method: 'POST',
@@ -264,6 +276,7 @@ export const CareersClient: React.FC = () => {
           coverNote: formData.coverNote,
           resumeUrl,
           resumeFileName: resumeFile.name,
+          resumeBase64,
         }),
       });
 

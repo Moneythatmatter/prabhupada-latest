@@ -12,8 +12,9 @@ interface CareerRequestBody {
   department?: string;
   experience?: string;
   coverNote?: string;
-  resumeUrl: string;
+  resumeUrl?: string;
   resumeFileName?: string;
+  resumeBase64?: string;
 }
 
 function escapeHtml(str: string): string {
@@ -77,9 +78,9 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (!resumeUrl || !/^https?:\/\//i.test(resumeUrl)) {
+    if (!resumeUrl && !body.resumeBase64) {
       return NextResponse.json(
-        { error: 'A valid resume file URL is required.' },
+        { error: 'A valid resume file or document is required.' },
         { status: 400 }
       );
     }
@@ -193,14 +194,20 @@ export async function POST(req: NextRequest) {
         : ''
       }
 
-              <!-- Action Button -->
+              <!-- Action Button / Attachment Note -->
               <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
+                ${resumeUrl ? `
                 <a href="${escapeHtml(resumeUrl)}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #8B1E1E; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; padding: 14px 30px; border-radius: 4px; border: 1px solid #C5A059; box-shadow: 0 4px 14px rgba(139, 30, 30, 0.4);">
                   📄 View / Download Candidate Resume
                 </a>
                 <p style="margin: 12px 0 0 0; font-size: 12px; color: rgba(255,255,255,0.45);">
                   Direct resume link: <a href="${escapeHtml(resumeUrl)}" style="color: #C5A059; text-decoration: underline;">${escapeHtml(resumeUrl)}</a>
                 </p>
+                ` : `
+                <div style="display: inline-block; background-color: rgba(197, 160, 89, 0.15); border: 1px solid #C5A059; padding: 14px 24px; border-radius: 4px; color: #ffffff; font-size: 14px;">
+                  📎 <strong>Resume Attached:</strong> ${escapeHtml(resumeFileName)} (see attached document)
+                </div>
+                `}
               </div>
             </td>
           </tr>
@@ -223,6 +230,16 @@ export async function POST(req: NextRequest) {
 </html>
     `;
 
+    // Prepare email attachments if base64 file provided
+    const attachments = [];
+    if (body.resumeBase64) {
+      const base64Data = body.resumeBase64.replace(/^data:[^;]+;base64,/, '');
+      attachments.push({
+        filename: resumeFileName || 'Resume.pdf',
+        content: Buffer.from(base64Data, 'base64'),
+      });
+    }
+
     // Dispatch GM email
     const gmEmailResult = await resend.emails.send({
       from: fromEmail,
@@ -230,6 +247,7 @@ export async function POST(req: NextRequest) {
       replyTo: candidateEmail,
       subject: gmSubject,
       html: gmHtml,
+      attachments: attachments.length > 0 ? attachments : undefined,
     });
 
     if (gmEmailResult.error) {
