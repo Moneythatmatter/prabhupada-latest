@@ -30,6 +30,7 @@ import {
   PatachitraDivider,
   LotusMotif,
 } from '@/components/patachitra/PatachitraMotifs';
+import { TripAdvisorAwards } from '@/components/tripadvisor/TripAdvisorAwards';
 import { DEFAULT_TESTIMONIALS, TestimonialItem } from '@/data/defaultTestimonials';
 
 const GOOGLE_REVIEWS_URL =
@@ -414,6 +415,8 @@ export const TestimonialsClient: React.FC = () => {
             </div>
           </section>
 
+          {/* Official TripAdvisor Recognition & Awards */}
+          <TripAdvisorAwards />
 
           {/* Main 2-Column Section: Left is Reviews List, Right is Write Review Form */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">

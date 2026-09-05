@@ -245,3 +245,24 @@ body {
 .animate-pata-bloom {
   animation: pataBloom 5s ease-in-out infinite;
 }
+
+/* TripAdvisor Widget Enhancements */
+.tripadvisor-widget-box {
+  width: 100%;
+  text-align: center;
+}
+
+.tripadvisor-widget-box #CDSWIDCOE,
+.tripadvisor-widget-box #CDSWIDEXC {
+  margin: 0 auto !important;
+  display: inline-block !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.tripadvisor-widget-box .widCOEImg,
+.tripadvisor-widget-box .widEXCIMG {
+  max-width: 100%;
+  height: auto;
+}

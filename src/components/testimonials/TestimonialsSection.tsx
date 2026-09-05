@@ -15,6 +15,7 @@ import {
   PatachitraDivider,
   LotusMotif,
 } from '@/components/patachitra/PatachitraMotifs';
+import { TripAdvisorAwards } from '@/components/tripadvisor/TripAdvisorAwards';
 
 const testimonials = [
   {
@@ -183,6 +184,11 @@ export const TestimonialsSection: React.FC = () => {
             </div>
           </div>
         </motion.div>
+
+        {/* TripAdvisor Official Awards Showcase */}
+        <div className="mt-8 sm:mt-10 max-w-[680px] mx-auto">
+          <TripAdvisorAwards />
+        </div>
 
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center gap-3 sm:gap-4 border-t border-[#C5A059]/30 pt-5 sm:pt-6">
           <Link

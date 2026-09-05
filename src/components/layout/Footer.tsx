@@ -102,6 +102,39 @@ export const Footer: React.FC = () => {
                 </a>
               </div>
             </div>
+
+            {/* Official TripAdvisor Travelers' Choice 2026 Award */}
+            <div className="mt-6 pt-5 border-t border-[#C5A059]/20">
+              <span className="block font-sans text-[10px] tracking-widest uppercase font-semibold text-[#E8A317] mb-2.5">
+                Official Recognition
+              </span>
+              <a
+                href="https://www.tripadvisor.in/Hotel_Review-g503703-d1150060-Reviews-Hotel_Prabhupada-Puri_Puri_District_Odisha.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 group bg-white/[0.04] hover:bg-white/[0.08] border border-[#C5A059]/30 hover:border-[#E8A317] px-3.5 py-2.5 rounded-sm transition-all duration-300"
+                title="Hotel Prabhupada Puri - TripAdvisor Travelers' Choice 2026 Winner"
+              >
+                <div className="relative w-12 h-14 shrink-0">
+                  <Image
+                    src="https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2026_LL.png"
+                    alt="TripAdvisor Travelers' Choice 2026 Award Winner Hotel Prabhupada"
+                    fill
+                    sizes="48px"
+                    className="object-contain group-hover:scale-105 transition-transform"
+                    unoptimized
+                  />
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="font-serif text-sm font-medium text-white group-hover:text-[#E8A317] transition-colors">
+                    Travelers&apos; Choice 2026
+                  </span>
+                  <span className="font-sans text-[11px] text-white/60 font-light">
+                    TripAdvisor Best of Best
+                  </span>
+                </div>
+              </a>
+            </div>
           </div>
 
           <div className="lg:col-span-3">
