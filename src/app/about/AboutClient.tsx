@@ -323,7 +323,7 @@ export const AboutClient: React.FC = () => {
                       Address
                     </p>
                     <p className="text-[#161616] font-medium">
-                      New Marine Drive Rd, Near Light House, Puri, Odisha 752001
+                      New Marine Drive Rd, Near light house, Puri, Odisha 752001
                     </p>
                   </div>
                 </div>
@@ -337,7 +337,19 @@ export const AboutClient: React.FC = () => {
                       Phone
                     </p>
                     <p className="text-[#161616] font-medium">
-                      +91 94370 23456 / +91 6752 231234
+                      <a
+                        href="tel:+919583002952"
+                        className="hover:text-[#E8A317] transition-colors"
+                      >
+                        +91 9583002952
+                      </a>{" "}
+                      /{" "}
+                      <a
+                        href="tel:+919583002951"
+                        className="hover:text-[#E8A317] transition-colors"
+                      >
+                        +91 9583002951
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -351,7 +363,19 @@ export const AboutClient: React.FC = () => {
                       Email
                     </p>
                     <p className="text-[#161616] font-medium">
-                      info@hotelprabhupada.com / booking@hotelprabhupada.com
+                      <a
+                        href="mailto:reservation@hotelprabhupada.com"
+                        className="hover:text-[#E8A317] transition-colors"
+                      >
+                        reservation@hotelprabhupada.com
+                      </a>{" "}
+                      /{" "}
+                      <a
+                        href="mailto:gm@hotelprabhupada.com"
+                        className="hover:text-[#E8A317] transition-colors"
+                      >
+                        gm@hotelprabhupada.com
+                      </a>
                     </p>
                   </div>
                 </div>
