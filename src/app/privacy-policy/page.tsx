@@ -6,6 +6,9 @@ import { LegalPageShell } from '@/components/layout/LegalPageShell';
 export const metadata: Metadata = {
   title: 'Privacy Policy | Hotel Prabhupada Puri',
   description: 'Official Privacy Policy of Hotel Prabhupada, Puri, Odisha.',
+  alternates: {
+    canonical: '/privacy-policy',
+  },
 };
 
 export default function PrivacyPolicyPage() {

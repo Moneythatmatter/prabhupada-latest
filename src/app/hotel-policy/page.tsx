@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   title: 'Hotel Policy & House Rules | Hotel Prabhupada Puri',
   description:
     'Official Hotel Policies, Pet Policy, Identification Requirements, Pool Guidelines, Cancellation Terms, and House Rules of Hotel Prabhupada, Puri, Odisha.',
+  alternates: {
+    canonical: '/hotel-policy',
+  },
 };
 
 export default function HotelPolicyPage() {

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Frequently Asked Questions (FAQ's) | Hotel Prabhupada Puri",
   description:
     'Find answers to frequently asked questions about Hotel Prabhupada, Puri. Information on check-in/check-out timings, room categories, in-house restaurant (Oris), swimming pool, pet policy, location, and travel assistance.',
+  alternates: {
+    canonical: '/faqs',
+  },
   openGraph: {
     title: "FAQ's | Hotel Prabhupada Puri",
     description:

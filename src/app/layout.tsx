@@ -6,9 +6,13 @@ import { Chatbot } from '@/components/chatbot/Chatbot';
 import { FloatingActionMenu } from '@/components/layout/FloatingActionMenu';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hotelprabhupada.com'),
   title: 'Best Pet Friendly Sea Facing Hotel in Puri Odisha | Hotel Prabhupada',
   description:
     'Stay at the best pet friendly, sea facing hotel in Puri, Odisha. Enjoy comfortable rooms, beach views, and a perfect stay near Puri beach.',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Hotel Prabhupada Puri | Best Pet Friendly Sea Facing Hotel',
     description:

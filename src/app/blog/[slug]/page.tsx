@@ -16,11 +16,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const post = getBlogBySlug(slug);
   if (!post) {
-    return { title: 'Blog | Hotel Prabhupada Puri' };
+    return {
+      title: 'Blog | Hotel Prabhupada Puri',
+      alternates: {
+        canonical: `/blog/${slug}`,
+      },
+    };
   }
   return {
     title: `${post.title} | Hotel Prabhupada Blog`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
   };
 }
 

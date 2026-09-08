@@ -7,6 +7,9 @@ import { HOTEL_POLICIES } from '@/data/hotelPolicies';
 export const metadata: Metadata = {
   title: 'Terms & Conditions | Hotel Prabhupada Puri',
   description: 'Official Terms & Conditions and Guest Agreement of Hotel Prabhupada, Puri, Odisha.',
+  alternates: {
+    canonical: '/terms-conditions',
+  },
 };
 
 export default function TermsConditionsPage() {

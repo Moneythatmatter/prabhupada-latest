@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Photo Gallery | Hotel Prabhupada Puri | Sea Facing Hotel',
   description:
     'Browse photos of sea-facing luxury rooms, suites, ocean balcony views, beachfront ambiance, and nearby Puri attractions at Hotel Prabhupada, Puri, Odisha.',
+  alternates: {
+    canonical: '/gallery',
+  },
 };
 
 export default function GalleryPage() {

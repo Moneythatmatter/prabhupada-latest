@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Refund & Cancellation Policy | Hotel Prabhupada Puri',
   description:
     'Official Refund & Cancellation Policy for Individual Reservations at Hotel Prabhupada, Puri, Odisha. Cancellation deadlines, festive periods, and refund processing details.',
+  alternates: {
+    canonical: '/refund-policy',
+  },
 };
 
 export default function RefundPolicyPage() {

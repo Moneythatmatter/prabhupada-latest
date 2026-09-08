@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Blog | Hotel Prabhupada Puri',
   description:
     'Read travel tips, Puri heritage guides, and stay inspiration from Hotel Prabhupada — the pet-friendly sea-facing hotel in Puri, Odisha.',
+  alternates: {
+    canonical: '/blog',
+  },
 };
 
 export default function BlogPage() {

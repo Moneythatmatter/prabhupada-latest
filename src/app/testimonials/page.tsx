@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Guest Testimonials & Reviews | Hotel Prabhupada Puri',
   description:
     'Read real guest reviews and submit your stay feedback for Hotel Prabhupada, New Marine Drive Rd, Near light house, Puri, Odisha 752001.',
+  alternates: {
+    canonical: '/testimonials',
+  },
   openGraph: {
     title: 'Guest Testimonials & Reviews | Hotel Prabhupada Puri',
     description:
