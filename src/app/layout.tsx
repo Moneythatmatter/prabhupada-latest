@@ -4,9 +4,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Chatbot } from "@/components/chatbot/Chatbot";
 import { FloatingActionMenu } from "@/components/layout/FloatingActionMenu";
-import LayoutShell from "@/components/layout-shell";
 
-import Maintenance from "./maintenance/page";
+import Maintenance from "./Maintenance/page";
 
 const IS_MAINTENANCE_MODE =
   process.env.MAINTENANCE_MODE !== undefined
@@ -57,14 +56,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased bg-[#070F1A] text-white overflow-x-hidden w-full max-w-full relative">
-        <LayoutShell
-          header={<Header />}
-          footer={<Footer />}
-          chatbot={<Chatbot />}
-          fab={<FloatingActionMenu />}
-        >
-          {children}
-        </LayoutShell>
         <Header />
         <main className="min-w-0 w-full overflow-x-hidden">{children}</main>
         <Footer />

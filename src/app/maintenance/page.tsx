@@ -4,26 +4,6 @@ import { Phone, Mail } from "lucide-react";
 
 export default function Maintenance() {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "100vh",
-        width: "100vw",
-        textAlign: "center",
-        fontFamily: "sans-serif",
-        padding: "1rem",
-        background: "#0b1220", 
-        color: "#fff",
-      }}
-    >
-      <h1>We&apos;ll be right back</h1>
-      <p>
-        Hotel Prabhupada&apos;s website is undergoing scheduled maintenance.
-      </p>
-      <p>Please check back in a few hours.</p>
     <div className="min-h-screen w-full bg-[#070F1A] text-white flex flex-col items-center justify-center p-6 text-center select-none relative overflow-hidden">
       {/* Subtle background ambient glow */}
       <div className="absolute w-[500px] h-[500px] bg-[#E8A317]/5 rounded-full blur-3xl pointer-events-none -top-24 -left-24" />
@@ -54,7 +34,8 @@ export default function Maintenance() {
 
         {/* Message */}
         <p className="font-sans text-sm sm:text-base text-white/75 font-light leading-relaxed max-w-md">
-          Hotel Prabhupada&apos;s website is undergoing scheduled maintenance. Please check back in a few hours.
+          Hotel Prabhupada&apos;s website is undergoing scheduled maintenance.
+          Please check back in a few hours.
         </p>
 
         {/* Direct Inquiries & Booking Contacts */}
