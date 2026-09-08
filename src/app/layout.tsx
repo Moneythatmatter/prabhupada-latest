@@ -4,8 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Chatbot } from "@/components/chatbot/Chatbot";
 import { FloatingActionMenu } from "@/components/layout/FloatingActionMenu";
-
-import Maintenance from "./Maintenance/page";
+import Maintenance from "./maintenance/page";
 
 const IS_MAINTENANCE_MODE =
   process.env.MAINTENANCE_MODE !== undefined
