@@ -35,13 +35,13 @@ Hotel Prabhupada aims to provide guests with a comfortable and convenient stay w
 
 Hotel Prabhupada offers multiple room categories. Final room allocation, current rates, occupancy limits, and availability are based on the selected travel dates and the latest reservation information.
 
-## **1\. PREMIER ROOM**
+## **1\. PREMIER ROOM (NON SEA FACING)**
 
-The Premier Room is one of the accommodation categories available at Hotel Prabhupada.
+The Premier Room (Non Sea facing) is one of the accommodation categories available at Hotel Prabhupada.
 
-It is designed to provide guests with a comfortable stay and essential room amenities.
+It is designed to provide guests with a comfortable stay and essential room amenities. Non-sea facing standard accommodation.
 
-The Premier Room may be suitable for:
+The Premier Room (Non Sea facing) may be suitable for:
 
 * Couples  
 * Individual travellers  
@@ -49,9 +49,27 @@ The Premier Room may be suitable for:
 * Business travellers  
 * Guests looking for comfortable standard accommodation
 
-### **Premier Room Information**
+### **Amenities & Room Inclusions**
 
-Room category: Premier Room
+* King-size bed  
+* Air Conditioner (AC)  
+* High-speed Wi-Fi  
+* Smart TV  
+* Tea/Coffee Maker  
+* Tea Poi & Chairs  
+* Mini Fridge  
+* RO Water with Alkaline Refilled Bottle  
+* Complimentary Cookies  
+* Wardrobe & Hangers  
+* Luggage Rack  
+* Geyser / Hot Water  
+* Fresh Towels  
+* Herbal Toiletries  
+* In-Room Telephone  
+
+### **Premier Room (Non Sea facing) Information**
+
+Room category: Premier Room (Non Sea facing)
 
 Current Room rate: Available through the latest Hotel Prabhupada booking information.
 
@@ -67,55 +85,48 @@ Availability: Based on selected travel dates.
 
 ---
 
-## **2\. DELUXE ROOM**
+## **2\. DELUXE BALCONY SIDE SEA VIEW**
 
-The Deluxe Room provides spacious and comfortable accommodation for guests visiting Hotel Prabhupada.
+The Deluxe Balcony side sea view room provides spacious and comfortable accommodation for guests visiting Hotel Prabhupada.
 
-The bedroom area is larger compared with the Premier Room, making it suitable for guests who prefer additional space during their stay.
+It features a comfortable bed, an en-suite bathroom, a well-lit desk area, and a private balcony overlooking coastal ocean vistas with warm Odia hospitality.
 
-The Deluxe Room may be suitable for:
+The Deluxe Balcony side sea view may be suitable for:
 
 * Couples  
 * Families  
 * Leisure travellers  
 * Longer stays  
-* Guests preferring additional room space
+* Guests preferring private balcony with side sea views
 
-### **Deluxe Room Information**
+### **Amenities & Room Inclusions**
 
-Room category: Deluxe Room
+* King-size bed  
+* Private Balcony with Side Sea View  
+* Air Conditioner (AC)  
+* High-speed Wi-Fi  
+* Smart TV  
+* Tea/Coffee Maker  
+* Tea Poi & Chairs  
+* Mini Fridge  
+* RO Water with Alkaline Refilled Bottle  
+* Complimentary Cookies  
+* Wardrobe & Hangers  
+* Luggage Rack  
+* Geyser / Hot Water  
+* Fresh Towels  
+* Shower Mat  
+* Herbal Toiletries  
+* Dental Kit  
+* Shaving Kit  
+* Bathroom Slippers  
+* Hair Dryer (On Request)  
+* Iron & Ironing Board (On Request)  
+* In-Room Telephone  
 
-Current room rate: Available through the latest Hotel Prabhupada booking information.
+### **Deluxe Balcony side sea view Information**
 
-Maximum adult occupancy: To be updated by Hotel Prabhupada management.
-
-Maximum child occupancy: To be updated by Hotel Prabhupada management.
-
-Extra-person accommodation: Based on current hotel policy.
-
-Meal inclusion: Based on the selected booking plan.
-
-Availability: Based on selected travel dates.
-
----
-
-## **3\. EXECUTIVE ROOM**
-
-The Executive Room offers an enhanced accommodation experience with a higher level of comfort and room amenities compared with the Deluxe Room.
-
-It is suitable for travellers who prefer upgraded accommodation during their stay in Puri.
-
-The Executive Room may be suitable for:
-
-* Couples  
-* Business travellers  
-* Families  
-* Leisure travellers  
-* Guests looking for upgraded comfort
-
-### **Executive Room Information**
-
-Room category: Executive Room
+Room category: Deluxe Balcony side sea view
 
 Current room rate: Available through the latest Hotel Prabhupada booking information.
 
@@ -129,59 +140,46 @@ Meal inclusion: Based on the selected booking plan.
 
 Availability: Based on selected travel dates.
 
----
-
-## **4\. FAMILY ROOM**
-
-The Family Room is designed for families and larger travelling parties who prefer additional sleeping space and comfortable accommodation together.
-
-This room category is suitable for guests travelling with children, parents, relatives, or small groups.
-
-### **Family Room Information**
-
-Room category: Family Room
-
-General configuration: Designed for family accommodation with additional sleeping capacity.
-
-Current room rate: Available through the latest Hotel Prabhupada booking information.
-
-Maximum adult occupancy: To be updated by Hotel Prabhupada management.
-
-Maximum child occupancy: To be updated by Hotel Prabhupada management.
-
-Extra-person accommodation: Based on current hotel policy.
-
-Meal inclusion: Based on the selected booking plan.
-
-Availability: Based on selected travel dates.
+Balcony / Sea view: Private balcony with side sea view.
 
 ---
 
-## **5\. SUPERIOR DELUXE BALCONY SEA VIEW**
+## **3\. SUPERIOR DELUXE BALCONY SIDE SEA VIEW**
 
-The Superior Deluxe Balcony Sea View room is designed for guests who would like to enjoy a sea-view experience during their stay.
+The Superior Deluxe Balcony Side sea View room is designed for guests who would like to enjoy an upgraded sea-view experience during their stay.
 
-This room category includes a balcony and offers views toward the sea.
+This room category includes a private balcony and offers side sea views toward Puri beach, combining contemporary comfort with seaside functionality.
 
-It combines comfortable accommodation with a more scenic stay experience.
+**Special Note:** Elevator is accessible till 2nd floor (Not preferable for Senior Citizens).
 
-### **Features**
+### **Amenities & Room Inclusions**
 
-Features associated with this room category may include:
-
-* Balcony  
-* Sea view  
-* Wi-Fi  
-* Television  
-* Comfortable bedding  
-* Modern room furnishings  
-* Guest conveniences provided by the hotel
-
-Final room features should follow the latest approved Hotel Prabhupada room information.
+* King-size bed  
+* Private Balcony with Side Sea View  
+* Air Conditioner (AC)  
+* High-speed Wi-Fi  
+* Smart TV  
+* Tea/Coffee Maker  
+* Tea Poi & Chairs  
+* Mini Fridge  
+* RO Water with Alkaline Refilled Bottle  
+* Complimentary Cookies  
+* Wardrobe & Hangers  
+* Luggage Rack  
+* Geyser / Hot Water  
+* Fresh Towels  
+* Shower Mat  
+* Herbal Toiletries  
+* Dental Kit  
+* Shaving Kit  
+* Bathroom Slippers  
+* Hair Dryer (On Request)  
+* Iron & Ironing Board (On Request)  
+* In-Room Telephone  
 
 ### **Room Information**
 
-Room category: Superior Deluxe Balcony Sea View
+Room category: Superior Deluxe Balcony Side sea View
 
 Current room rate: Available through the latest Hotel Prabhupada booking information.
 
@@ -195,17 +193,122 @@ Meal inclusion: Based on the selected booking plan.
 
 Availability: Based on selected travel dates.
 
-Sea view: Yes, subject to the confirmed room category and allocation.
+Sea view: Side sea view.
 
-Balcony: Available with this room category based on approved room specifications.
+Balcony: Private balcony.
+
+---
+
+## **4\. FAMILY QUAD (NON SEA FACING)**
+
+The Family Quad (Non sea facing) room is designed for families and travelling groups who prefer additional sleeping space and comfortable accommodation together.
+
+Equipped with 2 comfortable double beds, en-suite bathroom, smart TV, tea/coffee maker, and personalized room service for a seamless stay.
+
+**Special Note:** No-view / Non-sea facing room.
+
+### **Amenities & Room Inclusions**
+
+* 2 Double Beds  
+* Air Conditioner (AC)  
+* High-speed Wi-Fi  
+* Smart TV  
+* Tea/Coffee Maker  
+* Tea Poi & Chairs  
+* Mini Fridge  
+* RO Water with Alkaline Refilled Bottle  
+* Complimentary Cookies  
+* Wardrobe & Hangers  
+* Geyser / Hot Water  
+* Fresh Towels  
+* Shower Mat  
+* Herbal Toiletries  
+* Hair Dryer (On Request)  
+* Iron & Ironing Board (On Request)  
+* In-Room Telephone  
+
+### **Family Quad (Non sea facing) Information**
+
+Room category: Family Quad (Non sea facing)
+
+General configuration: Designed with 2 double beds for family accommodation with additional sleeping capacity.
+
+Current room rate: Available through the latest Hotel Prabhupada booking information.
+
+Maximum adult occupancy: To be updated by Hotel Prabhupada management.
+
+Maximum child occupancy: To be updated by Hotel Prabhupada management.
+
+Extra-person accommodation: Based on current hotel policy.
+
+Meal inclusion: Based on the selected booking plan.
+
+Availability: Based on selected travel dates.
+
+---
+
+## **5\. EXECUTIVE FRONT SEA VIEW**
+
+The Executive Front Sea View room is designed as a sanctuary of peace and comfort, featuring elegant interiors, plush furnishings, and modern technology.
+
+Guests enjoy panoramic front ocean views and true Odia hospitality for both short and extended stays.
+
+**Special Note:** Front sea view with large view window (No Balcony).
+
+### **Amenities & Room Inclusions**
+
+* King-size bed  
+* Long Deewan Seating  
+* Panoramic Front Ocean View  
+* Air Conditioner (AC)  
+* Room Humidifier  
+* High-speed Wi-Fi  
+* Smart TV  
+* Tea/Coffee Maker  
+* Tea Poi & Chairs  
+* Mini Fridge  
+* RO Water with Alkaline Refilled Bottle  
+* Complimentary Cookies  
+* Wardrobe & Hangers  
+* Geyser / Hot Water  
+* Fresh Towels  
+* Shower Mat  
+* Plush Bathrobe  
+* Bathroom Slippers  
+* Herbal Toiletries  
+* Dental Kit  
+* Shaving Kit  
+* Hair Dryer  
+* Iron & Ironing Board (On Request)  
+* In-Room Telephone  
+
+### **Executive Front Sea View Information**
+
+Room category: Executive Front Sea View
+
+Current room rate: Available through the latest Hotel Prabhupada booking information.
+
+Maximum adult occupancy: To be updated by Hotel Prabhupada management.
+
+Maximum child occupancy: To be updated by Hotel Prabhupada management.
+
+Extra-person accommodation: Based on current hotel policy.
+
+Meal inclusion: Based on the selected booking plan.
+
+Availability: Based on selected travel dates.
+
+Sea view: Panoramic direct front ocean view.
 
 ---
 
 ## **6\. SUITE FRONT SEA VIEW**
 
-The Suite Front Sea View is one of the premium accommodation categories available at Hotel Prabhupada.
+The Suite Front Sea view is the premium luxury accommodation category available at Hotel Prabhupada.
 
-It is designed for guests looking for a more spacious and enhanced stay experience with a front-facing sea view.
+It offers an expansive ocean retreat with contemporary décor, plush king bedding, dedicated sofa seating area, 43-inch Smart TV, dual air conditioner, and full VIP amenities.
+
+**Special Note:** Expansive front sea view suite (No Balcony).
 
 The suite may be suitable for:
 
@@ -213,26 +316,40 @@ The suite may be suitable for:
 * Families  
 * Leisure travellers  
 * Special occasions  
-* Guests looking for premium accommodation  
-* Guests who prefer sea-view rooms
+* Guests looking for premium luxury accommodation  
+* Guests who prefer direct front sea views
 
-### **Features**
+### **Amenities & Room Inclusions**
 
-Features associated with this category may include:
-
-* Front sea view  
-* Wi-Fi  
-* In-room entertainment  
-* Comfortable or premium bedding  
-* Workspace  
-* Modern room furnishings  
-* Guest conveniences provided by the hotel
-
-Final features should follow the latest approved Hotel Prabhupada room information.
+* King-size bed  
+* Dedicated Sofa Set  
+* Panoramic Front Sea View  
+* Dual Air Conditioners (Dual AC)  
+* High-speed Wi-Fi  
+* 43-inch Smart TV  
+* Tea/Coffee Maker  
+* Tea Poi & Chairs  
+* Fresh Fruit Platter  
+* Complimentary Snacks & Cookies  
+* Mini Fridge  
+* RO Water with Alkaline Refilled Bottle  
+* Wardrobe & Hangers  
+* Luggage Rack  
+* Geyser / Hot Water  
+* Fresh Towels  
+* Shower Mat  
+* Plush Bathrobe  
+* Bathroom Slippers  
+* Herbal Toiletries  
+* Dental Kit  
+* Shaving Kit  
+* Hair Dryer  
+* Iron & Ironing Board (On Request)  
+* In-Room Telephone  
 
 ### **Suite Information**
 
-Room category: Suite Front Sea View
+Room category: Suite Front Sea view
 
 Current room rate: Available through the latest Hotel Prabhupada booking information.
 
@@ -959,18 +1076,18 @@ Yes. Room service and in-room dining facilities are available.
 
 Hotel Prabhupada offers room categories including:
 
-* Premier Room  
-* Deluxe Room  
-* Executive Room  
-* Family Room  
-* Superior Deluxe Balcony Sea View  
-* Suite Front Sea View
+* Premier Room (Non Sea facing)  
+* Deluxe Balcony side sea view  
+* Superior Deluxe Balcony Side sea View  
+* Family Quad (Non sea facing)  
+* Executive Front Sea View  
+* Suite Front Sea view
 
 Availability depends on selected travel dates.
 
 ## **Does Hotel Prabhupada have sea-view rooms?**
 
-Yes. Sea-view room categories include Superior Deluxe Balcony Sea View and Suite Front Sea View, subject to current availability.
+Yes. Sea-view room categories include Deluxe Balcony side sea view, Superior Deluxe Balcony Side sea View, Executive Front Sea View, and Suite Front Sea view, subject to current availability.
 
 ## **How much does a room cost?**
 
@@ -1000,7 +1117,7 @@ Actual travel time depends on traffic and local conditions.
 
 ## **Does Hotel Prabhupada have family rooms?**
 
-Yes. Hotel Prabhupada offers a Family Room category designed for families and larger travelling parties.
+Yes. Hotel Prabhupada offers a Family Quad (Non sea facing) category designed for families and larger travelling parties.
 
 ## **Does the hotel provide travel assistance?**
 

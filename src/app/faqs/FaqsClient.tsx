@@ -160,12 +160,12 @@ const FAQ_DATA: FaqItem[] = [
       <div className="space-y-2">
         <p>Hotel Prabhupada offers 6 room categories:</p>
         <ul className="list-disc pl-5 space-y-1 text-white/85">
-          <li>Premier rooms ( No-view  & Lobby level)</li>
-          <li>Deluxe Balcony side sea view </li>
-          <li>Superior Balcony side sea view </li>
-          <li>Family room ( Non sea view )</li>
-          <li>Executive front sea view</li>
-          <li>Suite Front sea view</li>
+          <li>Premier Room (Non Sea facing)</li>
+          <li>Deluxe Balcony side sea view</li>
+          <li>Superior Deluxe Balcony Side sea View</li>
+          <li>Family Quad (Non sea facing)</li>
+          <li>Executive Front Sea View</li>
+          <li>Suite Front Sea view</li>
         </ul>
         <p className="text-white/70">
           Visit our <Link href="/rooms" className="text-[#E8A317] hover:underline">Rooms & Suites</Link> page to view details and photos.

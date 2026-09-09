@@ -1,40 +1,34 @@
-import type { Metadata, Viewport } from "next";
-import "./globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { Chatbot } from "@/components/chatbot/Chatbot";
-import { FloatingActionMenu } from "@/components/layout/FloatingActionMenu";
-import Maintenance from "./maintenance/page";
-
-const IS_MAINTENANCE_MODE =
-  process.env.MAINTENANCE_MODE !== undefined
-    ? process.env.MAINTENANCE_MODE.trim().toLowerCase() === "true"
-    : true;
+import type { Metadata, Viewport } from 'next';
+import './globals.css';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { Chatbot } from '@/components/chatbot/Chatbot';
+import { FloatingActionMenu } from '@/components/layout/FloatingActionMenu';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hotelprabhupada.com"),
-  title: "Best Pet Friendly Sea Facing Hotel in Puri Odisha | Hotel Prabhupada",
+  metadataBase: new URL('https://hotelprabhupada.com'),
+  title: 'Best Pet Friendly Sea Facing Hotel in Puri Odisha | Hotel Prabhupada',
   description:
-    "Stay at the best pet friendly, sea facing hotel in Puri, Odisha. Enjoy comfortable rooms, beach views, and a perfect stay near Puri beach.",
+    'Stay at the best pet friendly, sea facing hotel in Puri, Odisha. Enjoy comfortable rooms, beach views, and a perfect stay near Puri beach.',
   alternates: {
-    canonical: "/",
+    canonical: '/',
   },
   openGraph: {
-    title: "Hotel Prabhupada Puri | Best Pet Friendly Sea Facing Hotel",
+    title: 'Hotel Prabhupada Puri | Best Pet Friendly Sea Facing Hotel',
     description:
-      "Stay at the best pet friendly, sea facing hotel in Puri, Odisha. Enjoy comfortable rooms, beach views, and a perfect stay near Puri beach.",
-    url: "https://hotelprabhupada.com",
-    siteName: "Hotel Prabhupada",
-    locale: "en_IN",
-    type: "website",
+      'Stay at the best pet friendly, sea facing hotel in Puri, Odisha. Enjoy comfortable rooms, beach views, and a perfect stay near Puri beach.',
+    url: 'https://hotelprabhupada.com',
+    siteName: 'Hotel Prabhupada',
+    locale: 'en_IN',
+    type: 'website',
   },
 };
 
 export const viewport: Viewport = {
-  width: "device-width",
+  width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  viewportFit: "cover",
+  viewportFit: 'cover',
 };
 
 export default function RootLayout({
@@ -42,16 +36,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  if (IS_MAINTENANCE_MODE) {
-    return (
-      <html lang="en">
-        <body className="antialiased bg-[#070F1A] text-white min-h-screen m-0 p-0 overflow-x-hidden">
-          <Maintenance />
-        </body>
-      </html>
-    );
-  }
-
   return (
     <html lang="en">
       <body className="antialiased bg-[#070F1A] text-white overflow-x-hidden w-full max-w-full relative">

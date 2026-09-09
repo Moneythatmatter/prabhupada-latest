@@ -139,12 +139,12 @@ For more details, visit our [Hotel Amenities](/amenities) page.`;
   ) {
     return `**Hotel Prabhupada offers the following room categories:**
 
-1. **Premier Room** – Comfortable standard accommodation suitable for couples, individual travellers, and short stays.
-2. **Deluxe Room** – Spacious accommodation with a larger bedroom area, ideal for couples and families.
-3. **Executive Room** – Upgraded comfort and enhanced room amenities.
-4. **Family Room** – Designed with additional sleeping capacity for families, parents with children, or small groups.
-5. **Superior Deluxe Balcony Sea View** – Scenic stay featuring a private balcony and views toward the sea.
-6. **Suite Front Sea View** – Premium accommodation offering a front-facing sea view and dedicated living/workspace.
+1. **Premier Room (Non Sea facing)** – Comfortable standard accommodation suitable for couples, individual travellers, and short stays.
+2. **Deluxe Balcony side sea view** – Spacious accommodation with a private balcony overlooking coastal ocean vistas.
+3. **Superior Deluxe Balcony Side sea View** – Scenic stay featuring a private balcony and side sea views with modern amenities.
+4. **Family Quad (Non sea facing)** – Designed with 2 double beds for families and travelling groups.
+5. **Executive Front Sea View** – Upgraded comfort with panoramic front ocean views.
+6. **Suite Front Sea view** – Premium accommodation offering a front-facing sea view and dedicated living space.
 
 👉 [View Room Details](/rooms) | [Book Online](${HOTEL_INFO.contact.directBookingUrl})`;
   }
