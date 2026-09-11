@@ -60,6 +60,20 @@ const galleryPhotos = [
     image: '/images/staircase.jpg',
     caption: 'Elegantly panelled main staircase and guest floor corridors with wooden handrails.',
   },
+  {
+    id: 12,
+    title: 'Lobby & Lounge Areas',
+    category: 'Common Area & Corridors',
+    image: '/images/guest_lounge.webp',
+    caption: 'Comfortably appointed common spaces designed for guests to relax, gather, and unwind.',
+  },
+  {
+    id: 13,
+    title: 'Garden & Outdoor Spaces',
+    category: 'Common Area & Corridors',
+    image: '/images/lawn.webp',
+    caption: 'Well-maintained outdoor areas offering a pleasant setting to relax and enjoy the surroundings.',
+  },
 
   // 4. SWIMMING POOL
   {
@@ -123,20 +137,6 @@ const galleryPhotos = [
     category: 'Executive (Front Sea View)',
     image: '/images/puri-golden-beach.webp',
     caption: 'Direct sea view of Puri Golden Beach waves visible from Executive Suite windows.',
-  },
-  {
-    id: 12,
-    title: 'Shree Jagannatha Temple Puri',
-    category: 'Common Area & Corridors',
-    image: '/images/jagannath-temple.webp',
-    caption: 'Sacred 12th-century Jagannath Temple heritage located near Hotel Prabhupada.',
-  },
-  {
-    id: 13,
-    title: 'Konark Sun Temple Heritage',
-    category: 'Common Area & Corridors',
-    image: '/images/attraction-konark.webp',
-    caption: 'UNESCO World Heritage 13th-century Sun Temple architectural monument.',
   },
 ];
 
