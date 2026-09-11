@@ -6,6 +6,7 @@ import { RoomsSection } from '@/components/rooms/RoomsSection';
 import { FacilitiesSection } from '@/components/facilities/FacilitiesSection';
 import { TestimonialsSection } from '@/components/testimonials/TestimonialsSection';
 import { AttractionsSection } from '@/components/attractions/AttractionsSection';
+import { WhyChooseUsSection } from '@/components/why-choose-us/WhyChooseUsSection';
 
 export const metadata: Metadata = {
   alternates: {
@@ -22,6 +23,7 @@ export default function Home() {
       <RoomsSection />
       <FacilitiesSection />
       {/* <AmenitiesSection /> */}
+      <WhyChooseUsSection />
       <TestimonialsSection />
       <AttractionsSection />
     </>
