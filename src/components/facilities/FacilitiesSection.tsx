@@ -64,7 +64,7 @@ const facilities: Facility[] = [
     number: '03',
   },
   {
-    title: 'Spa',
+    title: 'Spa & Steam',
     description:
       'Rejuvenating treatments for restful wellness during your stay — unwind after a day of exploring Puri.',
     icon: Flower2,

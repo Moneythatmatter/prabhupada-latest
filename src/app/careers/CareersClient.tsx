@@ -542,7 +542,7 @@ export const CareersClient: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
+                    {/* <div className="flex items-start gap-3">
                       <Mail className="w-4 h-4 text-[#8B1E1E] shrink-0 mt-0.5" />
                       <div>
                         <p className="text-[#C5A059] text-[11px] uppercase tracking-wider font-medium">
@@ -555,21 +555,15 @@ export const CareersClient: React.FC = () => {
                           reservation@hotelprabhupada.com
                         </a>
                       </div>
-                    </div>
+                    </div> */}
 
                     <div className="flex items-start gap-3">
                       <Phone className="w-4 h-4 text-[#8B1E1E] shrink-0 mt-0.5" />
                       <div>
                         <p className="text-[#C5A059] text-[11px] uppercase tracking-wider font-medium">
-                          Reservation Phone Numbers
+                          career support
                         </p>
                         <div className="space-y-1">
-                          <a
-                            href="tel:+919583002951"
-                            className="block text-white/90 hover:text-[#E8A317] transition-colors"
-                          >
-                            +91 9583002951
-                          </a>
                           <a
                             href="tel:+919583002952"
                             className="block text-white/90 hover:text-[#E8A317] transition-colors"
@@ -587,7 +581,7 @@ export const CareersClient: React.FC = () => {
                           Hotel Address
                         </p>
                         <p className="text-white/80 leading-relaxed">
-                          New Marine Drive Rd, Near light house, Puri, Odisha 752001
+                          New Marine Drive Road, Near light house, Puri, Odisha 752001
                         </p>
                       </div>
                     </div>

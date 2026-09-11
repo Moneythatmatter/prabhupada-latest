@@ -27,10 +27,10 @@ import {
 const roomsData = [
   {
     id: "premier-room",
-    title: "Premier Room (Non Sea facing)",
-    badgeTitle: "PREMIER ROOM (NON SEA FACING)",
+    title: "Premier Room (Non Sea View)",
+    badgeTitle: "Premier Room (Non Sea View)",
     description:
-      "Indulge in the comfort and elegance of Hotel Prabhupada's Premier Room (Non Sea facing). Thoughtfully designed with modern aesthetics and essential luxury amenities, featuring air conditioning, high-speed Wi-Fi, smart TV, tea/coffee maker, and personalized hospitality for a serene stay in Puri.",
+      "Indulge in the comfort and elegance of Hotel Prabhupada's Premier Room (Non Sea View). Thoughtfully designed with modern aesthetics and essential luxury amenities, featuring air conditioning, high-speed Wi-Fi, smart TV, tea/coffee maker, and personalized hospitality for a serene stay in Puri.",
     image: "/images/official-hero1.webp",
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
@@ -55,7 +55,7 @@ const roomsData = [
       "Complimentary Cookies",
       "Wardrobe & Hangers",
       "Luggage Rack",
-      "Geyser / Hot Water",
+      "Geyser",
       "Fresh Towels",
       "Herbal Toiletries",
       "In-Room Telephone",
@@ -63,10 +63,10 @@ const roomsData = [
   },
   {
     id: "deluxe-room-balcony-sea-view",
-    title: "Deluxe Balcony side sea view",
-    badgeTitle: "DELUXE BALCONY SIDE SEA VIEW",
+    title: "Deluxe Balcony (Side Sea View)",
+    badgeTitle: "Deluxe Balcony (Side Sea View)",
     description:
-      "Thoughtfully designed for both spiritual and leisure travelers, our Deluxe Balcony side sea view features a comfortable bed, an en-suite bathroom, a well-lit desk area, and a private balcony overlooking coastal ocean vistas with warm Odia hospitality.",
+      "Thoughtfully designed for both spiritual and leisure travelers, our Deluxe Balcony (Side Sea View) features a comfortable bed, an en-suite bathroom, a well-lit desk area, and a private balcony overlooking coastal ocean vistas with warm Odia hospitality.",
     image: "/images/official-hero2.webp",
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
@@ -91,7 +91,7 @@ const roomsData = [
       "Complimentary Cookies",
       "Wardrobe & Hangers",
       "Luggage Rack",
-      "Geyser / Hot Water",
+      "Geyser",
       "Fresh Towels",
       "Shower Mat",
       "Herbal Toiletries",
@@ -105,11 +105,11 @@ const roomsData = [
   },
   {
     id: "superior-deluxe-balcony-side-sea-view",
-    title: "Superior Deluxe Balcony Side sea view",
-    badgeTitle: "SUPERIOR DELUXE BALCONY SIDE SEA VIEW",
+    title: "Superior Deluxe Balcony (Side Sea View)",
+    badgeTitle: "SUPERIOR Deluxe Balcony (Side Sea View)",
     note: "Elevator is accessible till 2nd floor (Not preferable for Senior Citizens)",
     description:
-      "Welcome to Hotel Prabhupada, where comfort meets luxury. Our Superior Deluxe Balcony Side sea View offers the perfect blend of style and seaside functionality, ideal for both spiritual and leisure travelers, with modern amenities and plush bedding.",
+      "Welcome to Hotel Prabhupada, where comfort meets luxury. Our Superior Deluxe Balcony (Side Sea View) offers the perfect blend of style and seaside functionality, ideal for both spiritual and leisure travelers, with modern amenities and plush bedding.",
     image: "/images/room-superior-deluxe.webp",
     bookingUrl:
       "https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000009",
@@ -135,7 +135,7 @@ const roomsData = [
       "Complimentary Cookies",
       "Wardrobe & Hangers",
       "Luggage Rack",
-      "Geyser / Hot Water",
+      "Geyser",
       "Fresh Towels",
       "Shower Mat",
       "Herbal Toiletries",
@@ -149,10 +149,10 @@ const roomsData = [
   },
   {
     id: "family-quad-sharing",
-    title: "Family Quad (Non sea facing)",
-    badgeTitle: "FAMILY QUAD (NON SEA FACING)",
+    title: "Family Quad (Non Sea View)",
+    badgeTitle: "Family Quad (Non Sea View)",
     description:
-      "At Hotel Prabhupada, we pride ourselves in offering a home away from home. Our Family Quad (Non sea facing) rooms are thoughtfully designed for families and travelling groups, equipped with 2 comfortable double beds, en-suite bathroom, smart TV, tea/coffee maker, and personalized room service for a seamless stay.",
+      "At Hotel Prabhupada, we pride ourselves in offering a home away from home. Our Family Quad (Non Sea View) rooms are thoughtfully designed for families and travelling groups, equipped with 2 comfortable double beds, en-suite bathroom, smart TV, tea/coffee maker, and personalized room service for a seamless stay.",
     image: "/images/roomImage.webp",
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
@@ -176,7 +176,7 @@ const roomsData = [
       "RO Water with Alkaline Refilled Bottle",
       "Complimentary Cookies",
       "Wardrobe & Hangers",
-      "Geyser / Hot Water",
+      "Geyser",
       "Fresh Towels",
       "Shower Mat",
       "Herbal Toiletries",
@@ -187,10 +187,10 @@ const roomsData = [
   },
   {
     id: "executive-front-sea",
-    title: "Executive Front Sea view",
-    badgeTitle: "EXECUTIVE FRONT SEA VIEW",
+    title: "Executive (Front Sea View)",
+    badgeTitle: "Executive (Front Sea View)",
     description:
-      "Designed as a sanctuary of peace and comfort, our Executive Front Sea View features elegant interiors, plush furnishings, and modern technology. Enjoy panoramic front ocean views and true Odia hospitality for both short and extended stays.",
+      "Designed as a sanctuary of peace and comfort, our Executive (Front Sea View) features elegant interiors, plush furnishings, and modern technology. Enjoy panoramic front ocean views and true Odia hospitality for both short and extended stays.",
     image: "/images/hero2.webp",
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
@@ -216,7 +216,7 @@ const roomsData = [
       "RO Water with Alkaline Refilled Bottle",
       "Complimentary Cookies",
       "Wardrobe & Hangers",
-      "Geyser / Hot Water",
+      "Geyser",
       "Fresh Towels",
       "Shower Mat",
       "Plush Bathrobe",
@@ -231,10 +231,10 @@ const roomsData = [
   },
   {
     id: "suite-front",
-    title: "Suite Front Sea view",
-    badgeTitle: "SUITE FRONT SEA VIEW",
+    title: "Suite (Front Sea View)",
+    badgeTitle: "Suite (Front Sea View)",
     description:
-      "Discover the ultimate in luxury and coastal tranquility at Hotel Prabhupada. Our Suite Front Sea view offers an expansive ocean retreat with contemporary décor, plush king bedding, dedicated sofa seating area, 43-inch Smart TV, dual air conditioner, and full VIP amenities.",
+      "Discover the ultimate in luxury and coastal tranquility at Hotel Prabhupada. Our Suite (Front Sea View) offers an expansive ocean retreat with contemporary décor, plush king bedding, dedicated sofa seating area, 43-inch Smart TV, dual air conditioner, and full VIP amenities.",
     image: "/images/room-suite.webp",
     bookingUrl:
       "https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000010",
@@ -262,7 +262,7 @@ const roomsData = [
       "RO Water with Alkaline Refilled Bottle",
       "Wardrobe & Hangers",
       "Luggage Rack",
-      "Geyser / Hot Water",
+      "Geyser",
       "Fresh Towels",
       "Shower Mat",
       "Plush Bathrobe",

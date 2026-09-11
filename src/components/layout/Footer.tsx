@@ -301,7 +301,7 @@ export const Footer: React.FC = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#C0392B] shrink-0 mt-0.5" />
                 <span>
-                  New Marine Drive Rd, Near light house, Puri, Odisha 752001
+                  New Marine Drive Road, Near light house, Puri, Odisha 752001
                 </span>
               </li>
               <li className="flex items-center gap-3">

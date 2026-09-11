@@ -32,7 +32,7 @@ export const ContactClient: React.FC = () => {
   return (
     <>
       <InnerPageHero
-        overline="New Marine Drive · Puri"
+        overline="New Marine Drive road · Puri"
         title="Contact Us"
         subtitle="Reach Hotel Prabhupada for reservations, queries, or a callback."
         image="/images/official-about.webp"
@@ -172,7 +172,7 @@ export const ContactClient: React.FC = () => {
                       Address
                     </h4>
                     <p className="text-white/90 leading-relaxed">
-                      New Marine Drive Rd, Near light house, Puri, Odisha 752001
+                      New Marine Drive Road, Near light house, Puri, Odisha 752001
                     </p>
                   </div>
                 </div>

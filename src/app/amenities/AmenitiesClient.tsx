@@ -49,7 +49,7 @@ const officialAmenities = [
   },
   {
     number: "04",
-    title: "FREE PARKING",
+    title: "limited FREE PARKING",
     icon: Car,
     description:
       "Spacious secure parking facility available free of charge for guest vehicles.",

@@ -55,7 +55,7 @@ export default function HotelPolicyPage() {
       icon={<Building2 className="w-6 h-6" />}
     >
       <div className="space-y-10 font-sans text-sm sm:text-base text-white/80 font-light leading-relaxed">
-        
+
         {/* Intro Banner */}
         <div className="bg-[#0C1827] p-6 sm:p-8 rounded-sm border border-[#C5A059]/30 relative overflow-hidden shadow-xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#E8A317]/5 rounded-full blur-3xl pointer-events-none" />
@@ -103,11 +103,10 @@ export default function HotelPolicyPage() {
             {identificationPolicy.rules.map((rule, idx) => (
               <div
                 key={idx}
-                className={`p-4 rounded-xl border flex items-start gap-3.5 transition-colors ${
-                  rule.important
-                    ? 'bg-amber-500/10 border-amber-500/30 text-amber-100'
-                    : 'bg-white/[0.03] border-white/5 text-white/90'
-                }`}
+                className={`p-4 rounded-xl border flex items-start gap-3.5 transition-colors ${rule.important
+                  ? 'bg-amber-500/10 border-amber-500/30 text-amber-100'
+                  : 'bg-white/[0.03] border-white/5 text-white/90'
+                  }`}
               >
                 <CheckCircle2 className="w-5 h-5 text-[#E8A317] shrink-0 mt-0.5" />
                 <div className="text-sm sm:text-base leading-relaxed">
@@ -155,19 +154,17 @@ export default function HotelPolicyPage() {
             {cancellationPolicy.timeline.map((item, idx) => (
               <div
                 key={idx}
-                className={`p-5 rounded-xl border flex flex-col justify-between space-y-3 ${
-                  item.refundable
-                    ? 'bg-emerald-950/20 border-emerald-500/30'
-                    : 'bg-rose-950/20 border-rose-500/30'
-                }`}
+                className={`p-5 rounded-xl border flex flex-col justify-between space-y-3 ${item.refundable
+                  ? 'bg-emerald-950/20 border-emerald-500/30'
+                  : 'bg-rose-950/20 border-rose-500/30'
+                  }`}
               >
                 <div>
                   <span
-                    className={`inline-block text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-sm mb-2 ${
-                      item.refundable
-                        ? 'bg-emerald-500/20 text-emerald-300'
-                        : 'bg-rose-500/20 text-rose-300'
-                    }`}
+                    className={`inline-block text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-sm mb-2 ${item.refundable
+                      ? 'bg-emerald-500/20 text-emerald-300'
+                      : 'bg-rose-500/20 text-rose-300'
+                      }`}
                   >
                     {item.charge}
                   </span>
@@ -301,8 +298,8 @@ export default function HotelPolicyPage() {
               </div>
 
               <div className="p-4 bg-white/[0.04] rounded-xl border border-white/10 space-y-1">
-                <span className="text-xs text-white/60 uppercase tracking-wider block">Security Deposit</span>
-                <div className="text-lg sm:text-xl font-serif text-emerald-400 font-medium">
+                <span className="text-xs text-white/60 uppercase tracking-wider block">Refundable Security Deposit</span>
+                <div className="text-lg sm:text-xl font-serif text-[#E8A317] font-medium">
                   {petPolicy.feeDetails.securityDeposit}
                 </div>
                 <p className="text-xs text-white/70">{petPolicy.feeDetails.depositNote}</p>
@@ -310,7 +307,7 @@ export default function HotelPolicyPage() {
 
               <div className="p-4 bg-white/[0.04] rounded-xl border border-white/10 space-y-1">
                 <span className="text-xs text-white/60 uppercase tracking-wider block">Waste Cleaning Fine</span>
-                <div className="text-lg sm:text-xl font-serif text-rose-400 font-medium">
+                <div className="text-lg sm:text-xl font-serif text-[#E8A317] font-medium">
                   {petPolicy.feeDetails.cleaningFine}
                 </div>
                 <p className="text-xs text-white/70">{petPolicy.feeDetails.fineNote}</p>
@@ -324,7 +321,7 @@ export default function HotelPolicyPage() {
               <Clock className="w-4 h-4 text-[#E8A317]" />
               Check-in Process
             </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {petPolicy.checkInProcess.map((step, idx) => (
                 <div key={idx} className="p-4 bg-[#070F1A] rounded-xl border border-[#E8A317]/20 flex flex-col justify-between space-y-2">
                   <div className="w-6 h-6 rounded-full bg-[#E8A317]/20 text-[#E8A317] text-xs font-bold flex items-center justify-center">
@@ -499,11 +496,10 @@ export default function HotelPolicyPage() {
             {visitorsPolicy.rules.map((rule, idx) => (
               <div
                 key={idx}
-                className={`p-4 rounded-xl border flex items-start gap-3.5 ${
-                  rule.important
-                    ? 'bg-[#E8A317]/10 border-[#E8A317]/30 text-white'
-                    : 'bg-white/[0.03] border-white/5 text-white/90'
-                }`}
+                className={`p-4 rounded-xl border flex items-start gap-3.5 ${rule.important
+                  ? 'bg-[#E8A317]/10 border-[#E8A317]/30 text-white'
+                  : 'bg-white/[0.03] border-white/5 text-white/90'
+                  }`}
               >
                 {rule.text.includes('Photographers') ? (
                   <Camera className="w-5 h-5 text-[#E8A317] shrink-0 mt-0.5" />

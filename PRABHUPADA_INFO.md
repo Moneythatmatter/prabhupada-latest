@@ -8,7 +8,7 @@ Hotel Prabhupada
 
 Hotel Prabhupada is located at:
 
- New Marine Drive Rd  
+ New Marine Drive Road  
  Near light house  
  Puri, Odisha 752001  
  India
@@ -35,13 +35,13 @@ Hotel Prabhupada aims to provide guests with a comfortable and convenient stay w
 
 Hotel Prabhupada offers multiple room categories. Final room allocation, current rates, occupancy limits, and availability are based on the selected travel dates and the latest reservation information.
 
-## **1\. PREMIER ROOM (NON SEA FACING)**
+## **1\. Premier Room (Non Sea View)**
 
-The Premier Room (Non Sea facing) is one of the accommodation categories available at Hotel Prabhupada.
+The Premier Room (Non Sea View) is one of the accommodation categories available at Hotel Prabhupada.
 
 It is designed to provide guests with a comfortable stay and essential room amenities. Non-sea facing standard accommodation.
 
-The Premier Room (Non Sea facing) may be suitable for:
+The Premier Room (Non Sea View) may be suitable for:
 
 * Couples  
 * Individual travellers  
@@ -62,14 +62,14 @@ The Premier Room (Non Sea facing) may be suitable for:
 * Complimentary Cookies  
 * Wardrobe & Hangers  
 * Luggage Rack  
-* Geyser / Hot Water  
+* Geyser  
 * Fresh Towels  
 * Herbal Toiletries  
 * In-Room Telephone  
 
-### **Premier Room (Non Sea facing) Information**
+### **Premier Room (Non Sea View) Information**
 
-Room category: Premier Room (Non Sea facing)
+Room category: Premier Room (Non Sea View)
 
 Current Room rate: Available through the latest Hotel Prabhupada booking information.
 
@@ -85,13 +85,13 @@ Availability: Based on selected travel dates.
 
 ---
 
-## **2\. DELUXE BALCONY SIDE SEA VIEW**
+## **2\. Deluxe Balcony (Side Sea View)**
 
-The Deluxe Balcony side sea view room provides spacious and comfortable accommodation for guests visiting Hotel Prabhupada.
+The Deluxe Balcony (Side Sea View) room provides spacious and comfortable accommodation for guests visiting Hotel Prabhupada.
 
 It features a comfortable bed, an en-suite bathroom, a well-lit desk area, and a private balcony overlooking coastal ocean vistas with warm Odia hospitality.
 
-The Deluxe Balcony side sea view may be suitable for:
+The Deluxe Balcony (Side Sea View) may be suitable for:
 
 * Couples  
 * Families  
@@ -113,7 +113,7 @@ The Deluxe Balcony side sea view may be suitable for:
 * Complimentary Cookies  
 * Wardrobe & Hangers  
 * Luggage Rack  
-* Geyser / Hot Water  
+* Geyser  
 * Fresh Towels  
 * Shower Mat  
 * Herbal Toiletries  
@@ -124,9 +124,9 @@ The Deluxe Balcony side sea view may be suitable for:
 * Iron & Ironing Board (On Request)  
 * In-Room Telephone  
 
-### **Deluxe Balcony side sea view Information**
+### **Deluxe Balcony (Side Sea View) Information**
 
-Room category: Deluxe Balcony side sea view
+Room category: Deluxe Balcony (Side Sea View)
 
 Current room rate: Available through the latest Hotel Prabhupada booking information.
 
@@ -144,9 +144,9 @@ Balcony / Sea view: Private balcony with side sea view.
 
 ---
 
-## **3\. SUPERIOR DELUXE BALCONY SIDE SEA VIEW**
+## **3\. SUPERIOR Deluxe Balcony (Side Sea View)**
 
-The Superior Deluxe Balcony Side sea View room is designed for guests who would like to enjoy an upgraded sea-view experience during their stay.
+The Superior Deluxe Balcony (Side Sea View) room is designed for guests who would like to enjoy an upgraded sea-view experience during their stay.
 
 This room category includes a private balcony and offers side sea views toward Puri beach, combining contemporary comfort with seaside functionality.
 
@@ -166,7 +166,7 @@ This room category includes a private balcony and offers side sea views toward P
 * Complimentary Cookies  
 * Wardrobe & Hangers  
 * Luggage Rack  
-* Geyser / Hot Water  
+* Geyser  
 * Fresh Towels  
 * Shower Mat  
 * Herbal Toiletries  
@@ -179,7 +179,7 @@ This room category includes a private balcony and offers side sea views toward P
 
 ### **Room Information**
 
-Room category: Superior Deluxe Balcony Side sea View
+Room category: Superior Deluxe Balcony (Side Sea View)
 
 Current room rate: Available through the latest Hotel Prabhupada booking information.
 
@@ -199,9 +199,9 @@ Balcony: Private balcony.
 
 ---
 
-## **4\. FAMILY QUAD (NON SEA FACING)**
+## **4\. Family Quad (Non Sea View)**
 
-The Family Quad (Non sea facing) room is designed for families and travelling groups who prefer additional sleeping space and comfortable accommodation together.
+The Family Quad (Non Sea View) room is designed for families and travelling groups who prefer additional sleeping space and comfortable accommodation together.
 
 Equipped with 2 comfortable double beds, en-suite bathroom, smart TV, tea/coffee maker, and personalized room service for a seamless stay.
 
@@ -219,7 +219,7 @@ Equipped with 2 comfortable double beds, en-suite bathroom, smart TV, tea/coffee
 * RO Water with Alkaline Refilled Bottle  
 * Complimentary Cookies  
 * Wardrobe & Hangers  
-* Geyser / Hot Water  
+* Geyser  
 * Fresh Towels  
 * Shower Mat  
 * Herbal Toiletries  
@@ -227,9 +227,9 @@ Equipped with 2 comfortable double beds, en-suite bathroom, smart TV, tea/coffee
 * Iron & Ironing Board (On Request)  
 * In-Room Telephone  
 
-### **Family Quad (Non sea facing) Information**
+### **Family Quad (Non Sea View) Information**
 
-Room category: Family Quad (Non sea facing)
+Room category: Family Quad (Non Sea View)
 
 General configuration: Designed with 2 double beds for family accommodation with additional sleeping capacity.
 
@@ -247,9 +247,9 @@ Availability: Based on selected travel dates.
 
 ---
 
-## **5\. EXECUTIVE FRONT SEA VIEW**
+## **5\. Executive (Front Sea View)**
 
-The Executive Front Sea View room is designed as a sanctuary of peace and comfort, featuring elegant interiors, plush furnishings, and modern technology.
+The Executive (Front Sea View) room is designed as a sanctuary of peace and comfort, featuring elegant interiors, plush furnishings, and modern technology.
 
 Guests enjoy panoramic front ocean views and true Odia hospitality for both short and extended stays.
 
@@ -270,7 +270,7 @@ Guests enjoy panoramic front ocean views and true Odia hospitality for both shor
 * RO Water with Alkaline Refilled Bottle  
 * Complimentary Cookies  
 * Wardrobe & Hangers  
-* Geyser / Hot Water  
+* Geyser  
 * Fresh Towels  
 * Shower Mat  
 * Plush Bathrobe  
@@ -282,9 +282,9 @@ Guests enjoy panoramic front ocean views and true Odia hospitality for both shor
 * Iron & Ironing Board (On Request)  
 * In-Room Telephone  
 
-### **Executive Front Sea View Information**
+### **Executive (Front Sea View) Information**
 
-Room category: Executive Front Sea View
+Room category: Executive (Front Sea View)
 
 Current room rate: Available through the latest Hotel Prabhupada booking information.
 
@@ -302,9 +302,9 @@ Sea view: Panoramic direct front ocean view.
 
 ---
 
-## **6\. SUITE FRONT SEA VIEW**
+## **6\. Suite (Front Sea View)**
 
-The Suite Front Sea view is the premium luxury accommodation category available at Hotel Prabhupada.
+The Suite (Front Sea View) is the premium luxury accommodation category available at Hotel Prabhupada.
 
 It offers an expansive ocean retreat with contemporary décor, plush king bedding, dedicated sofa seating area, 43-inch Smart TV, dual air conditioner, and full VIP amenities.
 
@@ -335,7 +335,7 @@ The suite may be suitable for:
 * RO Water with Alkaline Refilled Bottle  
 * Wardrobe & Hangers  
 * Luggage Rack  
-* Geyser / Hot Water  
+* Geyser  
 * Fresh Towels  
 * Shower Mat  
 * Plush Bathrobe  
@@ -349,7 +349,7 @@ The suite may be suitable for:
 
 ### **Suite Information**
 
-Room category: Suite Front Sea view
+Room category: Suite (Front Sea View)
 
 Current room rate: Available through the latest Hotel Prabhupada booking information.
 
@@ -635,7 +635,7 @@ Hotel Prabhupada
 
 ## **ADDRESS**
 
-New Marine Drive Rd  
+New Marine Drive Road  
  Near light house  
  Puri, Odisha 752001  
  India
@@ -1030,7 +1030,7 @@ Only currently active offers should be presented to guests.
 
 ## **Where is Hotel Prabhupada located?**
 
-Hotel Prabhupada is located on New Marine Drive Rd, Near light house, Puri, Odisha 752001, India.
+Hotel Prabhupada is located on New Marine Drive Road, Near light house, Puri, Odisha 752001, India.
 
 ## **Is Hotel Prabhupada near the beach?**
 
@@ -1076,18 +1076,18 @@ Yes. Room service and in-room dining facilities are available.
 
 Hotel Prabhupada offers room categories including:
 
-* Premier Room (Non Sea facing)  
-* Deluxe Balcony side sea view  
-* Superior Deluxe Balcony Side sea View  
-* Family Quad (Non sea facing)  
-* Executive Front Sea View  
-* Suite Front Sea view
+* Premier Room (Non Sea View)  
+* Deluxe Balcony (Side Sea View)  
+* Superior Deluxe Balcony (Side Sea View)  
+* Family Quad (Non Sea View)  
+* Executive (Front Sea View)  
+* Suite (Front Sea View)
 
 Availability depends on selected travel dates.
 
 ## **Does Hotel Prabhupada have sea-view rooms?**
 
-Yes. Sea-view room categories include Deluxe Balcony side sea view, Superior Deluxe Balcony Side sea View, Executive Front Sea View, and Suite Front Sea view, subject to current availability.
+Yes. Sea-view room categories include Deluxe Balcony (Side Sea View), Superior Deluxe Balcony (Side Sea View), Executive (Front Sea View), and Suite (Front Sea View), subject to current availability.
 
 ## **How much does a room cost?**
 
@@ -1117,7 +1117,7 @@ Actual travel time depends on traffic and local conditions.
 
 ## **Does Hotel Prabhupada have family rooms?**
 
-Yes. Hotel Prabhupada offers a Family Quad (Non sea facing) category designed for families and larger travelling parties.
+Yes. Hotel Prabhupada offers a Family Quad (Non Sea View) category designed for families and larger travelling parties.
 
 ## **Does the hotel provide travel assistance?**
 

@@ -139,12 +139,12 @@ For more details, visit our [Hotel Amenities](/amenities) page.`;
   ) {
     return `**Hotel Prabhupada offers the following room categories:**
 
-1. **Premier Room (Non Sea facing)** – Comfortable standard accommodation suitable for couples, individual travellers, and short stays.
-2. **Deluxe Balcony side sea view** – Spacious accommodation with a private balcony overlooking coastal ocean vistas.
-3. **Superior Deluxe Balcony Side sea View** – Scenic stay featuring a private balcony and side sea views with modern amenities.
-4. **Family Quad (Non sea facing)** – Designed with 2 double beds for families and travelling groups.
-5. **Executive Front Sea View** – Upgraded comfort with panoramic front ocean views.
-6. **Suite Front Sea view** – Premium accommodation offering a front-facing sea view and dedicated living space.
+1. **Premier Room (Non Sea View)** – Comfortable standard accommodation suitable for couples, individual travellers, and short stays.
+2. **Deluxe Balcony (Side Sea View)** – Spacious accommodation with a private balcony overlooking coastal ocean vistas.
+3. **Superior Deluxe Balcony (Side Sea View)** – Scenic stay featuring a private balcony and side sea views with modern amenities.
+4. **Family Quad (Non Sea View)** – Designed with 2 double beds for families and travelling groups.
+5. **Executive (Front Sea View)** – Upgraded comfort with panoramic front ocean views.
+6. **Suite (Front Sea View)** – Premium accommodation offering a front-facing sea view and dedicated living space.
 
 👉 [View Room Details](/rooms) | [Book Online](${HOTEL_INFO.contact.directBookingUrl})`;
   }
@@ -179,7 +179,7 @@ To check the latest rates and available rooms:
   ) {
     return `**Hotel Prabhupada Location:**
 
-📍 **Address:** New Marine Drive Rd, Near light house, Puri, Odisha 752001, India.
+📍 **Address:** New Marine Drive Road, Near light house, Puri, Odisha 752001, India.
 🌊 **Location Highlights:** Situated right near the sea beach in Puri, offering convenient access to the beach, Swargadwar, Shree Jagannath Temple, Konark Sun Temple, and Chilika Lake.
 
 👉 [Open in Google Maps](${HOTEL_INFO.location.googleMapsUrl}) | [Contact Us](/contact)`;
@@ -292,7 +292,7 @@ Hotel Prabhupada provides a travel desk and local assistance for:
 - ✉️ **Reservation Email:** reservation@hotelprabhupada.com
 - ✉️ **General Manager Email:** gm@hotelprabhupada.com
 - 🌐 **Website:** [www.hotelprabhupada.com](https://www.hotelprabhupada.com)
-- 📍 **Address:** New Marine Drive Rd, Near light house, Puri, Odisha 752001, India
+- 📍 **Address:** New Marine Drive Road, Near light house, Puri, Odisha 752001, India
 
 👉 [Book Online](${HOTEL_INFO.contact.directBookingUrl}) | [Contact Page](/contact)`;
   }

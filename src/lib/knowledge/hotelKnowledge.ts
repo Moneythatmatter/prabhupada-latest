@@ -32,8 +32,8 @@ export const HOTEL_INFO = {
   name: 'Hotel Prabhupada',
   tagline: 'Comfortable Hospitality & Sea-Facing Accommodation in Puri, Odisha',
   location: {
-    address: 'New Marine Drive Rd, Near light house, Puri, Odisha 752001, India',
-    area: 'Near light house, New Marine Drive Rd, Puri',
+    address: 'New Marine Drive Road, Near light house, Puri, Odisha 752001, India',
+    area: 'Near light house, New Marine Drive Road, Puri',
     googleMapsUrl: 'https://maps.google.com/?q=Hotel+Prabhupada+Puri+New+Marine+Drive+Road',
     directionsNote: 'Situated on New Marine Drive Road near the sea beach, providing convenient access to Shree Jagannath Temple, Swargadwar, Konark, and Chilika Lake.',
   },
@@ -111,8 +111,8 @@ export const HOTEL_INFO = {
   rooms: [
     {
       id: 'premier-room',
-      name: 'Premier Room (Non Sea facing)',
-      badgeTitle: 'PREMIER ROOM (NON SEA FACING)',
+      name: 'Premier Room (Non Sea View)',
+      badgeTitle: 'Premier Room (Non Sea View)',
       description: 'Designed to provide guests with a comfortable stay and essential room amenities. Non-sea facing room suitable for couples, individual travellers, and business stays.',
       features: [
         'King-size bed',
@@ -126,7 +126,7 @@ export const HOTEL_INFO = {
         'Complimentary Cookies',
         'Wardrobe & Hangers',
         'Luggage Rack',
-        'Geyser / Hot Water',
+        'Geyser',
         'Fresh Towels',
         'Herbal Toiletries',
         'In-Room Telephone',
@@ -136,8 +136,8 @@ export const HOTEL_INFO = {
     },
     {
       id: 'deluxe-room-balcony-sea-view',
-      name: 'Deluxe Balcony side sea view',
-      badgeTitle: 'DELUXE BALCONY SIDE SEA VIEW',
+      name: 'Deluxe Balcony (Side Sea View)',
+      badgeTitle: 'Deluxe Balcony (Side Sea View)',
       description: 'Features a comfortable bed, an en-suite bathroom, a well-lit desk area, and a private balcony overlooking coastal ocean vistas with warm Odia hospitality.',
       features: [
         'King-size bed',
@@ -151,7 +151,7 @@ export const HOTEL_INFO = {
         'Complimentary Cookies',
         'Wardrobe & Hangers',
         'Luggage Rack',
-        'Geyser / Hot Water',
+        'Geyser',
         'Fresh Towels',
         'Shower Mat',
         'Herbal Toiletries',
@@ -166,8 +166,8 @@ export const HOTEL_INFO = {
     },
     {
       id: 'superior-deluxe-balcony-side-sea-view',
-      name: 'Superior Deluxe Balcony Side sea View',
-      badgeTitle: 'SUPERIOR DELUXE BALCONY SIDE SEA VIEW',
+      name: 'Superior Deluxe Balcony (Side Sea View)',
+      badgeTitle: 'SUPERIOR Deluxe Balcony (Side Sea View)',
       description: 'Offers the perfect blend of style and seaside functionality, ideal for both spiritual and leisure travelers, with modern amenities and plush bedding. Note: Elevator accessible till 2nd floor.',
       features: [
         'King-size bed',
@@ -181,7 +181,7 @@ export const HOTEL_INFO = {
         'Complimentary Cookies',
         'Wardrobe & Hangers',
         'Luggage Rack',
-        'Geyser / Hot Water',
+        'Geyser',
         'Fresh Towels',
         'Shower Mat',
         'Herbal Toiletries',
@@ -196,8 +196,8 @@ export const HOTEL_INFO = {
     },
     {
       id: 'family-quad-sharing',
-      name: 'Family Quad (Non sea facing)',
-      badgeTitle: 'FAMILY QUAD (NON SEA FACING)',
+      name: 'Family Quad (Non Sea View)',
+      badgeTitle: 'Family Quad (Non Sea View)',
       description: 'Designed for families and travelling groups, equipped with 2 comfortable double beds, en-suite bathroom, smart TV, tea/coffee maker, and personalized room service. No-view / Non-sea facing room.',
       features: [
         '2 Double Beds',
@@ -210,7 +210,7 @@ export const HOTEL_INFO = {
         'RO Water with Alkaline Refilled Bottle',
         'Complimentary Cookies',
         'Wardrobe & Hangers',
-        'Geyser / Hot Water',
+        'Geyser',
         'Fresh Towels',
         'Shower Mat',
         'Herbal Toiletries',
@@ -223,8 +223,8 @@ export const HOTEL_INFO = {
     },
     {
       id: 'executive-front-sea',
-      name: 'Executive Front Sea View',
-      badgeTitle: 'EXECUTIVE FRONT SEA VIEW',
+      name: 'Executive (Front Sea View)',
+      badgeTitle: 'Executive (Front Sea View)',
       description: 'Sanctuary of peace and comfort featuring elegant interiors, plush furnishings, and panoramic direct front ocean views. No balcony.',
       features: [
         'King-size bed',
@@ -239,7 +239,7 @@ export const HOTEL_INFO = {
         'RO Water with Alkaline Refilled Bottle',
         'Complimentary Cookies',
         'Wardrobe & Hangers',
-        'Geyser / Hot Water',
+        'Geyser',
         'Fresh Towels',
         'Shower Mat',
         'Plush Bathrobe',
@@ -255,8 +255,8 @@ export const HOTEL_INFO = {
     },
     {
       id: 'suite-front',
-      name: 'Suite Front Sea view',
-      badgeTitle: 'SUITE FRONT SEA VIEW',
+      name: 'Suite (Front Sea View)',
+      badgeTitle: 'Suite (Front Sea View)',
       description: 'Premium luxury accommodation offering an expansive ocean retreat with contemporary décor, plush king bedding, dedicated sofa seating area, and dual air conditioner. No balcony.',
       features: [
         'King-size bed',
@@ -272,7 +272,7 @@ export const HOTEL_INFO = {
         'RO Water with Alkaline Refilled Bottle',
         'Wardrobe & Hangers',
         'Luggage Rack',
-        'Geyser / Hot Water',
+        'Geyser',
         'Fresh Towels',
         'Shower Mat',
         'Plush Bathrobe',

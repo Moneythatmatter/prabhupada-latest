@@ -140,7 +140,6 @@ export const HOTEL_POLICIES = {
       'Pet Policy Agreement to be signed at the front desk',
       'Present all mandatory vaccination records, pet passport/licence & health certificates',
       'Security deposit and applicable fees to be settled',
-      'Hang "Pet in Room" door hanger (guest must display throughout stay)',
     ],
     guestResponsibilities: [
       {

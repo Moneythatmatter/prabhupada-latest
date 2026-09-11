@@ -103,7 +103,7 @@ export const TestimonialsSection: React.FC = () => {
             Guest Experience
           </span>
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-white tracking-tight leading-[1.15] drop-shadow-lg">
-            What Clients Say
+            What Our Guests Say
           </h2>
           <PatachitraDivider light className="mt-3 sm:mt-4" />
         </motion.div>
@@ -165,9 +165,8 @@ export const TestimonialsSection: React.FC = () => {
                     <button
                       key={i}
                       onClick={() => setCurrent(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${
-                        current === i ? 'w-6 bg-[#E8A317]' : 'w-1.5 bg-white/30'
-                      }`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${current === i ? 'w-6 bg-[#E8A317]' : 'w-1.5 bg-white/30'
+                        }`}
                       aria-label={`Go to testimonial ${i + 1}`}
                     />
                   ))}
@@ -219,7 +218,7 @@ export const TestimonialsSection: React.FC = () => {
             rel="noopener noreferrer"
             className="pata-btn-outline inline-flex items-center justify-center gap-2 text-[10px] sm:text-xs font-sans font-semibold tracking-[0.14em] sm:tracking-[0.16em] uppercase px-4 py-3 sm:px-5 sm:py-2.5 rounded-sm transition-all duration-300 backdrop-blur-sm bg-[#070F1A]/55 hover:-translate-y-0.5 w-full sm:w-auto"
           >
-            Booking Reviews &rarr;
+            Website Reviews &rarr;
           </a>
         </div>
       </div>

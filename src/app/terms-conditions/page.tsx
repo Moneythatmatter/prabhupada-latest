@@ -37,7 +37,7 @@ export default function TermsConditionsPage() {
             Please read these Terms and Conditions carefully as these conditions incorporate the basis on which bookings for Hotel Prabhupada are accepted. The Terms and Conditions below apply to all direct bookings made via the hotel’s official website, front desk, and authorized reservation systems.
           </p>
           <p className="text-white/70">
-            Registered Address: Hotel Prabhupada, New Marine Drive Rd, Near light house, Puri, Odisha 752001.
+            Registered Address: Hotel Prabhupada, New Marine Drive Road, Near light house, Puri, Odisha 752001.
           </p>
           <p className="text-[#E8A317] font-medium">
             By making a reservation or using this Site, you agree to be bound by these terms and conditions.

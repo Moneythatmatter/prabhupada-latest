@@ -47,6 +47,7 @@ const whyChooseCards = [
     description:
       "Enjoy a complimentary breakfast buffet featuring a delicious array of options during your stay at our hotel.",
   },
+
 ];
 
 const attractionsData = [
@@ -323,7 +324,7 @@ export const AboutClient: React.FC = () => {
                       Address
                     </p>
                     <p className="text-[#161616] font-medium">
-                      New Marine Drive Rd, Near light house, Puri, Odisha 752001
+                      New Marine Drive Road, Near light house, Puri, Odisha 752001
                     </p>
                   </div>
                 </div>

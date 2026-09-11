@@ -307,7 +307,7 @@ export const TestimonialsClient: React.FC = () => {
                   </span>
                 </div>
                 <p className="font-sans text-xs sm:text-sm text-white/90 font-normal leading-relaxed">
-                  Prime location on New Marine Drive Road with authentic Odia dining, pet-friendly comfort & ocean views.
+                  Prime location on New Marine Drive Road with authentic Odia dining, pet-friendly comfort & ocean view.
                 </p>
               </div>
 
@@ -681,8 +681,8 @@ export const TestimonialsClient: React.FC = () => {
                             >
                               <Star
                                 className={`w-6 h-6 transition-colors ${active
-                                    ? 'fill-[#E8A317] text-[#E8A317]'
-                                    : 'text-white/30'
+                                  ? 'fill-[#E8A317] text-[#E8A317]'
+                                  : 'text-white/30'
                                   }`}
                               />
                             </button>

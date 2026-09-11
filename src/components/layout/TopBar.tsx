@@ -47,7 +47,7 @@ export const TopBar: React.FC = () => {
 
           <div className="flex items-center gap-2 text-white/75 tracking-wider">
             <MapPin className="w-3.5 h-3.5 text-[#C0392B] shrink-0" />
-            <span>New Marine Drive Rd, Near light house, Puri, Odisha 752001</span>
+            <span>New Marine Drive Road, Near light house, Puri, Odisha 752001</span>
           </div>
           <LanguageSelector />
         </div>

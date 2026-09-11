@@ -28,8 +28,8 @@ const officialCategories = [
   'Common Area & Corridors',
   'Swimming Pool',
   'Restaurant',
-  'Deluxe Balcony side sea view',
-  'Executive Front Sea View',
+  'Deluxe Balcony (Side Sea View)',
+  'Executive (Front Sea View)',
 ];
 
 // Authentic Official Hotel Prabhupada Photographs (No synthetic / AI generated images)
@@ -79,48 +79,48 @@ const galleryPhotos = [
     caption: 'In-house restaurant serving authentic Odia seafood, North Indian, and Continental delicacies.',
   },
 
-  // 6. DELUXE BALCONY SIDE SEA VIEW
+  // 6. Deluxe Balcony (Side Sea View)
   {
     id: 6,
-    title: 'Deluxe Balcony side sea view Bedroom',
-    category: 'Deluxe Balcony side sea view',
+    title: 'Deluxe Balcony (Side Sea View) Bedroom',
+    category: 'Deluxe Balcony (Side Sea View)',
     image: '/images/room-superior-deluxe.webp',
     caption: 'Spacious guest bedroom with plush double bed, artwork, and individual air conditioning.',
   },
   {
     id: 7,
     title: 'Private Sea View Balcony',
-    category: 'Deluxe Balcony side sea view',
+    category: 'Deluxe Balcony (Side Sea View)',
     image: '/images/sea_balcony.jpg',
     caption: 'Private sea-facing balcony offering panoramic views of Puri Golden Beach and waves.',
   },
   {
     id: 8,
     title: 'Deluxe Sea View Bathroom',
-    category: 'Deluxe Balcony side sea view',
+    category: 'Deluxe Balcony (Side Sea View)',
     image: '/images/bathroom.jpg',
     caption: 'Modern tiled en-suite bathroom with hot & cold rain shower and vessel sink.',
   },
 
-  // 7. EXECUTIVE FRONT SEA VIEW
+  // 7. Executive (Front Sea View)
   {
     id: 9,
-    title: 'Executive Front Sea View Suite',
-    category: 'Executive Front Sea View',
+    title: 'Executive (Front Sea View) Suite',
+    category: 'Executive (Front Sea View)',
     image: '/images/room-suite.webp',
     caption: 'Elegantly furnished suite with plush double bed, feature wall art, and teal window drapes.',
   },
   {
     id: 10,
     title: 'Executive Room Interior View',
-    category: 'Executive Front Sea View',
+    category: 'Executive (Front Sea View)',
     image: '/images/room-executive.webp',
     caption: 'Bright, airy room layout with wall-mounted flat-screen TV and dedicated workspace.',
   },
   {
     id: 11,
     title: 'Puri Golden Beach Horizon',
-    category: 'Executive Front Sea View',
+    category: 'Executive (Front Sea View)',
     image: '/images/puri-golden-beach.webp',
     caption: 'Direct sea view of Puri Golden Beach waves visible from Executive Suite windows.',
   },

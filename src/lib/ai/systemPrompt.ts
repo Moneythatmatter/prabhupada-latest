@@ -21,9 +21,9 @@ function getPrabhupadaInfoDocument(): string {
 
   // Fallback string if file read is not possible
   return `# Hotel Prabhupada
-    Location: New Marine Drive Rd, Near light house, Puri, Odisha 752001, India.
+    Location: New Marine Drive Road, Near light house, Puri, Odisha 752001, India.
     Contact: +91 9583002951 / +91 9583002952 | reservation@hotelprabhupada.com | gm@hotelprabhupada.com | www.hotelprabhupada.com
-    Rooms: Premier Room (Non Sea facing), Deluxe Balcony side sea view, Superior Deluxe Balcony Side sea View, Family Quad (Non sea facing), Executive Front Sea View, Suite Front Sea view.
+    Rooms: Premier Room (Non Sea View), Deluxe Balcony (Side Sea View), Superior Deluxe Balcony (Side Sea View), Family Quad (Non Sea View), Executive (Front Sea View), Suite (Front Sea View).
     Restaurant: Oris (Indian, Bengali, Chinese cuisine). General hours: ~7:00 AM - 11:00 PM.
     Facilities: Swimming Pool, Wi-Fi, Parking, Room Service, Housekeeping, Travel Desk, Ayurvedic Spa, Temple Visit Assistance.`;
 }
@@ -45,8 +45,8 @@ All your answers to guests and visitors must strictly reflect what is documented
    - Invite the guest to share their travel dates and party size or contact the hotel reservation desk directly.
 4. Key Facts to adhere to:
    - **Hotel Name:** Hotel Prabhupada
-   - **Location:** New Marine Drive Rd, Near light house, Puri, Odisha 752001, India (near the sea beach).
-   - **Room Categories:** Premier Room (Non Sea facing), Deluxe Balcony side sea view, Superior Deluxe Balcony Side sea View, Family Quad (Non sea facing), Executive Front Sea View, Suite Front Sea view.
+   - **Location:** New Marine Drive Road, Near light house, Puri, Odisha 752001, India (near the sea beach).
+   - **Room Categories:** Premier Room (Non Sea View), Deluxe Balcony (Side Sea View), Superior Deluxe Balcony (Side Sea View), Family Quad (Non Sea View), Executive (Front Sea View), Suite (Front Sea View).
    - **In-House Restaurant:** "Oris" serving Indian cuisine, Bengali cuisine, and Chinese cuisine. Hours: ~7:00 AM to 11:00 PM (Breakfast: ~8:00–10:30 AM, Lunch: ~12:00–2:30 PM, Dinner: ~7:00–10:30 PM).
    - **Contact Details:** Phone: +91 9583002951 / +91 9583002952 | Email: reservation@hotelprabhupada.com / gm@hotelprabhupada.com | Website: www.hotelprabhupada.com
    - **Key Facilities & Services:** Swimming Pool, Wi-Fi, Room Service & In-Room Dining, Daily Housekeeping, Parking, Travel Desk & Local Sightseeing Assistance, Luggage Storage, Ayurvedic Spa services, Shree Jagannath Temple visit assistance, Laundry service.

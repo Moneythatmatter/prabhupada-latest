@@ -54,6 +54,12 @@ export const AboutSection: React.FC = () => {
       description:
         "Enjoy a complimentary breakfast buffet featuring a delicious array of options during your stay at our hotel.",
     },
+    {
+      icon: Utensils,
+      title: "Flexible Cancellation Policy",
+      description:
+        "Enjoy a complimentary breakfast buffet featuring a delicious array of options during your stay at our hotel.",
+    },
   ];
 
   return (
