@@ -145,18 +145,31 @@ export const AboutSection: React.FC = () => {
                 Ideally situated in Puri, Odisha, Hotel Prabhupada offers easy
                 access to the city&apos;s attractions, business centers, and
                 entertainment venues. Whether you are traveling for business or
-                pleasure, our location is perfect for exploring. Our dedicated
-                staff is committed to providing exceptional service and ensuring
-                that every guest has a memorable stay.
+                pleasure, our location is perfect for exploring — read our{" "}
+                <Link
+                  href="/blog"
+                  className="text-[#8B1E1E] hover:text-[#C5A059] font-medium underline underline-offset-4 decoration-[#8B1E1E]/40 hover:decoration-[#C5A059] transition-colors"
+                >
+                  Puri travel & heritage blog
+                </Link>{" "}
+                for local itineraries and stay guides. Our dedicated staff is
+                committed to providing exceptional service and ensuring that
+                every guest has a memorable stay.
               </p>
             </div>
 
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
               <Link
                 href="/about"
                 className="pata-btn inline-flex items-center justify-center text-white font-sans text-xs font-semibold tracking-[0.14em] uppercase px-7 sm:px-9 py-3.5 sm:py-4 rounded-sm transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto"
               >
                 Discover More &rarr;
+              </Link>
+              <Link
+                href="/blog"
+                className="inline-flex items-center justify-center text-[#8B1E1E] hover:text-[#0C1827] font-sans text-xs font-semibold tracking-[0.14em] uppercase px-6 py-3.5 rounded-sm border border-[#8B1E1E]/30 hover:border-[#8B1E1E] hover:bg-[#8B1E1E]/5 transition-all duration-300 w-full sm:w-auto"
+              >
+                Read Travel Blog &rarr;
               </Link>
             </div>
           </motion.div>

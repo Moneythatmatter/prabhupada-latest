@@ -259,7 +259,7 @@ export default function HotelPolicyPage() {
                 <p className="text-xs text-white/80">{petPolicy.permittedPets.breedRestrictions}</p>
               </div>
               <div className="p-4 bg-rose-950/20 rounded-xl border border-rose-500/20 space-y-1">
-                <span className="text-xs text-rose-400 font-semibold uppercase tracking-wider block">Excluded Animals</span>
+                <span className="text-xs text-rose-400 font-semibold uppercase tracking-wider block">Other Pets</span>
                 <p className="text-xs text-white/80">{petPolicy.permittedPets.otherAnimals}</p>
               </div>
             </div>

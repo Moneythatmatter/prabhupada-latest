@@ -250,7 +250,7 @@ export const TestimonialsClient: React.FC = () => {
     <>
       <InnerPageHero
         overline="Hotel Prabhupada · Puri"
-        title="Loved By Our Guests"
+        title="Guest Impression"
         subtitle="Read real experiences from families, couples, and pilgrims who enjoyed their seaside stay at Hotel Prabhupada, Puri."
         image="/images/patachitra-bg.webp"
         imageAlt="Hotel Prabhupada Guest Testimonials and Reviews"

@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/blog/best-4-star-hotel-in-puri-near-sea-beach-under-4000',
+        destination: '/blog/best-3-star-hotel-in-puri-near-sea-beach-starting-at-4000',
+        permanent: true,
+      },
+      {
         source: '/hotel-prabhupada-superior-deluxe-balcony-sea-view.html',
         destination: '/rooms/superior-deluxe-balcony-sea-view',
         permanent: true,

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   MapPin,
@@ -53,21 +54,21 @@ const attractionsData = [
   {
     title: "Shree Jagannatha Temple Puri",
     description:
-      "The world-famous sacred heritage temple located near Hotel Prabhupada in the heart of Puri.",
+      "One of the Char Dham pilgrimage sites and the spiritual heart of Puri. This revered 12th-century temple is known for its sacred traditions, rituals, and rich cultural heritage.",
     image: "/images/jagannath-temple.webp",
     mapsUrl: "https://maps.google.com/?q=Shree+Jagannath+Temple+Puri+Odisha",
   },
   {
     title: "Swargadwar Sea Beach & Shopping",
     description:
-      "Vibrant golden beach waves and famous coastal shopping markets within walking distance.",
+      "A lively seaside destination known for golden sands, ocean views, and vibrant local markets. Take a leisurely beach stroll and explore the shops around Swargadwar.",
     image: "/images/attraction-swargadwar.webp",
     mapsUrl: "https://maps.google.com/?q=Swargadwar+Beach+Puri+Odisha",
   },
   {
     title: "Konark Sun Temple & Heritage",
     description:
-      "Iconic 13th-century UNESCO World Heritage monument architectural wonder nearby.",
+      "Explore the iconic UNESCO World Heritage Site, admire its intricate carvings, and experience a beautiful sunrise or the evening Light & Sound Show.",
     image: "/images/attraction-konark.webp",
     mapsUrl: "https://maps.google.com/?q=Konark+Sun+Temple+Odisha",
   },
@@ -161,13 +162,20 @@ export const AboutClient: React.FC = () => {
                   access to the city’s attractions, business centers, and
                   entertainment venues. Whether you are traveling for business
                   or pleasure, our location is perfect for exploring the local
-                  area. Our dedicated staff is committed to providing
+                  area. Discover local travel insights, festival schedules, and stay tips in our{" "}
+                  <Link
+                    href="/blog"
+                    className="text-[#E8A317] hover:text-[#161616] font-medium underline underline-offset-4 decoration-[#E8A317]/50 hover:decoration-[#161616] transition-colors"
+                  >
+                    Puri travel blog
+                  </Link>
+                  . Our dedicated staff is committed to providing
                   exceptional service and ensuring that every guest has a
                   memorable stay.
                 </p>
               </div>
 
-              <div className="mt-12">
+              <div className="mt-12 flex flex-wrap items-center gap-4">
                 <a
                   href="https://live.ipms247.com/booking/book-rooms-hotelprabhupada"
                   target="_blank"
@@ -176,6 +184,12 @@ export const AboutClient: React.FC = () => {
                 >
                   Book Your Stay
                 </a>
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center justify-center font-sans text-xs font-semibold tracking-[0.16em] uppercase px-8 py-4 rounded-sm border border-[#161616]/20 text-[#161616] hover:border-[#E8A317] hover:text-[#E8A317] transition-all duration-300"
+                >
+                  Explore Travel Blog &rarr;
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -290,6 +304,25 @@ export const AboutClient: React.FC = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          <div className="mt-12 sm:mt-16 text-center">
+            <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 p-6 sm:p-8 bg-white rounded-xl border border-[#E5DECE] shadow-sm max-w-2xl mx-auto">
+              <div className="text-center sm:text-left">
+                <h4 className="font-serif text-lg font-medium text-[#161616] mb-1">
+                  Planning Your Puri Journey?
+                </h4>
+                <p className="font-sans text-xs sm:text-sm text-[#6B6B6B] font-light">
+                  Explore our in-depth guides on temple darshan, beach activities, and festival celebrations.
+                </p>
+              </div>
+              <Link
+                href="/blog"
+                className="header-book-btn inline-flex items-center justify-center font-sans text-xs tracking-[0.14em] uppercase px-6 py-3.5 rounded-sm whitespace-nowrap shrink-0"
+              >
+                Visit Travel Blog &rarr;
+              </Link>
+            </div>
           </div>
         </div>
       </section>

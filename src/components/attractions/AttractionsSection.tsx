@@ -94,12 +94,18 @@ export const AttractionsSection: React.FC = () => {
           ))}
         </div>
 
-        <FadeRise delay={0.12} className="text-center mt-10 sm:mt-16">
+        <FadeRise delay={0.12} className="text-center mt-10 sm:mt-16 flex flex-wrap items-center justify-center gap-4">
           <Link
             href="/attractions"
-            className="header-book-btn inline-flex items-center justify-center font-sans text-xs tracking-[0.14em] uppercase px-7 sm:px-9 py-3.5 sm:py-4 rounded-sm transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto max-w-sm"
+            className="header-book-btn inline-flex items-center justify-center font-sans text-xs tracking-[0.14em] uppercase px-7 sm:px-9 py-3.5 sm:py-4 rounded-sm transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
           >
             Explore All Attractions &rarr;
+          </Link>
+          <Link
+            href="/blog"
+            className="inline-flex items-center justify-center font-sans text-xs font-semibold tracking-[0.14em] uppercase px-7 sm:px-9 py-3.5 sm:py-4 rounded-sm border border-[#8B1E1E]/35 text-[#8B1E1E] hover:bg-[#8B1E1E] hover:text-white transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
+          >
+            Puri Travel Guides & Blog &rarr;
           </Link>
         </FadeRise>
       </div>

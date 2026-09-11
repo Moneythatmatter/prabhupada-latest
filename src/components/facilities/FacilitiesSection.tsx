@@ -267,10 +267,7 @@ export const FacilitiesSection: React.FC = () => {
             Facilities
           </h2>
           <PatachitraDivider className="mt-3 sm:mt-5" />
-          <p className="mt-4 sm:mt-5 font-sans text-xs sm:text-sm md:text-base text-[#64748B] font-light leading-relaxed">
-            Scroll down — each card sticks, the next stacks over it, and the one
-            behind fades away.
-          </p>
+
         </FadeRise>
 
         <div className="relative">
