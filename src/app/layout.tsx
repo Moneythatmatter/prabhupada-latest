@@ -31,6 +31,53 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 };
 
+const hotelJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Hotel',
+  '@id': 'https://www.hotelprabhupada.com/#hotel',
+  name: 'Hotel Prabhupada',
+  url: 'https://www.hotelprabhupada.com/',
+  description: 'A pet-friendly, sea-facing hotel on New Marine Drive Road in Puri, Odisha.',
+  telephone: '+91-9583002952',
+  email: 'reservation@hotelprabhupada.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'New Marine Drive Road, Near Light House',
+    addressLocality: 'Puri',
+    addressRegion: 'Odisha',
+    postalCode: '752001',
+    addressCountry: 'IN',
+  },
+  petsAllowed: true,
+  amenityFeature: [
+    {
+      '@type': 'LocationFeatureSpecification',
+      name: 'Free Wi-Fi',
+      value: true,
+    },
+    {
+      '@type': 'LocationFeatureSpecification',
+      name: 'Free parking',
+      value: true,
+    },
+    {
+      '@type': 'LocationFeatureSpecification',
+      name: 'Swimming pool',
+      value: true,
+    },
+    {
+      '@type': 'LocationFeatureSpecification',
+      name: 'Restaurant',
+      value: true,
+    },
+    {
+      '@type': 'LocationFeatureSpecification',
+      name: 'Air conditioning',
+      value: true,
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -39,6 +86,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased bg-[#070F1A] text-white overflow-x-hidden w-full max-w-full relative">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(hotelJsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
         <Header />
         <main className="min-w-0 w-full overflow-x-hidden">{children}</main>
         <Footer />
