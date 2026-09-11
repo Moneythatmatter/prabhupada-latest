@@ -175,19 +175,28 @@ export const ContactClient: React.FC = () => {
                   <Mail className="w-5 h-5 text-[#C0392B] shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-medium text-[#C5A059] text-xs mb-1 uppercase tracking-wider">
-                      Email
+                      Reservation
+                    </h4>
+                    <a
+                      href="mailto:reservation@hotelprabhupada.com"
+                      className="block text-white/90 hover:text-[#E8A317] transition-colors break-all"
+                    >
+                      reservation@hotelprabhupada.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-[#C0392B] shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-medium text-[#C5A059] text-xs mb-1 uppercase tracking-wider">
+                      Complaints
                     </h4>
                     <a
                       href="mailto:gm@hotelprabhupada.com"
                       className="block text-white/90 hover:text-[#E8A317] transition-colors break-all"
                     >
                       gm@hotelprabhupada.com
-                    </a>
-                    <a
-                      href="mailto:reservation@hotelprabhupada.com"
-                      className="block text-white/90 hover:text-[#E8A317] transition-colors break-all"
-                    >
-                      reservation@hotelprabhupada.com
                     </a>
                   </div>
                 </div>
