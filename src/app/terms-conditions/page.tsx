@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { FileText, CheckCircle2, ShieldCheck, Link2, AlertOctagon, Dog, Users, Waves } from 'lucide-react';
+import { FileText, ShieldCheck, Link2, AlertOctagon, Users, Waves } from 'lucide-react';
 import { LegalPageShell } from '@/components/layout/LegalPageShell';
 import { HOTEL_POLICIES } from '@/data/hotelPolicies';
 

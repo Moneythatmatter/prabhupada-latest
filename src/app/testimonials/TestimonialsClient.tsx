@@ -11,8 +11,6 @@ import {
   Loader2,
   MapPin,
   Calendar,
-  Sparkles,
-  HeartHandshake,
   Send,
   Filter,
   Award,
@@ -25,11 +23,6 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { InnerPageHero } from "@/components/layout/InnerPageHero";
-import { FadeRise } from "@/hooks/useParallax";
-import {
-  PatachitraDivider,
-  LotusMotif,
-} from "@/components/patachitra/PatachitraMotifs";
 import { TripAdvisorAwards } from "@/components/tripadvisor/TripAdvisorAwards";
 import {
   DEFAULT_TESTIMONIALS,
@@ -252,13 +245,6 @@ export const TestimonialsClient: React.FC = () => {
   });
 
   const totalReviews = testimonials.length;
-  const avgRating =
-    totalReviews > 0
-      ? (
-          testimonials.reduce((acc, curr) => acc + (curr.rating || 5), 0) /
-          totalReviews
-        ).toFixed(1)
-      : "5.0";
 
   return (
     <>
@@ -721,11 +707,10 @@ export const TestimonialsClient: React.FC = () => {
                               aria-label={`Rate ${star} star`}
                             >
                               <Star
-                                className={`w-6 h-6 transition-colors ${
-                                  active
-                                    ? "fill-[#E8A317] text-[#E8A317]"
-                                    : "text-white/30"
-                                }`}
+                                className={`w-6 h-6 transition-colors ${active
+                                  ? "fill-[#E8A317] text-[#E8A317]"
+                                  : "text-white/30"
+                                  }`}
                               />
                             </button>
                           );

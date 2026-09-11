@@ -66,7 +66,7 @@ const FAQ_DATA: FaqItem[] = [
           <li><strong>Mandatory Documentation:</strong> Anti-rabies vaccination certificate, pet passport/licence, medical clearance (if sick within 72 hrs), and signed Pet Waiver Form.</li>
           <li><strong>Allowed Areas:</strong> Guest Room (occupied), Garden / Lawn, and Lobby Lounge only (must be on leash or in carrier in public areas).</li>
           <li><strong>Restricted Areas:</strong> Strictly prohibited in Restaurants & F&B outlets, Banquet rooms, Swimming pool area, Spa/salon, and Fitness center.</li>
-          <li><strong>In-Room Rules:</strong> "Pet in Room" door hanger must be displayed; pets not allowed on beds/sofas; cannot bathe in hotel bathrooms; max 2 hours unattended (notify Front Desk).</li>
+          <li><strong>In-Room Rules:</strong> &ldquo;Pet in Room&ldquo; door hanger must be displayed; pets not allowed on beds/sofas; cannot bathe in hotel bathrooms; max 2 hours unattended (notify Front Desk).</li>
           <li><strong>Service Animals:</strong> Legitimate service animals are always welcome without any fees or restrictions.</li>
         </ul>
       </div>

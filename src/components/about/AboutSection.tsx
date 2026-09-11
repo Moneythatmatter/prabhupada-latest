@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { MapPin, ShieldCheck, Clock, Utensils } from "lucide-react";
+import { MapPin, ShieldCheck, Clock, Utensils, CalendarCheck } from "lucide-react";
 import {
   PatachitraBackdrop,
   PatachitraDivider,
@@ -55,10 +55,10 @@ export const AboutSection: React.FC = () => {
         "Enjoy a complimentary breakfast buffet featuring a delicious array of options during your stay at our hotel.",
     },
     {
-      icon: Utensils,
+      icon: CalendarCheck,
       title: "Flexible Cancellation Policy",
       description:
-        "Enjoy a complimentary breakfast buffet featuring a delicious array of options during your stay at our hotel.",
+        "Our flexible cancellation policy provides greater convenience and peace of mind should your travel plans change.",
     },
   ];
 

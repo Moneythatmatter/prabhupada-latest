@@ -9,7 +9,7 @@ import {
   useSpring,
   useReducedMotion,
 } from 'framer-motion';
-import { Wifi, ConciergeBell, Sparkles, Car, Bath, Wind, Bed, Tv, ArrowRight } from 'lucide-react';
+import { Wifi, ConciergeBell, Sparkles, Car, Wind, Bed, Tv, ArrowRight } from 'lucide-react';
 import {
   PatachitraBackdrop,
   PatachitraDivider,

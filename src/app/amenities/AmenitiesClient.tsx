@@ -8,7 +8,6 @@ import {
   ConciergeBell,
   Sparkles,
   Car,
-  Bath,
   Wind,
   Bed,
   Tv,

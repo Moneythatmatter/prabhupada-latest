@@ -16,7 +16,6 @@ import {
   Flower2,
   UtensilsCrossed,
   Trees,
-  ArrowUpDown,
   type LucideIcon,
 } from "lucide-react";
 import {
@@ -154,9 +153,8 @@ function StackFacilityCard({
         className="grid grid-cols-1 lg:grid-cols-12 overflow-hidden border border-[#E5DECE] bg-[#FBF8F1] shadow-[0_14px_40px_rgba(12,24,39,0.12)] will-change-transform rounded-sm"
       >
         <div
-          className={`lg:col-span-7 relative min-h-[200px] sm:min-h-[260px] lg:min-h-[320px] ${
-            reverse ? "lg:order-2" : "lg:order-1"
-          }`}
+          className={`lg:col-span-7 relative min-h-[200px] sm:min-h-[260px] lg:min-h-[320px] ${reverse ? "lg:order-2" : "lg:order-1"
+            }`}
         >
           <ParallaxImage
             src={item.image}
@@ -171,9 +169,8 @@ function StackFacilityCard({
             className="absolute inset-0 bg-gradient-to-t from-[#0C1827]/70 via-black/10 to-transparent pointer-events-none"
           />
           <span
-            className={`absolute top-3 sm:top-5 font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-white/30 leading-none select-none ${
-              reverse ? "right-4 sm:right-7" : "left-4 sm:left-7"
-            }`}
+            className={`absolute top-3 sm:top-5 font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-white/30 leading-none select-none ${reverse ? "right-4 sm:right-7" : "left-4 sm:left-7"
+              }`}
           >
             {item.number}
           </span>
@@ -185,9 +182,8 @@ function StackFacilityCard({
         </div>
 
         <div
-          className={`lg:col-span-5 flex flex-col justify-center px-5 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-8 bg-[#FBF8F1] ${
-            reverse ? "lg:order-1" : "lg:order-2"
-          }`}
+          className={`lg:col-span-5 flex flex-col justify-center px-5 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-8 bg-[#FBF8F1] ${reverse ? "lg:order-1" : "lg:order-2"
+            }`}
         >
           <div className="mb-3 sm:mb-4 flex items-center gap-3">
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-sm bg-[#F8F0DC] border border-[#C5A059]/40 flex items-center justify-center shrink-0">

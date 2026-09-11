@@ -23,7 +23,6 @@ import {
   ShieldCheck,
   Building2,
   FileCheck2,
-  HelpCircle,
   Loader2,
   ChevronDown,
 } from 'lucide-react';

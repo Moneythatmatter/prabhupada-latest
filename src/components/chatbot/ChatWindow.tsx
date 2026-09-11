@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { X, RotateCcw, Sparkles, MessageCircleQuestion, AlertCircle } from 'lucide-react';
+import { X, RotateCcw, MessageCircleQuestion, AlertCircle } from 'lucide-react';
 import { ChatMessage, Message } from './ChatMessage';
 import { ChatInput } from './ChatInput';
 

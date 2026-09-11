@@ -21,7 +21,6 @@ import {
   Calendar,
   Receipt,
   ShieldAlert,
-  Info,
 } from 'lucide-react';
 import { LegalPageShell } from '@/components/layout/LegalPageShell';
 import { HOTEL_POLICIES } from '@/data/hotelPolicies';
@@ -233,7 +232,7 @@ export default function HotelPolicyPage() {
               <span>Policy Objective</span>
             </div>
             <p className="text-white/95 text-sm sm:text-base font-light italic leading-relaxed">
-              "{petPolicy.objective}"
+              &ldquo;{petPolicy.objective}&rdquo;
             </p>
             <p className="text-white/70 text-xs sm:text-sm pt-1">
               {petPolicy.description}
