@@ -1,39 +1,39 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import {
   motion,
   AnimatePresence,
   useScroll,
   useTransform,
   useSpring,
-} from 'framer-motion';
-import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+} from "framer-motion";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   PatachitraDivider,
   LotusMotif,
-} from '@/components/patachitra/PatachitraMotifs';
-import { TripAdvisorAwards } from '@/components/tripadvisor/TripAdvisorAwards';
+} from "@/components/patachitra/PatachitraMotifs";
+import { TripAdvisorAwards } from "@/components/tripadvisor/TripAdvisorAwards";
 
 const testimonials = [
   {
     quote:
-      'Great experience staying in this hotel. Excellent location. Very near and working distance shopping area.',
-    author: 'Santan P',
+      "Great experience staying in this hotel. Excellent location. Very near and working distance shopping area.",
+    author: "Santan P",
     rating: 5,
   },
   {
     quote:
-      'Had a wonderful stay with my family. Pet friendly hotel. Excellent location. Stupendous service.',
-    author: 'Arijit Mondal',
+      "Had a wonderful stay with my family. Pet friendly hotel. Excellent location. Stupendous service.",
+    author: "Arijit Mondal",
     rating: 5,
   },
   {
     quote:
-      'The hotel has all the adequate amenities with a great ambience that made our stay very comfortable.',
-    author: 'Bijeta M',
+      "The hotel has all the adequate amenities with a great ambience that made our stay very comfortable.",
+    author: "Bijeta M",
     rating: 5,
   },
 ];
@@ -44,14 +44,18 @@ export const TestimonialsSection: React.FC = () => {
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
 
   const bgY = useSpring(useTransform(scrollYProgress, [0, 1], [40, -50]), {
     stiffness: 70,
     damping: 28,
   });
-  const bgScale = useTransform(scrollYProgress, [0, 0.5, 1], [1.04, 1.08, 1.04]);
+  const bgScale = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    [1.04, 1.08, 1.04],
+  );
   const cardY = useSpring(useTransform(scrollYProgress, [0, 1], [28, -28]), {
     stiffness: 90,
     damping: 28,
@@ -103,7 +107,7 @@ export const TestimonialsSection: React.FC = () => {
             Guest Experience
           </span>
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-white tracking-tight leading-[1.15] drop-shadow-lg">
-            What Our Guests Say
+            Guest Impression
           </h2>
           <PatachitraDivider light className="mt-3 sm:mt-4" />
         </motion.div>
@@ -117,8 +121,16 @@ export const TestimonialsSection: React.FC = () => {
           transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="relative z-10 flex flex-col items-center px-5 sm:px-12 pt-7 sm:pt-11 pb-6 sm:pb-10">
-            <LotusMotif size={22} tone="gold" className="mb-2 sm:mb-3 opacity-95 sm:hidden" />
-            <LotusMotif size={28} tone="gold" className="mb-3 opacity-95 hidden sm:block" />
+            <LotusMotif
+              size={22}
+              tone="gold"
+              className="mb-2 sm:mb-3 opacity-95 sm:hidden"
+            />
+            <LotusMotif
+              size={28}
+              tone="gold"
+              className="mb-3 opacity-95 hidden sm:block"
+            />
             <Quote className="w-6 h-6 sm:w-7 sm:h-7 text-[#C0392B]/80 mb-3 sm:mb-4" />
 
             <div className="w-full min-h-[120px] sm:min-h-[150px] flex flex-col items-center justify-center">
@@ -133,7 +145,10 @@ export const TestimonialsSection: React.FC = () => {
                 >
                   <div className="flex items-center justify-center gap-1 mb-3 sm:mb-4">
                     {[...Array(testimonials[current].rating)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#E8A317] text-[#E8A317]" />
+                      <Star
+                        key={i}
+                        className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#E8A317] text-[#E8A317]"
+                      />
                     ))}
                   </div>
 
@@ -152,7 +167,10 @@ export const TestimonialsSection: React.FC = () => {
               <div className="grid grid-cols-[40px_1fr_40px] items-center gap-1 sm:gap-2">
                 <button
                   onClick={() =>
-                    setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+                    setCurrent(
+                      (prev) =>
+                        (prev - 1 + testimonials.length) % testimonials.length,
+                    )
                   }
                   className="h-10 w-10 flex items-center justify-center text-[#E8A317]/80 hover:text-[#E8A317] transition-colors focus:outline-none border border-transparent hover:border-[#C5A059]/40 rounded-sm justify-self-start"
                   aria-label="Previous Review"
@@ -165,15 +183,18 @@ export const TestimonialsSection: React.FC = () => {
                     <button
                       key={i}
                       onClick={() => setCurrent(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${current === i ? 'w-6 bg-[#E8A317]' : 'w-1.5 bg-white/30'
-                        }`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        current === i ? "w-6 bg-[#E8A317]" : "w-1.5 bg-white/30"
+                      }`}
                       aria-label={`Go to testimonial ${i + 1}`}
                     />
                   ))}
                 </div>
 
                 <button
-                  onClick={() => setCurrent((prev) => (prev + 1) % testimonials.length)}
+                  onClick={() =>
+                    setCurrent((prev) => (prev + 1) % testimonials.length)
+                  }
                   className="h-10 w-10 flex items-center justify-center text-[#E8A317]/80 hover:text-[#E8A317] transition-colors focus:outline-none border border-transparent hover:border-[#C5A059]/40 rounded-sm justify-self-end"
                   aria-label="Next Review"
                 >
