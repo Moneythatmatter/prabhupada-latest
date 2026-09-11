@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import {
   Star,
   Quote,
@@ -22,24 +22,29 @@ import {
   X,
   Copy,
   Check,
-} from 'lucide-react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { InnerPageHero } from '@/components/layout/InnerPageHero';
-import { FadeRise } from '@/hooks/useParallax';
+} from "lucide-react";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { InnerPageHero } from "@/components/layout/InnerPageHero";
+import { FadeRise } from "@/hooks/useParallax";
 import {
   PatachitraDivider,
   LotusMotif,
-} from '@/components/patachitra/PatachitraMotifs';
-import { TripAdvisorAwards } from '@/components/tripadvisor/TripAdvisorAwards';
-import { DEFAULT_TESTIMONIALS, TestimonialItem } from '@/data/defaultTestimonials';
+} from "@/components/patachitra/PatachitraMotifs";
+import { TripAdvisorAwards } from "@/components/tripadvisor/TripAdvisorAwards";
+import {
+  DEFAULT_TESTIMONIALS,
+  TestimonialItem,
+} from "@/data/defaultTestimonials";
 
 const GOOGLE_REVIEWS_URL =
-  'https://www.google.com/maps/place/Hotel+Prabhupada/@19.7899492,85.8070141,17z/data=!4m11!3m10!1s0x3a19c5ccce332e3b:0x3e5550da010583ec!5m2!4m1!1i2!8m2!3d19.7899492!4d85.8070141!9m1!1b1!16s%2Fg%2F11b6dcvt28?entry=ttu';
+  "https://www.google.com/maps/place/Hotel+Prabhupada/@19.7899492,85.8070141,17z/data=!4m11!3m10!1s0x3a19c5ccce332e3b:0x3e5550da010583ec!5m2!4m1!1i2!8m2!3d19.7899492!4d85.8070141!9m1!1b1!16s%2Fg%2F11b6dcvt28?entry=ttu";
 
 const TRIPADVISOR_REVIEWS_URL =
-  'https://www.tripadvisor.com/Hotel_Review-g503703-d1150060-Reviews-Hotel_Prabhupada-Puri_Puri_District_Odisha.html';
+  "https://www.tripadvisor.com/Hotel_Review-g503703-d1150060-Reviews-Hotel_Prabhupada-Puri_Puri_District_Odisha.html";
 
-const GoogleIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
+const GoogleIcon: React.FC<{ className?: string }> = ({
+  className = "w-4 h-4",
+}) => (
   <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
     <path
       fill="#4285F4"
@@ -60,7 +65,9 @@ const GoogleIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' })
   </svg>
 );
 
-const TripAdvisorIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
+const TripAdvisorIcon: React.FC<{ className?: string }> = ({
+  className = "w-4 h-4",
+}) => (
   <svg
     className={className}
     viewBox="0 -96 512.2 512.2"
@@ -76,39 +83,44 @@ const TripAdvisorIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-
 );
 
 const TRIP_TYPES = [
-  'Family Stay',
-  'Couple Getaway',
-  'Pet-Friendly Vacation',
-  'Pilgrimage & Leisure',
-  'Friends Trip',
-  'Solo Traveler',
-  'Business Stay',
+  "Family Stay",
+  "Couple Getaway",
+  "Pet-Friendly Vacation",
+  "Pilgrimage & Leisure",
+  "Friends Trip",
+  "Solo Traveler",
+  "Business Stay",
 ];
 
 const RATING_LABELS: Record<number, string> = {
-  1: '1 Star - Poor',
-  2: '2 Stars - Fair',
-  3: '3 Stars - Good',
-  4: '4 Stars - Very Good',
-  5: '5 Stars - Excellent',
+  1: "1 Star - Poor",
+  2: "2 Stars - Fair",
+  3: "3 Stars - Good",
+  4: "4 Stars - Very Good",
+  5: "5 Stars - Excellent",
 };
 
 export const TestimonialsClient: React.FC = () => {
-  const [testimonials, setTestimonials] = useState<TestimonialItem[]>(DEFAULT_TESTIMONIALS);
+  const [testimonials, setTestimonials] =
+    useState<TestimonialItem[]>(DEFAULT_TESTIMONIALS);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [selectedFilter, setSelectedFilter] = useState<string>('all');
-  const [selectedRatingFilter, setSelectedRatingFilter] = useState<number | 'all'>('all');
-  const [activeQrModal, setActiveQrModal] = useState<'google' | 'tripadvisor' | null>(null);
+  const [selectedFilter, setSelectedFilter] = useState<string>("all");
+  const [selectedRatingFilter, setSelectedRatingFilter] = useState<
+    number | "all"
+  >("all");
+  const [activeQrModal, setActiveQrModal] = useState<
+    "google" | "tripadvisor" | null
+  >(null);
   const [copiedLink, setCopiedLink] = useState(false);
 
   // Form State
   const [formData, setFormData] = useState({
-    name: '',
-    location: '',
+    name: "",
+    location: "",
     rating: 5,
-    tripType: 'Family Stay',
-    title: '',
-    review: '',
+    tripType: "Family Stay",
+    title: "",
+    review: "",
   });
 
   const [hoveredStar, setHoveredStar] = useState<number | null>(null);
@@ -123,15 +135,22 @@ export const TestimonialsClient: React.FC = () => {
   useEffect(() => {
     async function loadTestimonials() {
       try {
-        const res = await fetch('/api/testimonials');
+        const res = await fetch("/api/testimonials");
         if (res.ok) {
           const data = await res.json();
-          if (data.testimonials && Array.isArray(data.testimonials) && data.testimonials.length > 0) {
+          if (
+            data.testimonials &&
+            Array.isArray(data.testimonials) &&
+            data.testimonials.length > 0
+          ) {
             setTestimonials(data.testimonials);
           }
         }
       } catch (err) {
-        console.warn('Could not fetch testimonials from API, using default list:', err);
+        console.warn(
+          "Could not fetch testimonials from API, using default list:",
+          err,
+        );
       } finally {
         setIsLoading(false);
       }
@@ -151,22 +170,22 @@ export const TestimonialsClient: React.FC = () => {
     setSubmitSuccess(null);
 
     if (!formData.name.trim()) {
-      setSubmitError('Please enter your name.');
+      setSubmitError("Please enter your name.");
       return;
     }
 
     if (!formData.review.trim() || formData.review.trim().length < 5) {
-      setSubmitError('Please write a review with at least 5 characters.');
+      setSubmitError("Please write a review with at least 5 characters.");
       return;
     }
 
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/testimonials', {
-        method: 'POST',
+      const response = await fetch("/api/testimonials", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           name: formData.name.trim(),
@@ -181,7 +200,9 @@ export const TestimonialsClient: React.FC = () => {
       const result = await response.json().catch(() => null);
 
       if (!response.ok) {
-        throw new Error(result?.error || 'Failed to submit review. Please try again.');
+        throw new Error(
+          result?.error || "Failed to submit review. Please try again.",
+        );
       }
 
       // Add new testimonial to top of list
@@ -189,14 +210,16 @@ export const TestimonialsClient: React.FC = () => {
         setTestimonials((prev) => [result.testimonial, ...prev]);
       }
 
-      setSubmitSuccess('Thank you! Your review has been submitted and posted successfully.');
+      setSubmitSuccess(
+        "Thank you! Your review has been submitted and posted successfully.",
+      );
       setFormData({
-        name: '',
-        location: '',
+        name: "",
+        location: "",
         rating: 5,
-        tripType: 'Family Stay',
-        title: '',
-        review: '',
+        tripType: "Family Stay",
+        title: "",
+        review: "",
       });
 
       // Clear success message after 6 seconds
@@ -204,7 +227,10 @@ export const TestimonialsClient: React.FC = () => {
         setSubmitSuccess(null);
       }, 6000);
     } catch (err: unknown) {
-      const message = err instanceof Error ? err.message : 'An error occurred while posting your review.';
+      const message =
+        err instanceof Error
+          ? err.message
+          : "An error occurred while posting your review.";
       setSubmitError(message);
     } finally {
       setIsSubmitting(false);
@@ -213,25 +239,32 @@ export const TestimonialsClient: React.FC = () => {
 
   // Filtered reviews
   const filteredTestimonials = testimonials.filter((item) => {
-    if (selectedFilter !== 'all' && item.trip_type !== selectedFilter) {
+    if (selectedFilter !== "all" && item.trip_type !== selectedFilter) {
       return false;
     }
-    if (selectedRatingFilter !== 'all' && item.rating !== selectedRatingFilter) {
+    if (
+      selectedRatingFilter !== "all" &&
+      item.rating !== selectedRatingFilter
+    ) {
       return false;
     }
     return true;
   });
 
   const totalReviews = testimonials.length;
-  const avgRating = totalReviews > 0
-    ? (testimonials.reduce((acc, curr) => acc + (curr.rating || 5), 0) / totalReviews).toFixed(1)
-    : '5.0';
+  const avgRating =
+    totalReviews > 0
+      ? (
+          testimonials.reduce((acc, curr) => acc + (curr.rating || 5), 0) /
+          totalReviews
+        ).toFixed(1)
+      : "5.0";
 
   return (
     <>
       <InnerPageHero
         overline="Hotel Prabhupada · Puri"
-        title="Guest Testimonials & Reviews"
+        title="Loved By Our Guests"
         subtitle="Read real experiences from families, couples, and pilgrims who enjoyed their seaside stay at Hotel Prabhupada, Puri."
         image="/images/patachitra-bg.webp"
         imageAlt="Hotel Prabhupada Guest Testimonials and Reviews"
@@ -240,7 +273,7 @@ export const TestimonialsClient: React.FC = () => {
             type="button"
             onClick={() => {
               if (formSectionRef.current) {
-                formSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+                formSectionRef.current.scrollIntoView({ behavior: "smooth" });
               }
             }}
             className="header-book-btn inline-flex items-center justify-center gap-2 font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase rounded-sm px-8 py-3.5 cursor-pointer"
@@ -263,7 +296,6 @@ export const TestimonialsClient: React.FC = () => {
         />
 
         <div className="max-w-[1320px] mx-auto px-4 sm:px-8 relative z-10 space-y-16 sm:space-y-20">
-
           {/* Overview Rating Stats Header with Google & TripAdvisor QR Cards */}
           <section className="bg-[#0C1827] rounded-sm border border-[#C5A059]/30 p-6 sm:p-8 shadow-2xl relative overflow-hidden">
             <div
@@ -275,29 +307,6 @@ export const TestimonialsClient: React.FC = () => {
               className="pointer-events-none absolute inset-0 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:24px_24px] opacity-15"
             />
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
-
-              {/* Col 1: Guest Satisfaction */}
-              <div className="lg:col-span-3 space-y-2 border-b lg:border-b-0 lg:border-r border-[#C5A059]/25 pb-6 lg:pb-0 lg:pr-6 text-center lg:text-left">
-                <span className="inline-block font-sans text-xs font-semibold tracking-[0.22em] uppercase text-[#E8A317]">
-                  Guest Satisfaction
-                </span>
-                <div className="flex items-center justify-center lg:justify-start gap-3">
-                  <span className="font-serif text-4xl sm:text-5xl font-medium text-white">
-                    {avgRating}
-                  </span>
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-1 text-[#E8A317]">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-[#E8A317] text-[#E8A317]" />
-                      ))}
-                    </div>
-                    <p className="font-sans text-xs text-white/90 font-medium">
-                      Based on {totalReviews} guest reviews
-                    </p>
-                  </div>
-                </div>
-              </div>
-
               {/* Col 2: Puri Beach Hospitality Message */}
               <div className="lg:col-span-4 space-y-2 border-b lg:border-b-0 lg:border-r border-[#C5A059]/25 pb-6 lg:pb-0 lg:pr-6 text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start gap-2 text-[#E8A317]">
@@ -307,13 +316,13 @@ export const TestimonialsClient: React.FC = () => {
                   </span>
                 </div>
                 <p className="font-sans text-xs sm:text-sm text-white/90 font-normal leading-relaxed">
-                  Prime location on New Marine Drive Road with authentic Odia dining, pet-friendly comfort & ocean view.
+                  Prime location on New Marine Drive Road with authentic Odia
+                  dining, pet-friendly comfort & ocean view.
                 </p>
               </div>
 
               {/* Col 3: Google & TripAdvisor QR Cards */}
               <div className="lg:col-span-5 flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-3.5 sm:gap-4">
-
                 {/* 1. Google Review QR Card */}
                 <div className="w-full sm:w-auto flex-1 max-w-[230px] bg-white/[0.04] hover:bg-white/[0.08] border border-white/15 hover:border-[#E8A317]/50 rounded-sm p-3 transition-all duration-300 group flex flex-col items-center text-center">
                   <div className="flex items-center gap-1.5 mb-2">
@@ -326,7 +335,7 @@ export const TestimonialsClient: React.FC = () => {
                   {/* QR Image Container */}
                   <button
                     type="button"
-                    onClick={() => setActiveQrModal('google')}
+                    onClick={() => setActiveQrModal("google")}
                     className="relative w-20 h-20 bg-white p-1 rounded-sm shadow-md transition-transform duration-300 group-hover:scale-105 cursor-pointer focus:outline-none"
                     title="Click to expand Google Review QR Code"
                   >
@@ -343,7 +352,7 @@ export const TestimonialsClient: React.FC = () => {
                   <div className="mt-2.5 flex items-center gap-2">
                     <button
                       type="button"
-                      onClick={() => setActiveQrModal('google')}
+                      onClick={() => setActiveQrModal("google")}
                       className="text-[10px] uppercase tracking-wider font-semibold text-[#E8A317] hover:underline flex items-center gap-1 cursor-pointer"
                     >
                       <QrCode className="w-3 h-3" />
@@ -375,7 +384,7 @@ export const TestimonialsClient: React.FC = () => {
                   {/* QR Image Container */}
                   <button
                     type="button"
-                    onClick={() => setActiveQrModal('tripadvisor')}
+                    onClick={() => setActiveQrModal("tripadvisor")}
                     className="relative w-20 h-20 bg-white p-1 rounded-sm shadow-md transition-transform duration-300 group-hover:scale-105 cursor-pointer focus:outline-none"
                     title="Click to expand TripAdvisor Review QR Code"
                   >
@@ -392,7 +401,7 @@ export const TestimonialsClient: React.FC = () => {
                   <div className="mt-2.5 flex items-center gap-2">
                     <button
                       type="button"
-                      onClick={() => setActiveQrModal('tripadvisor')}
+                      onClick={() => setActiveQrModal("tripadvisor")}
                       className="text-[10px] uppercase tracking-wider font-semibold text-[#00AA6C] hover:underline flex items-center gap-1 cursor-pointer"
                     >
                       <QrCode className="w-3 h-3" />
@@ -409,9 +418,7 @@ export const TestimonialsClient: React.FC = () => {
                     </a>
                   </div>
                 </div>
-
               </div>
-
             </div>
           </section>
 
@@ -420,10 +427,8 @@ export const TestimonialsClient: React.FC = () => {
 
           {/* Main 2-Column Section: Left is Reviews List, Right is Write Review Form */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
-
             {/* Left Column: Reviews Feed */}
             <div className="lg:col-span-7 space-y-6">
-
               {/* Header & Filter Bar */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
                 <div>
@@ -444,9 +449,15 @@ export const TestimonialsClient: React.FC = () => {
                       onChange={(e) => setSelectedFilter(e.target.value)}
                       className="bg-transparent text-white focus:outline-none cursor-pointer pr-6 appearance-none text-xs"
                     >
-                      <option value="all" className="bg-[#0C1827] text-white">All Trip Types</option>
+                      <option value="all" className="bg-[#0C1827] text-white">
+                        All Trip Types
+                      </option>
                       {TRIP_TYPES.map((type) => (
-                        <option key={type} value={type} className="bg-[#0C1827] text-white">
+                        <option
+                          key={type}
+                          value={type}
+                          className="bg-[#0C1827] text-white"
+                        >
                           {type}
                         </option>
                       ))}
@@ -460,15 +471,25 @@ export const TestimonialsClient: React.FC = () => {
                       value={selectedRatingFilter}
                       onChange={(e) =>
                         setSelectedRatingFilter(
-                          e.target.value === 'all' ? 'all' : Number(e.target.value)
+                          e.target.value === "all"
+                            ? "all"
+                            : Number(e.target.value),
                         )
                       }
                       className="bg-transparent text-white focus:outline-none cursor-pointer pr-6 appearance-none text-xs"
                     >
-                      <option value="all" className="bg-[#0C1827] text-white">All Ratings</option>
-                      <option value={5} className="bg-[#0C1827] text-white">5 Stars Only</option>
-                      <option value={4} className="bg-[#0C1827] text-white">4 Stars</option>
-                      <option value={3} className="bg-[#0C1827] text-white">3 Stars</option>
+                      <option value="all" className="bg-[#0C1827] text-white">
+                        All Ratings
+                      </option>
+                      <option value={5} className="bg-[#0C1827] text-white">
+                        5 Stars Only
+                      </option>
+                      <option value={4} className="bg-[#0C1827] text-white">
+                        4 Stars
+                      </option>
+                      <option value={3} className="bg-[#0C1827] text-white">
+                        3 Stars
+                      </option>
                     </select>
                     <ChevronDown className="w-3.5 h-3.5 text-[#E8A317] absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none" />
                   </div>
@@ -487,13 +508,13 @@ export const TestimonialsClient: React.FC = () => {
                   <div className="space-y-1 max-w-md mx-auto">
                     <p className="text-white font-serif text-xl">
                       {testimonials.length === 0
-                        ? 'No guest reviews posted yet'
-                        : 'No reviews found matching the selected filter'}
+                        ? "No guest reviews posted yet"
+                        : "No reviews found matching the selected filter"}
                     </p>
                     <p className="font-sans text-xs sm:text-sm text-white/60 font-light">
                       {testimonials.length === 0
-                        ? 'Be the first guest to share your stay experience at Hotel Prabhupada, Puri!'
-                        : 'Try adjusting your trip type or star rating filter to see more reviews.'}
+                        ? "Be the first guest to share your stay experience at Hotel Prabhupada, Puri!"
+                        : "Try adjusting your trip type or star rating filter to see more reviews."}
                     </p>
                   </div>
                   {testimonials.length === 0 ? (
@@ -501,7 +522,9 @@ export const TestimonialsClient: React.FC = () => {
                       type="button"
                       onClick={() => {
                         if (formSectionRef.current) {
-                          formSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+                          formSectionRef.current.scrollIntoView({
+                            behavior: "smooth",
+                          });
                         }
                       }}
                       className="header-book-btn inline-flex items-center justify-center gap-2 font-sans text-xs tracking-wider uppercase rounded-sm px-6 py-2.5 cursor-pointer mt-2"
@@ -513,8 +536,8 @@ export const TestimonialsClient: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => {
-                        setSelectedFilter('all');
-                        setSelectedRatingFilter('all');
+                        setSelectedFilter("all");
+                        setSelectedRatingFilter("all");
                       }}
                       className="text-xs text-[#E8A317] hover:underline block mx-auto mt-2"
                     >
@@ -530,7 +553,10 @@ export const TestimonialsClient: React.FC = () => {
                         key={item.id || idx}
                         initial={reduceMotion ? false : { opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: Math.min(idx * 0.05, 0.3) }}
+                        transition={{
+                          duration: 0.4,
+                          delay: Math.min(idx * 0.05, 0.3),
+                        }}
                         className="bg-[#0C1827] p-6 sm:p-7 rounded-sm border border-[#C5A059]/20 hover:border-[#E8A317]/50 transition-colors shadow-lg relative group"
                       >
                         {/* Top Row: Stars & Trip Type */}
@@ -580,13 +606,16 @@ export const TestimonialsClient: React.FC = () => {
                             {item.created_at && (
                               <span className="flex items-center gap-1">
                                 <Calendar className="w-3 h-3" />
-                                {new Date(item.created_at).toLocaleDateString('en-IN', {
-                                  month: 'short',
-                                  year: 'numeric',
-                                })}
+                                {new Date(item.created_at).toLocaleDateString(
+                                  "en-IN",
+                                  {
+                                    month: "short",
+                                    year: "numeric",
+                                  },
+                                )}
                               </span>
                             )}
-                            {item.id?.startsWith('google-rev-') ? (
+                            {item.id?.startsWith("google-rev-") ? (
                               <a
                                 href={GOOGLE_REVIEWS_URL}
                                 target="_blank"
@@ -625,7 +654,8 @@ export const TestimonialsClient: React.FC = () => {
                     Share Your Stay Experience
                   </h3>
                   <p className="font-sans text-xs text-white/70 font-light mt-1">
-                    Help fellow travelers know about your stay at Hotel Prabhupada.
+                    Help fellow travelers know about your stay at Hotel
+                    Prabhupada.
                   </p>
                 </div>
 
@@ -638,8 +668,12 @@ export const TestimonialsClient: React.FC = () => {
                   >
                     <CheckCircle2 className="w-5 h-5 text-[#E8A317] shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-semibold text-[#E8A317]">Review Submitted!</p>
-                      <p className="text-white/80 mt-0.5 leading-relaxed">{submitSuccess}</p>
+                      <p className="font-semibold text-[#E8A317]">
+                        Review Submitted!
+                      </p>
+                      <p className="text-white/80 mt-0.5 leading-relaxed">
+                        {submitSuccess}
+                      </p>
                     </div>
                   </motion.div>
                 )}
@@ -653,8 +687,12 @@ export const TestimonialsClient: React.FC = () => {
                   >
                     <AlertCircle className="w-5 h-5 text-[#E8A317] shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-semibold text-[#E8A317]">Could not submit</p>
-                      <p className="text-white/80 mt-0.5 leading-relaxed">{submitError}</p>
+                      <p className="font-semibold text-[#E8A317]">
+                        Could not submit
+                      </p>
+                      <p className="text-white/80 mt-0.5 leading-relaxed">
+                        {submitError}
+                      </p>
                     </div>
                   </motion.div>
                 )}
@@ -668,22 +706,26 @@ export const TestimonialsClient: React.FC = () => {
                     <div className="flex items-center gap-2">
                       <div className="flex items-center gap-1.5 p-2 bg-white/5 border border-white/15 rounded-sm">
                         {[1, 2, 3, 4, 5].map((star) => {
-                          const active = (hoveredStar ?? formData.rating) >= star;
+                          const active =
+                            (hoveredStar ?? formData.rating) >= star;
                           return (
                             <button
                               key={star}
                               type="button"
-                              onClick={() => setFormData({ ...formData, rating: star })}
+                              onClick={() =>
+                                setFormData({ ...formData, rating: star })
+                              }
                               onMouseEnter={() => setHoveredStar(star)}
                               onMouseLeave={() => setHoveredStar(null)}
                               className="p-1 text-white/30 hover:scale-110 transition-transform cursor-pointer focus:outline-none"
                               aria-label={`Rate ${star} star`}
                             >
                               <Star
-                                className={`w-6 h-6 transition-colors ${active
-                                  ? 'fill-[#E8A317] text-[#E8A317]'
-                                  : 'text-white/30'
-                                  }`}
+                                className={`w-6 h-6 transition-colors ${
+                                  active
+                                    ? "fill-[#E8A317] text-[#E8A317]"
+                                    : "text-white/30"
+                                }`}
                               />
                             </button>
                           );
@@ -711,7 +753,9 @@ export const TestimonialsClient: React.FC = () => {
                         type="text"
                         required
                         value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, name: e.target.value })
+                        }
                         placeholder="e.g. Rameshwar Das"
                         className="w-full h-11 bg-white/5 border border-white/15 rounded-sm px-3.5 text-sm text-white focus:outline-none focus:border-[#E8A317] placeholder:text-white/30 transition-colors"
                       />
@@ -733,7 +777,9 @@ export const TestimonialsClient: React.FC = () => {
                         id="review-location"
                         type="text"
                         value={formData.location}
-                        onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, location: e.target.value })
+                        }
                         placeholder="e.g. Kolkata, WB"
                         className="w-full h-11 bg-white/5 border border-white/15 rounded-sm px-3.5 text-sm text-white focus:outline-none focus:border-[#E8A317] placeholder:text-white/30 transition-colors"
                       />
@@ -755,11 +801,20 @@ export const TestimonialsClient: React.FC = () => {
                         <select
                           id="review-tripType"
                           value={formData.tripType}
-                          onChange={(e) => setFormData({ ...formData, tripType: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              tripType: e.target.value,
+                            })
+                          }
                           className="w-full h-11 bg-[#0C1827] border border-white/15 rounded-sm pl-3.5 pr-10 text-sm text-white focus:outline-none focus:border-[#E8A317] transition-colors cursor-pointer appearance-none"
                         >
                           {TRIP_TYPES.map((type) => (
-                            <option key={type} value={type} className="bg-[#0C1827]">
+                            <option
+                              key={type}
+                              value={type}
+                              className="bg-[#0C1827]"
+                            >
                               {type}
                             </option>
                           ))}
@@ -784,7 +839,9 @@ export const TestimonialsClient: React.FC = () => {
                         id="review-title"
                         type="text"
                         value={formData.title}
-                        onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, title: e.target.value })
+                        }
                         placeholder="e.g. Wonderful beach view"
                         className="w-full h-11 bg-white/5 border border-white/15 rounded-sm px-3.5 text-sm text-white focus:outline-none focus:border-[#E8A317] placeholder:text-white/30 transition-colors"
                       />
@@ -806,7 +863,9 @@ export const TestimonialsClient: React.FC = () => {
                       rows={4}
                       required
                       value={formData.review}
-                      onChange={(e) => setFormData({ ...formData, review: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, review: e.target.value })
+                      }
                       placeholder="Share your stay experience, room comfort, hospitality, dining, or suggestions..."
                       className="w-full bg-white/5 border border-white/15 rounded-sm p-3.5 text-sm text-white focus:outline-none focus:border-[#E8A317] placeholder:text-white/30 transition-colors resize-y"
                     />
@@ -832,15 +891,14 @@ export const TestimonialsClient: React.FC = () => {
                       )}
                     </button>
                     <p className="mt-2 text-center text-[10px] text-white/40">
-                      Reviews are instantly published to help future guests of Hotel Prabhupada.
+                      Reviews are instantly published to help future guests of
+                      Hotel Prabhupada.
                     </p>
                   </div>
                 </form>
               </section>
             </div>
-
           </div>
-
         </div>
       </div>
 
@@ -877,7 +935,7 @@ export const TestimonialsClient: React.FC = () => {
 
               {/* Title & Brand Icon */}
               <div className="flex items-center justify-center gap-2 mb-2">
-                {activeQrModal === 'google' ? (
+                {activeQrModal === "google" ? (
                   <GoogleIcon className="w-5 h-5" />
                 ) : (
                   <div className="text-[#00AA6C]">
@@ -885,26 +943,29 @@ export const TestimonialsClient: React.FC = () => {
                   </div>
                 )}
                 <h4 className="font-serif text-xl font-normal text-white">
-                  {activeQrModal === 'google' ? 'Google Review QR' : 'TripAdvisor QR'}
+                  {activeQrModal === "google"
+                    ? "Google Review QR"
+                    : "TripAdvisor QR"}
                 </h4>
               </div>
 
               <p className="font-sans text-xs text-white/70 font-light mb-5">
-                Point your phone camera at the QR code to open and leave your review for Hotel Prabhupada, Puri.
+                Point your phone camera at the QR code to open and leave your
+                review for Hotel Prabhupada, Puri.
               </p>
 
               {/* QR Image with High Contrast White Border */}
               <div className="relative w-52 h-52 mx-auto bg-white p-3 rounded-sm shadow-xl border border-white/20 mb-5 flex items-center justify-center">
                 <Image
                   src={
-                    activeQrModal === 'google'
-                      ? '/images/qr/google-review-qr.png'
-                      : '/images/qr/tripadvisor-review-qr.png'
+                    activeQrModal === "google"
+                      ? "/images/qr/google-review-qr.png"
+                      : "/images/qr/tripadvisor-review-qr.png"
                   }
                   alt={
-                    activeQrModal === 'google'
-                      ? 'Google Review QR Code'
-                      : 'TripAdvisor Review QR Code'
+                    activeQrModal === "google"
+                      ? "Google Review QR Code"
+                      : "TripAdvisor Review QR Code"
                   }
                   fill
                   sizes="208px"
@@ -916,13 +977,18 @@ export const TestimonialsClient: React.FC = () => {
               <div className="space-y-2.5">
                 <a
                   href={
-                    activeQrModal === 'google' ? GOOGLE_REVIEWS_URL : TRIPADVISOR_REVIEWS_URL
+                    activeQrModal === "google"
+                      ? GOOGLE_REVIEWS_URL
+                      : TRIPADVISOR_REVIEWS_URL
                   }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 font-sans text-xs uppercase tracking-wider font-semibold py-3 px-4 rounded-sm bg-[#C5A059] hover:bg-[#B38E46] text-white transition-colors shadow-md"
                 >
-                  <span>Open {activeQrModal === 'google' ? 'Google' : 'TripAdvisor'} Page</span>
+                  <span>
+                    Open {activeQrModal === "google" ? "Google" : "TripAdvisor"}{" "}
+                    Page
+                  </span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
 
@@ -930,7 +996,9 @@ export const TestimonialsClient: React.FC = () => {
                   type="button"
                   onClick={() =>
                     handleCopyLink(
-                      activeQrModal === 'google' ? GOOGLE_REVIEWS_URL : TRIPADVISOR_REVIEWS_URL
+                      activeQrModal === "google"
+                        ? GOOGLE_REVIEWS_URL
+                        : TRIPADVISOR_REVIEWS_URL,
                     )
                   }
                   className="w-full inline-flex items-center justify-center gap-2 font-sans text-xs uppercase tracking-wider py-2.5 px-4 rounded-sm bg-white/5 hover:bg-white/10 text-white/80 hover:text-white border border-white/15 transition-colors cursor-pointer"
@@ -955,4 +1023,3 @@ export const TestimonialsClient: React.FC = () => {
     </>
   );
 };
-

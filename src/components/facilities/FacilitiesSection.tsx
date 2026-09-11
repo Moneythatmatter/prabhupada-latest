@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useMemo, useRef } from 'react';
+import React, { useMemo, useRef } from "react";
 import {
   motion,
   useScroll,
@@ -8,7 +8,7 @@ import {
   useSpring,
   useReducedMotion,
   type MotionValue,
-} from 'framer-motion';
+} from "framer-motion";
 import {
   Waves,
   Presentation,
@@ -18,13 +18,13 @@ import {
   Trees,
   ArrowUpDown,
   type LucideIcon,
-} from 'lucide-react';
+} from "lucide-react";
 import {
   PatachitraBackdrop,
   PatachitraDivider,
-} from '@/components/patachitra/PatachitraMotifs';
-import { ParallaxImage } from '@/components/motion/ParallaxImage';
-import { FadeRise } from '@/hooks/useParallax';
+} from "@/components/patachitra/PatachitraMotifs";
+import { ParallaxImage } from "@/components/motion/ParallaxImage";
+import { FadeRise } from "@/hooks/useParallax";
 
 type Facility = {
   title: string;
@@ -37,58 +37,58 @@ type Facility = {
 
 const facilities: Facility[] = [
   {
-    title: 'Swimming Pool',
+    title: "Swimming Pool",
     description:
-      'Refresh in our outdoor pool after a day by the Puri coast — blue water, open sky, and easy poolside lounging.',
+      "Refresh in our outdoor pool after a day by the Puri coast — blue water, open sky, and easy poolside lounging.",
     icon: Waves,
-    image: '/images/swimming_pool.webp',
-    alt: 'Outdoor swimming pool and sun deck at Hotel Prabhupada Puri',
-    number: '01',
+    image: "/images/swimming_pool.webp",
+    alt: "Outdoor swimming pool and sun deck at Hotel Prabhupada Puri",
+    number: "01",
   },
   {
-    title: 'Conference Hall',
+    title: "Conference Hall",
     description:
-      'A well-equipped space for meetings, celebrations, and gatherings — ready for business or family occasions.',
+      "A well-equipped space for meetings, celebrations, and gatherings — ready for business or family occasions.",
     icon: Presentation,
-    image: '/images/conference_hall.webp',
-    alt: 'Conference and banquet hall setup for corporate meetings and family events',
-    number: '02',
+    image: "/images/conference_hall.webp",
+    alt: "Conference and banquet hall setup for corporate meetings and family events",
+    number: "02",
   },
   {
-    title: 'Guest Lounge',
+    title: "Guest Lounge",
     description:
-      'A calm shared lounge to relax, connect, and unwind between temple visits and beach walks.',
+      "A calm shared lounge to relax, connect, and unwind between temple visits and beach walks.",
     icon: Sofa,
-    image: '/images/guest_lounge.webp',
-    alt: 'Relaxing guest lounge with comfortable seating at Hotel Prabhupada',
-    number: '03',
+    image: "/images/guest_lounge.webp",
+    alt: "Relaxing guest lounge with comfortable seating at Hotel Prabhupada",
+    number: "03",
   },
   {
-    title: 'Spa & Steam',
+    title: "Wellness",
     description:
-      'Rejuvenating treatments for restful wellness during your stay — unwind after a day of exploring Puri.',
+      "Rejuvenate with soothing spa treatments and steam sessions, perfect for restoring comfort and calm after a day of exploring Puri.",
     icon: Flower2,
-    image: '/images/spa.webp',
-    alt: 'Ayurvedic wellness and rejuvenating spa therapies at Hotel Prabhupada',
-    number: '04',
+    image: "/images/spa.webp",
+    alt: "Ayurvedic wellness and rejuvenating spa therapies at Hotel Prabhupada",
+    number: "04",
   },
   {
-    title: 'Restaurant',
+    title: "Restaurant",
     description:
-      'In-house dining with Odia flavours and multi-cuisine options, served in a warm, welcoming setting.',
+      "In-house dining with Odia flavours and multi-cuisine options, served in a warm, welcoming setting.",
     icon: UtensilsCrossed,
-    image: '/images/oris_restaurant.webp',
-    alt: 'Oris restaurant serving authentic Odia delicacies and multi-cuisine meals',
-    number: '05',
+    image: "/images/oris_restaurant.webp",
+    alt: "Oris restaurant serving authentic Odia delicacies and multi-cuisine meals",
+    number: "05",
   },
   {
-    title: 'Lawn',
+    title: "Lawn",
     description:
-      'Open green lawn for leisure, photos, and outdoor moments — quiet greenery on New Marine Drive.',
+      "Open green lawn for leisure, photos, and outdoor moments — quiet greenery on New Marine Drive.",
     icon: Trees,
-    image: '/images/lawn.webp',
-    alt: 'Lush landscaped open garden lawn facing New Marine Drive Puri',
-    number: '06',
+    image: "/images/lawn.webp",
+    alt: "Lush landscaped open garden lawn facing New Marine Drive Puri",
+    number: "06",
   },
 ];
 
@@ -114,40 +114,49 @@ function StackFacilityCard({
   // Scroll up reverses that progress → opacity returns to 1.
   const { scrollYProgress: coverProgress } = useScroll({
     target: nextRef ?? cardRef,
-    offset: ['start end', 'start 20%'],
+    offset: ["start end", "start 20%"],
   });
 
   const rawOpacity: MotionValue<number> = useTransform(
     coverProgress,
     [0, 0.4, 0.8, 1],
-    reduceMotion || isLast ? [1, 1, 1, 1] : [1, 0.9, 0.25, 0]
+    reduceMotion || isLast ? [1, 1, 1, 1] : [1, 0.9, 0.25, 0],
   );
-  const opacity = useSpring(rawOpacity, { stiffness: 140, damping: 28, mass: 0.35 });
+  const opacity = useSpring(rawOpacity, {
+    stiffness: 140,
+    damping: 28,
+    mass: 0.35,
+  });
 
   const rawScale = useTransform(
     coverProgress,
     [0, 1],
-    reduceMotion || isLast ? [1, 1] : [1, 0.97]
+    reduceMotion || isLast ? [1, 1] : [1, 0.97],
   );
-  const scale = useSpring(rawScale, { stiffness: 140, damping: 28, mass: 0.35 });
+  const scale = useSpring(rawScale, {
+    stiffness: 140,
+    damping: 28,
+    mass: 0.35,
+  });
 
   return (
     <div
       ref={cardRef}
-      className={`sticky top-[5rem] sm:top-24 ${isLast ? 'mb-[6vh]' : 'mb-[6vh] sm:mb-[8vh] md:mb-[10vh]'}`}
+      className={`sticky top-[5rem] sm:top-24 ${isLast ? "mb-[6vh]" : "mb-[6vh] sm:mb-[8vh] md:mb-[10vh]"}`}
       style={{ zIndex: index + 1 }}
     >
       <motion.article
         style={{
           opacity,
           scale,
-          transformOrigin: 'center top',
+          transformOrigin: "center top",
         }}
         className="grid grid-cols-1 lg:grid-cols-12 overflow-hidden border border-[#E5DECE] bg-[#FBF8F1] shadow-[0_14px_40px_rgba(12,24,39,0.12)] will-change-transform rounded-sm"
       >
         <div
-          className={`lg:col-span-7 relative min-h-[200px] sm:min-h-[260px] lg:min-h-[320px] ${reverse ? 'lg:order-2' : 'lg:order-1'
-            }`}
+          className={`lg:col-span-7 relative min-h-[200px] sm:min-h-[260px] lg:min-h-[320px] ${
+            reverse ? "lg:order-2" : "lg:order-1"
+          }`}
         >
           <ParallaxImage
             src={item.image}
@@ -162,8 +171,9 @@ function StackFacilityCard({
             className="absolute inset-0 bg-gradient-to-t from-[#0C1827]/70 via-black/10 to-transparent pointer-events-none"
           />
           <span
-            className={`absolute top-3 sm:top-5 font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-white/30 leading-none select-none ${reverse ? 'right-4 sm:right-7' : 'left-4 sm:left-7'
-              }`}
+            className={`absolute top-3 sm:top-5 font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-white/30 leading-none select-none ${
+              reverse ? "right-4 sm:right-7" : "left-4 sm:left-7"
+            }`}
           >
             {item.number}
           </span>
@@ -175,8 +185,9 @@ function StackFacilityCard({
         </div>
 
         <div
-          className={`lg:col-span-5 flex flex-col justify-center px-5 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-8 bg-[#FBF8F1] ${reverse ? 'lg:order-1' : 'lg:order-2'
-            }`}
+          className={`lg:col-span-5 flex flex-col justify-center px-5 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-8 bg-[#FBF8F1] ${
+            reverse ? "lg:order-1" : "lg:order-2"
+          }`}
         >
           <div className="mb-3 sm:mb-4 flex items-center gap-3">
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-sm bg-[#F8F0DC] border border-[#C5A059]/40 flex items-center justify-center shrink-0">
@@ -205,21 +216,29 @@ export const FacilitiesSection: React.FC = () => {
 
   const cardRefs = useMemo(
     () => facilities.map(() => React.createRef<HTMLDivElement>()),
-    []
+    [],
   );
 
   const { scrollYProgress: sectionProgress } = useScroll({
     target: sectionRef,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
 
   const blobY = useSpring(
-    useTransform(sectionProgress, [0, 1], [reduceMotion ? 0 : 70, reduceMotion ? 0 : -90]),
-    { stiffness: 65, damping: 28 }
+    useTransform(
+      sectionProgress,
+      [0, 1],
+      [reduceMotion ? 0 : 70, reduceMotion ? 0 : -90],
+    ),
+    { stiffness: 65, damping: 28 },
   );
   const blobYAlt = useSpring(
-    useTransform(sectionProgress, [0, 1], [reduceMotion ? 0 : 40, reduceMotion ? 0 : -55]),
-    { stiffness: 70, damping: 30 }
+    useTransform(
+      sectionProgress,
+      [0, 1],
+      [reduceMotion ? 0 : 40, reduceMotion ? 0 : -55],
+    ),
+    { stiffness: 70, damping: 30 },
   );
 
   return (
@@ -229,7 +248,10 @@ export const FacilitiesSection: React.FC = () => {
     >
       <PatachitraBackdrop />
 
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        aria-hidden
+      >
         <motion.div
           className="pointer-events-none absolute top-24 -left-28 w-[360px] h-[360px] rounded-full bg-[#C5A059]/12 blur-3xl will-change-transform"
           style={{ y: blobY }}
@@ -250,7 +272,8 @@ export const FacilitiesSection: React.FC = () => {
           </h2>
           <PatachitraDivider className="mt-3 sm:mt-5" />
           <p className="mt-4 sm:mt-5 font-sans text-xs sm:text-sm md:text-base text-[#64748B] font-light leading-relaxed">
-            Scroll down — each card sticks, the next stacks over it, and the one behind fades away.
+            Scroll down — each card sticks, the next stacks over it, and the one
+            behind fades away.
           </p>
         </FadeRise>
 

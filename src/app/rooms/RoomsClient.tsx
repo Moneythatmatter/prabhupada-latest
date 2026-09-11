@@ -3,19 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Wifi,
-  Wind,
-  Tv,
-  ConciergeBell,
-  Sparkles,
-  Bath,
-  ExternalLink,
-  Info,
-  X,
-  Check,
-  Camera,
-} from "lucide-react";
+import { ExternalLink, Info, X, Check, Camera } from "lucide-react";
 import { InnerPageHero } from "@/components/layout/InnerPageHero";
 import { ParallaxImage } from "@/components/motion/ParallaxImage";
 import { FadeRise } from "@/hooks/useParallax";
@@ -277,39 +265,6 @@ const roomsData = [
   },
 ];
 
-const roomFeaturesList = [
-  {
-    icon: Wifi,
-    title: "Free Wi-Fi",
-    description: "High-speed internet access.",
-  },
-  {
-    icon: Wind,
-    title: "Air Conditioning",
-    description: "Individual climate control.",
-  },
-  {
-    icon: Tv,
-    title: "HD Television",
-    description: "Satellite & entertainment channels.",
-  },
-  {
-    icon: Sparkles,
-    title: "Daily Housekeeping",
-    description: "Meticulous daily room cleaning.",
-  },
-  {
-    icon: Bath,
-    title: "En-Suite Bathroom",
-    description: "Continuous hot & cold water.",
-  },
-  {
-    icon: ConciergeBell,
-    title: "Room Service",
-    description: "Fresh multi-cuisine in-room dining.",
-  },
-];
-
 export const RoomsClient: React.FC = () => {
   const [selectedRoom, setSelectedRoom] = useState<
     (typeof roomsData)[0] | null
@@ -453,52 +408,6 @@ export const RoomsClient: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. In-Room Features Section (Minimalist Luxury Design) */}
-      <section className="py-20 lg:py-28 bg-white border-t border-[#E5DECE] text-[#070F1A] relative overflow-hidden">
-        <div className="max-w-[1240px] mx-auto px-6 sm:px-8 relative z-10">
-          <FadeRise className="text-center max-w-[700px] mx-auto mb-14 lg:mb-16">
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#161616] tracking-tight leading-[1.15]">
-              In-Room Amenities
-            </h2>
-            <p className="font-sans text-sm sm:text-base text-[#6B6B6B] font-light mt-3">
-              Thoughtfully curated comforts for a relaxing stay.
-            </p>
-            <PatachitraDivider className="mt-5" />
-          </FadeRise>
-
-          {/* 3 Cards per row desktop, 2 tablet, 1 mobile */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-            {roomFeaturesList.map((item, index) => {
-              const IconComponent = item.icon;
-              return (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.08,
-                    ease: [0.16, 1, 0.3, 1],
-                  }}
-                  className="bg-white p-5 sm:p-6 rounded-[18px] border border-[#E5DECE] hover:border-[#E8A317] shadow-sm hover:shadow-xl hover:shadow-[#E8A317]/10 transition-all duration-300 hover:-translate-y-[6px] flex flex-col justify-center h-full group"
-                >
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-[14px] bg-[#F8F0DC] group-hover:bg-[#E8A317] border border-[#E5DECE]/60 flex items-center justify-center mb-4 transition-colors duration-300 shrink-0">
-                    <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-[#E8A317] group-hover:text-white transition-colors duration-300" />
-                  </div>
-                  <h3 className="font-serif text-lg sm:text-xl font-normal text-[#161616] mb-1 group-hover:text-[#E8A317] transition-colors leading-tight">
-                    {item.title}
-                  </h3>
-                  <p className="font-sans text-xs sm:text-sm text-[#6B6B6B] font-light leading-snug line-clamp-1">
-                    {item.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Details Modal */}
       <AnimatePresence>
         {selectedRoom && (
@@ -563,7 +472,9 @@ export const RoomsClient: React.FC = () => {
                 <div className="mb-6 p-3.5 rounded-lg bg-[#FAF8F5] border border-[#E8A317]/40 text-xs text-[#8B6B23] flex items-start gap-2.5">
                   <Info className="w-4 h-4 text-[#E8A317] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block text-[#161616] mb-0.5">Room Notice:</span>
+                    <span className="font-semibold block text-[#161616] mb-0.5">
+                      Room Notice:
+                    </span>
                     <span>{selectedRoom.note}</span>
                   </div>
                 </div>
@@ -571,7 +482,8 @@ export const RoomsClient: React.FC = () => {
 
               <div className="mb-8">
                 <h4 className="font-serif text-lg text-[#161616] mb-3">
-                  All Room Amenities & Inclusions ({selectedRoom.amenities.length}):
+                  All Room Amenities & Inclusions (
+                  {selectedRoom.amenities.length}):
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {selectedRoom.amenities.map((feat) => (

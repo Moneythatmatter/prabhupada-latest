@@ -1,21 +1,29 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { Phone, Mail, MapPin, ExternalLink, X, CheckCircle2, PhoneCall } from 'lucide-react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { InnerPageHero } from '@/components/layout/InnerPageHero';
-import { FadeRise } from '@/hooks/useParallax';
-import { PatachitraDivider } from '@/components/patachitra/PatachitraMotifs';
+import React, { useState } from "react";
+import Image from "next/image";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  X,
+  CheckCircle2,
+  PhoneCall,
+} from "lucide-react";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { InnerPageHero } from "@/components/layout/InnerPageHero";
+import { FadeRise } from "@/hooks/useParallax";
+import { PatachitraDivider } from "@/components/patachitra/PatachitraMotifs";
 
 export const ContactClient: React.FC = () => {
   const [callbackModalOpen, setCallbackModalOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    message: '',
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
   });
   const reduceMotion = useReducedMotion();
 
@@ -25,7 +33,7 @@ export const ContactClient: React.FC = () => {
     setTimeout(() => {
       setSubmitted(false);
       setCallbackModalOpen(false);
-      setFormData({ name: '', phone: '', email: '', message: '' });
+      setFormData({ name: "", phone: "", email: "", message: "" });
     }, 3000);
   };
 
@@ -108,7 +116,9 @@ export const ContactClient: React.FC = () => {
                     className="w-14 h-14 bg-[#003580]/20 border border-[#003580]/40 rounded-sm flex items-center justify-center hover:scale-105 transition-transform"
                     title="Book on Booking.com"
                   >
-                    <span className="text-[#003580] bg-white px-2 py-0.5 rounded text-base font-black">B.</span>
+                    <span className="text-[#003580] bg-white px-2 py-0.5 rounded text-base font-black">
+                      B.
+                    </span>
                   </a>
                 </div>
               </div>
@@ -127,7 +137,11 @@ export const ContactClient: React.FC = () => {
               initial={reduceMotion ? false : { opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.7,
+                delay: 0.08,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="lg:col-span-4 bg-[#0C1827] p-7 sm:p-9 rounded-sm border border-[#C5A059]/25 flex flex-col shadow-xl space-y-6"
             >
               <h3 className="font-serif text-2xl font-normal text-[#E8A317] tracking-wide">
@@ -141,11 +155,18 @@ export const ContactClient: React.FC = () => {
                     <h4 className="font-medium text-[#C5A059] text-xs mb-1 uppercase tracking-wider">
                       Phone
                     </h4>
-                    <a href="tel:+919583002952" className="block text-white/90 hover:text-[#E8A317] transition-colors">
-                      +91 9583002952
-                    </a>
-                    <a href="tel:+919583002951" className="block text-white/90 hover:text-[#E8A317] transition-colors">
+
+                    <a
+                      href="tel:+919583002951"
+                      className="block text-white/90 hover:text-[#E8A317] transition-colors"
+                    >
                       +91 9583002951
+                    </a>
+                    <a
+                      href="tel:+919583002952"
+                      className="block text-white/90 hover:text-[#E8A317] transition-colors"
+                    >
+                      +91 9583002952
                     </a>
                   </div>
                 </div>
@@ -156,10 +177,16 @@ export const ContactClient: React.FC = () => {
                     <h4 className="font-medium text-[#C5A059] text-xs mb-1 uppercase tracking-wider">
                       Email
                     </h4>
-                    <a href="mailto:gm@hotelprabhupada.com" className="block text-white/90 hover:text-[#E8A317] transition-colors break-all">
+                    <a
+                      href="mailto:gm@hotelprabhupada.com"
+                      className="block text-white/90 hover:text-[#E8A317] transition-colors break-all"
+                    >
                       gm@hotelprabhupada.com
                     </a>
-                    <a href="mailto:reservation@hotelprabhupada.com" className="block text-white/90 hover:text-[#E8A317] transition-colors break-all">
+                    <a
+                      href="mailto:reservation@hotelprabhupada.com"
+                      className="block text-white/90 hover:text-[#E8A317] transition-colors break-all"
+                    >
                       reservation@hotelprabhupada.com
                     </a>
                   </div>
@@ -172,7 +199,8 @@ export const ContactClient: React.FC = () => {
                       Address
                     </h4>
                     <p className="text-white/90 leading-relaxed">
-                      New Marine Drive Road, Near light house, Puri, Odisha 752001
+                      New Marine Drive Road, Near light house, Puri, Odisha
+                      752001
                     </p>
                   </div>
                 </div>
@@ -183,7 +211,11 @@ export const ContactClient: React.FC = () => {
               initial={reduceMotion ? false : { opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.7,
+                delay: 0.16,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="lg:col-span-4 bg-[#0C1827] rounded-sm border border-[#C5A059]/25 overflow-hidden shadow-xl relative min-h-[380px] flex flex-col"
             >
               <div className="absolute top-4 right-4 z-10">
@@ -202,7 +234,7 @@ export const ContactClient: React.FC = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.6397395029315!2d85.80443917596041!3d19.789949181566838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19c5ccce332e3b%3A0x3e5550da010583ec!2sHotel%20Prabhupada!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: '380px' }}
+                style={{ border: 0, minHeight: "380px" }}
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -246,9 +278,12 @@ export const ContactClient: React.FC = () => {
               {submitted ? (
                 <div className="text-center py-8 space-y-3">
                   <CheckCircle2 className="w-12 h-12 text-[#E8A317] mx-auto" />
-                  <h4 className="font-serif text-xl text-white">Request Received!</h4>
+                  <h4 className="font-serif text-xl text-white">
+                    Request Received!
+                  </h4>
                   <p className="font-sans text-sm text-white/70">
-                    Our team at Hotel Prabhupada will get in touch with you shortly.
+                    Our team at Hotel Prabhupada will get in touch with you
+                    shortly.
                   </p>
                 </div>
               ) : (
@@ -261,7 +296,9 @@ export const ContactClient: React.FC = () => {
                       type="text"
                       required
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                       placeholder="Enter your full name"
                       className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317]"
                     />
@@ -275,7 +312,9 @@ export const ContactClient: React.FC = () => {
                       type="tel"
                       required
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, phone: e.target.value })
+                      }
                       placeholder="+91 9876543210"
                       className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317]"
                     />
@@ -288,7 +327,9 @@ export const ContactClient: React.FC = () => {
                     <input
                       type="email"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                       placeholder="your.email@example.com"
                       className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317]"
                     />
@@ -301,7 +342,9 @@ export const ContactClient: React.FC = () => {
                     <textarea
                       rows={3}
                       value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
                       placeholder="How can we assist your stay in Puri?"
                       className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E8A317]"
                     />
