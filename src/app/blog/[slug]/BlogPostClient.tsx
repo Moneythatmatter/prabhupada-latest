@@ -38,6 +38,8 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
         href = '/rooms';
       } else if (href.includes('hotelprabhupada.com/contactus') || href.includes('hotelprabhupada.com/contact')) {
         href = '/contact';
+      } else if (href.includes('hotelprabhupada.com/about')) {
+        href = '/about';
       } else if (
         href === 'https://www.hotelprabhupada.com/' ||
         href === 'https://www.hotelprabhupada.com' ||

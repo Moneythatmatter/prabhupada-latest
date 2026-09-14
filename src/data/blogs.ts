@@ -20,6 +20,85 @@ export type BlogPost = {
 /** Hotel Prabhupada blog posts — travel, stay tips & Puri heritage */
 export const blogs: BlogPost[] = [
   {
+    slug: 'top-sea-facing-hotels-in-puri-new-marine-drive-road',
+    title:
+      'Top Sea-Facing Hotels in Puri on New Marine Drive Road: Wake Up to Ocean Balconies',
+    excerpt:
+      "There's a specific kind of morning that only a handful of hotels in Puri can actually deliver — curtains pulled back to reveal open sea, a private balcony just steps from the bed and the sound of the Bay of Bengal setting the pace for the day before you've even had coffee. Discover why New Marine Drive Road is Puri's best address for sea views.",
+    content: [
+      "There's a specific kind of morning that only a handful of hotels in Puri can actually deliver — curtains pulled back to reveal open sea, a private balcony just steps from the bed and the sound of the Bay of Bengal setting the pace for the day before you've even had coffee. That experience depends almost entirely on location and one stretch of Puri delivers it more consistently than most: New Marine Drive Road.",
+      'This guide looks at what makes best sea facing hotels in New Marine Drive Road Puri worth prioritizing and how Hotel Prabhupada fits into that stretch as a genuinely balcony-forward, ocean-view stay with both front-facing and side-facing room options.',
+      "## Why New Marine Drive Road Is Puri's Best Address for Sea Views",
+      "New Marine Drive Road runs directly along Puri's coastline, which is exactly why it's home to some of the [best sea facing hotels in Puri](https://www.hotelprabhupada.com/). Properties here sit close enough to the water that a genuine ocean-view balcony isn't a rare upgrade — it's a realistic standard room feature. Compared to hotels tucked further into town, a stay on New Marine Drive Road means the beach, the breeze and the view are all part of daily life rather than something you have to travel toward each morning.",
+      '## What a True Sea-Facing Balcony Room Should Offer',
+      'A genuine sea facing hotel room should open onto a real ocean view, paired with a private, usable balcony rather than a narrow ledge. For hotels in Puri with balcony rooms specifically, look for:',
+      '- A choice between front-facing and side-facing sea views, so guests can pick the orientation and budget that suits them best.',
+      '- A private sit-out balcony, spacious enough to actually sit and take in the view, not just glance out briefly.',
+      "- Well-appointed room tiers, from comfortable mid-range options to spacious front-facing suites, so the view scales with the stay you're booking.",
+      "- Clear, accurate room categorization, so what's booked online matches what's delivered at check-in.",
+      "## Hotel Prabhupada's Sea-Facing Room Options",
+      'Hotel Prabhupada, located directly on New Marine Drive Road near the lighthouse, offers four room categories built specifically around ocean views and balcony access, giving guests a genuine choice between front-facing and side-facing sea views:',
+      '- Deluxe Room with Balcony Sea View, a comfortable entry-level option with a private balcony and sea view.',
+      '- Superior Deluxe Room with Balcony Side Sea View, offering a side-facing ocean view and balcony, a great pick for guests who want a sea view with a bit more room to spare.',
+      '- Executive Front Sea View Room, positioned for a direct, front-facing ocean view.',
+      '- Suite Front Sea View Room, the most spacious option, with the same direct, front-facing sea orientation.',
+      'For anyone searching for a sea view room in Puri with a proper sit-out balcony, having both front-facing and side-facing categories to choose from makes it easier to match the exact experience to the exact budget, rather than choosing between "sea view" and "affordable."',
+      '## How Far Is Hotel Prabhupada From Jagannath Temple and the Lighthouse',
+      "Hotel Prabhupada sits close to both the coastline and the town's key landmarks, making it a practical base beyond just the sea view itself. The hotel is roughly 2 km from the Jagannath Temple, keeping darshan easily reachable and sits right near the Puri Lighthouse on New Marine Drive Road itself. Guests looking for hotels near the lighthouse in Puri with a genuine sea view get both in one location here, without needing to choose between temple proximity and beachfront access.",
+      '## Are Hotels Near the Lighthouse Quieter Than Swargadwar?',
+      'Generally, yes. [Hotels near the Puri Lighthouse on New Marine Drive Road](https://www.hotelprabhupada.com/contactus.html) tend to offer a calmer, more residential atmosphere compared to the busier Swargadwar stretch, which sees heavier footfall due to its proximity to the main temple approach and beach markets. For travellers who want a peaceful sea facing hotel experience — long balcony mornings, a quieter beachfront, less crowd noise — the New Marine Drive Road side of Puri, including the stretch near Hotel Prabhupada, is generally the better fit, while still keeping Swargadwar Beach within easy reach for those who want to visit.',
+      '## Amenities Worth Checking Alongside the View',
+      "A sea facing hotel is only part of the picture but the amenities around it decide how comfortable the overall stay actually is. Hotel Prabhupada pairs its balcony sea view rooms with a swimming pool, a spa with steam service and complimentary breakfast, giving guests real value beyond the room itself. The hotel is also pet-friendly, making it a solid pick for [pet-friendly sea facing hotels in Puri](https://www.hotelprabhupada.com/about.html) on New Marine Drive specifically — a combination that's harder to find than sea view alone. For families booking a quad-sharing sea view room, this mix of space, amenities and view makes a multi-person stay considerably easier to plan around.",
+      '## Booking a Sea-Facing Room at the Right Price',
+      "[Affordable sea facing hotels in Puri under ₹4,000](https://www.hotelprabhupada.com/) do exist along New Marine Drive Road, particularly outside peak festival weeks and Hotel Prabhupada's four sea-facing categories, from the Deluxe Room with Balcony Sea View up to the Suite Front Sea View Room, give guests room to choose based on budget and preferred orientation without giving up the ocean view entirely. Confirming current tariff and room availability directly with the hotel, especially for the Executive Front Sea View Room and Superior Deluxe Room with Balcony Side Sea View, is the most reliable way to lock in the exact room type before travel dates.",
+      '## Final Thoughts',
+      "Waking up to an ocean-facing balcony isn't reserved for high-end resorts alone. On New Marine Drive Road, it's a realistic standard across several room categories and Hotel Prabhupada's sea-facing room options, proximity to the Jagannath Temple and lighthouse and everyday amenities make it a strong choice for anyone prioritizing genuine sea views on their next Puri trip.",
+    ],
+    faqs: [
+      {
+        question: 'Which is the best sea-facing hotel on New Marine Drive Road, Puri?',
+        answer:
+          'Hotel Prabhupada is a strong option, offering sea-facing room categories — including the Executive Front Sea View Room and Superior Deluxe Room with Balcony Side Sea View — directly on New Marine Drive Road near the lighthouse.',
+      },
+      {
+        question: 'Can I get a room with a direct sea view balcony in Puri?',
+        answer:
+          'Yes. Several hotels along New Marine Drive Road, including Hotel Prabhupada, offer rooms with private balconies and direct, unobstructed ocean views.',
+      },
+      {
+        question: 'How far is New Marine Drive Road, Puri, from the Jagannath Temple?',
+        answer:
+          "It's approximately 2 km from the Jagannath Temple, making darshan easily accessible while staying on the coastline.",
+      },
+      {
+        question: 'Are hotels near Puri Lighthouse quieter than Swargadwar?',
+        answer:
+          'Generally yes. The New Marine Drive Road and lighthouse area tends to be calmer than the busier Swargadwar stretch, while still keeping Swargadwar Beach within easy reach.',
+      },
+      {
+        question: 'Which sea-facing hotel in Puri allows pets on New Marine Drive?',
+        answer:
+          'Hotel Prabhupada is pet-friendly, making it a practical choice for travellers wanting a sea-facing stay on New Marine Drive Road without leaving their pet behind.',
+      },
+      {
+        question: 'Is there a swimming pool at sea-facing hotels on New Marine Drive Road?',
+        answer:
+          'Yes, Hotel Prabhupada includes a swimming pool along with a spa and steam service, adding to the value of its balcony sea view rooms.',
+      },
+      {
+        question: 'How far is Hotel Prabhupada from Puri Beach and Swargadwar Beach?',
+        answer:
+          'The hotel sits directly on the New Marine Drive Road coastline, placing both Puri Beach and Swargadwar Beach within a very short and convenient distance.',
+      },
+    ],
+    date: '2026-09-09',
+    author: 'Hotel Prabhupada',
+    category: 'Hotel Stay',
+    image: '/images/puri-marine-drive.webp',
+    readTime: '5 min read',
+    featured: true,
+  },
+  {
     slug: 'best-3-star-hotel-in-puri-near-sea-beach-starting-at-4000',
     title:
       "Are You Travelling to Puri? Here's How to Choose the Best 3-Star Hotel Near the Sea Beach Starting at ₹4,000",
