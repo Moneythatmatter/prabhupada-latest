@@ -297,7 +297,7 @@ export const RoomsClient: React.FC = () => {
           {/* 2-Column Responsive Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
             {roomsData.map((room, index) => (
-              <motion.div
+              <motion.article
                 key={room.id}
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -383,7 +383,7 @@ export const RoomsClient: React.FC = () => {
                   </div>
 
                   {/* Card Footer Actions - Fixed at Bottom */}
-                  <div className="p-6 sm:p-7 pt-2 mt-auto flex flex-col sm:flex-row items-center gap-3">
+                  <footer className="p-6 sm:p-7 pt-2 mt-auto flex flex-col sm:flex-row items-center gap-3">
                     <button
                       onClick={() => setSelectedRoom(room)}
                       className="pata-btn w-full sm:w-1/2 inline-flex items-center justify-center gap-2 text-white font-sans text-xs font-semibold tracking-[0.14em] uppercase px-5 py-3.5 rounded-sm"
@@ -400,9 +400,9 @@ export const RoomsClient: React.FC = () => {
                       <span>Book Now</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
-                  </div>
+                  </footer>
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
         </div>

@@ -58,7 +58,7 @@ export const AttractionsClient: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
             {attractions.map((item, index) => (
-              <motion.div
+              <motion.article
                 key={item.title}
                 initial={reduceMotion ? false : { opacity: 0, y: 32 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export const AttractionsClient: React.FC = () => {
                   </p>
                   <div className="w-10 h-px bg-gradient-to-r from-transparent via-[#E8A317] to-transparent mx-auto" />
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
 

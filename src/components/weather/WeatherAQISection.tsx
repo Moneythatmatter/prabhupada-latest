@@ -47,7 +47,7 @@ export const WeatherAQISection: React.FC = () => {
   const { data, loading, refresh } = useWeatherData();
 
   return (
-    <section className="relative z-20 -mt-8 sm:-mt-12 max-w-[1320px] mx-auto px-4 sm:px-8 mb-10 sm:mb-16">
+    <aside aria-label="Current Weather and Air Quality" className="relative z-20 -mt-8 sm:-mt-12 max-w-[1320px] mx-auto px-4 sm:px-8 mb-10 sm:mb-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -208,6 +208,6 @@ export const WeatherAQISection: React.FC = () => {
           </div>
         )}
       </motion.div>
-    </section>
+    </aside>
   );
 };

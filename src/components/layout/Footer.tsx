@@ -297,48 +297,50 @@ export const Footer: React.FC = () => {
             <h4 className="font-serif text-xl font-normal text-[#E8A317] mb-6 tracking-wider uppercase">
               Get In Touch
             </h4>
-            <ul className="space-y-4 font-sans text-sm font-light text-white/80 list-none p-0 m-0">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#C0392B] shrink-0 mt-0.5" />
-                <span>
-                  New Marine Drive Road, Near light house, Puri, Odisha 752001
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#C0392B] shrink-0" />
-                <div className="flex flex-col">
-                  <a
-                    href="tel:+919583002952"
-                    className="hover:text-[#C5A059] transition-colors"
-                  >
-                    +91 9583002952
-                  </a>
-                  <a
-                    href="tel:+919583002951"
-                    className="hover:text-[#C5A059] transition-colors"
-                  >
-                    +91 9583002951
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#C0392B] shrink-0" />
-                <div className="flex flex-col">
-                  <a
-                    href="mailto:reservation@hotelprabhupada.com"
-                    className="hover:text-[#C5A059] transition-colors"
-                  >
-                    reservation@hotelprabhupada.com
-                  </a>
-                  <a
-                    href="mailto:gm@hotelprabhupada.com"
-                    className="hover:text-[#C5A059] transition-colors"
-                  >
-                    gm@hotelprabhupada.com
-                  </a>
-                </div>
-              </li>
-            </ul>
+            <address className="not-italic">
+              <ul className="space-y-4 font-sans text-sm font-light text-white/80 list-none p-0 m-0">
+                <li className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-[#C0392B] shrink-0 mt-0.5" />
+                  <span>
+                    New Marine Drive Road, Near light house, Puri, Odisha 752001
+                  </span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-[#C0392B] shrink-0" />
+                  <div className="flex flex-col">
+                    <a
+                      href="tel:+919583002952"
+                      className="hover:text-[#C5A059] transition-colors"
+                    >
+                      +91 9583002952
+                    </a>
+                    <a
+                      href="tel:+919583002951"
+                      className="hover:text-[#C5A059] transition-colors"
+                    >
+                      +91 9583002951
+                    </a>
+                  </div>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-[#C0392B] shrink-0" />
+                  <div className="flex flex-col">
+                    <a
+                      href="mailto:reservation@hotelprabhupada.com"
+                      className="hover:text-[#C5A059] transition-colors"
+                    >
+                      reservation@hotelprabhupada.com
+                    </a>
+                    <a
+                      href="mailto:gm@hotelprabhupada.com"
+                      className="hover:text-[#C5A059] transition-colors"
+                    >
+                      gm@hotelprabhupada.com
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </address>
           </div>
         </div>
 

@@ -117,7 +117,7 @@ export const RoomsSection: React.FC = () => {
         >
           <Image
             src="/images/rooms-corner-ornament-v2.webp"
-            alt=""
+            alt="Decorative gold corner ornament"
             fill
             sizes="(max-width: 640px) 140px, (max-width: 768px) 200px, 260px"
             className={`object-contain ${anchor} opacity-40 sm:opacity-50`}
@@ -151,7 +151,7 @@ export const RoomsSection: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 lg:gap-16">
           {featuredRooms.map((room, index) => (
-            <motion.div
+            <motion.article
               key={room.title}
               initial={reduceMotion ? false : { opacity: 0, y: 36 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -217,7 +217,7 @@ export const RoomsSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="px-5 sm:px-8 md:px-10 pb-5 sm:pb-8 md:pb-10 flex flex-col sm:flex-row items-stretch gap-3">
+              <footer className="px-5 sm:px-8 md:px-10 pb-5 sm:pb-8 md:pb-10 flex flex-col sm:flex-row items-stretch gap-3">
                 <a
                   href={room.bookingUrl}
                   target="_blank"
@@ -232,8 +232,8 @@ export const RoomsSection: React.FC = () => {
                 >
                   Explore Room
                 </Link>
-              </div>
-            </motion.div>
+              </footer>
+            </motion.article>
           ))}
         </div>
 

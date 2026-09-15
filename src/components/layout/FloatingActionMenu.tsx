@@ -124,7 +124,7 @@ export const FloatingActionMenu: React.FC = () => {
   ];
 
   return (
-    <>
+    <aside aria-label="Quick contact and assistance actions">
       {/* ========================================================================= */}
       {/* 1. MOBILE ONLY: Floating '+' button with semi-circle radial expansion     */}
       {/* ========================================================================= */}
@@ -305,6 +305,6 @@ export const FloatingActionMenu: React.FC = () => {
           </span>
         </div>
       </div>
-    </>
+    </aside>
   );
 };

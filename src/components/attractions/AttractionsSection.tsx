@@ -55,7 +55,7 @@ export const AttractionsSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
           {featuredAttractions.map((item, index) => (
-            <motion.div
+            <motion.article
               key={item.title}
               initial={reduceMotion ? false : { opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ export const AttractionsSection: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
 

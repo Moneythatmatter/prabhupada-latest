@@ -49,49 +49,51 @@ export const BlogClient: React.FC = () => {
 
           {featured ? (
             <FadeRise className="mb-8 sm:mb-12">
-              <Link
-                href={`/blog/${featured.slug}`}
-                className="group grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden rounded-sm border border-[#E5DECE] bg-white shadow-sm hover:shadow-[0_20px_44px_rgba(12,24,39,0.1)] transition-shadow"
-              >
-                <div className="relative lg:col-span-7 h-56 sm:h-72 lg:h-auto min-h-[280px] overflow-hidden">
-                  <Image
-                    src={featured.image}
-                    alt={featured.title}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 58vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#070F1A]/50 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#070F1A]/10" />
-                  <span className="absolute top-4 left-4 font-sans text-[10px] font-semibold tracking-[0.14em] uppercase bg-[#E8A317] text-[#0C1827] px-2.5 py-1 rounded-sm">
-                    Latest
-                  </span>
-                </div>
-                <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
-                  <span className="inline-block w-fit font-sans text-[10px] font-semibold tracking-[0.18em] uppercase text-[#8B1E1E] mb-3">
-                    {featured.category}
-                  </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#0C1827] leading-snug mb-3 group-hover:text-[#8B1E1E] transition-colors">
-                    {featured.title}
-                  </h3>
-                  <p className="font-sans text-sm text-[#64748B] font-light leading-relaxed mb-5">
-                    {featured.excerpt}
-                  </p>
-                  <div className="flex flex-wrap items-center gap-4 text-xs text-[#64748B] font-sans mb-5">
-                    <span className="inline-flex items-center gap-1.5">
-                      <CalendarDays className="w-3.5 h-3.5 text-[#C0392B]" />
-                      {formatBlogDate(featured.date)}
-                    </span>
-                    <span className="inline-flex items-center gap-1.5">
-                      <Clock3 className="w-3.5 h-3.5 text-[#C0392B]" />
-                      {featured.readTime}
+              <article>
+                <Link
+                  href={`/blog/${featured.slug}`}
+                  className="group grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden rounded-sm border border-[#E5DECE] bg-white shadow-sm hover:shadow-[0_20px_44px_rgba(12,24,39,0.1)] transition-shadow block"
+                >
+                  <div className="relative lg:col-span-7 h-56 sm:h-72 lg:h-auto min-h-[280px] overflow-hidden">
+                    <Image
+                      src={featured.image}
+                      alt={featured.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 58vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#070F1A]/50 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#070F1A]/10" />
+                    <span className="absolute top-4 left-4 font-sans text-[10px] font-semibold tracking-[0.14em] uppercase bg-[#E8A317] text-[#0C1827] px-2.5 py-1 rounded-sm">
+                      Latest
                     </span>
                   </div>
-                  <span className="inline-flex items-center gap-2 font-sans text-xs font-semibold tracking-[0.14em] uppercase text-[#0C1827] group-hover:text-[#8B1E1E] transition-colors">
-                    Read Article <ArrowRight className="w-4 h-4" />
-                  </span>
-                </div>
-              </Link>
+                  <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
+                    <span className="inline-block w-fit font-sans text-[10px] font-semibold tracking-[0.18em] uppercase text-[#8B1E1E] mb-3">
+                      {featured.category}
+                    </span>
+                    <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#0C1827] leading-snug mb-3 group-hover:text-[#8B1E1E] transition-colors">
+                      {featured.title}
+                    </h3>
+                    <p className="font-sans text-sm text-[#64748B] font-light leading-relaxed mb-5">
+                      {featured.excerpt}
+                    </p>
+                    <footer className="flex flex-wrap items-center gap-4 text-xs text-[#64748B] font-sans mb-5">
+                      <time dateTime={featured.date} className="inline-flex items-center gap-1.5">
+                        <CalendarDays className="w-3.5 h-3.5 text-[#C0392B]" />
+                        {formatBlogDate(featured.date)}
+                      </time>
+                      <span className="inline-flex items-center gap-1.5">
+                        <Clock3 className="w-3.5 h-3.5 text-[#C0392B]" />
+                        {featured.readTime}
+                      </span>
+                    </footer>
+                    <span className="inline-flex items-center gap-2 font-sans text-xs font-semibold tracking-[0.14em] uppercase text-[#0C1827] group-hover:text-[#8B1E1E] transition-colors">
+                      Read Article <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
+              </article>
             </FadeRise>
           ) : null}
 
@@ -132,16 +134,16 @@ export const BlogClient: React.FC = () => {
                       <p className="font-sans text-sm text-[#64748B] font-light leading-relaxed mb-4 line-clamp-3 flex-1">
                         {post.excerpt}
                       </p>
-                      <div className="flex flex-wrap items-center gap-3 text-[11px] text-[#64748B] font-sans pt-3 border-t border-[#E5DECE]">
-                        <span className="inline-flex items-center gap-1.5">
+                      <footer className="flex flex-wrap items-center gap-3 text-[11px] text-[#64748B] font-sans pt-3 border-t border-[#E5DECE]">
+                        <time dateTime={post.date} className="inline-flex items-center gap-1.5">
                           <CalendarDays className="w-3.5 h-3.5 text-[#C0392B]" />
                           {formatBlogDate(post.date)}
-                        </span>
+                        </time>
                         <span className="inline-flex items-center gap-1.5">
                           <Clock3 className="w-3.5 h-3.5 text-[#C0392B]" />
                           {post.readTime}
                         </span>
-                      </div>
+                      </footer>
                     </div>
                   </Link>
                 </motion.article>
