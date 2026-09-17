@@ -20,6 +20,86 @@ export type BlogPost = {
 /** Hotel Prabhupada blog posts — travel, stay tips & Puri heritage */
 export const blogs: BlogPost[] = [
   {
+    slug: 'jagannath-temple-puri-travel-guide-darshan-mahaprasad',
+    title:
+      'Jagannath Temple Puri Travel Guide: Darshan, Mahaprasad, Best Time to Visit and Nearby Attractions',
+    excerpt:
+      "Puri has a way of organizing itself around one building. Every road, market stall and hotel in the city seems to exist in relation to the Jagannath Temple and for good reason — this is one of the four sacred Char Dham sites of Hindu pilgrimage and stepping through its gates for the first time is an experience most visitors remember long after the trip itself fades. This guide covers what a first-time visitor to Puri actually needs to know: darshan timings, how Mahaprasad works, when to visit and what's worth seeing beyond the temple itself.",
+    content: [
+      "Puri has a way of organizing itself around one building. Every road, market stall and hotel in the city seems to exist in relation to the Jagannath Temple and for good reason — this is one of the four sacred Char Dham sites of Hindu pilgrimage and stepping through its gates for the first time is an experience most visitors remember long after the trip itself fades.",
+      "This guide covers what a first-time visitor to Puri actually needs to know: darshan timings, how Mahaprasad works, when to visit and what's worth seeing beyond the temple itself.",
+      '## Jagannath Temple Puri Darshan Timings',
+      "The temple opens at 5:00 AM and the day's final rituals run until around 11:00 PM, though darshan itself pauses several times through the day during bhog offerings and private rituals. Rather than treating the temple as open continuously, it helps to plan around two specific windows, early morning, between 5:30 AM and 7:30 AM, when the temple is at its calmest and late evening around 9:30 PM for the Badashringara Vesha, the final and most elaborately dressed darshan of the day. Arriving without knowing the ritual schedule is the most common reason first-time visitors end up waiting at a closed inner gate with no clear sense of when it will reopen.",
+      '## What to Know Before Visiting Jagannath Temple',
+      'A few rules shape every visit to the temple and they are worth knowing before you arrive rather than discovering at the gate:',
+      "- Entry is restricted to Hindus, one of the temple's oldest and most firmly observed traditions. Non-Hindu visitors can view the temple from outside.",
+      '- Phones, cameras and leather items must be left outside, with cloak rooms available near the entrance for safe storage.',
+      '- A structured queue system is now in place, with entry and exit through designated gates to manage the flow of visitors more predictably than in past years.',
+      '- Modest, traditional dress is expected — full-length clothing for men, sarees or salwar kameez with full coverage for women and no footwear inside.',
+      '## Where to Get Mahaprasad in Puri',
+      "Mahaprasad, also called Abhada, is prepared in the temple's Rosaghara kitchen — widely considered the largest kitchen in the world — using earthen pots stacked over an open flame, with no onion, garlic, potato, or tomato in any dish. It's sold inside the temple premise at Ananda Bazar, near the temple's northeastern Uttara Dwara gate, once it's been offered to the deities following the Madhyanha Dhupa ritual, typically in the early-to-mid afternoon. A basic cooked thali of rice, dal and vegetable curry costs somewhere in the range of ₹100–150, while a larger family-sized Kudua pot serving several people runs higher depending on size. Dry Mahaprasad — sweets like Khaja and Gaja — is available through most of the day and travels well as a keepsake to bring home.",
+      '## How to Get Mahaprasad at Jagannath Temple',
+      "Getting Mahaprasad is straightforward: head to Ananda Bazar after the temple's midday rituals conclude, choose from the cooked or dry offerings on display and pay directly at the stall. Prices aren't yet fixed by an official rate chart, so it's worth confirming the cost before purchasing, particularly during festival periods when demand — and occasionally, unofficial markups — tend to rise. Devotees traditionally sit together on the floor to eat, regardless of background and taking only what you will actually eat is treated as a mark of respect, since Mahaprasad is considered a sacred, shared blessing rather than an ordinary meal.",
+      '## Best Time to Visit Jagannath Temple Puri',
+      "The best time to visit Jagannath Temple Puri is during the cooler months between October and February, when the weather is more comfortable for the walking, standing and queuing that a temple visit involves. That said, visiting during a major festival — Rath Yatra in particular — offers an entirely different, once-in-a-lifetime kind of experience, provided you are prepared for significantly larger crowds and [book accommodation](https://www.hotelprabhupada.com/) well in advance. For a calmer, more contemplative darshan without festival crowds, the months outside the main festival calendar and outside the peak of summer heat tend to work best.",
+      '## Places to Visit Near Jagannath Temple Puri',
+      'A Puri trip is easily built around the temple, but the city has plenty more worth exploring within a short distance:',
+      '- Puri Beach, a short walk from the temple, ideal for an early morning or sunset visit.',
+      "- Swargadwar Beach, close to the temple's main approach, known for its spiritual significance alongside its coastal setting.",
+      "- Gundicha Temple, connected to the Jagannath Temple's own Rath Yatra tradition, worth visiting for its role in the annual festival.",
+      "- Konark Sun Temple, a UNESCO World Heritage Site around an hour's drive away, shaped like a colossal stone chariot.",
+      '- Pipili & Raghurajpur, roughly 25 km from Puri, known for its centuries-old applique craft villages.',
+      '- Chilika Lake, about 50 km out, offering boat rides to spot Irrawaddy dolphins for those with extra time.',
+      '## How to Plan a Jagannath Temple Puri Trip',
+      'Planning a smooth Jagannath Temple trip mostly comes down to timing and location. Planning darshan around the early morning or late evening windows avoids the bulk of the day\'s crowds and choosing [a hotel within easy walking distance of the temple](https://www.hotelprabhupada.com/contactus) removes the added stress of navigating traffic during a 5:30 AM start. [Hotel Prabhupada](https://www.hotelprabhupada.com/about.html), located near the Jagannath Temple with sea-facing rooms on New Marine Drive Road, offers exactly this kind of convenience — guests can head to darshan on foot and return to a comfortable, [sea-facing view room](https://www.hotelprabhupada.com/rooms.html) afterward, with a pool, spa and complimentary breakfast rounding out the stay.',
+      '## Final Thoughts',
+      "A first visit to the Jagannath Temple rewards a bit of planning far more than it rewards spontaneity. Knowing the darshan windows, understanding how Mahaprasad works, timing your trip around the right season and building in a day or two for Puri's surrounding attractions turns a single temple visit into a genuinely well-rounded trip.",
+    ],
+    faqs: [
+      {
+        question: 'What are the Jagannath Temple Puri darshan timings?',
+        answer:
+          'The temple opens at 5:00 AM and closes around 11:00 PM, though darshan pauses during ritual offerings through the day. The calmest windows are early morning (5:30–7:30 AM) and late evening around 9:30 PM.',
+      },
+      {
+        question: 'Where can I get Mahaprasad in Puri?',
+        answer:
+          "Mahaprasad is sold at Ananda Bazar, near the temple's Uttara Dwara gate, typically available in the early-to-mid afternoon after the Madhyanha Dhupa ritual.",
+      },
+      {
+        question: 'How much does Mahaprasad cost at Jagannath Temple?',
+        answer:
+          "A basic cooked thali generally costs around ₹100–150, with larger family-sized portions costing more. Prices aren't officially fixed, so it's worth confirming the amount before purchasing.",
+      },
+      {
+        question: 'What is the best time to visit Jagannath Temple Puri?',
+        answer:
+          'The cooler months between October and February are generally the most comfortable for a temple visit, though visiting during Rath Yatra offers a unique experience for those prepared for larger crowds.',
+      },
+      {
+        question: 'What should I know before visiting Jagannath Temple Puri?',
+        answer:
+          'Entry is restricted to Hindus, phones and leather items must be left outside, modest traditional dress is expected and a structured queue system now manages visitor flow.',
+      },
+      {
+        question: 'What places can I visit near Jagannath Temple Puri?',
+        answer:
+          'Puri Beach, Swargadwar Beach, Gundicha Temple, Konark Sun Temple, Pipili and Chilika Lake are all popular additions to a Puri trip.',
+      },
+      {
+        question: 'Where should I stay for a Jagannath Temple Puri visit?',
+        answer:
+          'A hotel within walking distance of the temple makes early darshan far easier to manage. Hotel Prabhupada, close to the temple with sea-facing rooms, is a practical option for pilgrims and travellers alike.',
+      },
+    ],
+    date: '2026-09-17',
+    author: 'Hotel Prabhupada',
+    category: 'Heritage',
+    image: '/images/jagannath-temple.webp',
+    readTime: '6 min read',
+    featured: true,
+  },
+  {
     slug: 'top-sea-facing-hotels-in-puri-new-marine-drive-road',
     title:
       'Top Sea-Facing Hotels in Puri on New Marine Drive Road: Wake Up to Ocean Balconies',
