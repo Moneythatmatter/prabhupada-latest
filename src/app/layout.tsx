@@ -1,9 +1,12 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Chatbot } from '@/components/chatbot/Chatbot';
 import { FloatingActionMenu } from '@/components/layout/FloatingActionMenu';
+
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-3ZQ87ZQPXK';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hotelprabhupada.com'),
@@ -86,6 +89,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased bg-[#070F1A] text-white overflow-x-hidden w-full max-w-full relative">
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
