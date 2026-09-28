@@ -91,7 +91,7 @@ export const Header: React.FC = () => {
         >
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#C5A059]/50 to-transparent pointer-events-none" />
           <div
-            className="max-w-[1360px] mx-auto px-3 flex items-center justify-between gap-3 overflow-hidden h-[106px] sm:h-[132px] md:h-[152px] lg:h-[174px]"
+            className="max-w-[1360px] mx-auto px-3 flex items-center justify-between gap-3 h-[106px] sm:h-[132px] md:h-[152px] lg:h-[174px]"
           >
 
             {/* 1. Official Hotel Logo Container */}
@@ -103,7 +103,7 @@ export const Header: React.FC = () => {
                   src="/logos/official-logo.png"
                   alt="Hotel Prabhupada Official Logo"
                   fill
-                  sizes="(max-width: 640px) 130px, (max-width: 768px) 165px, (max-width: 1024px) 190px, 220px"
+                  sizes="(max-width: 640px) 130px, (max-width: 768px) 160px, (max-width: 1024px) 190px, 220px"
                   priority
                   className="object-contain object-left filter drop-shadow-md transition-transform duration-300 group-hover:scale-[1.02]"
                 />
@@ -190,13 +190,14 @@ export const Header: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-1 w-64 bg-[#141F2E] border border-white/15 shadow-2xl rounded-sm py-3 z-[1100]"
+                        className="absolute top-full left-0 mt-1 w-64 bg-[#141F2E] border border-white/15 shadow-2xl rounded-sm py-3 z-[1100] before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:content-['']"
                       >
                         <ul className="flex flex-col list-none m-0 p-0">
                           {moreLinks.map((item) => (
                             <li key={item.name}>
                               <Link
                                 href={item.href}
+                                onClick={() => setMoreDropdownOpen(false)}
                                 className="px-6 py-2.5 font-sans text-[12px] font-semibold tracking-[0.14em] uppercase text-white/90 hover:text-[#C5A059] hover:bg-white/5 transition-colors block"
                               >
                                 {item.name}

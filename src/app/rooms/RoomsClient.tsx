@@ -98,7 +98,7 @@ const roomsData = [
     note: "Elevator is accessible till 2nd floor (Not preferable for Senior Citizens)",
     description:
       "Welcome to Hotel Prabhupada, where comfort meets luxury. Our Superior Deluxe Balcony (Side Sea View) offers the perfect blend of style and seaside functionality, ideal for both spiritual and leisure travelers, with modern amenities and plush bedding.",
-    image: "/images/room-superior-deluxe.webp",
+    image: "/images/superior-deluxe-balcony-view.png",
     bookingUrl:
       "https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000009",
     features: [
@@ -141,7 +141,7 @@ const roomsData = [
     badgeTitle: "Family Quad (Non Sea View)",
     description:
       "At Hotel Prabhupada, we pride ourselves in offering a home away from home. Our Family Quad (Non Sea View) rooms are thoughtfully designed for families and travelling groups, equipped with 2 comfortable double beds, en-suite bathroom, smart TV, tea/coffee maker, and personalized room service for a seamless stay.",
-    image: "/images/roomImage.webp",
+    image: "/images/family-quad.png",
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
       "2 Double Beds",
