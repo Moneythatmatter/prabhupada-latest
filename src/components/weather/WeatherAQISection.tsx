@@ -18,7 +18,11 @@ import {
   Compass,
   RefreshCw,
 } from 'lucide-react';
-import { useWeatherData } from '@/hooks/useWeatherData';
+import { useWeatherData, type WeatherAQIData } from '@/hooks/useWeatherData';
+
+interface WeatherAQISectionProps {
+  initialData?: WeatherAQIData | null;
+}
 
 const getWeatherIcon = (iconType: string, className = 'w-6 h-6') => {
   switch (iconType) {
@@ -43,8 +47,8 @@ const getWeatherIcon = (iconType: string, className = 'w-6 h-6') => {
   }
 };
 
-export const WeatherAQISection: React.FC = () => {
-  const { data, loading, refresh } = useWeatherData();
+export const WeatherAQISection: React.FC<WeatherAQISectionProps> = ({ initialData }) => {
+  const { data, loading, refresh } = useWeatherData(initialData);
 
   return (
     <aside aria-label="Current Weather and Air Quality" className="relative z-20 -mt-8 sm:-mt-12 max-w-[1320px] mx-auto px-4 sm:px-8 mb-10 sm:mb-16">

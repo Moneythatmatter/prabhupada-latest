@@ -7,6 +7,9 @@ import { FacilitiesSection } from '@/components/facilities/FacilitiesSection';
 import { TestimonialsSection } from '@/components/testimonials/TestimonialsSection';
 import { AttractionsSection } from '@/components/attractions/AttractionsSection';
 import { WhyChooseUsSection } from '@/components/why-choose-us/WhyChooseUsSection';
+import { getWeatherData } from '@/lib/weather';
+
+export const revalidate = 600;
 
 export const metadata: Metadata = {
   alternates: {
@@ -14,11 +17,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
+  const weatherData = await getWeatherData();
+
   return (
     <>
       <Hero />
-      <WeatherAQISection />
+      <WeatherAQISection initialData={weatherData} />
       <AboutSection />
       <RoomsSection />
       <FacilitiesSection />
@@ -29,4 +34,3 @@ export default function Home() {
     </>
   );
 }
-

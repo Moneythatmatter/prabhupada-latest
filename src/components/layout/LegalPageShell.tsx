@@ -27,7 +27,7 @@ export function LegalPageShell({
   const reduceMotion = useReducedMotion();
 
   return (
-    <div className="bg-[#070F1A] text-white min-h-screen pt-32 sm:pt-36 md:pt-44 pb-20 sm:pb-24 relative overflow-hidden">
+    <div className="bg-[#070F1A] text-white min-h-screen pt-36 sm:pt-40 md:pt-48 pb-20 sm:pb-24 relative overflow-hidden">
       <div
         aria-hidden
         className="pointer-events-none absolute top-24 right-[-8%] w-[340px] h-[340px] rounded-full bg-[#C5A059]/08 blur-3xl"

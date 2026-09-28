@@ -91,19 +91,19 @@ export const Header: React.FC = () => {
         >
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#C5A059]/50 to-transparent pointer-events-none" />
           <div
-            className="max-w-[1360px] mx-auto px-3 flex items-center justify-between gap-3 overflow-hidden h-[88px] sm:h-[112px] md:h-[128px] lg:h-[144px]"
+            className="max-w-[1360px] mx-auto px-3 flex items-center justify-between gap-3 overflow-hidden h-[106px] sm:h-[132px] md:h-[152px] lg:h-[174px]"
           >
 
             {/* 1. Official Hotel Logo Container */}
-            <Link href="/" className="flex items-center group py-2 h-full min-w-0 shrink">
+            <Link href="/" className="flex items-center group py-1.5 h-full min-w-0 shrink">
               <div
-                className="relative h-[72px] w-60 sm:h-24 sm:w-80 md:h-[110px] md:w-[400px] lg:h-[124px] lg:w-[450px]"
+                className="relative h-[94px] aspect-[349/264] sm:h-[120px] md:h-[140px] lg:h-[162px] shrink-0"
               >
                 <Image
                   src="/logos/official-logo.png"
                   alt="Hotel Prabhupada Official Logo"
                   fill
-                  sizes="(max-width: 640px) 240px, (max-width: 768px) 320px, (max-width: 1024px) 400px, 450px"
+                  sizes="(max-width: 640px) 130px, (max-width: 768px) 165px, (max-width: 1024px) 190px, 220px"
                   priority
                   className="object-contain object-left filter drop-shadow-md transition-transform duration-300 group-hover:scale-[1.02]"
                 />
@@ -294,12 +294,12 @@ export const Header: React.FC = () => {
             >
               <div>
                 <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
-                  <div className="relative h-20 w-64">
+                  <div className="relative h-28 aspect-[349/264] sm:h-32 shrink-0">
                     <Image
                       src="/logos/official-logo.png"
                       alt="Hotel Prabhupada Logo"
                       fill
-                      sizes="224px"
+                      sizes="160px"
                       className="object-contain object-left"
                     />
                   </div>

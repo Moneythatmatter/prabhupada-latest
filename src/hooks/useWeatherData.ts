@@ -1,39 +1,16 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { type WeatherAQIData } from '@/lib/weather';
 
-export interface WeatherAQIData {
-  success: boolean;
-  isFallback?: boolean;
-  city: string;
-  location: string;
-  temperature: number;
-  feelsLike: number;
-  humidity: number;
-  windSpeed: number;
-  isDay: boolean;
-  weatherCode: number;
-  condition: string;
-  iconType: string;
-  aqi: number;
-  pm25: number;
-  pm10: number;
-  aqiCategory: string;
-  aqiStatus: string;
-  aqiColor: string;
-  aqiTextColor: string;
-  aqiBgColor: string;
-  aqiBorderColor: string;
-  advice: string;
-  updatedAt: string;
-}
+export type { WeatherAQIData };
 
 const CACHE_KEY = 'prabhupada_weather_aqi_v1';
 const CACHE_EXPIRY = 10 * 60 * 1000;
 
-export function useWeatherData() {
-  const [data, setData] = useState<WeatherAQIData | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+export function useWeatherData(initialData?: WeatherAQIData | null) {
+  const [data, setData] = useState<WeatherAQIData | null>(initialData || null);
+  const [loading, setLoading] = useState<boolean>(!initialData);
   const [error, setError] = useState<string | null>(null);
 
   const fetchWeather = useCallback(async (ignoreCache = false) => {
@@ -83,8 +60,28 @@ export function useWeatherData() {
   }, []);
 
   useEffect(() => {
+    // If server passed initialData, populate cache and skip network fetch on mount
+    if (initialData) {
+      setData(initialData);
+      setLoading(false);
+      if (typeof window !== 'undefined') {
+        try {
+          sessionStorage.setItem(
+            CACHE_KEY,
+            JSON.stringify({
+              data: initialData,
+              timestamp: Date.now(),
+            })
+          );
+        } catch {
+          // ignore
+        }
+      }
+      return;
+    }
+
     fetchWeather();
-  }, [fetchWeather]);
+  }, [fetchWeather, initialData]);
 
   return {
     data,

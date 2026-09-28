@@ -57,7 +57,7 @@ export function InnerPageHero({
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[460px] sm:min-h-[500px] md:min-h-[540px] w-full flex flex-col items-center justify-center bg-[#070F1A] overflow-hidden pt-32 sm:pt-36 md:pt-44 pb-14 sm:pb-16 md:pb-20"
+      className="relative min-h-[480px] sm:min-h-[520px] md:min-h-[560px] w-full flex flex-col items-center justify-center bg-[#070F1A] overflow-hidden pt-36 sm:pt-40 md:pt-48 pb-14 sm:pb-16 md:pb-20"
     >
       <motion.div
         className="absolute inset-0 w-full h-[118%] -top-[9%] will-change-transform"

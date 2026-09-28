@@ -65,14 +65,14 @@ export const Footer: React.FC = () => {
       <div className="max-w-[1320px] mx-auto px-4 sm:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 pb-10 sm:pb-16 border-b border-[#C5A059]/20">
           <div className="lg:col-span-4">
-            <Link href="/" className="inline-block mb-5 sm:mb-6">
-              <div className="relative h-20 w-64 sm:h-24 sm:w-72">
+            <Link href="/" className="inline-block mb-5 sm:mb-6 group">
+              <div className="relative h-[94px] aspect-[349/264] sm:h-[120px] md:h-[140px] lg:h-[162px] shrink-0">
                 <Image
                   src="/logos/official-logo.png"
                   alt="Hotel Prabhupada Logo"
                   fill
-                  sizes="224px"
-                  className="object-contain object-left"
+                  sizes="(max-width: 640px) 130px, (max-width: 768px) 165px, (max-width: 1024px) 190px, 220px"
+                  className="object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
                 />
               </div>
             </Link>
