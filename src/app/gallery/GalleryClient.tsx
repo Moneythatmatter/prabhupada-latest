@@ -39,7 +39,7 @@ const galleryPhotos = [
     id: 1,
     title: 'Hotel Reception Counter & Lounge',
     category: 'Reception',
-    image: '/images/reception.jpg',
+    image: '/images/reception.webp',
     caption: 'Welcoming reception counter featuring marble wall backdrop and traditional deity altar at Hotel Prabhupada.',
   },
 
@@ -57,7 +57,7 @@ const galleryPhotos = [
     id: 3,
     title: 'Main Staircase & Corridors',
     category: 'Common Area & Corridors',
-    image: '/images/staircase.jpg',
+    image: '/images/staircase.webp',
     caption: 'Elegantly panelled main staircase and guest floor corridors with wooden handrails.',
   },
   {
@@ -105,14 +105,14 @@ const galleryPhotos = [
     id: 7,
     title: 'Private Sea View Balcony',
     category: 'Deluxe Balcony (Side Sea View)',
-    image: '/images/sea_balcony.jpg',
+    image: '/images/sea_balcony.webp',
     caption: 'Private sea-facing balcony offering panoramic views of Puri Golden Beach and waves.',
   },
   {
     id: 8,
     title: 'Deluxe Sea View Bathroom',
     category: 'Deluxe Balcony (Side Sea View)',
-    image: '/images/bathroom.jpg',
+    image: '/images/bathroom.webp',
     caption: 'Modern tiled en-suite bathroom with hot & cold rain shower and vessel sink.',
   },
 

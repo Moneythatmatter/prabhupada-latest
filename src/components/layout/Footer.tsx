@@ -66,7 +66,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 pb-10 sm:pb-16 border-b border-[#C5A059]/20">
           <div className="lg:col-span-4">
             <Link href="/" className="inline-block mb-5 sm:mb-6">
-              <div className="relative h-15 w-48 sm:h-19 sm:w-56">
+              <div className="relative h-20 w-64 sm:h-24 sm:w-72">
                 <Image
                   src="/logos/official-logo.png"
                   alt="Hotel Prabhupada Logo"

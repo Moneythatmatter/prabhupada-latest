@@ -91,23 +91,19 @@ export const Header: React.FC = () => {
         >
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#C5A059]/50 to-transparent pointer-events-none" />
           <div
-            className={`max-w-[1360px] mx-auto px-3 flex items-center justify-between gap-3 transition-all duration-300 ${isScrolled ? 'h-[56px] sm:h-[76px]' : 'h-[62px] sm:h-[94px] md:h-[102px]'
-              }`}
+            className="max-w-[1360px] mx-auto px-3 flex items-center justify-between gap-3 overflow-hidden h-[88px] sm:h-[112px] md:h-[128px] lg:h-[144px]"
           >
 
             {/* 1. Official Hotel Logo Container */}
-            <Link href="/" className="flex items-center group py-1 h-full min-w-0 shrink">
+            <Link href="/" className="flex items-center group py-2 h-full min-w-0 shrink">
               <div
-                className={`relative transition-all duration-300 ${isScrolled
-                  ? 'h-11 w-36 sm:h-14 sm:w-52 md:h-16 md:w-64'
-                  : 'h-12 w-40 sm:h-[72px] sm:w-60 md:h-[82px] md:w-72 lg:h-[88px] lg:w-80'
-                  }`}
+                className="relative h-[72px] w-60 sm:h-24 sm:w-80 md:h-[110px] md:w-[400px] lg:h-[124px] lg:w-[450px]"
               >
                 <Image
                   src="/logos/official-logo.png"
                   alt="Hotel Prabhupada Official Logo"
                   fill
-                  sizes="(max-width: 640px) 160px, (max-width: 768px) 240px, 320px"
+                  sizes="(max-width: 640px) 240px, (max-width: 768px) 320px, (max-width: 1024px) 400px, 450px"
                   priority
                   className="object-contain object-left filter drop-shadow-md transition-transform duration-300 group-hover:scale-[1.02]"
                 />
@@ -298,7 +294,7 @@ export const Header: React.FC = () => {
             >
               <div>
                 <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
-                  <div className="relative h-16 w-56">
+                  <div className="relative h-20 w-64">
                     <Image
                       src="/logos/official-logo.png"
                       alt="Hotel Prabhupada Logo"

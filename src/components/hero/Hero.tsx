@@ -91,8 +91,8 @@ export const Hero: React.FC = () => {
       <motion.div
         className="absolute inset-0 w-full h-[120%] -top-[10%] will-change-transform"
         style={{ y: bgY }}
-        initial={reduceMotion ? false : { scale: 1.14, opacity: 0.4 }}
-        animate={ready ? { scale: 1, opacity: 1 } : undefined}
+        initial={reduceMotion ? false : { scale: 1.14 }}
+        animate={ready ? { scale: 1 } : undefined}
         transition={{ duration: 1.8, ease: easeOut }}
       >
         {slides.map((slide, index) => (
@@ -115,7 +115,7 @@ export const Hero: React.FC = () => {
               alt={slide.alt}
               fill
               sizes="100vw"
-              priority
+              priority={index === 0}
               className="object-cover object-[center_35%] sm:object-center"
             />
             <div className="absolute inset-0 bg-[#070F1A]/35 sm:bg-[#070F1A]/40 pointer-events-none" />

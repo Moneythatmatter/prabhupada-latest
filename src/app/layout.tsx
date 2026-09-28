@@ -88,6 +88,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to TripAdvisor domains used by the widget scripts */}
+        <link rel="preconnect" href="https://www.jscache.com" />
+        <link rel="preconnect" href="https://static.tacdn.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.tripadvisor.in" />
+      </head>
       <body className="antialiased bg-[#070F1A] text-white overflow-x-hidden w-full max-w-full relative">
         {GA_MEASUREMENT_ID && (
           <>

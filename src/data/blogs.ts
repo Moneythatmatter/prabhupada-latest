@@ -341,7 +341,7 @@ export const blogs: BlogPost[] = [
     date: '2026-09-05',
     author: 'Hotel Prabhupada',
     category: 'Hotel Stay',
-    image: '/images/sea_balcony.jpg',
+    image: '/images/sea_balcony.webp',
     readTime: '5 min read',
     featured: true,
   },

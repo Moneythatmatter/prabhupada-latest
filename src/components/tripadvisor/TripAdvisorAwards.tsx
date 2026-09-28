@@ -13,12 +13,24 @@ declare global {
 const TRIPADVISOR_URL =
   'https://www.tripadvisor.in/Hotel_Review-g503703-d1150060-Reviews-Hotel_Prabhupada-Puri_Puri_District_Odisha.html';
 
-/**
- * Hook to safely load and execute TripAdvisor widgets in Next.js
- */
 function useTripAdvisorScript() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
+    const patchImgAlts = () => {
+      document.querySelectorAll<HTMLImageElement>(
+        '#TA_excellent815 img, #TA_certificateOfExcellence585 img, #CDSWIDEXC img, #CDSWIDCOE img'
+      ).forEach((img) => {
+        if (img.hasAttribute('alt')) return;
+        const isPixel = img.naturalWidth <= 1 || img.width <= 1 || img.height <= 1
+          || img.src.includes('transparent_pixel') || img.src.includes('.gif');
+        img.alt = isPixel
+          ? ''
+          : 'Hotel Prabhupada TripAdvisor Award';
+      });
+    };
+
+    const observer = new MutationObserver(patchImgAlts);
+    observer.observe(document.body, { childList: true, subtree: true, attributes: false });
 
     // Function to trigger TripAdvisor's validator
     const triggerValidation = () => {
@@ -29,6 +41,7 @@ function useTripAdvisorScript() {
       } catch (err) {
         console.warn('TripAdvisor validation error:', err);
       }
+      patchImgAlts();
     };
 
     // Load script helper
@@ -68,6 +81,7 @@ function useTripAdvisorScript() {
     const t3 = setTimeout(triggerValidation, 2500);
 
     return () => {
+      observer.disconnect();
       clearTimeout(t1);
       clearTimeout(t2);
       clearTimeout(t3);
