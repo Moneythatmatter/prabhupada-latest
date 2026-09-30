@@ -86,7 +86,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-[68svh] sm:min-h-[100svh] sm:h-[100svh] flex items-end sm:items-center justify-center bg-[#070F1A] overflow-hidden"
+      className="relative w-full min-h-[100svh] flex flex-col justify-center items-center pt-[120px] sm:pt-[150px] md:pt-[210px] lg:pt-[230px] pb-12 sm:pb-16 bg-[#070F1A] overflow-hidden"
     >
       <motion.div
         className="absolute inset-0 w-full h-[120%] -top-[10%] will-change-transform"
@@ -126,7 +126,7 @@ export const Hero: React.FC = () => {
       </motion.div>
 
       <motion.div
-        className="relative z-10 w-full max-w-[1020px] mx-auto px-5 sm:px-8 pt-[4.75rem] pb-9 sm:pt-20 sm:pb-0 text-center text-white will-change-transform"
+        className="relative z-10 w-full max-w-[1020px] mx-auto px-5 sm:px-8 text-center text-white will-change-transform"
         style={{ y: contentY, opacity: contentOpacity, scale: contentScale }}
       >
         <div className="grid grid-cols-1 grid-rows-1 items-center justify-center max-w-[880px] mx-auto">
@@ -149,7 +149,7 @@ export const Hero: React.FC = () => {
                 transition={{ duration: 0.7, delay: baseDelay, ease: easeOut }}
                 className="flex flex-col items-center mb-3 sm:mb-5"
               >
-                <span className="inline-block font-sans text-[10px] sm:text-xs font-semibold tracking-[0.24em] sm:tracking-[0.28em] uppercase text-[#E8A317]">
+                <span className="inline-block font-sans text-[11px] sm:text-xs md:text-sm font-semibold tracking-[0.24em] sm:tracking-[0.28em] uppercase text-[#E8A317] drop-shadow-md">
                   {slides[currentSlide].overline}
                 </span>
                 <motion.span

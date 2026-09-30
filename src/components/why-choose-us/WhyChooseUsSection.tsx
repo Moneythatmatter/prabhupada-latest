@@ -79,9 +79,9 @@ export const WhyChooseUsSection: React.FC = () => {
                   delay: index * 0.1,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="bg-white p-6 sm:p-8 rounded-sm border border-[#E5DECE] border-t-[3px] border-t-[#8B1E1E] hover:border-[#C5A059] hover:border-t-[#C0392B] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between h-full group"
+                className="bg-white p-6 sm:p-8 rounded-sm border border-[#E5DECE] border-t-[3px] border-t-[#8B1E1E] hover:border-[#C5A059] hover:border-t-[#C0392B] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between text-center h-full group"
               >
-                <div>
+                <div className="flex flex-col items-center">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-sm bg-[#F8F0DC] group-hover:bg-[#0C1827] flex items-center justify-center mb-5 sm:mb-6 transition-colors duration-300 border border-[#C5A059]/30">
                     <IconComponent className="w-6 h-6 text-[#C0392B] group-hover:text-[#C5A059] transition-colors duration-300" />
                   </div>
