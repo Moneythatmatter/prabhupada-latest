@@ -14,25 +14,25 @@ import {
 const slides = [
   {
     overline: 'Odisha Heritage · Sea Facing Stay',
-    title: 'Welcome to an Enchanting Wonderland',
+    title: 'A Sea-Facing Stay in Puri for Your Family and Pets',
     subtitle:
-      'Stay at the best pet friendly, sea facing hotel in Puri, Odisha. Enjoy comfortable rooms, beach views, and a perfect stay near Puri beach.',
+      'Bring your family and your four-legged companion to Hotel Prabhupada, a pet-friendly hotel on New Marine Drive in Puri, Odisha. Choose from front sea-view rooms, side sea-view balcony rooms and non-sea-view family accommodation for your coastal getaway.',
     image: '/images/official-hero1.webp',
     alt: 'Authentic Hotel Prabhupada Ocean View Puri Odisha',
   },
   {
-    overline: 'PET-FRIENDLY HOSPITALITY',
-    title: 'Best Pet-Friendly Hotel in Puri',
+    overline: 'Puri, Odisha · Sea Views · Family & Pet-Friendly Stays',
+    title: 'Pet-Friendly Hotel in Puri for Family Getaways',
     subtitle:
-      'Stay at one of the best pet-friendly hotels in Puri, where you and your furry companions can enjoy a relaxing stay with modern amenities, comfortable rooms, and warm hospitality near Puri Beach.',
+      'A family holiday feels more complete when your pet comes along. At Hotel Prabhupada, our pet-friendly hotel on New Marine Drive in Puri, Odisha, you can enjoy comfortable accommodation, warm hospitality and time together near Puri Beach.',
     image: '/images/official-hero2.webp',
     alt: 'Hotel Prabhupada Superior Sea Facing Balcony View',
   },
   {
     overline: 'BEACHFRONT LUXURY EXPERIENCE',
-    title: 'Best Beachfront Hotel in Puri',
+    title: 'Your Next Family Trip to Puri Starts Here',
     subtitle:
-      'Experience an unforgettable stay at one of the best beachfront hotels in Puri. Wake up to beautiful sea views and enjoy premium comfort on New Marine Drive Road.',
+      'Planning a family holiday in Puri with a budget in mind? Hotel Prabhupada offers non-sea-view family accommodation and sea-view room options on New Marine Drive, along with pet-friendly stays and warm Odia hospitality. Explore room rates and package inclusions to find the right fit for your next trip together.',
     image: '/images/official-hero3.webp',
     alt: 'Hotel Prabhupada New Marine Drive Puri Location',
   },
@@ -126,7 +126,7 @@ export const Hero: React.FC = () => {
       </motion.div>
 
       <motion.div
-        className="relative z-10 w-full max-w-[1320px] mx-auto px-5 sm:px-8 pt-[4.75rem] pb-9 sm:pt-20 sm:pb-0 text-center text-white will-change-transform"
+        className="relative z-10 w-full max-w-[1020px] mx-auto px-5 sm:px-8 pt-[4.75rem] pb-9 sm:pt-20 sm:pb-0 text-center text-white will-change-transform"
         style={{ y: contentY, opacity: contentOpacity, scale: contentScale }}
       >
         <div className="grid grid-cols-1 grid-rows-1 items-center justify-center max-w-[880px] mx-auto">
@@ -206,11 +206,10 @@ export const Hero: React.FC = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`h-1 rounded-full transition-all duration-300 focus:outline-none ${
-                currentSlide === index
-                  ? 'w-6 bg-[#E8A317]'
-                  : 'w-1.5 bg-white/30 hover:bg-white/60'
-              }`}
+              className={`h-1 rounded-full transition-all duration-300 focus:outline-none ${currentSlide === index
+                ? 'w-6 bg-[#E8A317]'
+                : 'w-1.5 bg-white/30 hover:bg-white/60'
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}

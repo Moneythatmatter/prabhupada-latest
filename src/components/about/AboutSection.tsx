@@ -32,33 +32,33 @@ export const AboutSection: React.FC = () => {
   const highlightCards = [
     {
       icon: MapPin,
-      title: "Best Location",
+      title: "A Coastal Stay on New Marine Drive, Puri",
       description:
-        "Nestled in the heart of Puri, Odisha, our hotel boasts the best location, offering easy access to top attractions, Swargadwar beach, and scenic ocean views, ensuring an unforgettable stay for our guests.",
+        "Hotel Prabhupada is located on New Marine Drive near Puri Lighthouse. Our sea-facing, pet-friendly hotel offers a welcoming base for family holidays, beach outings and exploring Puri.",
     },
     {
       icon: ShieldCheck,
-      title: "Best Rate Guarantee",
+      title: "Book Direct with Our Best Rate Guarantee",
       description:
-        "Book directly with us and enjoy our Best Rate Guarantee, ensuring you receive the lowest available rates for your stay.",
+        "Planning a family getaway or a stay with your pet? Book directly with Hotel Prabhupada and ask about our Best Rate Guarantee, available offers and the terms for your travel dates.",
     },
     {
       icon: Clock,
-      title: "Reservations 24/7",
+      title: "Online Reservations, Anytime",
       description:
-        "Reservations available round-the-clock, ensuring seamless booking convenience for our guests, anytime, anywhere.",
+        "Check room availability and book your Puri stay online, 24/7. Before reserving, compare room categories to choose between front sea views, side sea views and non-sea-view family accommodation.",
     },
     {
       icon: Utensils,
-      title: "Complimentary Breakfast",
+      title: "Breakfast Before You Explore Puri",
       description:
-        "Enjoy a complimentary breakfast buffet featuring a delicious array of options during your stay at our hotel.",
+        "Enjoy a breakfast buffet before a beach outing or a day exploring Puri with your family. Check your room package for complimentary breakfast inclusions and any children’s meal charges.",
     },
     {
       icon: CalendarCheck,
-      title: "Flexible Cancellation Policy",
+      title: "Cancellation Terms for Your Booking",
       description:
-        "Our flexible cancellation policy provides greater convenience and peace of mind should your travel plans change.",
+        "Know your options if your travel plans change. Review the cancellation deadline, refund conditions and applicable charges for your selected rate before confirming your stay.",
     },
   ];
 
@@ -125,37 +125,32 @@ export const AboutSection: React.FC = () => {
             style={{ y: textY }}
           >
             <span className="inline-block font-sans text-[10px] sm:text-xs font-semibold tracking-[0.22em] sm:tracking-[0.28em] uppercase text-[#8B1E1E] mb-3 sm:mb-4">
-              Coastal Heritage
+              Coastal Comfort · Odia Hospitality
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-[#0C1827] tracking-tight leading-[1.15] mb-3 sm:mb-4">
-              About Hotel Prabhupada
+              About Hotel Prabhupada — A Pet-Friendly, Sea-Facing Hotel in Puri
             </h2>
             <PatachitraDivider className="mb-6 sm:mb-8" />
 
             <div className="max-w-xl mx-auto lg:mx-0 space-y-4 sm:space-y-6 font-sans text-sm sm:text-base md:text-lg text-[#64748B] font-light leading-relaxed mb-8 sm:mb-10 text-left">
               <p>
-                Welcome to Hotel Prabhupada, a premier destination for comfort
-                and style in Puri, Odisha — where costal elegance meets
-                Divinity. Our hotel offers a blend of elegance and convenience,
-                featuring a variety of rooms and suites designed to provide a
-                restful and enjoyable stay. Each room is equipped with modern
-                amenities to ensure your comfort and satisfaction.
+                At Hotel Prabhupada, a holiday in Puri means time by the sea, exploring Odisha’s heritage and enjoying the company of those you love—including your pets. Located on New Marine Drive near the lighthouse, our pet-friendly hotel welcomes families and travellers looking for a comfortable coastal stay in Puri, Odisha.
               </p>
               <p className="hidden sm:block">
-                Ideally situated in Puri, Odisha, Hotel Prabhupada offers easy
-                access to the city&apos;s attractions, business centers, and
-                entertainment venues. Whether you are traveling for business or
-                pleasure, our location is perfect for exploring — read our{" "}
+                Choose from front <Link
+                  href="/rooms"
+                  className="text-[#8B1E1E] hover:text-[#C5A059] font-medium underline underline-offset-4 decoration-[#8B1E1E]/40 hover:decoration-[#C5A059] transition-colors"
+                >sea-view rooms</Link> and suites, side sea-view balcony rooms or non-sea-view family accommodation. Whether you’re planning a family beach holiday or visiting Puri for Jagannath Temple darshan, you can settle in, enjoy a meal at our in-house restaurant and explore at your own pace.{" "}
+              </p>
+              <p>Travelling with children, bringing a pet or arriving by car? Speak with our team about room occupancy, pet policies, parking availability and guest safety arrangements before booking. We’ll help you understand the details that matter to your stay.</p>
+              <p>For ideas on what to see and how to plan your visit, explore our{" "}
                 <Link
                   href="/blog"
                   className="text-[#8B1E1E] hover:text-[#C5A059] font-medium underline underline-offset-4 decoration-[#8B1E1E]/40 hover:decoration-[#C5A059] transition-colors"
                 >
                   Puri travel & heritage blog
                 </Link>{" "}
-                for local itineraries and stay guides. Our dedicated staff is
-                committed to providing exceptional service and ensuring that
-                every guest has a memorable stay.
-              </p>
+                , with local itineraries and practical stay guides.</p>
             </div>
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">

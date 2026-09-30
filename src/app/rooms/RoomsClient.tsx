@@ -55,7 +55,7 @@ const roomsData = [
     badgeTitle: "Deluxe Balcony (Side Sea View)",
     description:
       "Thoughtfully designed for both spiritual and leisure travelers, our Deluxe Balcony (Side Sea View) features a comfortable bed, an en-suite bathroom, a well-lit desk area, and a private balcony overlooking coastal ocean vistas with warm Odia hospitality.",
-    image: "/images/official-hero2.webp",
+    image: "/images/deluxe-balcony.png",
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
       "King-size bed",

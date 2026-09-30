@@ -18,27 +18,27 @@ interface WhyChooseItem {
 const whyChooseItems: WhyChooseItem[] = [
   {
     icon: Landmark,
-    title: "Temple Darshan Assistance",
+    title: "Jagannath Temple Darshan Assistance",
     description:
-      "Thoughtful assistance with temple darshan arrangements, making your spiritual visit more seamless.",
+      "Planning a visit to Shree Jagannath Temple during your Puri stay? Our team can help with local guidance and darshan arrangements, so you can prepare for your visit. Temple entry and darshan remain subject to temple rules.",
   },
   {
     icon: Compass,
-    title: "Travel Assistance",
+    title: "Local Travel Assistance in Puri",
     description:
-      "From local guidance to travel arrangements, we are here to make exploring Puri easier.",
+      "Not sure where to begin exploring Puri? Speak with our team for local recommendations and help with travel arrangements, whether you’re planning temple visits, beach outings or sightseeing with your family.",
   },
   {
     icon: PawPrint,
-    title: "Pet-Friendly Stay",
+    title: "A Pet-Friendly Stay for the Whole Family",
     description:
-      "Because your four-legged companions deserve to be part of the journey too.",
+      "Bring your four-legged companion along to Hotel Prabhupada, our pet-friendly hotel on New Marine Drive, Puri. Before booking, ask about suitable rooms, pet policies and applicable charges to help plan a comfortable stay together.",
   },
   {
     icon: Droplets,
-    title: "Complimentary Steam",
+    title: "Complimentary Steam to Help You Unwind",
     description:
-      "Unwind and refresh with a complimentary steam experience after a day in Puri.",
+      "Take a relaxing break with a complimentary steam session at Hotel Prabhupada after a day exploring Puri. Our team can help you check session timings, availability and any booking requirements.",
   },
 ];
 

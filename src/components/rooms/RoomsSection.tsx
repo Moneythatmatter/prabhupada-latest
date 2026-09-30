@@ -42,7 +42,7 @@ const featuredRooms = [
     badgeTitle: "SUPERIOR Deluxe Balcony (Side Sea View)",
     description:
       "Welcome to Hotel Prabhupada, where comfort meets luxury. Our Superior Deluxe Balcony (Side Sea View) offers the perfect blend of style and functionality, featuring high-speed Wi-Fi, flat-screen TVs, and plush bedding.",
-    image: "/images/superior-deluxe-balcony-view.png",
+    image: "/images/deluxe-balcony.png",
     bookingUrl:
       "https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000009",
     exploreUrl: "/rooms",

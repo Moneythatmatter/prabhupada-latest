@@ -36,18 +36,18 @@ type Facility = {
 
 const facilities: Facility[] = [
   {
-    title: "Swimming Pool",
+    title: "Outdoor Swimming Pool",
     description:
-      "Refresh in our outdoor pool after a day by the Puri coast — blue water, open sky, and easy poolside lounging.",
+      "Looking for a hotel in Puri with a swimming pool? Hotel Prabhupada has an outdoor pool where you can enjoy a swim or relax by the water between sightseeing and beach outings.",
     icon: Waves,
     image: "/images/swimming_pool.webp",
     alt: "Outdoor swimming pool and sun deck at Hotel Prabhupada Puri",
     number: "01",
   },
   {
-    title: "Conference Hall",
+    title: "Conference Hall for Meetings & Gatherings",
     description:
-      "A well-equipped space for meetings, celebrations, and gatherings — ready for business or family occasions.",
+      "Bring your colleagues or family together at Hotel Prabhupada’s conference hall in Puri. The space welcomes business meetings, celebrations and group gatherings. Speak with our team about seating, equipment and arrangements for your occasion.",
     icon: Presentation,
     image: "/images/conference_hall.webp",
     alt: "Conference and banquet hall setup for corporate meetings and family events",
@@ -56,34 +56,34 @@ const facilities: Facility[] = [
   {
     title: "Guest Lounge",
     description:
-      "A calm shared lounge to relax, connect, and unwind between temple visits and beach walks.",
+      "Take a comfortable break in our shared guest lounge. Whether you’re returning from Jagannath Temple darshan, catching up with family or planning your next outing, there’s a welcoming place to sit and unwind.",
     icon: Sofa,
     image: "/images/guest_lounge.webp",
     alt: "Relaxing guest lounge with comfortable seating at Hotel Prabhupada",
     number: "03",
   },
   {
-    title: "Wellness",
+    title: "Spa & Steam Sessions",
     description:
-      "Rejuvenate with soothing spa treatments and steam sessions, perfect for restoring comfort and calm after a day of exploring Puri.",
+      "Make room for some downtime during your Puri holiday. Hotel Prabhupada offers spa treatments and steam sessions to help you relax after exploring. Ask our team about available treatments, timings and charges.",
     icon: Flower2,
     image: "/images/spa.webp",
     alt: "Ayurvedic wellness and rejuvenating spa therapies at Hotel Prabhupada",
     number: "04",
   },
   {
-    title: "Restaurant",
+    title: "In-House Restaurant with Odia Flavours",
     description:
-      "In-house dining with Odia flavours and multi-cuisine options, served in a warm, welcoming setting.",
+      "Enjoy a meal together without heading out of the hotel. Our in-house restaurant in Puri serves Odia dishes alongside multi-cuisine options, giving families and travelling groups a choice of familiar favourites and local flavours.",
     icon: UtensilsCrossed,
     image: "/images/oris_restaurant.webp",
     alt: "Oris restaurant serving authentic Odia delicacies and multi-cuisine meals",
     number: "05",
   },
   {
-    title: "Lawn",
+    title: "Open Lawn on New Marine Drive",
     description:
-      "Open green lawn for leisure, photos, and outdoor moments — quiet greenery on New Marine Drive.",
+      "Spend a little time outdoors on Hotel Prabhupada’s green lawn. It’s a pleasant spot for a quiet break, family photographs or a relaxed conversation during your stay on New Marine Drive, Puri.",
     icon: Trees,
     image: "/images/lawn.webp",
     alt: "Lush landscaped open garden lawn facing New Marine Drive Puri",

@@ -9,18 +9,18 @@ import { FloatingActionMenu } from '@/components/layout/FloatingActionMenu';
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-3ZQ87ZQPXK';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://hotelprabhupada.com'),
-  title: 'Best Pet Friendly Sea Facing Hotel in Puri Odisha | Hotel Prabhupada',
+  metadataBase: new URL('https://www.hotelprabhupada.com'),
+  title: 'Pet-Friendly Hotel in Puri for Families | Hotel Prabhupada',
   description:
-    'Stay at the best pet friendly, sea facing hotel in Puri, Odisha. Enjoy comfortable rooms, beach views, and a perfect stay near Puri beach.',
+    'Plan a family getaway with your pet at Hotel Prabhupada in Puri. Explore sea-view rooms, enjoy coastal comfort and book your stay on New Marine Drive.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Hotel Prabhupada Puri | Best Pet Friendly Sea Facing Hotel',
+    title: 'Pet-Friendly Hotel in Puri for Families | Hotel Prabhupada',
     description:
-      'Stay at the best pet friendly, sea facing hotel in Puri, Odisha. Enjoy comfortable rooms, beach views, and a perfect stay near Puri beach.',
-    url: 'https://hotelprabhupada.com',
+      'Plan a family getaway with your pet at Hotel Prabhupada in Puri. Explore sea-view rooms, enjoy coastal comfort and book your stay on New Marine Drive.',
+    url: 'https://www.hotelprabhupada.com',
     siteName: 'Hotel Prabhupada',
     locale: 'en_IN',
     type: 'website',
