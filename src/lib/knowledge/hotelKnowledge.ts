@@ -45,12 +45,12 @@ export const HOTEL_INFO = {
   },
   policies: {
     checkIn: {
-      standardTime: '10:00 AM',
+      standardTime: '11:00 AM',
       earlyCheckIn: 'Early check-in requests are handled according to room availability and current hotel policy on a chargeable basis.',
       idRequirement: 'Every Indian resident guest must carry valid proof of identity (Passport, Driving License, AADHAAR Card, or Voter ID). PAN Card is NOT accepted. Foreign nationals must present a valid Passport and valid Visa.',
     },
     checkOut: {
-      standardTime: '08:00 AM',
+      standardTime: '09:00 AM',
       lateCheckOut: 'Late check-out requests are handled according to room availability and current hotel policy on a chargeable basis.',
       procedure: 'Guests settle any incidental bills and return room keys at the reception during departure.',
     },

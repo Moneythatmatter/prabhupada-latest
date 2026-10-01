@@ -57,6 +57,7 @@ const WHATSAPP_URL =
 
 export const FloatingActionMenu: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
   const mobileRef = useRef<HTMLDivElement>(null);
 
   // Click outside to close mobile radial menu
@@ -68,6 +69,15 @@ export const FloatingActionMenu: React.FC = () => {
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const handleChatState = (e: Event) => {
+      const customEvent = e as CustomEvent<{ isOpen: boolean }>;
+      setIsChatOpen(Boolean(customEvent.detail?.isOpen));
+    };
+    window.addEventListener('chatbot-state-change', handleChatState);
+    return () => window.removeEventListener('chatbot-state-change', handleChatState);
   }, []);
 
   const handleOpenChatbot = () => {
@@ -251,7 +261,8 @@ export const FloatingActionMenu: React.FC = () => {
         </div>
       </div>
 
-      <div className="hidden md:flex fixed bottom-6 right-6 z-[997] flex-col gap-3.5 items-end select-none">
+      <div className={`hidden md:flex fixed bottom-6 right-6 z-[997] flex-col gap-3.5 items-end select-none transition-opacity duration-200 ${isChatOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}>
         {/* AI Chatbot Button */}
         <div className="relative group flex items-center flex-row-reverse">
           <motion.button

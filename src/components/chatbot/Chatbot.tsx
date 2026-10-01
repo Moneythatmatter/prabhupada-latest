@@ -57,7 +57,36 @@ export const Chatbot: React.FC = () => {
     }
   }, [messages]);
 
-  // 3. Listen for open-chatbot event from FloatingActionMenu
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 24);
+    };
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    window.dispatchEvent(
+      new CustomEvent('chatbot-state-change', { detail: { isOpen } })
+    );
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+      return () => window.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [isOpen]);
+
+  // 6. Listen for open-chatbot event from FloatingActionMenu
   useEffect(() => {
     const handleOpenChat = () => setIsOpen(true);
     window.addEventListener('open-chatbot', handleOpenChat);
@@ -187,7 +216,10 @@ export const Chatbot: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 25, scale: 0.95 }}
             transition={{ duration: 0.26, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed z-[999] inset-x-3 bottom-24 top-auto sm:inset-auto sm:bottom-28 sm:right-6 w-auto sm:w-[410px] h-[78vh] sm:h-[580px] max-h-[640px] flex"
+            className={`fixed z-[1001] inset-x-3 bottom-24 top-auto sm:inset-auto sm:bottom-6 sm:right-6 w-auto sm:w-[410px] h-[78vh] sm:h-[580px] flex transition-[max-height] duration-300 ease-out ${isScrolled
+                ? 'max-h-[calc(100dvh-125px)] sm:max-h-[calc(100dvh-215px)]'
+                : 'max-h-[calc(100dvh-125px)] sm:max-h-[calc(100dvh-265px)]'
+              }`}
           >
             <ChatWindow
               messages={messages}

@@ -388,11 +388,11 @@ export const HOTEL_POLICIES = {
     shortTitle: "Timings",
     badge: "Daily Operations",
     iconName: "Clock",
-    standardCheckIn: "10:00 AM",
-    standardCheckOut: "08:00 AM",
+    standardCheckIn: "11:00 AM",
+    standardCheckOut: "09:00 AM",
     rules: [
-      { text: "Standard Check-in time is 10:00 AM." },
-      { text: "Standard Check-out time is 08:00 AM." },
+      { text: "Standard Check-in time is 11:00 AM." },
+      { text: "Standard Check-out time is 09:00 AM." },
       {
         text: "Early check-in is subject to room availability on a chargeable basis.",
       },

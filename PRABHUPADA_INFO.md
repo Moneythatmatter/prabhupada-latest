@@ -666,9 +666,8 @@ Guests may use the official reservation contact details for room enquiries, book
 
 Hotel Prabhupada's approved check-in and check-out timings should be maintained in the central hotel information database.
 
-Current check-in time: To be confirmed and updated by Hotel Prabhupada management.
-
-Current check-out time: To be confirmed and updated by Hotel Prabhupada management.
+Current check-in time: 11:00 AM
+Current check-out time: 09:00 AM
 
 Early check-in requests are handled according to room availability and current hotel policy.
 
