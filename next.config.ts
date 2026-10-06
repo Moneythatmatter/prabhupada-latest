@@ -16,6 +16,24 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/',
+        has: [{ type: 'query', key: 'nuss_footer' }],
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/',
+        has: [{ type: 'query', key: 'nuss_mega_menu' }],
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/',
+        has: [{ type: 'query', key: 'sa' }],
+        destination: '/',
+        permanent: true,
+      },
+      {
         source: '/blog/best-4-star-hotel-in-puri-near-sea-beach-under-4000',
         destination: '/blog/best-3-star-hotel-in-puri-near-sea-beach-starting-at-4000',
         permanent: true,
@@ -118,6 +136,16 @@ const nextConfig: NextConfig = {
       {
         source: '/index.html',
         destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/terms-and-conditions.html',
+        destination: '/terms-conditions',
+        permanent: true,
+      },
+      {
+        source: '/terms-and-conditions',
+        destination: '/terms-conditions',
         permanent: true,
       },
     ];
