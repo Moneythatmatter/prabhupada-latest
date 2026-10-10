@@ -83,10 +83,17 @@ export const Footer: React.FC = () => {
               pet-friendly stay, and scenic ocean views on New Marine Drive.
             </p>
             <div className="flex flex-wrap items-center gap-3">
-              <div className="inline-flex items-center gap-2 text-[#E8A317] font-sans text-[10px] sm:text-xs font-medium tracking-widest uppercase bg-[#C0392B]/15 border border-[#C5A059]/30 px-3 sm:px-4 py-2 rounded-sm">
+              <a
+                href="https://www.google.co.in/maps/place/Hotel+Prabhupada/@19.7899492,85.8044392,17z/data=!3m1!4b1!4m20!1m10!3m9!1s0x3a19c5ccce332e3b:0x3e5550da010583ec!2sHotel+Prabhupada!5m2!4m1!1i2!8m2!3d19.7899492!4d85.8070141!16s%2Fg%2F11b6dcvt28!3m8!1s0x3a19c5ccce332e3b:0x3e5550da010583ec!5m2!4m1!1i2!8m2!3d19.7899492!4d85.8070141!16s%2Fg%2F11b6dcvt28?entry=ttu"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Hotel Prabhupada on Google Maps"
+                className="inline-flex items-center gap-2 text-[#E8A317] font-sans text-[10px] sm:text-xs font-medium tracking-widest uppercase bg-[#C0392B]/15 hover:bg-[#C0392B]/25 border border-[#C5A059]/30 hover:border-[#E8A317] px-3 sm:px-4 py-2 rounded-sm transition-all duration-200"
+                title="View location on Google Maps"
+              >
                 <MapPin className="w-3.5 h-3.5 shrink-0" /> New Marine Drive
                 Road, Puri
-              </div>
+              </a>
               <div className="flex items-center gap-2">
                 <a
                   href="https://www.facebook.com/share/1CwS7yEET7/"
@@ -301,9 +308,15 @@ export const Footer: React.FC = () => {
               <ul className="space-y-4 font-sans text-sm font-light text-white/80 list-none p-0 m-0">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-[#C0392B] shrink-0 mt-0.5" />
-                  <span>
+                  <a
+                    href="https://www.google.co.in/maps/place/Hotel+Prabhupada/@19.7899492,85.8044392,17z/data=!3m1!4b1!4m20!1m10!3m9!1s0x3a19c5ccce332e3b:0x3e5550da010583ec!2sHotel+Prabhupada!5m2!4m1!1i2!8m2!3d19.7899492!4d85.8070141!16s%2Fg%2F11b6dcvt28!3m8!1s0x3a19c5ccce332e3b:0x3e5550da010583ec!5m2!4m1!1i2!8m2!3d19.7899492!4d85.8070141!16s%2Fg%2F11b6dcvt28?entry=ttu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#C5A059] transition-colors"
+                    title="View location on Google Maps"
+                  >
                     New Marine Drive Road, Near light house, Puri, Odisha 752001
-                  </span>
+                  </a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-[#C0392B] shrink-0" />
