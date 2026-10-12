@@ -85,6 +85,19 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
   };
 
   const renderParagraph = (text: string, index: number) => {
+    // Sub-heading (e.g. ### Heading)
+    if (text.startsWith('### ')) {
+      const title = text.replace(/^###\s+/, '');
+      return (
+        <div key={index} className="pt-4 pb-1 mt-6">
+          <h3 className="font-serif text-xl sm:text-2xl text-[#0C1827] font-semibold flex items-center gap-2.5">
+            <span className="w-2 h-2 rounded-full bg-[#8B1E1E] inline-block shrink-0" />
+            {renderFormattedText(title)}
+          </h3>
+        </div>
+      );
+    }
+
     // Section Heading (e.g. ## Heading)
     if (text.startsWith('## ')) {
       const title = text.replace(/^##\s+/, '');
@@ -235,7 +248,7 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
                         </button>
                         {isOpen && (
                           <div className="px-5 pb-5 pt-1 text-sm sm:text-base text-[#475569] leading-relaxed border-t border-[#E5DECE]/50 font-sans font-light bg-white/50">
-                            {faq.answer}
+                            {renderFormattedText(faq.answer)}
                           </div>
                         )}
                       </div>
