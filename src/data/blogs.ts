@@ -20,6 +20,103 @@ export type BlogPost = {
 /** Hotel Prabhupada blog posts — travel, stay tips & Puri heritage */
 export const blogs: BlogPost[] = [
   {
+    slug: 'planning-a-family-trip-from-kolkata-to-puri',
+    title:
+      'Planning a Family Trip from Kolkata to Puri? Best Hotels, Travel Tips and Booking Guide',
+    excerpt:
+      'A family trip from Kolkata to Puri brings together time by the sea, visits to sacred places and opportunities to explore Odisha’s culture. From travel options to family accommodations and 3-day itineraries, here is everything you need to plan a memorable stay.',
+    content: [
+      'A family trip from Kolkata to Puri brings together time by the sea, visits to sacred places and opportunities to explore Odisha’s culture. Whether you are travelling with children, parents or an extended family, a little planning can make the journey more comfortable and help you make the most of your stay.',
+      'From choosing the right travel option to finding suitable family accommodation, there are a few things worth considering before you leave. This guide covers how to plan a Kolkata to Puri family trip, what to include in a three-day itinerary and how to choose among the many hotels in Puri.',
+      '## How to Travel from Kolkata to Puri with Family',
+      'The first step in [planning your Puri family trip](https://www.hotelprabhupada.com/) is choosing how to reach the destination. Your decision will depend on your budget, travel dates, the age of your family members and how much time you want to spend travelling.',
+      '- By train: For many families, travelling by train is a convenient option. Several services connect Kolkata and Puri, with departures from stations such as Howrah and Shalimar. Journey times and availability vary by train, so check the latest schedule and book through the official railway booking platform before travelling. If you are travelling with young children or elderly parents, consider your preferred departure time, seating or berth arrangements and the distance from your arrival station to your hotel.',
+      '- By car: Driving gives your family greater flexibility to stop for meals, refreshments and breaks along the way. Plan your departure, check the route and allow extra time for traffic, road conditions and rest stops. If you are travelling with children, carry water, snacks and any essentials they may need during the journey.',
+      '- By air: Families who prefer flying can check flights to Bhubaneswar and arrange onward road travel to Puri. Remember to account for airport transfers and waiting time when comparing the total journey.',
+      'Whichever option you choose, confirm your travel arrangements and hotel check-in details before departure.',
+      '## How to Choose the Best Hotels in Puri for Families',
+      "Choosing accommodation is an important part of planning a family holiday. The [best hotels in Puri for families travelling from Kolkata](https://www.hotelprabhupada.com/) are not necessarily the most expensive ones. The right choice depends on your group's size, preferred location, room requirements and the facilities you expect during your stay.",
+      'Here are some practical considerations when comparing family hotels in Puri:',
+      '- Room size and occupancy: Check how many guests each room can accommodate and whether the sleeping arrangements suit your family. Hotels in Puri with quad rooms for families can be useful when travelling with children or several family members. If your group needs more space, compare suites and other room categories before booking.',
+      '- Location: Consider whether you want to stay close to the beach, within convenient reach of Jagannath Temple or somewhere that offers access to both. Hotels near Puri Beach appeal to families who want to enjoy the coastline, while hotels near Jagannath Temple may suit travellers prioritising temple visits.',
+      '- Room views and balconies: Sea-facing rooms can make the stay more memorable, especially for families who enjoy waking up to ocean views. If you prefer an outdoor space to sit together, look for family hotel options in Puri with balcony rooms and check whether the balcony offers a front or side sea view.',
+      '- Food and dining options: Food is an important consideration when travelling with children or elderly family members. Look for hotels with an in-house restaurant, varied meal options and convenient dining timings. If your family wants to try local Odia cuisine while also having familiar dishes available, check the restaurant menu before booking. An in-house dining option can also save you from having to go out for every meal after a long day of sightseeing.',
+      '- Other essential facilities: Air conditioning, Wi-Fi, room service, housekeeping and parking can make a family stay more convenient. If you are travelling with young children or senior family members, consider which facilities will make the stay easier for everyone.',
+      "- Booking terms: Before confirming your reservation, review the total price, included meals, cancellation policy, extra-person charges and check-in requirements. Families travelling with pets should also check the hotel's pet policy and applicable fees.",
+      '## Where to Stay in Puri with Family Near the Beach',
+      'If spending time by the sea is part of your holiday plan, staying along New Marine Drive offers a coastal setting for your Puri family trip. This area is worth considering when comparing sea-facing hotels in Puri, particularly if you want beach access alongside facilities for a comfortable stay.',
+      '[Hotel Prabhupada](https://www.hotelprabhupada.com/) is located on New Marine Drive Road, near Puri Lighthouse. It offers several room categories, including a Family Quad (Non Sea View), Executive (Front Sea View), Superior Deluxe Balcony (Side Sea View) and Suite (Front Sea View).',
+      'The Family Quad offers two beds, making it an option for families who need shared accommodation. Travellers who prioritise ocean views can explore the front sea-view rooms and suites, while the Superior Deluxe Balcony provides a side sea view. Check the current occupancy limits and room details with the hotel to find the best fit for your group.',
+      "Hotel Prabhupada also has an in-house restaurant serving Odia and multi-cuisine dishes, an outdoor swimming pool, a guest lounge and parking. Its location makes it a consideration for families planning beach outings alongside visits to Puri's cultural and religious attractions.",
+      'For families looking for a [family-friendly hotel on New Marine Drive, Puri](https://www.hotelprabhupada.com/contactus), the choice of room can help balance comfort, views and budget. Explore the available options on the [Hotel Prabhupada website](https://www.hotelprabhupada.com/) before making your reservation.',
+      '## A Simple Three-Day Puri Family Trip Itinerary',
+      "A three-day itinerary can help you balance sightseeing with time to relax. Adjust the schedule according to your arrival time, family members' preferences and local conditions.",
+      '### Day 1: Arrive and Enjoy the Beach',
+      'After reaching Puri, check in to your hotel and take some time to settle in. If you arrive early enough, spend the evening enjoying Puri Beach or relaxing at your hotel. A leisurely first day can be especially helpful when travelling with children or elderly family members.',
+      '### Day 2: Visit Jagannath Temple and Explore Puri',
+      'Dedicate part of the day to Shree Jagannath Temple if a temple visit is part of your plans. Check the latest temple rules and timings before visiting, and allow time for local traffic and queues. You can spend the remaining time exploring local markets, trying Odia food or returning to the beach.',
+      '### Day 3: Explore at Your Own Pace',
+      'Depending on your departure time, enjoy breakfast, take a short beach walk or explore another local attraction. Families with additional time may consider a separate excursion to Konark, including the Sun Temple, after checking travel time and opening arrangements. Avoid overloading the final day if you need to catch a train or continue your onward journey.',
+      '## Tips for Booking a Family Hotel in Puri',
+      'Hotel booking in Puri can become more competitive during holidays, festivals and popular travel periods. Planning ahead gives you more time to compare room categories and understand the terms before paying.',
+      '- Book around your travel dates: Confirm transport first and then choose accommodation that matches your arrival and departure times.',
+      '- Compare the total cost: Check taxes, meal inclusions, extra-person charges and any additional fees instead of comparing room rates alone.',
+      '- Choose the right room category: A family room may be more practical than booking multiple rooms, depending on your group size and preferences.',
+      '- Check the location carefully: Consider your planned visits, preferred beach access and the time needed to reach major attractions.',
+      '- Read the cancellation policy: Understand deadlines, refunds and applicable charges before confirming your reservation.',
+      '- Contact the hotel directly: If you have specific requirements involving children, elderly guests, pets or room views, confirm the arrangements before booking.',
+      "For direct hotel booking in Puri, you can check room availability, compare categories and review the applicable booking conditions on the hotel's official website.",
+      '## Plan Your Family Stay at Hotel Prabhupada',
+      'A memorable family holiday is not only about the places you visit. It is also about having a comfortable place to return to after a day of sightseeing, temple visits and time by the sea.',
+      'Hotel Prabhupada, on New Marine Drive near Puri Lighthouse, offers room options for different travel preferences, including family accommodation, front sea-view rooms and a side sea-view balcony room. With an in-house restaurant, outdoor swimming pool, guest lounge and parking, it provides facilities to consider when planning your family stay.',
+      'If you are [planning a family trip from Kolkata to Puri](https://www.hotelprabhupada.com/contactus), explore the available rooms and confirm the details that matter to your group before booking.',
+      'Visit [Hotel Prabhupada website](https://www.hotelprabhupada.com/) to explore accommodation options and plan your stay in Puri.',
+    ],
+    faqs: [
+      {
+        question: 'How can I plan a family trip from Kolkata to Puri?',
+        answer:
+          'Choose your travel option, book your hotel in advance and plan visits to Puri Beach, Jagannath Temple and other local attractions according to your family’s schedule.',
+      },
+      {
+        question: 'How many days are enough for a family trip to Puri?',
+        answer:
+          'Three days are usually enough to explore Puri’s main attractions, visit Jagannath Temple and spend time at the beach. You can add more days if you want to visit nearby destinations such as Konark.',
+      },
+      {
+        question: 'How can I travel from Kolkata to Puri with my family?',
+        answer:
+          'You can travel by train, drive by car or fly to Bhubaneswar and continue to Puri by road. Choose the option that best suits your budget, travel time and family’s comfort.',
+      },
+      {
+        question: 'How do I choose the right hotel in Puri for my family?',
+        answer:
+          'Consider the hotel’s location, room size, bed arrangements, dining options and facilities. Check the total cost and confirm that the room can accommodate everyone in your family before booking.',
+      },
+      {
+        question: 'Should I book a hotel near Puri Beach or Jagannath Temple?',
+        answer:
+          'Choose a hotel near the beach if you want to spend more time by the sea. If temple visits are your priority, consider accommodation that offers convenient access to Jagannath Temple.',
+      },
+      {
+        question: 'What should I check before booking a family hotel in Puri?',
+        answer:
+          'Confirm room availability, occupancy limits, meal options, facilities, cancellation terms and any additional charges. If you need a sea-view room or balcony, verify the specific room category before confirming your booking.',
+      },
+      {
+        question: 'When should I book a hotel for a family trip to Puri?',
+        answer:
+          'Book early if you plan to travel during school holidays, festivals or long weekends. Advance booking gives you more time to compare rooms and coordinate your stay with your travel dates.',
+      },
+    ],
+    date: '2026-10-24',
+    author: 'Hotel Prabhupada',
+    category: 'Travel Guide',
+    image: '/images/blogs/kolkata-to-puri-family-trip.webp',
+    readTime: '6 min read',
+    featured: true,
+  },
+  {
     slug: 'family-quad-and-balcony-rooms-in-puri-compare-and-book-direct',
     title: 'Family Quad and Balcony Rooms in Puri: Compare and Book Direct',
     excerpt:
