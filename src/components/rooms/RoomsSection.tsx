@@ -15,7 +15,7 @@ import {
   PatachitraDivider,
   LotusMotif,
 } from "@/components/patachitra/PatachitraMotifs";
-import { ParallaxImage } from "@/components/motion/ParallaxImage";
+import { RoomImageCarousel } from "@/components/rooms/RoomImageCarousel";
 import { FadeRise } from "@/hooks/useParallax";
 
 const featuredRooms = [
@@ -25,6 +25,14 @@ const featuredRooms = [
     description:
       "At Hotel Prabhupada, we pride ourselves in offering a home away from home. Our Family Quad (Non Sea View) rooms are thoughtfully designed to meet your needs, whether you're visiting for business or pleasure. Each room comes with top-tier amenities, including 2 comfortable beds, an en-suite bathroom, and a well-lit desk area.",
     image: "/images/family-quad.png",
+    images: [
+      "/images/family-quad.png",
+      "/rooms/room-seating-area.webp",
+      "/rooms/room-tea-station.webp",
+      "/rooms/room-kettle-amenities.webp",
+      "/rooms/bathroom.webp",
+      "/rooms/sink.webp",
+    ],
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     exploreUrl: "/rooms",
   },
@@ -34,6 +42,14 @@ const featuredRooms = [
     description:
       "Designed as a sanctuary of peace and comfort, our Executive (Front Sea View) rooms feature elegant interiors, plush furnishings, and modern technology. Enjoy direct ocean views and true Odia hospitality for both short and extended stays.",
     image: "/images/room-executive.webp",
+    images: [
+      "/images/room-executive.webp",
+      "/rooms/suite-sea-view-window.webp",
+      "/rooms/room-seating-area.webp",
+      "/rooms/room-tea-station.webp",
+      "/rooms/bathroom.webp",
+      "/rooms/sink.webp",
+    ],
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     exploreUrl: "/rooms",
   },
@@ -43,6 +59,9 @@ const featuredRooms = [
     description:
       "Welcome to Hotel Prabhupada, where comfort meets luxury. Our Superior Deluxe Balcony (Side Sea View) offers the perfect blend of style and functionality, featuring high-speed Wi-Fi, flat-screen TVs, and plush bedding.",
     image: "/images/deluxe-balcony.png",
+    images: [
+      "/images/deluxe-balcony.png",
+    ],
     bookingUrl:
       "https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000009",
     exploreUrl: "/rooms",
@@ -52,7 +71,17 @@ const featuredRooms = [
     badgeTitle: "Suite (Front Sea View)",
     description:
       "Discover the ultimate in relaxation at Hotel Prabhupada. Our Suite (Front Sea View) offers a tranquil retreat with contemporary décor, premium bedding, and essential amenities.",
-    image: "/images/room-suite.webp",
+    image: "/rooms/suite-front-sea-view.webp",
+    images: [
+      "/rooms/suite-front-sea-view.webp",
+      "/rooms/suite-front-sea-view_2.webp",
+      "/rooms/suite-living-area.webp",
+      "/rooms/suite-work-desk.webp",
+      "/rooms/suite-sea-view-window.webp",
+      "/rooms/bathroom.webp",
+      "/rooms/sink.webp",
+      "/rooms/room-tea-station.webp",
+    ],
     bookingUrl:
       "https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000010",
     exploreUrl: "/rooms",
@@ -165,40 +194,12 @@ export const RoomsSection: React.FC = () => {
               className="pata-card-dark relative rounded-sm overflow-hidden transition-shadow duration-500 hover:border-[#E8A317] hover:shadow-[0_24px_50px_rgba(192,57,43,0.2)] flex flex-col justify-between group"
             >
               <div>
-                <div className="relative h-[240px] sm:h-[340px] md:h-[400px] w-full overflow-hidden bg-[#070F1A]">
-                  {room.image ? (
-                    <>
-                      <ParallaxImage
-                        src={room.image}
-                        alt={room.title}
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="absolute inset-0"
-                        imageClassName="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                        distance={56}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0C1827] via-[#0C1827]/20 to-transparent opacity-90" />
-                    </>
-                  ) : (
-                    <div className="absolute inset-0 bg-[#070F1A] flex flex-col items-center justify-center p-6 text-center">
-                      <div className="w-14 h-14 rounded-sm bg-[#C5A059]/10 border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] mb-3">
-                        <Camera className="w-6 h-6" />
-                      </div>
-                      <span className="font-serif text-base font-normal text-white/90 tracking-wide mb-1">
-                        Official Photo Pending
-                      </span>
-                    </div>
-                  )}
-
-                  <div className="absolute bottom-0 inset-x-0 z-10 p-3 sm:p-5">
-                    <div className="relative overflow-hidden rounded-sm bg-gradient-to-r from-[#070F1A]/75 via-[#0C1827]/85 to-[#070F1A]/75 backdrop-blur-md px-4 sm:px-6 py-3 sm:py-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.45)] ring-1 ring-white/10">
-                      <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-[#E8A317]/70 to-transparent" />
-                      <div className="absolute inset-x-6 bottom-0 h-px bg-gradient-to-r from-transparent via-[#E8A317]/35 to-transparent" />
-                      <span className="relative font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.22em] sm:tracking-[0.28em] text-[#F0D78C] uppercase block text-center leading-snug">
-                        {room.badgeTitle}
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                <RoomImageCarousel
+                  images={room.images}
+                  alt={room.title}
+                  badgeTitle={room.badgeTitle}
+                  aspectHeightClass="h-[240px] sm:h-[340px] md:h-[400px]"
+                />
 
                 <div className="p-5 sm:p-8 md:p-10 relative">
                   <div className="flex items-start sm:items-center gap-2 sm:gap-3 mb-3 sm:mb-4">

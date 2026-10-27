@@ -48,7 +48,7 @@ const galleryPhotos = [
     id: 2,
     title: 'Hotel Lawn & Outdoor Seating',
     category: 'Lawn',
-    image: '/images/lawn.webp',
+    image: '/rooms/lawn.webp',
     caption: 'Manicured green lawn with comfortable wooden bench seating for outdoor relaxation.',
   },
 
@@ -71,7 +71,7 @@ const galleryPhotos = [
     id: 13,
     title: 'Garden & Outdoor Spaces',
     category: 'Common Area & Corridors',
-    image: '/images/lawn.webp',
+    image: '/rooms/lawn.webp',
     caption: 'Well-maintained outdoor areas offering a pleasant setting to relax and enjoy the surroundings.',
   },
 
@@ -80,7 +80,7 @@ const galleryPhotos = [
     id: 4,
     title: 'Outdoor Swimming Pool & Facade',
     category: 'Swimming Pool',
-    image: '/images/swimming_pool.webp',
+    image: '/rooms/swimming-pool.webp',
     caption: 'Crystal-clear blue tiled outdoor swimming pool with poolside lounge seating.',
   },
 
@@ -89,7 +89,7 @@ const galleryPhotos = [
     id: 5,
     title: 'In-House Dining Restaurant',
     category: 'Restaurant',
-    image: '/images/oris_restaurant.webp',
+    image: '/rooms/oris.webp',
     caption: 'In-house restaurant serving authentic Odia seafood, North Indian, and Continental delicacies.',
   },
 
@@ -112,7 +112,7 @@ const galleryPhotos = [
     id: 8,
     title: 'Deluxe Sea View Bathroom',
     category: 'Deluxe Balcony (Side Sea View)',
-    image: '/images/bathroom.webp',
+    image: '/rooms/bathroom.webp',
     caption: 'Modern tiled en-suite bathroom with hot & cold rain shower and vessel sink.',
   },
 

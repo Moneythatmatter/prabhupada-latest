@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Info, X, Check, Camera } from "lucide-react";
 import { InnerPageHero } from "@/components/layout/InnerPageHero";
-import { ParallaxImage } from "@/components/motion/ParallaxImage";
+import { RoomImageCarousel } from "@/components/rooms/RoomImageCarousel";
 import { FadeRise } from "@/hooks/useParallax";
 import {
   PatachitraBackdrop,
@@ -20,6 +20,14 @@ const roomsData = [
     description:
       "Indulge in the comfort and elegance of Hotel Prabhupada's Premier Room (Non Sea View). Thoughtfully designed with modern aesthetics and essential luxury amenities, featuring air conditioning, high-speed Wi-Fi, smart TV, tea/coffee maker, and personalized hospitality for a serene stay in Puri.",
     image: "/images/official-hero1.webp",
+    images: [
+      "/images/official-hero1.webp",
+      "/rooms/room-seating-area.webp",
+      "/rooms/room-tea-station.webp",
+      "/rooms/room-kettle-amenities.webp",
+      "/rooms/bathroom.webp",
+      "/rooms/sink.webp",
+    ],
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
       "King-size bed",
@@ -56,6 +64,7 @@ const roomsData = [
     description:
       "Thoughtfully designed for both spiritual and leisure travelers, our Deluxe Balcony (Side Sea View) features a comfortable bed, an en-suite bathroom, a well-lit desk area, and a private balcony overlooking coastal ocean vistas with warm Odia hospitality.",
     image: "/images/deluxe-balcony.png",
+    images: ["/images/deluxe-balcony.png"],
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
       "King-size bed",
@@ -99,6 +108,9 @@ const roomsData = [
     description:
       "Welcome to Hotel Prabhupada, where comfort meets luxury. Our Superior Deluxe Balcony (Side Sea View) offers the perfect blend of style and seaside functionality, ideal for both spiritual and leisure travelers, with modern amenities and plush bedding.",
     image: "/images/superior-deluxe-balcony-view.png",
+    images: [
+      "/images/superior-deluxe-balcony-view.png",
+    ],
     bookingUrl:
       "https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000009",
     features: [
@@ -142,6 +154,14 @@ const roomsData = [
     description:
       "At Hotel Prabhupada, we pride ourselves in offering a home away from home. Our Family Quad (Non Sea View) rooms are thoughtfully designed for families and travelling groups, equipped with 2 comfortable double beds, en-suite bathroom, smart TV, tea/coffee maker, and personalized room service for a seamless stay.",
     image: "/images/family-quad.png",
+    images: [
+      "/images/family-quad.png",
+      "/rooms/room-seating-area.webp",
+      "/rooms/room-tea-station.webp",
+      "/rooms/room-kettle-amenities.webp",
+      "/rooms/bathroom.webp",
+      "/rooms/sink.webp",
+    ],
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
       "2 Double Beds",
@@ -180,6 +200,14 @@ const roomsData = [
     description:
       "Designed as a sanctuary of peace and comfort, our Executive (Front Sea View) features elegant interiors, plush furnishings, and modern technology. Enjoy panoramic front ocean views and true Odia hospitality for both short and extended stays.",
     image: "/images/hero2.webp",
+    images: [
+      "/images/hero2.webp",
+      "/rooms/suite-sea-view-window.webp",
+      "/rooms/room-seating-area.webp",
+      "/rooms/room-tea-station.webp",
+      "/rooms/bathroom.webp",
+      "/rooms/sink.webp",
+    ],
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
       "King-size bed",
@@ -223,7 +251,17 @@ const roomsData = [
     badgeTitle: "Suite (Front Sea View)",
     description:
       "Discover the ultimate in luxury and coastal tranquility at Hotel Prabhupada. Our Suite (Front Sea View) offers an expansive ocean retreat with contemporary décor, plush king bedding, dedicated sofa seating area, 43-inch Smart TV, dual air conditioner, and full VIP amenities.",
-    image: "/images/room-suite.webp",
+    image: "/rooms/suite-front-sea-view.webp",
+    images: [
+      "/rooms/suite-front-sea-view.webp",
+      "/rooms/suite-front-sea-view_2.webp",
+      "/rooms/suite-living-area.webp",
+      "/rooms/suite-work-desk.webp",
+      "/rooms/suite-sea-view-window.webp",
+      "/rooms/bathroom.webp",
+      "/rooms/sink.webp",
+      "/rooms/room-tea-station.webp",
+    ],
     bookingUrl:
       "https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000010",
     features: [
@@ -311,44 +349,14 @@ export const RoomsClient: React.FC = () => {
               >
                 <div className="flex flex-col flex-1 justify-between">
                   <div>
-                    {/* Image Container with Badge Overlay */}
-                    <div className="relative h-[250px] sm:h-[280px] w-full overflow-hidden bg-[#161616]">
-                      {room.image ? (
-                        <>
-                          <ParallaxImage
-                            src={room.image}
-                            alt={room.title}
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                            className="absolute inset-0"
-                            imageClassName="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                            distance={36}
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#161616]/80 via-transparent to-transparent pointer-events-none" />
-                        </>
-                      ) : (
-                        <div className="absolute inset-0 bg-[#161616] flex flex-col items-center justify-center p-6 text-center">
-                          <div className="w-12 h-12 rounded-full bg-[#E8A317]/10 border border-[#E8A317]/30 flex items-center justify-center text-[#E8A317] mb-2.5 group-hover:scale-110 transition-transform duration-300">
-                            <Camera className="w-5 h-5" />
-                          </div>
-                          <span className="font-serif text-sm font-normal text-white/90 tracking-wide mb-1">
-                            Official Photo Pending
-                          </span>
-                          <span className="font-sans text-[10px] text-[#E8A317] font-light uppercase tracking-[0.18em]">
-                            Image Upload Pending
-                          </span>
-                        </div>
-                      )}
-
-                      <div className="absolute bottom-0 inset-x-0 z-10 p-3">
-                        <div className="relative overflow-hidden rounded-sm bg-gradient-to-r from-[#070F1A]/75 via-[#0C1827]/85 to-[#070F1A]/75 backdrop-blur-md px-4 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.45)] ring-1 ring-white/10">
-                          <div className="absolute inset-x-5 top-0 h-px bg-gradient-to-r from-transparent via-[#E8A317]/70 to-transparent" />
-                          <div className="absolute inset-x-5 bottom-0 h-px bg-gradient-to-r from-transparent via-[#E8A317]/35 to-transparent" />
-                          <span className="relative font-sans text-[11px] font-semibold tracking-[0.22em] text-[#F0D78C] uppercase block text-center truncate">
-                            {room.badgeTitle}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                    {/* Image Carousel Container with Badge Overlay */}
+                    <RoomImageCarousel
+                      images={room.images}
+                      alt={room.title}
+                      badgeTitle={room.badgeTitle}
+                      aspectHeightClass="h-[250px] sm:h-[280px]"
+                      onImageClick={() => setSelectedRoom(room)}
+                    />
 
                     {/* Content Container */}
                     <div className="p-6 sm:p-7 pb-4">
@@ -441,27 +449,14 @@ export const RoomsClient: React.FC = () => {
                 {selectedRoom.title}
               </h3>
 
-              <div className="relative h-64 w-full rounded-xl overflow-hidden mb-6 border border-[#E5DECE] bg-[#161616]">
-                {selectedRoom.image ? (
-                  <Image
-                    src={selectedRoom.image}
-                    alt={selectedRoom.title}
-                    fill
-                    className="object-cover"
-                  />
-                ) : (
-                  <div className="absolute inset-0 bg-[#161616] flex flex-col items-center justify-center p-6 text-center">
-                    <div className="w-12 h-12 rounded-full bg-[#E8A317]/10 border border-[#E8A317]/30 flex items-center justify-center text-[#E8A317] mb-2.5">
-                      <Camera className="w-5 h-5" />
-                    </div>
-                    <span className="font-serif text-sm font-normal text-white/90 tracking-wide mb-1">
-                      Official Photo Pending
-                    </span>
-                    <span className="font-sans text-[10px] text-[#E8A317] font-light uppercase tracking-[0.18em]">
-                      Image Upload Pending
-                    </span>
-                  </div>
-                )}
+              <div className="mb-6">
+                <RoomImageCarousel
+                  images={selectedRoom.images}
+                  alt={selectedRoom.title}
+                  aspectHeightClass="h-64 sm:h-80"
+                  showThumbnails={true}
+                  className="rounded-xl border border-[#E5DECE]"
+                />
               </div>
 
               <p className="font-sans text-sm text-[#6B6B6B] font-light leading-relaxed mb-6">

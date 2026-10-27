@@ -40,7 +40,7 @@ const facilities: Facility[] = [
     description:
       "Looking for a hotel in Puri with a swimming pool? Hotel Prabhupada has an outdoor pool where you can enjoy a swim or relax by the water between sightseeing and beach outings.",
     icon: Waves,
-    image: "/images/swimming_pool.webp",
+    image: '/rooms/swimming-pool.webp',
     alt: "Outdoor swimming pool and sun deck at Hotel Prabhupada Puri",
     number: "01",
   },
@@ -58,7 +58,7 @@ const facilities: Facility[] = [
     description:
       "Take a comfortable break in our shared guest lounge. Whether you’re returning from Jagannath Temple darshan, catching up with family or planning your next outing, there’s a welcoming place to sit and unwind.",
     icon: Sofa,
-    image: "/images/guest_lounge.webp",
+    image: "/rooms/lounge.webp",
     alt: "Relaxing guest lounge with comfortable seating at Hotel Prabhupada",
     number: "03",
   },
@@ -76,7 +76,7 @@ const facilities: Facility[] = [
     description:
       "Enjoy a meal together without heading out of the hotel. Our in-house restaurant in Puri serves Odia dishes alongside multi-cuisine options, giving families and travelling groups a choice of familiar favourites and local flavours.",
     icon: UtensilsCrossed,
-    image: "/images/oris_restaurant.webp",
+    image: "/rooms/oris.webp",
     alt: "Oris restaurant serving authentic Odia delicacies and multi-cuisine meals",
     number: "05",
   },
@@ -85,7 +85,7 @@ const facilities: Facility[] = [
     description:
       "Spend a little time outdoors on Hotel Prabhupada’s green lawn. It’s a pleasant spot for a quiet break, family photographs or a relaxed conversation during your stay on New Marine Drive, Puri.",
     icon: Trees,
-    image: "/images/lawn.webp",
+    image: '/rooms/lawn.webp',
     alt: "Lush landscaped open garden lawn facing New Marine Drive Puri",
     number: "06",
   },
