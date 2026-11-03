@@ -20,6 +20,118 @@ export type BlogPost = {
 /** Hotel Prabhupada blog posts — travel, stay tips & Puri heritage */
 export const blogs: BlogPost[] = [
   {
+    slug: 'travelling-to-puri-with-your-pet-guide',
+    title:
+      'Travelling to Puri with Your Pet? A Practical Guide to Hotel Policies, Packing and Booking a Comfortable Stay',
+    excerpt:
+      'Travelling to Puri with your pet requires a little planning, especially when choosing accommodation, preparing for beach visits and arranging travel essentials. From hotel policies and packing checklists to beach safety, here is everything you need for a comfortable stay.',
+    content: [
+      'Travelling to Puri with your pet requires a little planning, especially when choosing accommodation, preparing for beach visits and arranging your travel essentials. Not every hotel accepts pets, and even pet-friendly properties may have different rules regarding room access, additional charges and guest responsibilities.',
+      'If you are planning a family holiday with your dog or another companion animal, choosing suitable accommodation should be your first step. This guide explains what to check before booking, what to pack and how to make your stay in Puri comfortable for everyone.',
+      '## How to Find Pet-Friendly Hotels in Puri',
+      'To find a suitable [pet-friendly hotel in Puri](https://www.hotelprabhupada.com/), confirm its pet policy directly with the property before making a reservation. Hotel listings may mention pet-friendly accommodation, but the actual conditions can vary.',
+      'Before booking, clarify these details:',
+      '- Pet acceptance: Check whether the hotel accommodates dogs, cats or other pets.',
+      '- Size and breed restrictions: Ask whether there are limitations based on your pet\'s size or breed.',
+      '- Additional charges: Confirm whether a pet fee, refundable deposit or cleaning charge applies.',
+      '- Room arrangements: Check whether pets are allowed inside guest rooms and whether specific room categories are available.',
+      '- Common-area access: Ask whether pets can accompany you in the restaurant, lobby, pool area or other shared spaces.',
+      '- Guest responsibilities: Understand the rules regarding leashes, cleaning, noise and supervision.',
+      'These details help you avoid last-minute surprises during check-in. A quick conversation with the hotel can also clarify whether its arrangements suit your pet\'s needs.',
+      '## What to Check Before Booking a Pet-Friendly Hotel in Puri',
+      'Before booking a pet-friendly hotel in Puri check the convenience in surroundings, suitable room arrangements and clear policies. Apart from confirming that pets are accepted, consider the following factors before booking.',
+      '- Location and accessibility: Choose accommodation that makes it convenient to reach the beach and other places on your itinerary. Hotels around New Marine Drive offer access to Puri\'s coastal surroundings and make beach visits easier to plan.',
+      '- Room comfort: Ask about room size, ventilation and available arrangements for your pet. Your companion should have enough space to rest comfortably after travelling or spending time outdoors.',
+      '- Nearby walking spaces: Check whether there are suitable areas around the property where you can take your pet for regular walks. Also confirm the hotel\'s rules regarding outdoor access.',
+      '- Guest amenities: Facilities such as parking, an in-house restaurant, room service and housekeeping can make a family holiday easier to manage, particularly when travelling with a pet.',
+      'If you are searching for where to stay in Puri with a dog, consider these practical requirements alongside room prices and availability.',
+      '## What Should You Pack for a Beach Holiday with a Dog?',
+      'You should pack your dog\'s regular food, familiar belongings, walking essentials and basic health supplies before [travelling to Puri with pets](https://www.hotelprabhupada.com/). Keeping your pet\'s routine consistent can help it settle into an unfamiliar environment.',
+      'Use this checklist to prepare:',
+      '### Food and feeding essentials',
+      '- Sufficient regular pet food, including some extra for unexpected delays.',
+      '- Food and water bowls.',
+      '- Treats and familiar snacks.',
+      '- A portable water bottle for outings.',
+      '### Comfort and familiar belongings',
+      '- Regular bedding or a familiar blanket.',
+      '- Favourite toys.',
+      '- Leash, collar and identification tag.',
+      '- Harness, if normally used.',
+      '- Waste bags and cleaning supplies.',
+      '### Health and safety',
+      '- Prescribed medication, if applicable.',
+      '- Basic pet first-aid supplies.',
+      '- Vaccination and veterinary records.',
+      '- Your veterinarian\'s contact details.',
+      '- Towels for cleaning wet or sandy paws.',
+      'Avoid changing your pet\'s regular food or feeding schedule during the holiday unless advised by a veterinarian. Familiar routines can help reduce travel-related stress.',
+      '## What Should You Keep in Mind When Taking Your Pet to Puri Beach?',
+      '[You should keep a few things in mind when taking your pet to Puri Beach, particularly the weather, sand temperature, access to drinking water and local beach regulations](https://www.hotelprabhupada.com/). These precautions can help make the outing safer and more comfortable for your pet.',
+      'Follow these precautions:',
+      '- Choose cooler hours: Early mornings and cooler evenings are generally more comfortable than hot afternoons.',
+      '- Use a leash: Keep your dog under control around visitors, vehicles and unfamiliar animals.',
+      '- Carry drinking water: Prevent your pet from drinking seawater, which can cause digestive problems.',
+      '- Check the sand temperature: Hot sand can hurt your dog\'s paws, so check the surface before walking.',
+      '- Clean up responsibly: Carry waste bags and leave the beach clean.',
+      '- Follow local rules: Check current beach regulations and avoid areas where pets are restricted.',
+      'Keep beach visits short if your pet is not accustomed to long outdoor walks. Watch for signs of tiredness or overheating and allow time for rest.',
+      '## How to Plan Puri Sightseeing When Travelling with Pets',
+      'You can plan your sightseeing around places that allow pets and arrange alternative supervision when visiting restricted attractions. Puri offers several experiences, including its coastline, local markets and cultural attractions, but not every destination is suitable for animals.',
+      'For example, if you plan to visit the Jagannath Temple, arrange your visit in advance because pets are not permitted inside the temple premises. If you are travelling with family or friends, take turns so someone can stay with your pet.',
+      'Avoid leaving your pet unattended in a vehicle or an unfamiliar location. Keep your itinerary flexible enough to accommodate feeding, walks and rest periods.',
+      '## Enjoy a Pet-Friendly Stay at Hotel Prabhupada Puri',
+      '[Hotel Prabhupada Puri](https://www.hotelprabhupada.com/contactus), located along New Marine Drive near Puri Beach and the lighthouse, is an accommodation option for travellers planning a coastal holiday with their pets.',
+      'The hotel offers different room categories, including front sea-view rooms and suites, side sea-view rooms with balconies, and non-sea-view family rooms. Guests can also access facilities such as an in-house restaurant, swimming pool, parking, room service and housekeeping.',
+      'Its location offers convenient access to the coastal surroundings, making it a consideration for families looking to explore Puri and enjoy time near the beach.',
+      'If you are planning to stay with your pet, contact Hotel Prabhupada before booking to confirm its [current pet policy, permitted pet types, room arrangements](https://www.hotelprabhupada.com/hotel-policy) and any additional charges. Discussing these requirements in advance helps ensure that both you and your pet are prepared for the stay.',
+      '[Planning a trip to Puri with your furry companion](https://www.hotelprabhupada.com/contactus)? Contact Hotel Prabhupada to discuss your accommodation requirements and booking arrangements.',
+    ],
+    faqs: [
+      {
+        question: 'Are there pet-friendly hotels in Puri?',
+        answer:
+          'Yes, some hotels in Puri welcome guests travelling with pets. However, pet acceptance, size restrictions, additional charges and room arrangements vary by property. Confirm the hotel’s policy directly before booking.',
+      },
+      {
+        question: 'What should I pack when travelling to Puri with a dog?',
+        answer:
+          'Pack your dog’s regular food, feeding bowls, leash, collar, identification tag, bedding, medication, vaccination records and waste bags. Fresh drinking water and towels are also useful for beach outings.',
+      },
+      {
+        question: 'Can I take my dog to Puri Beach?',
+        answer:
+          'Check the current local beach rules before taking your dog to Puri Beach. If pets are permitted, keep your dog on a leash, carry drinking water, avoid hot sand and clean up after your pet.',
+      },
+      {
+        question: 'Is Hotel Prabhupada in Puri suitable for guests travelling with pets?',
+        answer:
+          'Hotel Prabhupada is a pet-friendly hotel in Puri, making it an accommodation option worth considering when planning a trip with your pet. Contact the hotel before booking to confirm its current pet-related arrangements and any specific requirements for your stay.',
+      },
+      {
+        question: 'Where is Hotel Prabhupada located in Puri?',
+        answer:
+          'Hotel Prabhupada is located on New Marine Drive, near Puri Beach and the lighthouse. Its location offers convenient access to the beach and other popular areas of the city.',
+      },
+      {
+        question: 'Can I take my pet to Jagannath Temple in Puri?',
+        answer:
+          'No. Pets are not allowed inside the Jagannath Temple premises. If you plan to visit the temple, make arrangements for your pet’s care and supervision during that time.',
+      },
+      {
+        question: 'What should I confirm with a hotel before booking a stay with my pet?',
+        answer:
+          'Confirm whether pets are permitted, whether any size or breed restrictions apply, whether additional charges are applicable, and what arrangements are available for guests travelling with animals. It is also useful to ask about room suitability and any specific guidelines you need to follow during your stay.',
+      },
+    ],
+    date: '2026-11-03',
+    author: 'Hotel Prabhupada',
+    category: 'Travel Guide',
+    image: '/images/puri-marine-drive.webp',
+    readTime: '6 min read',
+    featured: true,
+  },
+  {
     slug: 'planning-a-family-trip-from-kolkata-to-puri',
     title:
       'Planning a Family Trip from Kolkata to Puri? Best Hotels, Travel Tips and Booking Guide',

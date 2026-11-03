@@ -42,6 +42,8 @@ export const BlogPostClient: React.FC<BlogPostClientProps> = ({ post }) => {
         href = '/about';
       } else if (href.includes('hotelprabhupada.com/amenities')) {
         href = '/amenities';
+      } else if (href.includes('hotelprabhupada.com/hotel-policy')) {
+        href = '/hotel-policy';
       } else if (
         href === 'https://www.hotelprabhupada.com/' ||
         href === 'https://www.hotelprabhupada.com' ||
