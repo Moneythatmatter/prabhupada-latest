@@ -80,7 +80,7 @@ const galleryPhotos = [
     id: 4,
     title: 'Outdoor Swimming Pool & Facade',
     category: 'Swimming Pool',
-    image: '/rooms/swimming-pool.webp',
+    image: '/images/swimming_pool.webp',
     caption: 'Crystal-clear blue tiled outdoor swimming pool with poolside lounge seating.',
   },
 

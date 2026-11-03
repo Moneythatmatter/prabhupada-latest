@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Award, Star, ExternalLink } from 'lucide-react';
 
 declare global {
@@ -12,6 +12,45 @@ declare global {
 
 const TRIPADVISOR_URL =
   'https://www.tripadvisor.in/Hotel_Review-g503703-d1150060-Reviews-Hotel_Prabhupada-Puri_Puri_District_Odisha.html';
+
+/**
+ * Helper to dynamically extract the verified review / traveller count
+ * from the TripAdvisor widget DOM when rendered by TripAdvisor's script.
+ */
+function extractTripAdvisorReviewCount(container?: HTMLElement | null): string | null {
+  if (typeof document === 'undefined') return null;
+
+  const targets: (HTMLElement | null)[] = [
+    container ?? null,
+    document.getElementById('CDSWIDEXC'),
+    document.getElementById('TA_excellent815'),
+    document.querySelector<HTMLElement>('.TA_excellent'),
+    document.querySelector<HTMLElement>('.widEXC'),
+  ];
+
+  for (const target of targets) {
+    if (!target) continue;
+    const text = target.textContent || '';
+    if (!text) continue;
+
+    const byMatch = text.match(/by\s+([0-9,]+)\s+travel/i);
+    if (byMatch && byMatch[1]) {
+      return byMatch[1].trim();
+    }
+
+    const ratedMatch = text.match(/rated\s+["“']?excellent["”']?\s+by\s+([0-9,]+)/i);
+    if (ratedMatch && ratedMatch[1]) {
+      return ratedMatch[1].trim();
+    }
+
+    const travelMatch = text.match(/([0-9,]+)\s+travel/i);
+    if (travelMatch && travelMatch[1]) {
+      return travelMatch[1].trim();
+    }
+  }
+
+  return null;
+}
 
 function useTripAdvisorScript() {
   useEffect(() => {
@@ -161,6 +200,47 @@ export const TripAdvisorAwards: React.FC<{
   variant?: 'card' | 'compact' | 'strip';
 }> = ({ className = '', variant = 'card' }) => {
   useTripAdvisorScript();
+  const [excellentCount, setExcellentCount] = useState<string>('623');
+  const widgetContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const detectCount = () => {
+      const detected = extractTripAdvisorReviewCount(widgetContainerRef.current);
+      if (detected) {
+        setExcellentCount(detected);
+      }
+    };
+
+    detectCount();
+
+    const observer = new MutationObserver(() => {
+      detectCount();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+    });
+
+    const timers = [
+      setTimeout(detectCount, 400),
+      setTimeout(detectCount, 1200),
+      setTimeout(detectCount, 2500),
+      setTimeout(detectCount, 5000),
+    ];
+
+    return () => {
+      observer.disconnect();
+      timers.forEach(clearTimeout);
+    };
+  }, []);
+
+  const displayCount = excellentCount.endsWith('+')
+    ? excellentCount
+    : `${excellentCount}+`;
 
   if (variant === 'compact') {
     return (
@@ -244,11 +324,11 @@ export const TripAdvisorAwards: React.FC<{
               Guest Satisfaction
             </span>
           </div>
-          <div className="flex-1 flex items-center justify-center my-2 w-full">
+          <div ref={widgetContainerRef} className="flex-1 flex items-center justify-center my-2 w-full">
             <TripAdvisorRatedExcellent />
           </div>
           <p className="font-sans text-[11px] text-white/70 mt-2">
-            Rated &ldquo;Excellent&rdquo; by 520+ verified travelers on TripAdvisor
+            Rated &ldquo;Excellent&rdquo; by {displayCount} verified travelers on TripAdvisor
           </p>
         </div>
       </div>

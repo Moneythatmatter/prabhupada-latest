@@ -40,7 +40,7 @@ const facilities: Facility[] = [
     description:
       "Looking for a hotel in Puri with a swimming pool? Hotel Prabhupada has an outdoor pool where you can enjoy a swim or relax by the water between sightseeing and beach outings.",
     icon: Waves,
-    image: '/rooms/swimming-pool.webp',
+    image: '/images/swimming_pool.webp',
     alt: "Outdoor swimming pool and sun deck at Hotel Prabhupada Puri",
     number: "01",
   },
