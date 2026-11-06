@@ -20,6 +20,89 @@ export type BlogPost = {
 /** Hotel Prabhupada blog posts — travel, stay tips & Puri heritage */
 export const blogs: BlogPost[] = [
   {
+    slug: 'winter-mornings-in-puri-sunrise-from-balcony',
+    title:
+      'Winter Mornings in Puri: Enjoy a Breathtaking Sunrise from Your Balcony at Hotel Prabhupada',
+    excerpt:
+      'Winter is one of the most pleasant seasons to experience Puri, especially for travellers who enjoy quiet beach mornings and beautiful sea views. Discover the best times and spots to watch the sunrise, and why a sea-view balcony stay at Hotel Prabhupada makes your mornings truly memorable.',
+    content: [
+      'Winter is one of the most pleasant seasons to experience Puri, especially for travellers who enjoy quiet beach mornings and beautiful sea views. Staying at one of the sea-facing hotels in Puri lets you begin the day with the sound of waves, cool coastal air, and the changing colours of the sky over the Bay of Bengal. At Hotel Prabhupada, located on New Marine Drive near Puri Beach, guests can enjoy this coastal experience with sea-view room options.',
+      'Whether you are planning a winter vacation in Puri or looking for a relaxing beachfront stay, the right room can make your mornings as memorable as the rest of your holiday.',
+      '## Why Visit Puri During Winter?',
+      'Visiting Puri during winter offers comfortable weather for exploring Puri, spending time outdoors, and enjoying the beach without the intensity of the summer heat.',
+      'Here are a few reasons why winter is a popular time to visit:',
+      '- Pleasant mornings: Cooler temperatures make early beach walks and outdoor activities more comfortable.',
+      '- Beautiful coastal views: Clear mornings can offer lovely views of the sea and changing sunrise colours.',
+      '- Temple visits: The more comfortable weather makes exploring Puri and visiting Jagannath Temple easier.',
+      '- Relaxed beach experiences: Visitors can enjoy the shoreline, take photographs, and spend time by the sea.',
+      '- Local food and culture: Winter is a good time to explore Puri\'s local cuisine, markets, and cultural attractions.',
+      'For travellers who want to combine sightseeing with a peaceful coastal stay, winter is a rewarding season to explore the city.',
+      '## Best Time to Watch Sunrise in Puri',
+      'The [best time to watch sunrise in Puri](https://www.hotelprabhupada.com/) is early in the morning, just before and during the first appearance of sunlight above the horizon. During winter, sunrise generally occurs around 6:00–6:30 AM, although the exact time changes with the date.',
+      'Arriving at the beach or settling into your [sea-view balcony](https://www.hotelprabhupada.com/rooms) a little before sunrise gives you time to enjoy the changing sky. The experience is especially beautiful on clear mornings when the horizon is visible.',
+      'You can check the local sunrise time for your travel dates and plan accordingly. Carrying a light jacket can also make early winter mornings more comfortable.',
+      '## Places to Enjoy Sunrise in Puri',
+      'Puri offers several places where visitors can enjoy the morning atmosphere and coastal views.',
+      '- Puri Beach: The main beach is a popular place for early morning walks, watching the waves, and enjoying the sunrise over the Bay of Bengal.',
+      '- New Marine Drive: This coastal stretch offers a quieter setting in certain sections, with opportunities to enjoy morning beach views and the sea breeze.',
+      '- Golden Beach: A well-known beach destination where visitors can enjoy the shoreline and spend time outdoors. Check local access and beach timings before visiting.',
+      '- Your Sea-View Balcony: Sometimes, the most comfortable sunrise experience is the one you can enjoy without leaving your room. A hotel room with a suitable [sea-facing balcony](https://www.hotelprabhupada.com/rooms) lets you watch the morning sky while enjoying a relaxed start to the day.',
+      '## Benefits of Staying at a Beachfront Hotel in Puri',
+      'Choosing [beachfront accommodation in Puri](https://www.hotelprabhupada.com/contactus) offers more than convenient access to the shoreline. It can shape the overall experience of your holiday.',
+      '- Easy beach access: Spend more time by the sea without planning a separate journey.',
+      '- Relaxed mornings: Enjoy the coastal atmosphere before the city becomes busy.',
+      '- Sea views: Select sea-facing rooms to make the ocean part of your stay.',
+      '- Flexible experiences: Enjoy the beach early in the morning or return later for an evening walk.',
+      '- A peaceful holiday setting: The sound of waves and open coastal views can make your stay feel more relaxing.',
+      'When comparing beachfront hotels in Puri, consider the room category, actual sea visibility, balcony access, and distance from the beach instead of relying only on hotel descriptions.',
+      '## Enjoy Sea-View Stays at Hotel Prabhupada Puri',
+      'Located on New Marine Drive near Puri Beach and the lighthouse, Hotel Prabhupada Puri offers room options for guests who want to enjoy the coastal setting during their stay.',
+      'Guests can choose from different room categories based on their preferences:',
+      '- Front sea-view rooms and suites: Suitable for guests who want a more direct sea-facing stay.',
+      '- Side sea-view balcony rooms: Offer balcony access with a side view of the sea.',
+      '- Family rooms: An option for guests who need accommodation for family stays.',
+      'If watching the [sunrise from your balcony](https://www.hotelprabhupada.com/rooms) is an important part of your holiday, ask the hotel about the available balcony room categories and their exact views while booking. Room views can vary by category and availability.',
+      'With its beachfront location, restaurant, swimming pool, parking, and other guest amenities, [Hotel Prabhupada](https://www.hotelprabhupada.com/contactus) offers a convenient base for enjoying Puri\'s coastal atmosphere.',
+      '## Plan Your Winter Vacation in Puri',
+      'A [winter trip to Puri](https://www.hotelprabhupada.com/) can be about more than visiting popular attractions. It can also mean waking up to the sound of the waves, enjoying a quiet morning by the sea, and taking in the beauty of the coastline before beginning your day.',
+      'If you are exploring [hotels on New Marine Drive Puri](https://www.hotelprabhupada.com/), consider a stay that gives you access to both the beach and comfortable sea-view accommodation.',
+      'Choose your preferred room category and [book a winter stay in Puri at Hotel Prabhupada](https://www.hotelprabhupada.com/contactus). Make your next coastal getaway memorable, one sunrise at a time.',
+    ],
+    faqs: [
+      {
+        question: 'What is the best time to watch sunrise in Puri during winter?',
+        answer:
+          'Sunrise generally occurs around 6:00–6:30 AM during winter. Check the exact local sunrise time for your travel date to plan your morning.',
+      },
+      {
+        question: 'Are there sea-facing hotels in Puri with balconies?',
+        answer:
+          'Yes. Some hotels offer sea-view rooms with balconies. At Hotel Prabhupada, guests can enquire about side sea-view balcony rooms and front sea-view room options before booking.',
+      },
+      {
+        question: 'Is winter a good time for a beach holiday in Puri?',
+        answer:
+          'Yes. Winter offers relatively pleasant temperatures for beach walks, sightseeing, temple visits, and enjoying the coastal surroundings.',
+      },
+      {
+        question: 'Which area is suitable for booking a beachfront hotel in Puri?',
+        answer:
+          'New Marine Drive is an option for travellers looking for accommodation close to Puri Beach, with access to the coastal stretch and nearby attractions.',
+      },
+      {
+        question: 'How can I book a sea-view room at Hotel Prabhupada?',
+        answer:
+          'Contact Hotel Prabhupada directly to check room availability, compare the front and side sea-view categories, and confirm balcony access and the view before completing your booking.',
+      },
+    ],
+    date: '2026-11-06',
+    author: 'Hotel Prabhupada',
+    category: 'Travel Guide',
+    image: '/images/sea_balcony.webp',
+    readTime: '5 min read',
+    featured: true,
+  },
+  {
     slug: 'travelling-to-puri-with-your-pet-guide',
     title:
       'Travelling to Puri with Your Pet? A Practical Guide to Hotel Policies, Packing and Booking a Comfortable Stay',
