@@ -86,7 +86,7 @@ const roomsSchema = {
       description:
         'Premier Room (Non Sea View) at Hotel Prabhupada, thoughtfully designed with modern aesthetics and essential luxury amenities, featuring air conditioning, high-speed Wi-Fi, smart TV, tea/coffee maker, and personalized hospitality for a serene stay in Puri.',
       url: 'https://www.hotelprabhupada.com/rooms',
-      image: 'https://www.hotelprabhupada.com/images/official-hero1.webp',
+      image: 'https://www.hotelprabhupada.com/rooms/premier-rooms.webp',
       bed: { '@type': 'BedDetails', numberOfBeds: 1, typeOfBed: 'King' },
       amenityFeature: [
         { '@type': 'LocationFeatureSpecification', name: 'King-size bed', value: true },
@@ -106,7 +106,7 @@ const roomsSchema = {
       description:
         'Deluxe Balcony (Side Sea View) is designed for both spiritual and leisure travelers, with a comfortable bed, en-suite bathroom, well-lit desk area, and a private balcony overlooking coastal ocean vistas.',
       url: 'https://www.hotelprabhupada.com/rooms',
-      image: 'https://www.hotelprabhupada.com/images/deluxe-balcony.png',
+      image: 'https://www.hotelprabhupada.com/images/deluxe-balcony.webp',
       bed: { '@type': 'BedDetails', numberOfBeds: 1, typeOfBed: 'King' },
       amenityFeature: [
         { '@type': 'LocationFeatureSpecification', name: 'King-size bed', value: true },
@@ -126,7 +126,7 @@ const roomsSchema = {
       description:
         'Superior Deluxe Balcony (Side Sea View) blends style and seaside functionality for spiritual and leisure travelers, with modern amenities and plush bedding. Elevator is accessible till 2nd floor (not preferable for senior citizens).',
       url: 'https://www.hotelprabhupada.com/rooms',
-      image: 'https://www.hotelprabhupada.com/images/superior-deluxe-balcony-view.png',
+      image: 'https://www.hotelprabhupada.com/images/superior-deluxe-balcony-view.webp',
       bed: { '@type': 'BedDetails', numberOfBeds: 1, typeOfBed: 'King' },
       amenityFeature: [
         { '@type': 'LocationFeatureSpecification', name: 'King-size bed', value: true },
@@ -146,7 +146,7 @@ const roomsSchema = {
       description:
         'Family Quad (Non Sea View) rooms are designed for families and travelling groups, with 2 comfortable double beds, en-suite bathroom, smart TV, tea/coffee maker, and personalized room service.',
       url: 'https://www.hotelprabhupada.com/rooms',
-      image: 'https://www.hotelprabhupada.com/images/family-quad.png',
+      image: 'https://www.hotelprabhupada.com/images/family-quad.webp',
       bed: { '@type': 'BedDetails', numberOfBeds: 2, typeOfBed: 'Double' },
       amenityFeature: [
         { '@type': 'LocationFeatureSpecification', name: '2 Double Beds', value: true },
@@ -166,7 +166,7 @@ const roomsSchema = {
       description:
         'Executive (Front Sea View) features elegant interiors, plush furnishings, modern technology and panoramic front ocean views, suitable for both short and extended stays.',
       url: 'https://www.hotelprabhupada.com/rooms',
-      image: 'https://www.hotelprabhupada.com/images/hero2.webp',
+      image: 'https://www.hotelprabhupada.com/rooms/executive/exec1.webp',
       bed: { '@type': 'BedDetails', numberOfBeds: 1, typeOfBed: 'King' },
       amenityFeature: [
         { '@type': 'LocationFeatureSpecification', name: 'King-size bed', value: true },

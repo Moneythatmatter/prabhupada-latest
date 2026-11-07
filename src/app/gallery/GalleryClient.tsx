@@ -119,23 +119,23 @@ const galleryPhotos = [
   // 7. Executive (Front Sea View)
   {
     id: 9,
-    title: 'Executive (Front Sea View) Suite',
+    title: 'Suite (Front Sea View) ',
     category: 'Executive (Front Sea View)',
     image: '/images/room-suite.webp',
     caption: 'Elegantly furnished suite with plush double bed, feature wall art, and teal window drapes.',
   },
   {
     id: 10,
-    title: 'Executive Room Interior View',
+    title: 'Executive Front sea view room',
     category: 'Executive (Front Sea View)',
-    image: '/images/room-executive.webp',
+    image: '/rooms/executive/exec1.webp',
     caption: 'Bright, airy room layout with wall-mounted flat-screen TV and dedicated workspace.',
   },
   {
     id: 11,
     title: 'Puri Golden Beach Horizon',
     category: 'Executive (Front Sea View)',
-    image: '/images/puri-golden-beach.webp',
+    image: '/images/golden-beach.webp',
     caption: 'Direct sea view of Puri Golden Beach waves visible from Executive Suite windows.',
   },
 ];

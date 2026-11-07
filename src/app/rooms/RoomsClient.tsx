@@ -19,14 +19,14 @@ const roomsData = [
     badgeTitle: "Premier Room (Non Sea View)",
     description:
       "Indulge in the comfort and elegance of Hotel Prabhupada's Premier Room (Non Sea View). Thoughtfully designed with modern aesthetics and essential luxury amenities, featuring air conditioning, high-speed Wi-Fi, smart TV, tea/coffee maker, and personalized hospitality for a serene stay in Puri.",
-    image: "/images/official-hero1.webp",
+    image: "/rooms/premier-rooms.webp",
     images: [
-      "/images/official-hero1.webp",
-      "/rooms/room-seating-area.webp",
-      "/rooms/room-tea-station.webp",
-      "/rooms/room-kettle-amenities.webp",
-      "/rooms/bathroom.webp",
-      "/rooms/sink.webp",
+      "/rooms/premier-rooms.webp",
+      // "/rooms/room-seating-area.webp",
+      // "/rooms/room-tea-station.webp",
+      // "/rooms/room-kettle-amenities.webp",
+      // "/rooms/bathroom.webp",
+      // "/rooms/sink.webp",
     ],
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
@@ -63,8 +63,8 @@ const roomsData = [
     badgeTitle: "Deluxe Balcony (Side Sea View)",
     description:
       "Thoughtfully designed for both spiritual and leisure travelers, our Deluxe Balcony (Side Sea View) features a comfortable bed, an en-suite bathroom, a well-lit desk area, and a private balcony overlooking coastal ocean vistas with warm Odia hospitality.",
-    image: "/images/deluxe-balcony.png",
-    images: ["/images/deluxe-balcony.png"],
+    image: "/images/deluxe-balcony.webp",
+    images: ["/images/deluxe-balcony.webp"],
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
       "King-size bed",
@@ -107,10 +107,8 @@ const roomsData = [
     note: "Elevator is accessible till 2nd floor (Not preferable for Senior Citizens)",
     description:
       "Welcome to Hotel Prabhupada, where comfort meets luxury. Our Superior Deluxe Balcony (Side Sea View) offers the perfect blend of style and seaside functionality, ideal for both spiritual and leisure travelers, with modern amenities and plush bedding.",
-    image: "/images/superior-deluxe-balcony-view.png",
-    images: [
-      "/images/superior-deluxe-balcony-view.png",
-    ],
+    image: "/images/superior-deluxe-balcony-view.webp",
+    images: ["/rooms/superior-deluxe-balcony_2.webp", "/rooms/superior-deluxe-balcony_3.webp", "/rooms/superior-deluxe-balcony.webp", "/rooms/room-seating-area.webp", "/rooms/room-kettle-amenities.webp"],
     bookingUrl:
       "https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000009",
     features: [
@@ -153,14 +151,11 @@ const roomsData = [
     badgeTitle: "Family Quad (Non Sea View)",
     description:
       "At Hotel Prabhupada, we pride ourselves in offering a home away from home. Our Family Quad (Non Sea View) rooms are thoughtfully designed for families and travelling groups, equipped with 2 comfortable double beds, en-suite bathroom, smart TV, tea/coffee maker, and personalized room service for a seamless stay.",
-    image: "/images/family-quad.png",
+    image: "/images/family-quad.webp",
     images: [
-      "/images/family-quad.png",
-      "/rooms/room-seating-area.webp",
-      "/rooms/room-tea-station.webp",
-      "/rooms/room-kettle-amenities.webp",
-      "/rooms/bathroom.webp",
-      "/rooms/sink.webp",
+      "/images/family-quad.webp",
+      "/rooms/family-quad.webp",
+      "/rooms/family-four-bed.webp",
     ],
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
@@ -199,14 +194,13 @@ const roomsData = [
     badgeTitle: "Executive (Front Sea View)",
     description:
       "Designed as a sanctuary of peace and comfort, our Executive (Front Sea View) features elegant interiors, plush furnishings, and modern technology. Enjoy panoramic front ocean views and true Odia hospitality for both short and extended stays.",
-    image: "/images/hero2.webp",
+    image: "/rooms/executive/exec1.webp",
     images: [
-      "/images/hero2.webp",
-      "/rooms/suite-sea-view-window.webp",
-      "/rooms/room-seating-area.webp",
-      "/rooms/room-tea-station.webp",
-      "/rooms/bathroom.webp",
-      "/rooms/sink.webp",
+      "/rooms/executive/executive.webp",
+      "/rooms/executive/exec1.webp",
+      "/rooms/executive/exec2.webp",
+      "/rooms/executive/exec3.webp",
+
     ],
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
@@ -255,12 +249,11 @@ const roomsData = [
     images: [
       "/rooms/suite-front-sea-view.webp",
       "/rooms/suite-front-sea-view_2.webp",
-      "/rooms/suite-living-area.webp",
-      "/rooms/suite-work-desk.webp",
-      "/rooms/suite-sea-view-window.webp",
+      "/rooms/suite-entrance.webp",
+      // "/rooms/suite-sea-view-window.webp",
+      "/rooms/suite-washroom.webp",
       "/rooms/bathroom.webp",
-      "/rooms/sink.webp",
-      "/rooms/room-tea-station.webp",
+      "/rooms/handwash.webp",
     ],
     bookingUrl:
       "https://live.ipms247.com/booking/roomwisedata.php?hid=hotelprabhupada&roomtypeunkid=3636500000000000010",
@@ -314,7 +307,7 @@ export const RoomsClient: React.FC = () => {
         overline="Accommodations"
         title="Rooms & Suites"
         subtitle="Comfortable accommodations designed for a relaxing stay at Hotel Prabhupada."
-        image="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=2000&q=80"
+        image="/images/family-quad.webp"
         imageAlt="Hotel Prabhupada Luxury Rooms & Suites"
       />
 
