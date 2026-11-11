@@ -39,7 +39,7 @@ const galleryPhotos = [
     id: 1,
     title: 'Hotel Reception Counter & Lounge',
     category: 'Reception',
-    image: '/images/reception.webp',
+    image: '/images/reception-new.webp',
     caption: 'Welcoming reception counter featuring marble wall backdrop and traditional deity altar at Hotel Prabhupada.',
   },
 

@@ -22,11 +22,8 @@ const roomsData = [
     image: "/rooms/premier-rooms.webp",
     images: [
       "/rooms/premier-rooms.webp",
-      // "/rooms/room-seating-area.webp",
-      // "/rooms/room-tea-station.webp",
-      // "/rooms/room-kettle-amenities.webp",
-      // "/rooms/bathroom.webp",
-      // "/rooms/sink.webp",
+      "/rooms/deluxe/deluxe-washroom.webp",
+      "/rooms/deluxe/deluxe-sink.webp",
     ],
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
@@ -64,7 +61,15 @@ const roomsData = [
     description:
       "Thoughtfully designed for both spiritual and leisure travelers, our Deluxe Balcony (Side Sea View) features a comfortable bed, an en-suite bathroom, a well-lit desk area, and a private balcony overlooking coastal ocean vistas with warm Odia hospitality.",
     image: "/images/deluxe-balcony.webp",
-    images: ["/images/deluxe-balcony.webp"],
+    images: [
+      "/images/deluxe-balcony.webp",
+      "/rooms/deluxe/deluxe-interior.webp",
+      "/rooms/deluxe/deluxe-interior2.webp",
+      "/rooms/deluxe/deluxe-interior3.webp",
+      "/rooms/deluxe/deluxe-interior4.webp",
+      "/rooms/deluxe/deluxe-washroom.webp",
+      "/rooms/deluxe/deluxe-sink.webp",
+    ],
     bookingUrl: "https://live.ipms247.com/booking/book-rooms-hotelprabhupada",
     features: [
       "King-size bed",
