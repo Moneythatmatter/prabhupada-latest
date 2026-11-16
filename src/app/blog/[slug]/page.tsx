@@ -37,5 +37,62 @@ export default async function BlogPostPage({ params }: PageProps) {
   const post = getBlogBySlug(slug);
   if (!post) notFound();
 
-  return <BlogPostClient post={post} />;
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: `https://www.hotelprabhupada.com${post.image}`,
+    datePublished: post.date,
+    author: {
+      '@type': 'Organization',
+      name: post.author,
+      url: 'https://www.hotelprabhupada.com',
+    },
+    publisher: {
+      '@type': 'Hotel',
+      name: 'Hotel Prabhupada',
+      url: 'https://www.hotelprabhupada.com',
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.hotelprabhupada.com/blog/${post.slug}`,
+    },
+  };
+
+  const faqSchema =
+    post.faqs && post.faqs.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: post.faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer,
+            },
+          })),
+        }
+      : null;
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c'),
+          }}
+        />
+      )}
+      <BlogPostClient post={post} />
+    </>
+  );
 }

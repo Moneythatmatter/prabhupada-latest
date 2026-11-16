@@ -20,6 +20,101 @@ export type BlogPost = {
 /** Hotel Prabhupada blog posts — travel, stay tips & Puri heritage */
 export const blogs: BlogPost[] = [
   {
+    slug: 'puri-aqi-during-kartika-masa-2026-travel-guide',
+    title:
+      'Puri AQI During Kartika Masa 2026: Check Air Quality, Weather & Travel Conditions Before Booking Your Stay',
+    excerpt:
+      'Planning a visit to Jagannath Dham during Kartika Masa? Discover Puri AQI levels, November weather patterns, health precautions, and essential stay advice for Kartika Masa 2026.',
+    content: [
+      'Planning a visit to Jagannath Dham during Kartika Masa? Along with temple timings, accommodation and travel arrangements, it is worth checking the Puri AQI and local weather before finalising your trip. November is generally a favourable month for exploring Puri, with the monsoon largely behind the region and cooler conditions beginning to set in. However, air quality and daily weather can change, so checking the latest updates is important, particularly if you are travelling with children, older family members or someone sensitive to air pollution.',
+      'This Puri travel guide covers the air quality situation, November weather, practical travel considerations and what to look for when choosing a hotel during [Kartika Masa 2026](https://www.hotelprabhupada.com/contactus).',
+      '## Puri AQI During Kartika Masa 2026: What Should Travellers Know?',
+      'Puri generally records satisfactory [air quality](https://www.hotelprabhupada.com/), although the AQI can fluctuate depending on weather conditions, local activity and particulate levels. According to the latest published monthly average from the Odisha State Pollution Control Board (OSPCB), [Puri\'s November AQI](https://www.hotelprabhupada.com/) stands at 75, placing it in the Satisfactory category.',
+      'This category indicates that [Puri air quality](https://www.hotelprabhupada.com/contactus) is generally acceptable, with only minor breathing discomfort possible for sensitive individuals. However, the average is a reference point rather than a live reading. Actual conditions may change from day to day, so travellers are advised to check the latest AQI through the Central Pollution Control Board (CPCB) dashboard or the Sameer app before travelling.',
+      '### Understanding India\'s AQI Categories',
+      'The CPCB classifies air quality into six categories:',
+      '- 0–50 (Good): Minimal impact on health.',
+      '- 51–100 (Satisfactory): Minor discomfort may occur in sensitive individuals.',
+      '- 101–200 (Moderate): People with respiratory conditions may experience discomfort.',
+      '- 201–300 (Poor): Prolonged exposure can cause breathing discomfort.',
+      '- 301–400 (Very Poor): Increased risk of respiratory illness with prolonged exposure.',
+      '- 401–500 (Severe): Significant health effects are possible.',
+      'If you have asthma, a respiratory condition or other health concerns, pay particular attention to the daily reading and follow medical advice. Children and older adults should also avoid prolonged outdoor exertion when air quality is poor.',
+      '## Puri Weather During Kartika Masa 2026',
+      'November is generally a pleasant time to visit Puri. With the monsoon season behind it and winter gradually setting in, the weather is usually suitable for temple visits, sightseeing and spending time along the beach.',
+      'During this period, daytime temperatures generally remain around 30–31°C, while mornings and evenings are comparatively cooler, with temperatures around 21–22°C. This makes early morning darshan, coastal walks and outdoor sightseeing more comfortable.',
+      'Travellers should still check the local weather forecast closer to their visit, as temperatures and weather conditions can vary throughout the month.',
+      '### What Weather Can You Expect?',
+      '- Early mornings: Relatively cooler conditions, suitable for temple visits and coastal walks.',
+      '- Afternoons: Warmer temperatures and stronger sunshine, making light clothing and sun protection useful.',
+      '- Evenings: Generally more comfortable for exploring local markets, dining and spending time near the beach.',
+      '- Rainfall: November is considerably drier than the monsoon months, but occasional rain cannot be ruled out.',
+      'For the most accurate [Puri weather](https://www.hotelprabhupada.com/contactus) update, check the forecast a few days before departure rather than relying only on monthly averages.',
+      '## Is Puri Safe to Visit During Kartika Masa?',
+      'Puri remains a popular pilgrimage and coastal destination during Kartika Masa. However, whether a visit is comfortable for you depends on your health, travel plans, weather conditions and the latest air-quality information.',
+      'A moderate or satisfactory AQI reading does not mean every person will experience the same conditions. Similarly, a coastal location does not guarantee pollution-free air. Travellers with asthma, allergies or other respiratory concerns should review the latest readings and consult their healthcare professional if necessary.',
+      'A few practical precautions can make your visit more comfortable:',
+      '- Check the latest AQI before beginning outdoor sightseeing.',
+      '- Avoid strenuous outdoor activities when air quality is poor.',
+      '- Carry prescribed medication if you have an existing respiratory condition.',
+      '- Stay hydrated, particularly during afternoon sightseeing.',
+      '- Carry light cotton clothing, sunscreen and comfortable footwear.',
+      '- Keep a flexible itinerary in case of unexpected rain or changing weather.',
+      'These simple steps can help you plan your Puri trip more thoughtfully without unnecessarily changing your pilgrimage plans.',
+      '## Best Time to Visit Puri During Kartik Month',
+      'The [best time to visit Puri](https://www.hotelprabhupada.com/contactus) from October to March is generally considered favourable. During Kartika Masa, Puri also attracts devotees observing the Kartik Brata and visiting Jagannath Temple.',
+      'In 2026, the Kartika observances continue through the month, with Kartika Purnima falling on 24 November. The final days are especially significant for devotees, and the city can experience increased pilgrim activity around important religious occasions.',
+      'If you are planning to visit during this period, consider:',
+      '- Early mornings: Suitable for temple visits and enjoying the quieter coastal atmosphere.',
+      '- Late afternoons: A comfortable time for sightseeing, depending on the day\'s weather.',
+      '- Festival dates: Plan additional time for travel and temple visits because of increased crowds.',
+      '- Accommodation: Reserve your room in advance, especially if your visit coincides with Kartika Purnima or other important observances.',
+      '## Where to Stay in Puri During Kartika Masa?',
+      'Your choice of accommodation can influence how conveniently you experience Puri. If your itinerary includes Jagannath Temple, Puri Beach and other local attractions, consider a hotel that offers practical access to these locations along with comfortable rooms and essential facilities.',
+      '[Hotel Prabhupada](https://www.hotelprabhupada.com/contactus), located on New Marine Drive near Puri Beach and the lighthouse, offers a convenient stay option for pilgrims, families and leisure travellers.',
+      'The hotel offers different room categories, including front sea-view rooms and suites, side sea-view rooms with balconies, and family rooms. Guests can also make use of facilities such as the restaurant, swimming pool, parking, room service, air conditioning and Wi-Fi.',
+      'For travellers visiting during Kartika Masa, the hotel\'s beachfront location offers an opportunity to enjoy the coastal surroundings alongside a pilgrimage-focused itinerary. Room categories and views vary, so confirm the preferred room type when booking.',
+      'Whether you are visiting for Jagannath Darshan, exploring [Puri\'s cultural heritage](https://www.hotelprabhupada.com/contactus) or spending a few days by the sea, choosing a comfortable base can make your stay more convenient.',
+      '## Plan Your Puri Visit with the Latest AQI and Weather Updates',
+      'Kartika Masa is a meaningful time to experience the spiritual traditions of [Jagannath Dham](https://www.hotelprabhupada.com/). From temple visits and local rituals to peaceful moments along Puri Beach, the city offers plenty for pilgrims and travellers.',
+      'Before booking, check the latest [Puri AQI](https://www.hotelprabhupada.com/), weather forecast and local travel updates. Remember that air quality can change daily, and third-party estimates may use different measurement scales. For health-related decisions, refer to official and reliable source information and follow appropriate medical guidance.',
+      'For a comfortable stay near the coastline, explore [Hotel Prabhupada, Puri](https://www.hotelprabhupada.com/contactus).',
+    ],
+    faqs: [
+      {
+        question: 'What is the current AQI level in Puri, Odisha?',
+        answer:
+          'Puri\'s AQI changes throughout the day. Third-party platforms may show different estimates depending on their data sources and whether they use the US or Indian AQI scale. Check the CPCB\'s official AQI information or the Sameer app for the latest India-specific reading.',
+      },
+      {
+        question: 'What is the weather like in Puri during Kartika Masa 2026?',
+        answer:
+          'November is generally warm during the day and relatively cooler in the early morning and evening. On 13 November 2026, the forecast indicated temperatures of approximately 21°C to 31°C. Check an updated forecast before departure.',
+      },
+      {
+        question: 'Is Puri a good place to visit in November?',
+        answer:
+          'Yes. November generally offers more comfortable conditions for temple visits, sightseeing and beach activities than the summer and monsoon months. It is also an important period for religious observances during Kartika Masa.',
+      },
+      {
+        question: 'Is Puri safe for people with asthma or respiratory sensitivities?',
+        answer:
+          'The answer depends on the current air quality and individual health conditions. Travellers with asthma or respiratory sensitivities should check the latest AQI, avoid prolonged outdoor exertion when readings are elevated and follow their doctor\'s advice.',
+      },
+      {
+        question: 'Which hotels are suitable for visitors travelling to Puri during Kartika Masa?',
+        answer:
+          'Consider hotels that offer convenient access to Jagannath Temple and Puri Beach, comfortable accommodation and essential guest facilities. Hotel Prabhupada, located on New Marine Drive near Puri Beach, is one option for visitors planning a pilgrimage or coastal stay.',
+      },
+    ],
+    date: '2026-11-16',
+    author: 'Hotel Prabhupada',
+    category: 'Travel Guide',
+    image: '/images/jagannath-temple.webp',
+    readTime: '6 min read',
+    featured: true,
+  },
+  {
     slug: 'winter-mornings-in-puri-sunrise-from-balcony',
     title:
       'Winter Mornings in Puri: Enjoy a Breathtaking Sunrise from Your Balcony at Hotel Prabhupada',
