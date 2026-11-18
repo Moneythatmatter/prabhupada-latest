@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Chatbot } from '@/components/chatbot/Chatbot';
 import { FloatingActionMenu } from '@/components/layout/FloatingActionMenu';
+import { AwarenessPopup } from '@/components/awareness/AwarenessPopup';
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-3ZQ87ZQPXK';
 
@@ -124,6 +125,7 @@ export default function RootLayout({
         <Footer />
         <Chatbot />
         <FloatingActionMenu />
+        <AwarenessPopup />
       </body>
     </html>
   );
