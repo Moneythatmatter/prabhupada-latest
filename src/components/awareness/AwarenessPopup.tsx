@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Check } from 'lucide-react';
 
@@ -111,17 +112,15 @@ export const AwarenessPopup: React.FC = () => {
 
             {/* Awareness Image Container with overflow handling */}
             <div className="relative w-full overflow-y-auto bg-[#050B13] p-1.5 sm:p-3 flex items-center justify-center">
-              <picture className="w-full flex justify-center">
-                <source srcSet="/awareness/awareness.webp" type="image/webp" />
-                <img
-                  src="/awareness/awareness.png"
-                  alt="Hotel Prabhupada - Important Awareness Notice"
-                  width={900}
-                  height={650}
-                  className="w-full h-auto max-h-[70vh] object-contain rounded select-none pointer-events-none"
-                  loading="eager"
-                />
-              </picture>
+              <Image
+                src="/awareness/awareness.webp"
+                alt="Hotel Prabhupada - Important Awareness Notice"
+                width={900}
+                height={650}
+                priority
+                sizes="(max-width: 768px) 95vw, 720px"
+                className="w-full h-auto max-h-[70vh] object-contain rounded select-none pointer-events-none"
+              />
             </div>
 
             {/* Bottom Action Footer */}
