@@ -20,6 +20,74 @@ export type BlogPost = {
 /** Hotel Prabhupada blog posts — travel, stay tips & Puri heritage */
 export const blogs: BlogPost[] = [
   {
+    slug: 'planning-a-family-trip-to-puri-how-to-spend-one-day',
+    title: "Planning a Family Trip to Puri? Here's How to Spend One Day",
+    excerpt:
+      'Planning a one-day family trip to Puri? Discover a practical family itinerary covering early morning Jagannath Temple darshan, traditional breakfast, local sightseeing, beach sunset, and stay tips.',
+    content: [
+      "A one-day Puri family trip can be a memorable experience when you plan your sightseeing around the city's spiritual landmarks, local food and beautiful coastline. From seeking blessings at Shree Jagannath Temple to enjoying an evening at Puri Beach, the city offers several experiences that families can enjoy together.",
+      'If you are travelling from Bhubaneswar or visiting Puri as part of a longer Odisha holiday, a little planning can help you explore its highlights without making the day feel rushed. Here is a practical one-day Puri travel itinerary for families.',
+      '## How to Plan a One-Day Family Trip to Puri',
+      'The key to planning a comfortable one-day trip is to prioritise the main attractions and allow enough time for travel, meals and rest. Instead of covering every tourist spot, focus on a few experiences that give your family a good introduction to Puri.',
+      '### 5:30 AM – 9:30 AM: Begin with Jagannath Temple Darshan',
+      "Start your [Puri sightseeing](https://www.hotelprabhupada.com/) early with a visit to Shree Jagannath Temple, one of India's four sacred Char Dham pilgrimage destinations. Dedicated to Lord Jagannath, along with Lord Balabhadra and Devi Subhadra, the 12th century temple is the spiritual heart of Puri.",
+      "Take time to experience the temple's atmosphere, admire its Kalinga-style architecture and offer prayers. Darshan timings and access arrangements can vary depending on daily rituals, festivals and crowd conditions, so check the latest temple information before visiting.",
+      'Families should also plan for queues, particularly during weekends, holidays and festive periods.',
+      '### 9:30 AM – 11:00 AM: Enjoy a Traditional Odia Breakfast',
+      'After darshan, take a break for breakfast. Puri offers plenty of opportunities to explore local flavours. You can try traditional Odia preparations, light snacks and popular local sweets such as Khaja.',
+      "Food is an important part of a [Puri family vacation](https://www.hotelprabhupada.com/contactus), and trying regional dishes gives children and adults alike a taste of the city's culinary culture.",
+      "### 11:00 AM – 1:00 PM: Explore Puri's Local Attractions",
+      'Use the late morning to explore the city at a relaxed pace. You can visit Narendra Pokhari, a historic sacred water body associated with Jagannath temple traditions, or Gundicha Temple, another important religious landmark in Puri.',
+      "Choose one based on your family's interests and available time rather than trying to cover both hurriedly. These visits add cultural depth to your [Puri travel guide](https://www.hotelprabhupada.com/contactus) experience beyond the main temple.",
+      '### 1:00 PM – 3:30 PM: Lunch and a Relaxed Afternoon',
+      'Take a proper lunch break and allow some time to rest, especially if you are travelling with young children or senior family members.',
+      'Puri offers a variety of dining options, from traditional Odia meals to familiar Indian dishes. If you are planning a longer stay, choosing accommodation that allows your family to relax between sightseeing activities can make the experience more comfortable.',
+      '### 4:00 PM – 6:30 PM: Spend Time at Puri Beach',
+      'No [one day trip to Puri](https://www.hotelprabhupada.com/contactus) feels complete without visiting the coast. Head towards Puri Beach or the designated Blue Flag Golden Beach for a relaxed evening by the Bay of Bengal.',
+      'Families can enjoy a coastal walk, watch local sand artists at work, explore the surroundings and experience the lively atmosphere of the beach. Sunset is a particularly beautiful time to enjoy the shoreline.',
+      'Follow lifeguard instructions, respect designated beach zones and keep children away from rough water.',
+      '### 6:30 PM Onwards: Explore Local Markets and Wrap Up',
+      "Before leaving, spend some time exploring Puri's local markets. Look for traditional handicrafts, souvenirs, appliqué work and local sweets to take home.",
+      'If you are returning to Bhubaneswar, allow sufficient time for the road journey and check your transport schedule before departure.',
+      '## Other Places to Visit in Puri with Family',
+      'If you have additional time or are extending your trip, consider adding these attractions:',
+      '- [Raghurajpur Heritage Crafts Village](https://www.hotelprabhupada.com/attractions): Discover traditional Pattachitra paintings, palm-leaf engravings and Odisha\'s artistic heritage. It is a worthwhile cultural excursion outside the main city.',
+      '- Golden Beach: Explore the Blue Flag-certified beach and its designated visitor facilities.',
+      '- Gundicha Temple: Visit this important temple associated with the annual Rath Yatra tradition.',
+      "These attractions can be included depending on your family's interests and available travel time.",
+      '## Where to Stay in Puri During a Family Trip?',
+      'If your family plans to extend the visit beyond one day, choosing the right accommodation can make sightseeing easier. Look for a hotel with comfortable room options, convenient access to the beach, dining facilities and essential guest services.',
+      'Located on New Marine Drive, [Hotel Prabhupada](https://www.hotelprabhupada.com/) offers a comfortable base for families exploring Puri. The hotel features front sea-view rooms and suites, side sea-view balcony rooms and family accommodation options. Its facilities include a restaurant, swimming pool, parking, room service and Wi-Fi.',
+      'Its location near Puri Beach also makes it convenient for guests who want to enjoy the coastal atmosphere during their stay.',
+      '## Make Your Family Trip to Puri Memorable',
+      'The best [one-day Puri sightseeing guide](https://www.hotelprabhupada.com/attractions) is one that balances spiritual experiences, local culture, good food and time by the sea. With an early start and a manageable itinerary, families can discover some of the city\'s most memorable highlights without rushing from one attraction to another.',
+      'If you are planning to stay overnight, [contact Hotel Prabhupada](https://www.hotelprabhupada.com/contactus) to explore accommodation options for your family.',
+    ],
+    faqs: [
+      {
+        question: 'Can Puri be explored in one day with family?',
+        answer:
+          'Yes. Families can cover major highlights such as Shree Jagannath Temple, selected local attractions and Puri Beach in one day, provided they plan their schedule and travel time carefully.',
+      },
+      {
+        question: 'What is the best time to visit Puri for a family vacation?',
+        answer:
+          'October to March is generally considered a pleasant period for visiting Puri, with more comfortable conditions for sightseeing and beach activities. Festival periods can attract larger crowds, so plan accommodation and transport in advance.',
+      },
+      {
+        question: 'Is one day enough for a Puri trip from Bhubaneswar?',
+        answer:
+          'Yes. Puri is approximately 60 km from Bhubaneswar by road, making a day trip possible. However, starting early is advisable to make enough time for temple darshan, sightseeing, meals and the beach.',
+      },
+    ],
+    date: '2026-11-21',
+    author: 'Hotel Prabhupada',
+    category: 'Travel Guide',
+    image: '/images/golden-beach.webp',
+    readTime: '5 min read',
+    featured: true,
+  },
+  {
     slug: 'puri-aqi-during-kartika-masa-2026-travel-guide',
     title:
       'Puri AQI During Kartika Masa 2026: Check Air Quality, Weather & Travel Conditions Before Booking Your Stay',
